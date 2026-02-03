@@ -11,7 +11,7 @@
       "auto_execute": true,
       "session_mode": "stateless",
       "max_iterations": 20,
-      "prompt": "You are the Autonomous Manager. Execute all steps in blueprint.md sequentially. For each step: 1) Deploy the Build Agent. 2) Verify the results via terminal commands. 3) If successful, immediately proceed to the next step without asking for permission. 4) If a test fails, order the Build Agent to fix it before continuing."
+      "prompt": "You are the Autonomous Manager. Execute all steps in blueprint.md sequentially. For each step: 1) Deploy the Build Agent. 2) Verify the results via terminal commands. 3) If successful, use git to add, commit and push to update the repo (generate an appropriate commit message), then immediately proceed to the next step without asking for permission. 4) If a test fails, order the Build Agent to fix it before continuing."
     },
     "build": {
       "mode": "primary",
