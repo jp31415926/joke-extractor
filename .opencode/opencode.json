@@ -1,29 +1,7 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "instructions": ["docs/specs.md", "docs/checklist.md", "docs/AGENTS.md"],
+  "instructions": ["docs/specs.md", "docs/blueprint.md", "docs/todo.md", "AGENTS.md"],
     "watcher": {
-    "ignore": ["ignore/**", ".git/**", "__pycache__/**", ".pytest_cache/**", ".venv/**"]
-  },
-  "agent": {
-    "plan": {
-      "mode": "primary",
-      "model": "ollama/qwen3:8b",
-      "auto_execute": true,
-      "session_mode": "stateless",
-      "max_iterations": 20,
-      "prompt": "You are the Autonomous Manager. Execute all steps in blueprint.md sequentially. For each step: 1) Deploy the Build Agent. 2) Verify the results via terminal commands. 3) If successful, use git to add, commit and push to update the repo (generate an appropriate commit message), then immediately proceed to the next step without asking for permission. 4) If a test fails, order the Build Agent to fix it before continuing."
-    },
-    "build": {
-      "mode": "primary",
-      "model": "ollama/qwen3-coder:30b",
-      "auto_execute": true,
-      "session_strategy": "reset_on_task",
-      "tools": {
-        "bash": "allow",
-        "write": "allow",
-        "edit": "allow"
-      },
-      "prompt": "You are the Autonomous Implementer. Write files, execute tests, and report only the final pass/fail status to the Manager. Do not wait for confirmation to write to the filesystem."
-    }
+    "ignore": [".git/**", "__pycache__/**", ".pytest_cache/**", ".venv/**"],
   }
 }
