@@ -17,27 +17,27 @@ def parse_email(file_path):
             return email.message_from_file(file)
     except Exception as e:
         logging.error(f"Failed to parse email: {e}")
-        sys.exit(10)
+        sys.exit(5)
 
 def validate_email(email_message):
     """Validate that email has required headers."""
     # Check if Subject exists
     if not email_message.get('Subject'):
         logging.error("Email missing Subject header")
-        sys.exit(11)
+        sys.exit(6)
         
     # Check if From exists and is not empty
     sender = email_message.get('From')
     if not sender or sender.strip() == '':
         logging.error("Email missing From header or From header is empty")
-        sys.exit(12)
+        sys.exit(7)
         
-    # Check for non-text attachments (this will be used in Phase 3)
-    for part in email_message.walk():
-        content_type = part.get_content_type()
-        if content_type and content_type.startswith('application/') and not content_type == 'application/pdf':
-            logging.error(f"Email contains non-text attachment: {content_type}")
-            sys.exit(13)
+    # # Check for non-text attachments (this will be used in Phase 3)
+    # for part in email_message.walk():
+    #     content_type = part.get_content_type()
+    #     if content_type and content_type.startswith('application/') and not content_type == 'application/pdf':
+    #         logging.error(f"Email contains non-text attachment: {content_type}")
+    #         sys.exit(200)
 
 def find_text_content(email_message):
     """Find and return the text content of the email."""
@@ -54,7 +54,7 @@ def get_extractor_scripts():
     extractors_dir = 'extractors'
     if not os.path.exists(extractors_dir):
         logging.error("Extractors directory not found")
-        sys.exit(1)
+        sys.exit(2)
         
     scripts = []
     for filename in sorted(os.listdir(extractors_dir)):
@@ -87,7 +87,7 @@ def main():
     
     if not os.path.exists(email_file):
         logging.error(f"Email file does not exist: {email_file}")
-        sys.exit(2)
+        sys.exit(3)
     
     # Parse the email
     email_message = parse_email(email_file)
@@ -100,7 +100,7 @@ def main():
     
     if not scripts:
         logging.error("No executable extractor scripts found in extractors directory")
-        sys.exit(3)
+        sys.exit(4)
     
     # Create output directory if it doesn't exist
     output_dir = 'jokes'
