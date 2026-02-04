@@ -5,53 +5,53 @@ This checklist is designed to be updated as the build agent completes each step 
 ## Phase 1: Environment & Test Data
 
 ### Step 1: Project Scaffolding
-- [ ] Create project directories: `extractors/`, `tests/`, and `jokes/`
-- [ ] Initialize `joke-extract.py` with shebang and executable permissions
-- [ ] Initialize `extractors/default.py` with shebang and executable permissions
-- [ ] Verify `ls -R` output shows correct directory structure
-- [ ] Verify `chmod +x` status on scripts
-- [ ] Performed checks listed below in the **Code Style Compliance** section (where applicible)
-- [ ] Performed checks listed below in the **Error Handling & Return Codes** section (where applicible)
-- [ ] Performed checks listed below in the **File Handling** section (where applicible)
+- [x] Create project directories: `extractors/`, `tests/`, and `jokes/`
+- [x] Initialize `joke-extract.py` with shebang and executable permissions
+- [x] Initialize `extractors/default.py` with shebang and executable permissions
+- [x] Verify `ls -R` output shows correct directory structure
+- [x] Verify `chmod +x` status on scripts
+- [x] Performed checks listed below in the **Code Style Compliance** section (where applicible)
+- [x] Performed checks listed below in the **Error Handling & Return Codes** section (where applicible)
+- [x] Performed checks listed below in the **File Handling** section (where applicible)
 
 ### Step 2: RFC-Compliant Test Fixtures
-- [ ] Create `tests/valid_plain.eml` with Subject, From, and non-empty `text/plain`
-- [ ] Create `tests/valid_html.eml` with Subject, From, and non-empty `text/html`
-- [ ] Create `tests/empty_body.eml` with `text/plain` but empty content
-- [ ] Create `tests/invalid_attachment.eml` with `application/pdf` part
-- [ ] Create `tests/missing_from.eml` with empty `From:` header
-- [ ] Verify each `.eml` file loads without crashing using `email.message_from_file()`
-- [ ] Performed checks listed below in the **Code Style Compliance** section (where applicible)
-- [ ] Performed checks listed below in the **Error Handling & Return Codes** section (where applicible)
-- [ ] Performed checks listed below in the **File Handling** section (where applicible)
+- [x] Create `tests/valid_plain.eml` with Subject, From, and non-empty `text/plain`
+- [x] Create `tests/valid_html.eml` with Subject, From, and non-empty `text/html`
+- [x] Create `tests/empty_body.eml` with `text/plain` but empty content
+- [x] Create `tests/invalid_attachment.eml` with `application/pdf` part
+- [x] Create `tests/missing_from.eml` with empty `From:` header
+- [x] Verify each `.eml` file loads without crashing using `email.message_from_file()`
+- [x] Performed checks listed below in the **Code Style Compliance** section (where applicible)
+- [x] Performed checks listed below in the **Error Handling & Return Codes** section (where applicible)
+- [x] Performed checks listed below in the **File Handling** section (where applicible)
 
 ## Phase 2: Extractor Development (`extractors/default.py`)
 
 ### Step 3: Argument & Email Parsing
-- [ ] Implement CLI argument handling for 2 arguments
-- [ ] Implement `email.message_from_file()` parsing with UTF-8 enforcement
-- [ ] Verify `extractors/default.py tests/valid_plain.eml ./jokes/` exits with code 0
-- [ ] Performed checks listed below in the **Code Style Compliance** section (where applicible)
-- [ ] Performed checks listed below in the **Error Handling & Return Codes** section (where applicible)
-- [ ] Performed checks listed below in the **File Handling** section (where applicible)
+- [x] Implement CLI argument handling for 2 arguments
+- [x] Implement `email.message_from_file()` parsing with UTF-8 enforcement
+- [x] Verify `extractors/default.py tests/valid_plain.eml ./jokes/` exits with code 0
+- [x] Performed checks listed below in the **Code Style Compliance** section (where applicible)
+- [x] Performed checks listed below in the **Error Handling & Return Codes** section (where applicible)
+- [x] Performed checks listed below in the **File Handling** section (where applicible)
 
 ### Step 4: MIME Priority Logic
-- [ ] Implement part scanning logic
-- [ ] Prioritize `text/plain` exactly before falling back to `text/html`
-- [ ] Ignore non-text parts
-- [ ] Verify `valid_plain.eml` prints `100 Success`
-- [ ] Verify `empty_body.eml` prints `200 No joke found`
-- [ ] Performed checks listed below in the **Code Style Compliance** section (where applicible)
-- [ ] Performed checks listed below in the **Error Handling & Return Codes** section (where applicible)
-- [ ] Performed checks listed below in the **File Handling** section (where applicible)
+- [x] Implement part scanning logic
+- [x] Prioritize `text/plain` exactly before falling back to `text/html`
+- [x] Ignore non-text parts
+- [x] Verify `valid_plain.eml` prints `100 Success`
+- [x] Verify `empty_body.eml` prints `200 No joke found`
+- [x] Performed checks listed below in the **Code Style Compliance** section (where applicible)
+- [x] Performed checks listed below in the **Error Handling & Return Codes** section (where applicible)
+- [x] Performed checks listed below in the **File Handling** section (where applicible)
 
 ### Step 5: Atomic File Writing
-- [ ] Use `tempfile.NamedTemporaryFile` with `prefix="joke_"` and `suffix=".txt"`
-- [ ] Write content to `output_dir` correctly
-- [ ] Verify file appears in `jokes/` after running against `valid_plain.eml`
-- [ ] Performed checks listed below in the **Code Style Compliance** section (where applicible)
-- [ ] Performed checks listed below in the **Error Handling & Return Codes** section (where applicible)
-- [ ] Performed checks listed below in the **File Handling** section (where applicible)
+- [x] Use `tempfile.NamedTemporaryFile` with `prefix="joke_"` and `suffix=".txt"`
+- [x] Write content to `output_dir` correctly
+- [x] Verify file appears in `jokes/` after running against `valid_plain.eml`
+- [x] Performed checks listed below in the **Code Style Compliance** section (where applicible)
+- [x] Performed checks listed below in the **Error Handling & Return Codes** section (where applicible)
+- [x] Performed checks listed below in the **File Handling** section (where applicible)
 
 ## Phase 3: Primary Script Development (`joke-extract.py`)
 
