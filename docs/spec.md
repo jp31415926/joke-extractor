@@ -20,9 +20,6 @@
 3. **Header Validation:**
    - **`Subject:` must be present** (even if empty; `message['Subject']` must *not* be `None`).
    - **`From:` must be non-empty** (`message['From']` must not be empty string).
-4. **Attachment Validation:**
-   - **Reject if any attachment has MIME type *not* starting with `text/`** (e.g., `image/jpeg`, `application/pdf`).
-   - *Allow all `text/*` types (e.g., `text/plain`, `text/html`, `text/plain; charset=utf-8`).*
 
 **Execution Workflow:**
 1. Create `jokes/` directory if missing.
@@ -63,7 +60,7 @@
    - Scan all parts in order.
    - **Prioritize `text/plain`** (exact MIME type *before semicolon*).
    - **Fallback to `text/html`** if no `text/plain` found.
-   - **Ignore non-text parts** (e.g., `image/jpeg`).
+   - **Ignore non-text parts** (e.g., `image/jpeg`, `application/pdf`).
 3. **If valid text parts found:**
    - **If content is non-empty:** Save each to `output_dir` via `tempfile.NamedTemporaryFile(...)` → return `100 Success`.
    - Use `tempfile.NamedTemporaryFile(dir=output_dir, prefix="joke_", suffix=".txt", delete=False)`.

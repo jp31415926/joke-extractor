@@ -1,5 +1,12 @@
 # AGENTS.md - Joke Extractor Project
 
+## Files
+`docs/spec.md` is the spec file.
+`joke-extract.py` is the primary script
+`extractors/default.py` is the example extractor script
+`integration_test.py` is the integration test script
+`clean_up.py` deletes all output files, temp files, and all files in the `jokes/` directory
+
 ## Build, Lint, and Test Commands
 
 ### Build Commands

@@ -31,24 +31,7 @@ def validate_email(email_message):
     if not sender or sender.strip() == '':
         logging.error("Email missing From header or From header is empty")
         sys.exit(7)
-        
-    # # Check for non-text attachments (this will be used in Phase 3)
-    # for part in email_message.walk():
-    #     content_type = part.get_content_type()
-    #     if content_type and content_type.startswith('application/') and not content_type == 'application/pdf':
-    #         logging.error(f"Email contains non-text attachment: {content_type}")
-    #         sys.exit(200)
-
-def find_text_content(email_message):
-    """Find and return the text content of the email."""
-    for part in email_message.walk():
-        content_type = part.get_content_type()
-        if content_type == 'text/plain':
-            return part.get_payload(decode=True).decode('utf-8')
-        elif content_type == 'text/html':
-            return part.get_payload(decode=True).decode('utf-8')
-    return None
-
+    
 def get_extractor_scripts():
     """Find all extractor scripts in the extractors directory."""
     extractors_dir = 'extractors'
@@ -65,7 +48,7 @@ def get_extractor_scripts():
     return scripts
 
 def run_extractor(extractor_script, email_file, output_dir):
-    """Execute an extractor script."""
+    """Execute an extractor script and capture only the first line of stdout."""
     try:
         result = subprocess.run(
             [sys.executable, extractor_script, email_file, output_dir],
@@ -73,7 +56,20 @@ def run_extractor(extractor_script, email_file, output_dir):
             text=True,
             check=True
         )
-        return result.returncode, result.stdout.strip()
+        
+        # Only return the first line of stdout
+        first_line = result.stdout.strip().split('\n')[0] if result.stdout.strip() else ""
+        
+        # Extract return code from first line (should be 3-digit code at start)
+        return_code = 0
+        if first_line:
+            try:
+                return_code = int(first_line.split()[0])
+            except (ValueError, IndexError):
+                # If we can't parse the code, treat as error
+                return_code = 599
+                
+        return return_code, first_line
     except subprocess.CalledProcessError as e:
         logging.error(f"Extractor failed with return code {e.returncode}: {e.stderr}")
         return e.returncode, e.stderr.strip()
@@ -111,10 +107,10 @@ def main():
         logging.info(f"Running extractor: {script}")
         return_code, output = run_extractor(script, email_file, output_dir)
         
-        # Handle return codes
+        # Handle return codes according to spec
         if 100 <= return_code <= 199:
             # Success - stop processing
-            logging.info(f"Extractor {script} reported success (code {return_code})")
+            logging.debug(f"Extractor {script} reported success (code {return_code})")
             return 0
         elif 200 <= return_code <= 299:
             # No joke found - continue to next extractor
