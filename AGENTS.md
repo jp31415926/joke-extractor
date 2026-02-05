@@ -13,9 +13,9 @@
 
 ### Test Commands
 - `python3 -m pytest tests/` - Run all unit and integration tests
-- `python3 tests/integration_test.py` - Run integration test specifically
-- `python3 extractors/default.py tests/valid.eml ./jokes/` - Test individual extractor
-- `python3 joke-extract.py tests/valid.eml` - Test primary script with valid file
+- `python3 integration_test.py` - Run integration test specifically
+- `python3 extractors/default.py emails/valid.eml ./jokes/` - Test individual extractor
+- `python3 joke-extract.py emails/valid.eml` - Test primary script with valid file
 - `python3 -m pytest tests/ -v` - Run tests with verbose output
 - `python3 -m pytest tests/ -k "test_"` - Run tests matching pattern "test_" 
 
@@ -35,12 +35,12 @@ For running a single test:
 - Use standard library modules only: `sys`, `os`, `email`, `tempfile`, `logging`, `subprocess`, `argparse`
 - Import modules at the top of each file in standard order:
   1. Standard library imports
-  2. Third-party imports (none in this project)
-  3. Local application imports (none in this project)
+  2. Third-party imports
+  3. Local application imports
 - Import individual modules rather than using wildcard imports: `from email import message_from_file` instead of `from email import *`
 
 ### Formatting
-- Indentation: 4 spaces (no tabs)
+- Indentation: 2 spaces (no tabs)
 - Line length: Maximum 88 characters (PEP8 + black)
 - No trailing whitespace
 - Use snake_case for variables and functions
@@ -56,33 +56,14 @@ For running a single test:
 - Private methods: `_snake_case` (e.g., `_validate_headers`)
 
 ### Error Handling
-- Exit with `sys.exit(1)` on validation failures (file existence, missing headers, invalid attachments)
-- Handle exceptions gracefully in email parsing and file operations
-- Return appropriate exit codes from extractors:
-  - `100-199`: Success (stop processing)
-  - `200-299`: No joke found (continue)
-  - `500-599`: Error (continue but warn)
-- Use logging for status information:
-  - `logging.debug()` for return codes `100-199`
-  - `logging.warning()` for return codes `500-599`
-  - Error messages should be descriptive but concise
-
-### Return Codes
-- Extractors must return one of these codes (exit code 0 for all cases):
-  - `100`: Success - joke extracted
-  - `200`: No joke found
-  - `500`: Failed to parse email
-  - `501`: Other error during processing
+- Handle all exceptions gracefully
 
 ### File Handling
 - All email files must be processed with UTF-8 encoding
 - Use `tempfile.NamedTemporaryFile` with `prefix="joke_"` and `suffix=".txt"` for output files
 - Extractors must write to the directory specified in the second CLI argument
-- Don't modify the original EML files
-- All output files must be created atomically
 
 ### Testing
-- All test fixtures are real RFC-style EML files in the `tests/` directory
-- Extractor scripts should work as subprocesses from the main script
+- All test fixtures are real RFC-style EML files in the `emails/` directory
 - Extractors must validate all input and handle edge cases properly
 - Integration tests should exercise the full pipeline end-to-end

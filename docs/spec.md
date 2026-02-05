@@ -1,75 +1,113 @@
-**Final Comprehensive Specification for Developer**  
+# Updated Comprehensive Specification for Developer
 
 ---
 
-### **Project Specification: Joke Extractor**  
-*Python 3.11+ | Strictly UTF-8 Encoding | `logging` Module for Output*  
+### **Project Specification: Joke Extractor**
+*Python 3.11+ | Strictly UTF-8 Encoding | `logging` Module for Output*
 
 ---
 
-#### **1. Primary Script (`joke-extract.py`)**  
-**Input:**  
-- Single CLI argument: Path to `.eml` file (e.g., `./joke-extract.py "input.eml"`).  
+#### **A. Primary Script (`joke-extract.py`)**
+**Input:**
+- Single CLI argument: Path to `.eml` file (e.g., `./joke-extract.py "input.eml"`).
 
-**Validation & Preprocessing (Exit with `sys.exit(1)` if failed):**  
-1. **File Existence & Readability:**  
-   - Verify file exists and is readable.  
-2. **Email Parsing:**  
-   - Parse using `email.message_from_file()` (UTF-8).  
-   - **Reject if parsing fails** (e.g., invalid MIME structure).  
-3. **Header Validation:**  
-   - **`Subject:` must be present** (even if empty; `message['Subject']` must *not* be `None`).  
-   - **`From:` must be non-empty** (`message['From']` must not be empty string).  
-4. **Attachment Validation:**  
-   - **Reject if any attachment has MIME type *not* starting with `text/`** (e.g., `image/jpeg`, `application/pdf`).  
-   - *Allow all `text/*` types (e.g., `text/plain`, `text/html`, `text/plain; charset=utf-8`).*  
+**Validation & Preprocessing (Exit with `sys.exit()` if failed):**
+1. **File Existence & Readability:**
+   - Verify file exists and is readable.
+2. **Email Parsing:**
+   - Parse using `email.message_from_file()` (UTF-8).
+   - **Reject if parsing fails** (e.g., invalid MIME structure).
+3. **Header Validation:**
+   - **`Subject:` must be present** (even if empty; `message['Subject']` must *not* be `None`).
+   - **`From:` must be non-empty** (`message['From']` must not be empty string).
+4. **Attachment Validation:**
+   - **Reject if any attachment has MIME type *not* starting with `text/`** (e.g., `image/jpeg`, `application/pdf`).
+   - *Allow all `text/*` types (e.g., `text/plain`, `text/html`, `text/plain; charset=utf-8`).*
 
-**Execution Workflow:**  
-1. Create `jokes/` directory if missing.  
-2. For each extractor script in `extractors/` (sorted alphabetically):  
-   - Execute: `python3 extractor.py <eml_path> <jokes_dir>`  
-   - Capture **first line of stdout** (format: `### <message>`, e.g., `100 Success`).  
-   - **Log return code:**  
-     - `100-199` → `logging.debug()`  
-     - `200-299` → Continue to next extractor  
-     - `500-599` → `logging.warning()`  
-3. **Stop processing** if any extractor returns `100-199`.  
-4. **Final Error:**  
-   - If *no* extractor returns `100-199`, log error and exit.  
+**Execution Workflow:**
+1. Create `jokes/` directory if missing.
+2. For each extractor script in `extractors/` (sorted alphabetically):
+   - Execute: `python3 extractor.py <eml_path> <jokes_dir>`
+   - Capture **first line of stdout** (format: `### <message>`, e.g., `100 Success`).
+   - **Log return code:**
+     - `100-199` → `logging.debug()`
+     - `200-299` → Continue to next extractor
+     - `500-599` → `logging.warning()`
+3. **Stop processing** if any extractor returns `100-199`.
+4. **Final Error:**
+   - If *no* extractor returns `100-199`, log error and return exit code with `sys.exit(100)`.
 
----
+5. **Primary Script Exit Codes (using sys.exit()):**
 
-#### **2. Extractor Scripts (`extractors/*.py`)**  
-**Input:**  
-- Two CLI args: `<eml_path>` and `<output_dir>` (e.g., `./jokes/`).  
-
-**Example Extractor (`extractors/default.py`):**  
-*Template for all future extractors. Extracts first valid text part (prioritizing plain text).*  
-
-**Processing Logic:**  
-1. Parse email using `email.message_from_file()` (UTF-8).  
-2. **Find first valid text part:**  
-   - Scan all parts in order.  
-   - **Prefer `text/plain`** (exact MIME type *before semicolon*).  
-   - **Fallback to `text/html`** if no `text/plain` found.  
-   - **Ignore non-text parts** (e.g., `image/jpeg`).  
-3. **If valid text part found:**  
-   - **If content is non-empty:** Save to `output_dir` via `tempfile.NamedTemporaryFile(...)` → return `100 Success`.  
-   - Use `tempfile.NamedTemporaryFile(dir=output_dir, prefix="joke_", suffix=".txt", delete=False)`.  
-   - **If content is empty:** Return `200 No joke found`.  
-4. **If no text parts found:** Return `200 No joke found`.  
-
-**Example Return Codes:**  
-| Scenario                          | Return Code | Message             |  
-|-----------------------------------|-------------|---------------------|  
-| Found `text/plain` with content   | `100`       | `Success`           |  
-| Found `text/html` with content    | `100`       | `Success`           |  
-| `text/plain` found but empty      | `200`       | `No joke found`     |  
-| No text parts                     | `200`       | `No joke found`     |  
+| Exit Code | Description |
+| --- | --- |
+| 0 | Success |
+| 1 | The required parameters were not provided on the command line |
+| 2 | Extractors directory not found |
+| 3 | The email file could not be opened or read |
+| 4 | No executable extractor scripts found in extractors directory |
+| 5 | `email.message_from_file()` failed to parse the email file |
+| 6 | The email is missing the Subject: header |
+| 7 | The email is missing the From: header or the header is empty |
+| 100 | The email was processes successfully, but no joke was found |
 
 ---
 
-#### **3. Directory Structure**  
+#### **B. Extractor Scripts (`extractors/*.py`)**
+**Input:**
+- Two CLI args: `<eml_path>` and `<output_dir>` (e.g., `./jokes/`).
+
+**Processing Logic:**
+1. Parse email using `email.message_from_file()` (UTF-8).
+2. **Find valid text parts:**
+   - Scan all parts in order.
+   - **Prioritize `text/plain`** (exact MIME type *before semicolon*).
+   - **Fallback to `text/html`** if no `text/plain` found.
+   - **Ignore non-text parts** (e.g., `image/jpeg`).
+3. **If valid text parts found:**
+   - **If content is non-empty:** Save each to `output_dir` via `tempfile.NamedTemporaryFile(...)` → return `100 Success`.
+   - Use `tempfile.NamedTemporaryFile(dir=output_dir, prefix="joke_", suffix=".txt", delete=False)`.
+   - **If content is empty:** Skip (do not save).
+4. **If no text parts found:** Return `200 No joke found`.
+
+**Output Format (First Line of stdout):**
+- Format: `### <3-digit code> <message>`
+- Example: `100 Successfully extracted joke`
+- Message: 1-200 characters, can contain any text
+
+**Output File Format:**
+- Each joke file should contain:
+  1. The `From:` header (including "From: ") with UTF-8 decoding of original encoding
+  2. The `Subject:` header (including "Subject: ") with UTF-8 decoding of original encoding
+  3. One blank line
+  4. The joke content (the text part content)
+- Example:
+```
+From: John <john@email.com>
+Subject: This is a great joke
+
+This is a great joke. blah blah blah.
+```
+
+**Extractor Return Codes:**
+| Return Code | Description |
+| --- | --- |
+| 100 | Success |
+| 200 | No joke found |
+| 500 | The required parameters were not provided on the command line |
+| 501 | The email file could not be opened or read |
+| 502 | The extractor was unable to parse the email file with the `email.message_from_file()` function |
+| 599 | Unexpected error occurred (exception details in message) |
+
+**Error Handling for Extractors:**
+- For any exception not covered by specific codes:
+  - Print `599 <exception message>` to stdout
+  - Exit with `sys.exit(1)`
+  - Log full exception details using logging.error()
+
+---
+
+#### **C. Directory Structure**
 ```plaintext
 project-root/
 ├── joke-extract.py        # Primary script
@@ -87,35 +125,37 @@ project-root/
 
 ---
 
-#### **4. Error Handling & Logging**  
+#### **D. Error Handling & Logging**
 | **Scenario**                           | **Primary Script Action**                     | **Extractor Script Action**               |
 |----------------------------------------|-----------------------------------------------|-------------------------------------------|
 | Invalid `.eml` (missing Subject, PDF)  | `sys.exit(1)`                                 | *Not executed*                            |
 | Extractor returns `200-299`            | Continue to next extractor                    | Return `200` (e.g., `200 No joke found`)  |
-| Extractor returns `500-599`            | `logging.warning()` + continue                | Return `500` (e.g., `501 Failed to parse`)|
-| No extractor returns `100-199`         | Log error + `sys.exit(1)`                     | *Not applicable*                          |
+| Extractor returns `500-599`            | `logging.warning()` + continue                | Return `500` (e.g., `501 Failed to parse`)|  
+| No extractor returns `100-199`         | Log error + `sys.exit(100)`                   | *Not applicable*                          |
 
 ---
 
-#### **5. Testing Plan**  
-**Unit Test for `default.py`:**  
-- Test cases:  
-  - Email with `text/plain` (non-empty) → `100 Success`.  
-  - Email with `text/plain` (empty) → `200 No joke found`.  
-  - Email with `text/html` (non-empty) → `100 Success`.  
-  - Email with no text parts → `200 No joke found`.  
+#### **E. Testing Plan**
+**Unit Test for `default.py`:**
+- Test cases:
+  - Email with `text/plain` (non-empty) → `100 Success`.
+  - Email with `text/plain` (empty) → `200 No joke found`.
+  - Email with `text/html` (non-empty) → `100 Success`.
+  - Email with no text parts → `200 No joke found`.
 
-**Integration Test for Primary Script:**  
-- Verify `default.py` extracts joke from `tests/valid.eml` → `jokes/` populated.  
----
-
-#### **6. Implementation Notes**  
-- **No manual file handling:** Extractors *must* use `tempfile.NamedTemporaryFile` for uniqueness.  
-- **No email modification:** Primary script *does not* alter `.eml` files (e.g., remove attachments).  
-- **Strict UTF-8:** All files processed in UTF-8 (no encoding checks beyond MIME `text/*`).  
-- **Extraction is atomic:** Extractor must write *all* found jokes or return error.  
+**Integration Test for Primary Script:**
+- Verify `default.py` extracts joke from `tests/valid.eml` → `jokes/` populated.
 
 ---
 
-**All requirements now complete.**  
-*No further questions needed. Developer can implement immediately using this spec.*
+#### **F. Implementation Notes**
+- **No manual file handling:** Extractors *must* use `tempfile.NamedTemporaryFile` for uniqueness.
+- **No email modification:** No script alters `.eml` files (e.g., remove attachments).
+- **Strict UTF-8:** All files processed in UTF-8 (no encoding checks beyond MIME `text/*`).
+- **Extraction is atomic:** Extractor must write *all* found jokes or return error.
+- **First Line of stdout:** Must contain exactly 3-digit code followed by space and message (1-200 chars)
+- **Logging:** All logging should be done through `logging` module; stdout should only contain return codes
+- **Multiple Jokes:** If multiple valid text parts are found, each should be saved as a separate joke file
+- **Header Encoding:** From: and Subject: headers should be decoded from their original encoding to UTF-8
+- **Header Format:** Headers should be output with "From: " and "Subject: " prefixes, followed by the decoded header values
+- **Error Codes:** All error codes must be from the specified table, with 599 for unexpected errors
