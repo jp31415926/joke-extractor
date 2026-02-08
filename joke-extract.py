@@ -69,10 +69,10 @@ def run_extractor(extractor_script, email_file, output_dir):
                 # If we can't parse the code, treat as error
                 return_code = 599
                 
-        return return_code, first_line
+        return return_code, first_line, result.stdout, result.stderr
     except subprocess.CalledProcessError as e:
         logging.error(f"Extractor failed with return code {e.returncode}: {e.stderr}")
-        return e.returncode, e.stderr.strip()
+        return e.returncode, e.stderr.strip(), "", ""
 
 def main():
     if len(sys.argv) != 2:
@@ -105,13 +105,15 @@ def main():
     # Run each extractor until one succeeds
     for script in scripts:
         logging.info(f"Running extractor: {script}")
-        return_code, output = run_extractor(script, email_file, output_dir)
-        
+        return_code, message, stdout, stderr = run_extractor(script, email_file, output_dir)
+        print(stderr)
+
         # Handle return codes according to spec
         if 100 <= return_code <= 199:
             # Success - stop processing
             logging.debug(f"Extractor {script} reported success (code {return_code})")
-            return 0
+#            return 0
+            continue
         elif 200 <= return_code <= 299:
             # No joke found - continue to next extractor
             logging.info(f"Extractor {script} found no joke (code {return_code})")
@@ -126,8 +128,8 @@ def main():
             continue
     
     # If we get here, no extractor found a joke
-    logging.info("No joke found in email")
-    sys.exit(100)
+    #logging.info("No joke found in email")
+    #sys.exit(100)
 
 if __name__ == "__main__":
     main()
