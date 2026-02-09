@@ -75,12 +75,7 @@ def parse(email: EmailData) -> list[JokeData]:
                     (stripped.startswith('~') and stripped.endswith('~')) or
                     (stripped.startswith('_') and stripped.endswith('_'))):
 
-                    joke = JokeData(
-                        text = joke_text.strip(),
-                        submitter = joke_submitter,
-                        title = ''
-                    )
-                    jokes.append(joke)
+                    jokes.append(JokeData(text=joke_text.strip(), submitter=joke_submitter, title=''))
                     state = 1
                     joke_text = ''
                 else:

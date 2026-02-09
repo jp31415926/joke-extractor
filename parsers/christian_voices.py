@@ -102,12 +102,7 @@ def parse(email: EmailData) -> list[JokeData]:
                 if line.startswith("<>< "):
                     # Finalize and save the joke
                     if joke_text:
-                        joke = JokeData(
-                            text = joke_text.strip(),
-                            submitter = joke_submitter,
-                            title = joke_title
-                        )
-                        jokes.append(joke)
+                        jokes.append(JokeData(text=joke_text.strip(), submitter=joke_submitter, title=joke_title))
 
                     # for this parser, we always no more than one joke, so we are done
                     joke_text = ""

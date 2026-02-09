@@ -95,7 +95,7 @@ def parse(email: EmailData) -> list[JokeData]:
                         line.startswith("Mikey's Funnies") or line.startswith("A Joke A Day") or \
                         line.startswith("The Good Clean Fun List"):
                     if joke_text:
-                        jokes.append(JokeData(text=joke_text, submitter=joke_submitter, title=joke_title))
+                        jokes.append(JokeData(text=joke_text.strip(), submitter=joke_submitter, title=joke_title))
                     if line == 'Steve Sanderson':
                         break
                     joke_text = ""

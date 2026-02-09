@@ -30,15 +30,18 @@ def parse(email: EmailData) -> list[JokeData]:
     # storage for all the jokes that are collected. This is the return variable
     jokes = []
 
-    joke: JokeData
-    joke.submitter = email.from_header
-    joke.text = ''
+    joke_submitter = email.from_header
+    joke_text = ''
 
     # Extract subject without date (e.g., "Acts 2:38 - August 26, 2010" → "Acts 2:38")
     sub_parts = email.subject_header.split('-')
-    joke.title = ''.join(sub_parts[:-1]).strip()
+    joke_title = ''.join(sub_parts[:-1]).strip()
 
-    lines = email.text.split('\n')
+    lines = []
+    if len(email.html) > 0:
+        lines = email.html.split('\n')
+    else:
+        lines = email.text.split('\n')
 
     # Find visual separator line: starts with "__________" (10 underscores)
     bar_index = None
@@ -64,7 +67,7 @@ def parse(email: EmailData) -> list[JokeData]:
 
     # Skip the line matching cleaned subject (if present)
     line = lines[i]
-    if line == joke.title:
+    if line == joke_title:
         i += 1
         if i >= len(lines):
             return jokes
@@ -72,14 +75,15 @@ def parse(email: EmailData) -> list[JokeData]:
 
     # Collect content until reaching footer marker
     while i < len(lines) and line != "cybersalt.org/cleanlaugh":
-        joke.text += line + "\n\n"
+        if not line.startswith("*"):
+            joke_text += line + "\n\n"
         i += 1
         if i < len(lines):
             line = lines[i]
         else:
             line = ""
 
-    if joke.text:
-        jokes.append(joke)
+    if joke_text:
+        jokes.append(JokeData(text=joke_text.strip(), submitter=joke_submitter, title=joke_title))
 
     return jokes
