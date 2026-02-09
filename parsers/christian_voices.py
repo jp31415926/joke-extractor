@@ -51,12 +51,16 @@ def parse(email: EmailData) -> list[JokeData]:
     # Initialize results
     # Get the From header value (as required by the interface)
     joke: JokeData
-    joke_submitter = email.from_header[6:] # skip the "From: " header name
+    joke_submitter = email.from_header
     joke_title = ''
     joke_text = ''
 
     # Split into lines for processing
-    lines = email.text.split('\n')
+    lines = []
+    if len(email.html) > 0:
+        lines = email.html.split('\n')
+    else:
+        lines = email.text.split('\n')
     
     # State machine to process the content
     # We'll iterate through lines looking for the HUMOR section
@@ -84,7 +88,7 @@ def parse(email: EmailData) -> list[JokeData]:
                     continue
                 # Check if line is ≤35 characters
                 if len(line) <= 35:
-                    joke_title = line
+                    joke_title = line.title()
                     i += 1
                 else:
                     joke_title = ""  # Line too long, no title
@@ -110,7 +114,7 @@ def parse(email: EmailData) -> list[JokeData]:
                     break
                 else:
                     # Add line to current joke content
-                    if line.strip():
+                    if line.strip() and not (line.startswith("…") or line.startswith(".")):
                         joke_text += line + "\n\n"
                 
                 i += 1

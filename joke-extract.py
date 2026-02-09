@@ -304,8 +304,8 @@ def main():
                 tmp_file.write(email.text)
                 tmp_file.write("\n\n-=+=- HTML -=+=-\n")
                 tmp_file.write(email.html)
-            logging.info(f"201 No joke found in email. written to {tmp_file.name}")
-            print(f"201 No joke found in email. written to {tmp_file.name}")
+            logging.info(f"201 No joke found in email with Subject: {email.subject_header}. Written to {tmp_file.name}")
+            print(f"201 No joke found in email with Subject: {email.subject_header}. Written to {tmp_file.name}")
 
     else:
         logging.info("200 No email content found")
