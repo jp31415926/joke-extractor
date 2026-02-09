@@ -6,6 +6,7 @@ from . import register_parser
 
 def _can_be_parsed_here(email: EmailData) -> bool:
     return "Crosswalk@crosswalkmail.com" in email.from_header
+    #return False
 
 @register_parser(_can_be_parsed_here)
 

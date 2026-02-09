@@ -153,8 +153,8 @@ def extract_text_content(email_message) -> str:
             if payload:
                 text_content = payload.decode('utf-8').strip()
                 if text_content:
-                    if text:
-                        text += "-=+=-\n"
+                    # if text:
+                    #     text += "-=+=-\n"
                     text += cleanup_body(text_content)
 
     return text
@@ -292,18 +292,17 @@ def main():
             # if we didn't get any jokes out of the email, dump the whole email out to a file for further study
             with tempfile.NamedTemporaryFile(
                 mode='w',
-                prefix='email_',
-                suffix='.txt',
+                prefix='EmailData_',
+                suffix='.json',
                 dir=output_dir,
                 delete=False
             ) as tmp_file:
-                tmp_file.write(f"Subject: {email.subject_header}\n")
-                tmp_file.write(f"From: {email.from_header}\n")
-                tmp_file.write("\n")  # separator
-                tmp_file.write("-=+=- PLAIN TEXT -=+=-\n")
-                tmp_file.write(email.text)
-                tmp_file.write("\n\n-=+=- HTML -=+=-\n")
-                tmp_file.write(email.html)
+                tmp_file.write("{\n")
+                tmp_file.write(f"  \"subject\": \"{email.subject_header.replace('"', '\\"')}\",\n")
+                tmp_file.write(f"  \"from\": \"{email.from_header.replace('"', '\\"')}\",\n")
+                tmp_file.write(f"  \"plain_text\": \"{email.text.replace('"', '\\"').replace("\n", "\\n")}\",\n")
+                tmp_file.write(f"  \"html_text\": \"{email.html.replace('"', '\\"').replace("\n", "\\n")}\"\n")
+                tmp_file.write("}\n")
             logging.info(f"201 No joke found in email with Subject: {email.subject_header}. Written to {tmp_file.name}")
             print(f"201 No joke found in email with Subject: {email.subject_header}. Written to {tmp_file.name}")
 

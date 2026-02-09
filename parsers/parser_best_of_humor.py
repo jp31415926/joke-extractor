@@ -13,8 +13,8 @@ logging.basicConfig(
 from . import register_parser
 
 def _can_be_parsed_here(email: EmailData) -> bool:
-    #return False
-    return "bestofhumor.com" in email.from_header.lower()
+    return False
+    #return "bestofhumor.com" in email.from_header.lower()
 
 @register_parser(_can_be_parsed_here)
 
