@@ -1,12 +1,23 @@
 """Parser for Steve Sanderson's 'Sunday Fun Stuff' emails."""
 
+from .email_data import EmailData, JokeData
+
+import logging
+# Configure logging to stderr for visibility in pipelines
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
 from . import register_parser
 
-def _is_sanderson(from_header: str) -> bool:
-    return "aardvark@illinois.edu" in from_header
+def _can_be_parsed_here(email: EmailData) -> bool:
+    #return False
+    return "aardvark@illinois.edu" in email.from_header
 
-@register_parser(_is_sanderson)
-def parse(text: list, subject: str):
+@register_parser(_can_be_parsed_here)
+
+def parse(email: EmailData) -> list[JokeData]:
     """
     Parse Steve Sanderson's "Sunday Fun Stuff" email format.
 
@@ -18,27 +29,28 @@ def parse(text: list, subject: str):
 
     Parameters
     ----------
-    text : list of str
-        List containing a single string of the email's text/plain content.
-    subject : str
-        Subject line � unused because Sanderson email Subjects don't describe the jokes themselves
-
+    email : EmailData
+        Email to parse
+        
     Returns
     -------
-    tuple
-        - list[str]: List of extracted joke bodies.
-        - str: From header
+    list[JokeData]
+        List of extracted jokes in JokeData.
     """
-    # Sanderson email Subjects don't describe the jokes themselves.
-    # Someone (or an AI?) will have to come up with subjects later.
-    from_hdr = "Steve C Sanderson <aardvark@illinois.edu>"
-
+    # storage for all the jokes that are collected. This is the return variable
     jokes = []
+
+    joke_submitter = "Steve C Sanderson <aardvark@illinois.edu>"
+    joke_text = ''
+    joke_title = ''
+
     i = 0
     state = 0
-    new_content = ""
-
-    lines = text[0].split('\n')
+    lines = []
+    if len(email.html) > 0:
+        lines = email.html.split('\n')
+    else:
+        lines = email.text.split('\n')
 
     # State machine for parsing:
     # 0: wait for "*..." line (start of joke block)
@@ -46,7 +58,8 @@ def parse(text: list, subject: str):
     # 2: skip blank line before joke body
     # 3: collect lines until closing tag (e.g., `[end]`)
     while i < len(lines):
-        line = lines[i].strip()
+        line = lines[i]
+        #logging.info(f"state {state}: {line}")
 
         match state:
             case 0:  # Wait for start delimiter
@@ -57,14 +70,19 @@ def parse(text: list, subject: str):
             case 1:  # Find title (line ending with ':')
                 if not line:
                     i += 1
-                elif line.endswith(':'):
+                elif line.endswith(':'): # first line ends with colon is not part of the joke, so skip it
                     state = 2
+                    i += 1
+                elif line == line.upper():
+                    state = 2
+                    # convert to title capitization
+                    joke_title = line.title()
                     i += 1
                 elif line == 'Steve Sanderson':
                     # End of content
                     i = len(lines)
                 else:
-                    # No title � jump to content (non-standard)
+                    # No title found, jump to content (non-standard)
                     state = 3
 
             case 2:  # Skip blank line before joke body
@@ -73,19 +91,20 @@ def parse(text: list, subject: str):
                 state = 3
 
             case 3:  # Collect until end marker `[...]`
-                if line.startswith('[') and line.endswith(']'):
-                    if new_content:
-                        jokes.append(new_content.strip())
-                        new_content = ""
+                if (line.startswith('[') and line.endswith(']')) or line == 'Steve Sanderson' or \
+                        line.startswith("Mikey's Funnies") or line.startswith("A Joke A Day") or \
+                        line.startswith("The Good Clean Fun List"):
+                    if joke_text:
+                        jokes.append(JokeData(text=joke_text, submitter=joke_submitter, title=joke_title))
+                    if line == 'Steve Sanderson':
+                        break
+                    joke_text = ""
+                    joke_title = ""
                     state = 1
                     i += 1
                 else:
                     if line:
-                        new_content += line + "\n\n"
+                        joke_text += line + "\n\n"
                     i += 1
 
-    # Fallback: if no jokes found, use entire body as one joke
-    if not jokes:
-        jokes.append(text[0].strip())
-
-    return jokes, from_hdr
+    return jokes

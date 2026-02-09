@@ -1,14 +1,24 @@
 """Parser for Best of Humor emails."""
-
 # SEE EXAMPLE EMAIL AT BOTTOM OF FILE
+
+from .email_data import EmailData, JokeData
+
+import logging
+# Configure logging to stderr for visibility in pipelines
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 from . import register_parser
 
-def _is_best_of_humor(from_header: str) -> bool:
-    return "bestofhumor.com" in from_header or "shawn@bestofhumor.com" in from_header
+def _can_be_parsed_here(email: EmailData) -> bool:
+    #return False
+    return "bestofhumor.com" in email.from_header.lower()
 
-@register_parser(_is_best_of_humor)
-def parse(text: list, subject: str) -> tuple:
+@register_parser(_can_be_parsed_here)
+
+def parse(email: EmailData) -> list[JokeData]:
     """
     Parse 'Best of Humor' email format.
 
@@ -24,107 +34,120 @@ def parse(text: list, subject: str) -> tuple:
 
     Parameters
     ----------
-    text : list of str
-        List containing a single string of the email's text/plain content.
-
+    email : EmailData
+        Email to parse
+        
     Returns
     -------
-    tuple
-        - list[str]: List of extracted joke bodies (cleaned).
-        - str: Always '' (subject is never used as a title).
+    list[JokeData]
+        List of extracted jokes in JokeData.
     """
-    # Extract full text
-    raw = text[0]
-
-    lines = raw.split('\n')
-
-    # Identify border lines: start with '+' and contain '-' or '=' and end with '+'
-    # Examples: "+--------------...", "++-...--++"
-    border_indices = []
-    for i, line in enumerate(lines):
-        stripped = line.strip()
-        if ((stripped.startswith('+') and stripped.endswith('+')) or 
-            (stripped.startswith('~') and stripped.endswith('~')) or
-            (stripped.startswith('_') and stripped.endswith('_'))):
-            border_indices.append(i)
-
-    # If no borders found, fall back to entire body
-    if not border_indices:
-        return [raw.strip()], ''
-
+    # storage for all the jokes that are collected. This is the return variable
     jokes = []
 
-    # Collect sections between borders (including start-to-first and last-to-end)
-    sections = []
-    if border_indices:
-        # Section 0: before first border
-        sections.append((0, border_indices[0]))
-        # Sections between borders
-        for i in range(len(border_indices) - 1):
-            start = border_indices[i] + 1
-            end = border_indices[i + 1]
-            sections.append((start, end))
-        # Section N: after last border until end
-        sections.append((border_indices[-1] + 1, len(lines)))
+    joke_submitter = "Shawn Thayer <shawn@bestofhumor.com>"
 
-    for start, end in sections:
-        candidate_lines = lines[start:end]
-        # Clean candidate: strip blank lines
-        candidate = '\n'.join(candidate_lines).strip()
-        if not candidate:
-            continue
+    lines = email.text.split('\n')
+    joke_text = ''
+    i = 0
+    state = 0
+    while i < len(lines):
+        line = lines[i]
+        stripped = line.strip()
+        #logging.info(f"state {state}: {line}")
+        match state:
+            case 0:
+                if ((stripped.startswith('+') and stripped.endswith('+')) or 
+                    (stripped.startswith('~') and stripped.endswith('~')) or
+                    (stripped.startswith('_') and stripped.endswith('_'))):
+                    state += 1
+                i += 1
 
-        # Skip obvious non-joke content:
-        # - pure promotion/subscribe lines (start with http, "<a", "Join", etc.)
-        # - lines with only links or URLs
-        # - lines that are pure footer/signature-like
-        lines_to_keep = []
-        for line in candidate.split('\n'):
-            line_stripped = line.strip()
-            # Skip pure URLs or promotional lines
-            if ('http' in line_stripped or
-                '<a' in line_stripped.lower() or
-                'mailto:' in line_stripped or
-                line_stripped.lower().startswith('subscribe') or
-                line_stripped.lower().startswith('join') or
-                line_stripped.lower().startswith('unsub') or
-                line_stripped.startswith('___') or
-                'Bestofhumor.com' in line_stripped or
-                'email4fun' in line_stripped or
-                line_stripped.lower().startswith('visit') and 'http' in line_stripped):
-                continue
-            lines_to_keep.append(line)
+            case 1:
+                if ((stripped.startswith('+') and stripped.endswith('+')) or 
+                    (stripped.startswith('~') and stripped.endswith('~')) or
+                    (stripped.startswith('_') and stripped.endswith('_'))):
+                    state += 1
+                i += 1
 
-        cleaned_candidate = '\n'.join(lines_to_keep).strip()
-        if not cleaned_candidate:
-            continue
+            case 2:  # Collect until end marker `[...]`
+                if ((stripped.startswith('+') and stripped.endswith('+')) or 
+                    (stripped.startswith('~') and stripped.endswith('~')) or
+                    (stripped.startswith('_') and stripped.endswith('_'))):
 
-        # Require at least 2 non-empty lines to avoid noise (e.g., one-line ads)
-        non_empty_lines = [l for l in cleaned_candidate.split('\n') if l.strip()]
-        if len(non_empty_lines) < 2:
-            continue
+                    joke = JokeData(
+                        text = joke_text.strip(),
+                        submitter = joke_submitter,
+                        title = ''
+                    )
+                    jokes.append(joke)
+                    state = 1
+                    joke_text = ''
+                else:
+                    if ('http' in stripped or
+                        '<a' in stripped.lower() or
+                        'mailto:' in stripped or
+                        stripped.lower().startswith('subscribe') or
+                        stripped.lower().startswith('join') or
+                        stripped.lower().startswith('unsub') or
+                        stripped.startswith('___') or
+                        'Bestofhumor.com' in stripped or
+                        'email4fun' in stripped):
+                        pass
+                    else:
+                        joke_text += line + "\n"
 
-        # Skip if mostly promo (e.g., >50% lines contain 'free', 'win', 'click', etc.)
-        promo_keywords = ['free', 'win', 'click', 'enter now', 'subscribe', 'join', 'visit']
-        promo_count = sum(
-            any(kw in line.lower() for kw in promo_keywords)
-            for line in non_empty_lines
-        )
-        if promo_count / len(non_empty_lines) > 0.5:
-            continue
+                i += 1
 
-        jokes.append(cleaned_candidate)
 
-    # Fallback: if no jokes found, use entire body
-    if not jokes:
-        jokes.append(raw.strip())
+        # lines_to_keep = []
+        # line_stripped = ''
+        # for line in candidate.split('\n'):
+        #     prev = line_stripped
+        #     line_stripped = line.strip()
+        #     # Skip pure URLs or promotional lines
+        #     if ('http' in line_stripped or
+        #         '<a' in line_stripped.lower() or
+        #         'mailto:' in line_stripped or
+        #         line_stripped.lower().startswith('subscribe') or
+        #         line_stripped.lower().startswith('join') or
+        #         line_stripped.lower().startswith('unsub') or
+        #         line_stripped.startswith('___') or
+        #         'Bestofhumor.com' in line_stripped or
+        #         'email4fun' in line_stripped):
+        #         continue
+        #     if line_stripped != '' or prev != '':
+        #         lines_to_keep.append(line.rstrip())
 
-    return jokes, ''
+        # cleaned_candidate = '\n'.join(lines_to_keep)
+        # if not cleaned_candidate:
+        #     continue
 
-"""
-Subject: Best of Humor July 13th
-From: "Bestofhumor.com" <shawn@bestofhumor.com>
+        # # Require at least 2 non-empty lines to avoid noise (e.g., one-line ads)
+        # non_empty_lines = [l for l in cleaned_candidate.split('\n') if l.strip()]
+        # if len(non_empty_lines) < 2:
+        #     continue
 
+        # # Skip if mostly promo (e.g., >50% lines contain 'free', 'win', 'click', etc.)
+        # promo_keywords = ['free', 'win', 'click', 'enter now', 'subscribe', 'join', 'visit']
+        # promo_count = sum(
+        #     any(kw in line.lower() for kw in promo_keywords)
+        #     for line in non_empty_lines
+        # )
+        # if promo_count / len(non_empty_lines) > 0.5:
+        #     continue
+
+
+    return jokes
+
+import sys
+
+if __name__ == "__main__":
+
+    email = EmailData(
+        from_header = "Subject: Best of Humor July 13th",
+        subject_header = "From: \"Bestofhumor.com\" <shawn@bestofhumor.com>",
+        text = """
 Welcome to Best of Humor ---> http://www.bestofhumor.com
 We are part of the email4fun.com network ---> http://www.email4fun.com
 For FREE Fun E-mail, Visit http://sjMail.com
@@ -200,3 +223,7 @@ Or go to:  http://www.bestofhumor.com/leave.html
 
 We are part of the email4fun.com network ---> http://www.email4fun.com
 """
+    )
+    jokes = parse(email)
+
+

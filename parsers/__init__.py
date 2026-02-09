@@ -11,20 +11,21 @@ Parsers are auto-registered via `register_parser` decorator.
 import pkgutil
 import importlib
 from typing import Callable
+from .email_data import EmailData, JokeData
 
-_parser_registry: list[tuple[Callable[[str], bool], Callable]] = []
+_parser_registry: list[tuple[Callable[[EmailData], bool], Callable[[EmailData], list]]] = []
 
-def register_parser(checker: Callable[[str], bool]):
-    """Decorator to register a parser by `From` header matcher."""
+def register_parser(checker: Callable[[EmailData], bool]):
+    """Decorator to register a parser by EmailData matcher."""
     def decorator(parser_func):
         _parser_registry.append((checker, parser_func))
         return parser_func
     return decorator
 
-def get_parser(from_header: str):
+def get_parser(email: EmailData):
     """Return the matching parser (or None) based on `From` header."""
     for matcher, parser in _parser_registry:
-        if matcher(from_header):
+        if matcher(email):
             return parser
     return None
 
@@ -50,3 +51,6 @@ def _load_parsers():
 
 # Run auto-discovery at module import
 _load_parsers()
+
+# This makes the types available when importing from parsers
+__all__ = ['get_parser', 'register_parser', 'EmailData', 'JokeData']
