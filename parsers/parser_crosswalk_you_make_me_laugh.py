@@ -4,6 +4,13 @@ from .email_data import EmailData, JokeData
 from . import register_parser
 import re
 
+import logging
+# Configure logging to stderr for visibility in pipelines
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
 
 def _can_be_parsed_here(email: EmailData) -> bool:
     """Return True if this parser can parse the email."""
@@ -49,6 +56,8 @@ def parse(email: EmailData) -> list[JokeData]:
         # End marker is line containing "cybersalt.org/cleanlaugh"
         if "cybersalt.org/cleanlaugh" in line.lower():
             break
+        if not line:
+            line = '\n\n'
         joke_lines.append(line)
     
     # Remove the last line if it has asterisks on both sides
@@ -56,7 +65,7 @@ def parse(email: EmailData) -> list[JokeData]:
         joke_lines = joke_lines[:-1]
     
     # Join the joke text with newlines between lines
-    joke_text = '\n\n'.join(joke_lines).strip()
+    joke_text = ''.join(joke_lines).strip()
     
     if joke_text:
         jokes.append(JokeData(

@@ -2,15 +2,14 @@
 # SEE EXAMPLE EMAIL AT BOTTOM OF FILE
 
 from .email_data import EmailData, JokeData
-
+from . import register_parser
 import logging
+
 # Configure logging to stderr for visibility in pipelines
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
-
-from . import register_parser
 
 def _can_be_parsed_here(email: EmailData) -> bool:
     return False

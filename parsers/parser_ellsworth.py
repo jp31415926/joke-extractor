@@ -4,11 +4,16 @@ from .email_data import EmailData, JokeData
 from . import register_parser
 import logging
 
-logging.basicConfig(level=logging.WARNING)
+# Configure logging to stderr for visibility in pipelines
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 def _can_be_parsed_here(email: EmailData) -> bool:
     """Return True if this parser can parse the email."""
     return "tellswor@kcbx.net" in email.from_header.lower()
+    #return False
 
 
 @register_parser(_can_be_parsed_here)
@@ -51,26 +56,16 @@ def parse(email: EmailData) -> list[JokeData]:
 
     # Now collect lines until end delimiter (another "----------")
     joke_lines = []
-    end_idx = len(lines)
     for i in range(start_idx + 1, len(lines)):
         line = lines[i]
         if line.startswith("----------"):
-            end_idx = i
             break
-        # Include non-empty lines (keep blank lines between non-blank lines)
+        # if we hit a blank line, add two new lines, else keep the lines long
+        if not line:
+            line = '\n\n'
         joke_lines.append(line)
 
-    # Join joke text: join non-empty lines with '\n\n'
-    # But preserve internal blank lines → replace consecutive blanks with single blank, but keep structure
-    # More precisely: join with '\n\n' only between non-empty lines
-    cleaned_lines = []
-    for line in joke_lines:
-        stripped = line.strip()
-        if stripped:
-            cleaned_lines.append(stripped)
-
-    # Join with '\n\n'
-    joke_text = '\n\n'.join(cleaned_lines).strip() if cleaned_lines else ""
+    joke_text = ''.join(joke_lines).strip() if joke_lines else ""
 
     # If we found a joke, create JokeData
     if joke_text:

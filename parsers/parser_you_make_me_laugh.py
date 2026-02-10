@@ -3,6 +3,13 @@
 from .email_data import EmailData, JokeData
 
 from . import register_parser
+import logging
+
+# Configure logging to stderr for visibility in pipelines
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 def _can_be_parsed_here(email: EmailData) -> bool:
     return "Crosswalk@crosswalkmail.com" in email.from_header
