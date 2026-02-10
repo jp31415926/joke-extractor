@@ -46,7 +46,9 @@ def parse_email(file_path: str):
         Exits with status code 1 and logs error if parsing fails.
     """
     try:
-        with open(file_path, 'r', encoding='utf-8') as file:
+        #with open(file_path, 'r', encoding='utf-8') as file:
+
+        with open(file_path, 'r', encoding='ISO-8859-1') as file:
             return email.message_from_file(file)
     except Exception as e:
         logging.error(f"Failed to parse email: {e}")
@@ -151,7 +153,8 @@ def extract_text_content(email_message) -> str:
         if part.get_content_type() == 'text/plain':
             payload = part.get_payload(decode=True)
             if payload:
-                text_content = payload.decode('utf-8').strip()
+                #text_content = payload.decode('utf-8').strip()
+                text_content = payload.decode('ISO-8859-1').strip()
                 if text_content:
                     # if text:
                     #     text += "-=+=-\n"
@@ -184,7 +187,8 @@ def extract_html_content(email_message) -> str:
         if part.get_content_type() == 'text/html':
             payload = part.get_payload(decode=True)
             if payload:
-                html_content = payload.decode('utf-8').strip()
+                #html_content = payload.decode('utf-8').strip()
+                html_content = payload.decode('ISO-8859-1').strip()
                 try:
                     process = subprocess.run(
                         ["lynx", "-stdin", "-dump", "-nolist", "-hiddenlinks=ignore",
@@ -303,6 +307,22 @@ def main():
                 tmp_file.write(f"  \"plain_text\": \"{email.text.replace('"', '\\"').replace("\n", "\\n")}\",\n")
                 tmp_file.write(f"  \"html_text\": \"{email.html.replace('"', '\\"').replace("\n", "\\n")}\"\n")
                 tmp_file.write("}\n")
+            tmp_file.close()
+
+            with tempfile.NamedTemporaryFile(
+                mode='w',
+                prefix='EmailData_',
+                suffix='.txt',
+                dir=output_dir,
+                delete=False
+            ) as tmp_file:
+                tmp_file.write(f"Subject: {email.subject_header}\n")
+                tmp_file.write(f"From: {email.from_header}\n")
+                tmp_file.write("\n")
+                tmp_file.write(f"-=+=- PLAIN -=+=-\n{email.text}\n")
+                tmp_file.write(f"-=+=- HTML -=+=-\n{email.html}\n")
+            tmp_file.close()
+
             logging.info(f"201 No joke found in email with Subject: {email.subject_header}. Written to {tmp_file.name}")
             print(f"201 No joke found in email with Subject: {email.subject_header}. Written to {tmp_file.name}")
 
