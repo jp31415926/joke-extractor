@@ -12,7 +12,7 @@ logging.basicConfig(
 )
 
 def _can_be_parsed_here(email: EmailData) -> bool:
-    return "Crosswalk@crosswalkmail.com" in email.from_header
+    return "crosswalk@crosswalkmail.com" in email.from_header.lower()
     #return False
 
 @register_parser(_can_be_parsed_here)

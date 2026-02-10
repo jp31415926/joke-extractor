@@ -73,10 +73,25 @@ def parse(email: EmailData) -> list[JokeData]:
 ### 3.3. Whitespace & Formatting
 | Convention | Behavior |
 |-----------|---------|
-| Joke text lines | Join with `\n\n` between non-empty lines (i.e., blank line between lines of joke) |
 | Leading/trailing whitespace | `.strip()` final `joke_text` |
 | Internal blank lines | Preserve (e.g., multi-paragraph jokes) |
-| Carriage returns (`\r`) | Not expected — if present, treat as whitespace (`line.strip()` handles) |
+| Carriage returns (`\r`) | Not expected — if present, treat as whitespace (`line.rstrip()` handles) |
+
+For the TEXT version of a joke, remove '\n' from lines that have no blank line between them. For example:
+**BEFORE TEXT:**
+```
+A woman was scooping up an armload of toaster pastries just as I was
+contemplating their ingredients. I said to her, "These things could
+kill you."
+
+She said, "Well, they're just for the kids."
+```
+**AFTER TEXT:**
+```
+A woman was scooping up an armload of toaster pastries just as I was contemplating their ingredients. I said to her, "These things could kill you."
+
+She said, "Well, they're just for the kids."
+```
 
 ### 3.4. Error Handling
 - **Silent failure**: Missing delimiters, empty content, or malformed input → return `[]`.
@@ -171,10 +186,12 @@ def parse(email: EmailData) -> list[JokeData]:
 
     # Prefer pre-processed HTML text
     lines = []
+    html_format = True
     if email.html.strip():
         lines = email.html.split('\n')
     else:
         lines = email.text.split('\n')
+        html_format = False
 
     i = 0
     state = 0
@@ -211,7 +228,18 @@ def parse(email: EmailData) -> list[JokeData]:
                         ))
                     break  # Stop at first joke (if parser-hints.md says "no" to multiple)
                 elif stripped:
-                    buffer.append(stripped + "\n\n")
+                    if html_format:
+                        # do this for HTML format only
+                        buffer.append(stripped + "\n\n") 
+                    else:
+                        # do this for TEXT format only
+                        if stripped:
+                            # if not blank line, delete new line
+                            buffer.append(stripped)
+                        else:
+                            # if blank line, insert two new lines
+                            buffer.append(stripped + "\n\n")
+
                 i += 1
 
     return jokes
