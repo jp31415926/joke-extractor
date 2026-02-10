@@ -43,14 +43,21 @@ def parse(email: EmailData) -> list[JokeData]:
         end_index = len(lines)
 
     joke_lines = []
+    prev = ''
     for i in range(0, end_index):
-        line = lines[i]
+        line = lines[i].rstrip()
         # if we hit a blank line, add two new lines, else keep the lines long
         if not line:
-            line = '\n\n'
-        joke_lines.append(line)
+            line2 = '\n\n'
+        else:
+            if prev:
+                line2 = ' ' + line
+            else:
+                line2 = line
+        prev = line
+        joke_lines.append(line2)
 
-    joke_text = ''.join(joke_lines).strip() if joke_lines else ""
+    joke_text = ''.join(joke_lines) if joke_lines else ""
 
     # Add to jokes list
     jokes.append(JokeData(
