@@ -93,45 +93,6 @@ def parse(email: EmailData) -> list[JokeData]:
 
                 i += 1
 
-
-        # lines_to_keep = []
-        # line_stripped = ''
-        # for line in candidate.split('\n'):
-        #     prev = line_stripped
-        #     line_stripped = line.strip()
-        #     # Skip pure URLs or promotional lines
-        #     if ('http' in line_stripped or
-        #         '<a' in line_stripped.lower() or
-        #         'mailto:' in line_stripped or
-        #         line_stripped.lower().startswith('subscribe') or
-        #         line_stripped.lower().startswith('join') or
-        #         line_stripped.lower().startswith('unsub') or
-        #         line_stripped.startswith('___') or
-        #         'Bestofhumor.com' in line_stripped or
-        #         'email4fun' in line_stripped):
-        #         continue
-        #     if line_stripped != '' or prev != '':
-        #         lines_to_keep.append(line.rstrip())
-
-        # cleaned_candidate = '\n'.join(lines_to_keep)
-        # if not cleaned_candidate:
-        #     continue
-
-        # # Require at least 2 non-empty lines to avoid noise (e.g., one-line ads)
-        # non_empty_lines = [l for l in cleaned_candidate.split('\n') if l.strip()]
-        # if len(non_empty_lines) < 2:
-        #     continue
-
-        # # Skip if mostly promo (e.g., >50% lines contain 'free', 'win', 'click', etc.)
-        # promo_keywords = ['free', 'win', 'click', 'enter now', 'subscribe', 'join', 'visit']
-        # promo_count = sum(
-        #     any(kw in line.lower() for kw in promo_keywords)
-        #     for line in non_empty_lines
-        # )
-        # if promo_count / len(non_empty_lines) > 0.5:
-        #     continue
-
-
     return jokes
 
 import sys

@@ -21,19 +21,19 @@ def _can_be_parsed_here(email: EmailData) -> bool:
     # The from_header contains email addresses in formats like:
     # "Christian Voice <GrampsTN@comcast.net>" or "Bob <CVWorldwide@wmconnect.com>"
     # We look for consistent identifiers across the sample emails
-    return "GrampsTN@comcast.net" in email.from_header or "Christian Voice" in email.from_header
+    return "example@example.com" in email.from_header or "Example T Example" in email.from_header
 
 
 @register_parser(_can_be_parsed_here)
 def parse(email: EmailData) -> list[JokeData]:
     """
-    Parse Christian Voices email format to extract jokes.
+    Parse email format to extract jokes.
     
-    This parser identifies jokes from the "Christian Voices" email newsletter.
+    This parser identifies jokes from the "Example" email newsletter.
     Joke sections are marked with a line containing exactly "HUMOR" and continue
     until the next "<>< " delimited section.
     
-    The  is ignored as it doesn't describe the individual jokes.
+    The email.subject_header is ignored as it doesn't describe the individual jokes.
     
     Parameters
     ----------
