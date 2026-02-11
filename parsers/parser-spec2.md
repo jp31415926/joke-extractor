@@ -116,7 +116,7 @@ She said, "Well, they're just for the kids."
 
 ## 5. Hints File Format (`parser-hints.md`) — Mandatory Fields
 
-Every parser *must* include this `parser-hints.md`. Example structure:
+Every parser *must* include this `parser-hints.md`. **Example** structure:
 
 ```markdown
 # parser-hints.md for [Parser Name]
@@ -131,12 +131,12 @@ Content source preference: `html` (default), `text`, or `auto`
 Start delimiter: `"MARKER"` (e.g., line *starts with* this)  
 End delimiter: `"END"` (e.g., line *starts with* this)  
 Title rule:  
-  - Rule: "Next non-blank line ≤35 characters"  
+  - Rule: "Next non-blank line ≤35 characters"
   - Case normalization: `title.title()` (or `""` if missing)  
   - If line too long: `title = ""`  
 Whitespace handling:  
-  - Join lines with `\n\n` (yes)  
-  - Trim joke text (yes)  
+  - Join lines with `\n`
+  - Trim joke text
 Multiple jokes per email? `yes` / `no`  
 If `no`: exit after first joke
 
@@ -219,8 +219,10 @@ def parse(email: EmailData) -> list[JokeData]:
                     continue
 
             case 2:
+                # look for end of joke, marked by "<>< "
                 if stripped.startswith("<>< "):
-                    if jokes_text := "".join(buffer).strip():
+                    # join all the lines together with no delimiters (we added "\n\n" where we wanted them already)
+                    if jokes_text := ''.join(buffer).strip():
                         jokes.append(JokeData(
                             text=jokes_text,
                             submitter=submitter,
@@ -230,14 +232,17 @@ def parse(email: EmailData) -> list[JokeData]:
                 elif stripped:
                     if html_format:
                         # do this for HTML format only
+                        # HTML lines are one line per paragraph.
                         buffer.append(stripped + "\n\n") 
                     else:
                         # do this for TEXT format only
+                        # TEXT lines are only part of a paragraph, so gather all the paragraph lines without "\n"
+                        # When we see a blank line, that marks the end of the paragraph, so add a blank line there only.
                         if stripped:
-                            # if not blank line, delete new line
+                            # if not blank line, append with no "\n" (continuation of paragraph)
                             buffer.append(stripped)
                         else:
-                            # if blank line, insert two new lines
+                            # if blank line, insert two "\n" (end of paragraph)
                             buffer.append(stripped + "\n\n")
 
                 i += 1
