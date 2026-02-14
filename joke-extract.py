@@ -7,7 +7,7 @@ Supports parsing:
 Prioritizes `text/plain` over `text/html`, and cleans up content before output.
 
 Usage:
-    python 01-extract-text.py <email_file> <output_directory>
+    python joke-extract.py <email_file> <output_directory>
 """
 
 import sys
