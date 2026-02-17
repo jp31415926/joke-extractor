@@ -19,8 +19,8 @@ import subprocess
 
 # Configure logging to stderr for visibility in pipelines
 logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s %(levelname)s %(message)s',
+    level=logging.WARNING,
+    format='%(asctime)s %(levelname)s %(name)s:%(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 
@@ -229,15 +229,16 @@ def main():
         501 : file not found
         502 : email parsing error
     """
-    if len(sys.argv) != 3:
-        print("500 Not enough arguments provided")
+    if len(sys.argv) != 4:
+        print("500 Usage: joke-extract.py <email_file> <output_success_dir> <output_failure_dir>")
         sys.exit(1)
 
     from parsers import _parser_registry
     logging.info(f"Loaded {len(_parser_registry)} parsers")
 
     email_file = sys.argv[1]
-    output_dir = sys.argv[2]
+    output_success_dir = sys.argv[2]
+    output_failure_dir = sys.argv[3]
 
     # Validate email file existence
     if not os.path.exists(email_file):
@@ -283,7 +284,7 @@ def main():
                     mode='w',
                     prefix='joke_',
                     suffix='.txt',
-                    dir=output_dir,
+                    dir=output_success_dir,
                     delete=False
                 ) as tmp_file:
                     tmp_file.write(f"Title: {joke.title}\n")
@@ -297,9 +298,9 @@ def main():
             # if we didn't get any jokes out of the email, dump the whole email out to a file for further study
             with tempfile.NamedTemporaryFile(
                 mode='w',
-                prefix='EmailData_',
+                prefix='email_',
                 suffix='.json',
-                dir=output_dir,
+                dir=output_failure_dir,
                 delete=False
             ) as tmp_file:
                 tmp_file.write("{\n")
@@ -312,9 +313,9 @@ def main():
 
             with tempfile.NamedTemporaryFile(
                 mode='w',
-                prefix='EmailData_',
+                prefix='email_',
                 suffix='.txt',
-                dir=output_dir,
+                dir=output_failure_dir,
                 delete=False
             ) as tmp_file:
                 tmp_file.write(f"Subject: {email.subject_header}\n")
