@@ -2,13 +2,6 @@
 
 from .email_data import EmailData, JokeData
 from . import register_parser
-import logging
-
-# Configure logging to stderr for visibility in pipelines
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
 
 def _can_be_parsed_here(email: EmailData) -> bool:
     """Return True if this parser can parse the email."""
@@ -56,14 +49,16 @@ def parse(email: EmailData) -> list[JokeData]:
 
     # Now collect lines until end delimiter (another "----------")
     joke_lines = []
+    prev = ''
     for i in range(start_idx + 1, len(lines)):
-        line = lines[i]
+        line = lines[i].rstrip()
         if line.startswith("----------"):
             break
-        # if we hit a blank line, add two new lines, else keep the lines long
         if not line:
-            line = '\n\n'
-        joke_lines.append(line)
+            joke_lines.append('\n\n')
+        else:
+            joke_lines.append((' ' + line) if prev else line)
+        prev = line
 
     joke_text = ''.join(joke_lines).strip() if joke_lines else ""
 
