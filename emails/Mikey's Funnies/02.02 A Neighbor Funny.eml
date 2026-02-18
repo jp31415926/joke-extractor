@@ -1,0 +1,89 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <funnies-return-5399-gcfl-jokes=gcfl.net@lists.mikeysfunnies.com>
+X-Original-To: gcfl-jokes@gcfl.net
+Delivered-To: gcfl-jokes@gcfl.net
+Authentication-Results: OpenDMARC-attila.gcfl.net; dmarc=pass (p=none dis=none) header.from=lists.MikeysFunnies.com
+Authentication-Results: OpenDMARC-attila.gcfl.net; spf=pass smtp.mailfrom=lists.mikeysfunnies.com
+Authentication-Results: attila.gcfl.net;
+	dkim=pass (2048-bit key; unprotected) header.d=lists.MikeysFunnies.com header.i=@lists.MikeysFunnies.com header.a=rsa-sha256 header.s=dprts header.b=cVkilED0;
+	dkim=fail reason="signature verification failed" (2048-bit key; unprotected) header.d=mikeysfunnies.com header.i=@mikeysfunnies.com header.a=rsa-sha256 header.s=drh header.b=gNwvfrer;
+	dkim-atps=neutral
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=15.204.225.125; helo=mail.dprts.com; envelope-from=funnies-return-5399-gcfl-jokes=gcfl.net@lists.mikeysfunnies.com; receiver=gcfl.net 
+Received: from mail.dprts.com (mail.dprts.com [15.204.225.125])
+	by attila.gcfl.net (Postfix) with ESMTP id C0FD16F04D72
+	for <gcfl-jokes@gcfl.net>; Mon, 02 Feb 2026 02:35:31 -0600 (CST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=lists.MikeysFunnies.com; s=dprts; x=1770626128; h=Mailing-List:
+	Precedence:Content-Transfer-Encoding:Reply-To:To:From:
+	Delivered-To:Subject:Message-Id:Date; bh=GTIyFbQcCS0ZVe2+yQUmrJI
+	HJo8+Vn3RrSLO1vG2/g4=; b=cVkilED0a96SOx+NC3ZeGKO/mQVlFipafpuPr5c
+	wSQAi8rD0A93i4Gavw8oE2OiwBVqB1BcIdYYHjphzJyGZHfP0ho4yI1beQXRhRhO
+	+t3wMRvFkqPLAtN59BvUOJuIJL0bEJdBxrURLD/6iRQLdH/1VrRjX76Cb6tN94TH
+	xT/ZjZ3ojGhDeAw9es8xla99M4b285Qferunt2rjAtbDp+c5/kySrz2aF/iMlDkh
+	B3y0oRSY46tO5W3MhCeXoevcXlQLMc0w/3JGvx7/ksyM/SZKWFIyslM3rOL9zs8S
+	C9eai93+YlhUSLPCDF9XFlZ1Wd86wSAhCL2hUNslhaXL1Uw==
+Received: (qmail 2425227 invoked by uid 1014); 2 Feb 2026 08:30:02 +0000
+Mailing-List: contact funnies-help@lists.mikeysfunnies.com; run by ezmlm
+Precedence: bulk
+Content-Transfer-Encoding: 8bit
+X-Yes-Archive: yes
+X-List-Help: <mailto:funnies-help@lists.mikeysfunnies.com>
+Reply-To: reply@MikeysFunnies.com
+To: Mikey's Funnies List <funnies@lists.MikeysFunnies.com>
+From: Mikey's Funnies <funnies-owner@lists.MikeysFunnies.com>
+Delivered-To: mailing list funnies@lists.mikeysfunnies.com
+Received: (qmail 2425213 invoked by uid 0); 2 Feb 2026 08:30:02 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=mikeysfunnies.com;
+	s=drh; t=1770021001;
+	bh=5CwjQnF8LHgLzYysOa78A8/ApmOJhZunzwM+m0h1Bfw=;
+	h=From:To:Subject:Date:From;
+	b=gNwvfrerswSQJPXwDM5PXs8bQXTIAKbhnnnRqUg8mXYDNwieweNyZpjUogHlu7fyK
+	 boh7o/iprMCIFyUBdUQ9/4uzi/UCKUYz8MJ6y0fH04uIwMCV4MM0vE+J3bTZZuWWe9
+	 uM+bIp8ibXx9yYf3MSJ0ckIztSQIrqzsNWS0pnFVYUR+K4qNb/KaGs96f96ieprHcX
+	 Fe7vcN0MKIiYfc29RtLYEcJmBevqx0O0ADxXTT3o6E02E0qmVmHdpkmSkEzcYdZPG2
+	 LK4OFYZExWn2tvF1zBz7txjfebcMv61TVfFCYkPfg3I1FH7u/k+7AzGC/7eIx/TbLn
+	 EXSAwDWBLWWcw==
+Subject: 02.02: A Neighbor Funny
+Message-Id: <20260202083001.40FA7101F@mikeysfunnies-com.dprts.com>
+Date: Mon,  2 Feb 2026 03:30:01 -0500 (EST)
+Content-Length: 1423
+
+>>>Today's Funny
+
+As I was doing my jogging exercise on the road this morning, I got mugged! 
+
+I told the police, "First, I got hit by a violin, then a clarinet and finally a tuba." 
+
+The policeman said, "I think this was an orchestrated attack."
+
+>>>Today's Thot
+
+Bad weather reports are more likely to be accurate than good weather reports.
+
+>>>
+
+PASS IT ON! 
+Yeah, you can send this Funny to anybody you want. And, if you're REAL nice, you'll tell them where you got it! www.mikeysFunnies.com 
+
+>>>
+
+Mikey's Funnies is a clean humor email list sent every weekday and generously hosted by Agathon for Ministries. Agathon has over 35 years of experience helping organizations advance their digital mission through strategic planning, website design, and app development. Learn more at https://agathonforministries.com 
+
+We DO NOT rent, sell, or share your email address with any company, organization, or individual, sacred or secular. Subscribing will not result in more spam - we guarantee it!
+
+~ Add our address to your Approved Senders/Whitelist: funnies-owner@lists.MikeysFunnies.com
+
+Instagram: @mikeysfunnies
+
+Facebook: https://www.facebook.com/mikeysfunnies
+
+~ Donate: https://www.mikeysFunnies.com/donate.html
+
+~ Advertise: https://www.mikeysFunnies.com/advertise/
+
+~ Contact:  https://www.mikeysFunnies.com/contact.html
+
+Unsubscribe, subscribe, or change your email address: https://www.mikeysFunnies.com/sub/
+
+

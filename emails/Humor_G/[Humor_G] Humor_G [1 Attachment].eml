@@ -1,0 +1,324 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <sentto-450699-4122-1244560151-gcfl-jokes=gcfl.net@returns.groups.yahoo.com>
+X-Original-To: gcfl-jokes@gcfl.net
+Delivered-To: gcfl-jokes@gcfl.net
+Received: from n78c.bullet.mail.sp1.yahoo.com (n78c.bullet.mail.sp1.yahoo.com [98.136.45.77])
+	by bruno.gcfl.net (Postfix) with SMTP id E296517BAB73
+	for <gcfl-jokes@gcfl.net>; Tue,  9 Jun 2009 10:09:13 -0500 (CDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoogroups.com; s=lima; t=1244560153; bh=3ajP3VVPXuAnOkeKdXAuLF1EhCTy4mvu4SCgDvcPOWA=; h=Received:Received:X-Yahoo-Newman-Id:Received:Received:Received:DKIM-Signature:Received:Received:X-Sender:X-Apparently-To:X-Received:X-Received:X-Received:X-Received:X-Received:Message-ID:To:X-Priority:X-MSMail-Priority:X-Mailer:X-MimeOLE:X-Originating-IP:X-eGroups-Msg-Info:From:X-Yahoo-Profile:X-eGroups-Approved-By:Sender:MIME-Version:Mailing-List:Delivered-To:List-Id:Precedence:List-Unsubscribe:Date:Subject:Reply-To:X-Yahoo-Newman-Property:Content-Type; b=HmnlPZ9pXuTApoUMLJXEhfxvfFAuNcjQ3YgsrmhZoJMlHsVyDbqDRAy6IhRGbWd6pVtJo316ILrDxZYRf9J40Wc5RF4AhIr98luzYlbHsnG7jITZJz2QCk84c3XoQZI7
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=lima; d=yahoogroups.com;
+	b=CJDrC6UBn8+rsJnGnOrqRfIzstGBNsW8B4zyBfPGHGp5Ad/m6rrgdeJINM5v/RPlfDAVatIKIfENlsVnxiPwpxrRGDiGPvaSXdUqV9mtgmFBpTxcmA2SORvc2waZZYIy;
+Received: from [69.147.65.148] by n78.bullet.mail.sp1.yahoo.com with NNFMP; 09 Jun 2009 15:09:13 -0000
+Received: from [98.137.34.38] by t11.bullet.mail.sp1.yahoo.com with NNFMP; 09 Jun 2009 15:09:13 -0000
+X-Yahoo-Newman-Id: 450699-m4122
+Received: (qmail 40646 invoked from network); 9 Jun 2009 15:09:03 -0000
+Received: from unknown (98.137.34.46)
+  by m2.grp.sp2.yahoo.com with QMQP; 9 Jun 2009 15:09:03 -0000
+Received: from unknown (HELO n45b.bullet.mail.sp1.yahoo.com) (66.163.168.159)
+  by mta3.grp.sp2.yahoo.com with SMTP; 9 Jun 2009 15:09:03 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoogroups.com; s=lima; t=1244560137; bh=v5zKY0KKVPuMttv39rLDisnKbYbSPyzTMduoazZUBAg=; h=Received:Received:X-Sender:X-Apparently-To:X-Received:X-Received:X-Received:X-Received:X-Received:Message-ID:To:Date:MIME-Version:Content-Type:X-Priority:X-MSMail-Priority:X-Mailer:X-MimeOLE:X-Originating-IP:X-eGroups-Msg-Info:From:Subject:X-Yahoo-Group-Post:X-Yahoo-Profile:Sender:X-Yahoo-Newman-Property:X-eGroups-Approved-By:X-eGroups-Auth; b=NTPdwXm4ePIfN2aoL3Lz74dLHP8RRPf2i7a2heNVIHmUUoOMJp01jQEigpoAEXcbpEb8M/e6NEm2ljC0hdz862t1+Fme88y+GOidjsrOMnwcm/Xx+XmA3BqdJCf4erVt
+Received: from [69.147.65.151] by n45.bullet.mail.sp1.yahoo.com with NNFMP; 09 Jun 2009 15:08:57 -0000
+Received: from [98.137.35.12] by t5.bullet.mail.sp1.yahoo.com with NNFMP; 09 Jun 2009 15:08:52 -0000
+X-Sender: judib51@comcast.net
+X-Apparently-To: humor_g@yahoogroups.com
+X-Received: (qmail 91687 invoked from network); 9 Jun 2009 15:03:12 -0000
+X-Received: from unknown (69.147.108.202)
+  by m8.grp.re1.yahoo.com with QMQP; 9 Jun 2009 15:03:12 -0000
+X-Received: from unknown (HELO QMTA06.emeryville.ca.mail.comcast.net) (76.96.30.56)
+  by mta3.grp.re1.yahoo.com with SMTP; 9 Jun 2009 15:03:04 -0000
+X-Received: from OMTA07.emeryville.ca.mail.comcast.net ([76.96.30.59])
+	by QMTA06.emeryville.ca.mail.comcast.net with comcast
+	id 1qTX1c0011GXsucA6r2qJ9; Tue, 09 Jun 2009 15:02:50 +0000
+X-Received: from yourd137mzmhow ([75.71.220.24])
+	by OMTA07.emeryville.ca.mail.comcast.net with comcast
+	id 1r1i1c00D0YAy9F8Tr1jsT; Tue, 09 Jun 2009 15:02:49 +0000
+Message-ID: <88354F5265F04047A7A940C7FFB208E9@yourd137mzmhow>
+To: "Humor_G" <Humor_G@yahoogroups.com>
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.5512
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5579
+X-Originating-IP: 76.96.30.56
+X-eGroups-Msg-Info: 1:5:0:0:0
+From: "Judi" <judib51@comcast.net>
+X-Yahoo-Profile: judib1
+X-eGroups-Approved-By: judib1 <judib51@comcast.net> via web; 09 Jun 2009 15:08:47 -0000
+Sender: Humor_G@yahoogroups.com
+MIME-Version: 1.0
+Mailing-List: list Humor_G@yahoogroups.com; contact Humor_G-owner@yahoogroups.com
+Delivered-To: mailing list Humor_G@yahoogroups.com
+List-Id: <Humor_G.yahoogroups.com>
+Precedence: bulk
+List-Unsubscribe: <mailto:Humor_G-unsubscribe@yahoogroups.com>
+Date: Tue, 9 Jun 2009 09:01:40 -0600
+Subject: [Humor_G] Humor_G [1 Attachment]
+Reply-To: Humor_G@yahoogroups.com
+X-Yahoo-Newman-Property: groups-email-tradh-m
+Content-Type: multipart/alternative;
+ boundary="----=_NextPart_001_0038_01C9E8E0.E6E622D0"
+Content-Length: 9312
+Lines: 262
+
+------=_NextPart_001_0038_01C9E8E0.E6E622D0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Zeke the Dog-wmv
+
+~~~~~~~~~~~~~~
+Humor_G ...
+Humor_G-subscribe@yahoogroups.com
+Clean Humor for the whole family
+Subscribe: Humor_G-subscribe@yahoogroups.com
+
+Humor_ ...
+Humor_-subscribe@yahoogroups.com
+      While this is PG 13 Humor it is not raunchy
+      Enjoy these posts and feel free to share this site with your friends.
+      Subscribe: Humor_-subscribe@yahoogroups.com
+
+      STTA ...
+      STTA-subscribe@yahoogroups.com
+      Something To Think About
+            These are Inspiring Stories that I receive in my mailbox each d=
+ay.
+            I hope they touch you as they do me.=20
+            This world could use some encouragement to get by each day.
+            Enjoy them and share them with your friends.
+            Feel free to share this site and have them subscribe for themse=
+lves.=20
+      Subscribe: STTA-subscribe@yahoogroups.com=20
+
+
+BSAHWC ...
+BSAHWC-subscribe@yahoogroups.com
+Boring Stay At Home Wives Club
+This group was started by Housewives that were 'bashed' for being such.=20
+We call ourselves The Boring Stay At Home Wives Club.
+We are a group of women that have developed friendships, support each other=
+ continue to grow within ourselves.=20
+Just a happy go lucky group, meeting for lunches, movies or whatever.=20
+You know...all that BORING STUFF! ;)
+Subscribe : BSAHWC-subscribe@yahoogroups.com
+------=_NextPart_001_0038_01C9E8E0.E6E622D0
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+
+
+
+
+<head>
+
+<style type="text/css">
+<!--
+
+/* start of attachment style */
+       .ygrp-photo-title{
+         clear: both;
+         font-size: smaller;
+         height: 15px;
+         overflow: hidden;
+         text-align: center;
+         width: 75px;
+       }
+       div.ygrp-photo{
+         background-position: center;
+         background-repeat: no-repeat;
+         background-color: white;
+         border: 1px solid black;
+         height: 62px;
+         width: 62px;
+       }
+
+       div.photo-title 
+         a,
+         div.photo-title a:active,
+         div.photo-title a:hover,
+         div.photo-title a:visited {
+           text-decoration: none; 
+       }
+
+       div.attach-table div.attach-row {
+         clear: both;
+       }
+
+       div.attach-table div.attach-row div {
+         float: left;
+         /* margin: 2px;*/
+       }
+
+       p {
+         clear: both;
+         padding: 15px 0 3px 0;
+	 overflow: hidden;
+       }
+
+       div.ygrp-file {
+         width: 30px;
+         valign: middle;
+       }
+       div.attach-table div.attach-row div div a {
+         text-decoration: none;
+       }
+
+       div.attach-table div.attach-row div div span {
+         font-weight: normal;
+       }
+
+       div.ygrp-file-title {
+         font-weight: bold;
+       }
+ /* end of attachment style */
+        -->
+        </style>
+        </head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="MSHTML 6.00.6000.16825" name=GENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=#ffffff>
+
+
+<!-- |**|begin egp html banner|**| -->
+
+<span style="font-weight: bold; font-size: 14px;" >[<a style="text-decoration: none;" href="#TopText">Attachment(s)</a> from Judi included below]</span>
+<br><br>
+
+<!-- |**|end egp html banner|**| -->
+
+
+<FONT size=1>
+<P>Zeke the Dog-wmv</P>
+<DIV><FONT face="Comic Sans MS"><STRONG><FONT face=Arial 
+color=#ff0000>~~~~~~~~~~~~~~</FONT></STRONG></DIV>
+<DIV>
+<DIV class=group-description><STRONG>Humor_G ...</STRONG></DIV>
+<DIV class=group-description><A 
+href="mailto:Humor_G-subscribe@yahoogroups.com">Humor_G-subscribe@yahoogroups.com</A></DIV>
+<DIV class=group-description>
+<DIV class=group-description id=ygr_desc><STRONG>Clean Humor for the whole 
+family</STRONG></DIV>
+<DIV class=group-description>Subscribe: <A 
+href="mailto:Humor_G-subscribe@yahoogroups.com">Humor_G-subscribe@yahoogroups.com</A></DIV>
+<DIV class=group-description>&nbsp;</DIV>
+<DIV class=group-description>
+<DIV class=group-description><STRONG>Humor_ ...</STRONG></DIV>
+<DIV class=group-description><A 
+href="mailto:Humor_-subscribe@yahoogroups.com">Humor_-subscribe@yahoogroups.com</A></DIV><FONT 
+size=2>
+<DIV class=group-description>
+<TABLE class=ygrp-desc cellSpacing=0 cellPadding=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV class=group-description><STRONG>While this is PG 13 Humor it is not 
+      raunchy</STRONG><BR>Enjoy these posts and feel free to share this site 
+      with your friends.<BR><FONT size=2><FONT size=3>Subscribe:</FONT> <A 
+      href="mailto:Humor_-subscribe@yahoogroups.com"><FONT 
+      size=3>Humor_-subscribe@yahoogroups.com</FONT></A></FONT></DIV>
+      <DIV class=group-description>&nbsp;</DIV>
+      <DIV class=group-description>
+      <DIV class=group-description><STRONG>STTA ...</STRONG></DIV>
+      <DIV class=group-description><A 
+      href="mailto:STTA-subscribe@yahoogroups.com">STTA-subscribe@yahoogroups.com</A></DIV>
+      <DIV class=group-description><STRONG>Something To Think 
+      About</STRONG></DIV>
+      <TABLE class=ygrp-desc cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV class=group-description id=ygr_desc>These are Inspiring Stories 
+            that I receive in my mailbox each day.<BR>I hope they touch you as 
+            they do me. <BR>This world could use some encouragement to get by 
+            each day.<BR>Enjoy them and share them with your friends.<BR>Feel 
+            free to share this site and have them subscribe for 
+          themselves.</DIV></TD></TR></TBODY></TABLE>Subscribe: <A 
+      href="mailto:STTA-subscribe@yahoogroups.com">STTA-subscribe@yahoogroups.com</A></DIV></TD></TR></TBODY></TABLE></DIV>
+<DIV class=group-description><FONT size=3></FONT>&nbsp;</DIV>
+<DIV class=group-description>
+<DIV>
+<DIV class=group-description><STRONG>BSAHWC ...</STRONG></DIV>
+<DIV class=group-description><A 
+href="mailto:BSAHWC-subscribe@yahoogroups.com">BSAHWC-subscribe@yahoogroups.com</A></DIV>
+<DIV class=group-description><STRONG>Boring Stay At Home Wives 
+Club</STRONG></DIV>
+<DIV class=group-description>This group was started by Housewives that were 
+'bashed' for being such. <BR>We call ourselves The Boring Stay At Home Wives 
+Club.<BR>We are a group of women that have developed friendships, support each 
+other continue to grow within ourselves. <BR>Just a happy go lucky group, 
+meeting for lunches, movies or whatever. <BR>You know...all that BORING STUFF! 
+;)</DIV>
+<DIV class=group-description>Subscribe : <A 
+href="mailto:BSAHWC-subscribe@yahoogroups.com">BSAHWC-subscribe@yahoogroups.com</A></DIV></DIV></DIV></FONT></DIV></DIV></FONT></DIV></FONT>
+
+
+
+<!-- |**|begin egp html banner|**| -->
+
+<br>
+
+      <a name="TopText"><p style="clear: both; padding: 15px 0 3px 0;"><span style="color: #628C2A; font-weight: bold; font-size: 16px;"> Attachment(s) from Judi </span> </p></a>
+    
+          <p style="clear: both; padding: 15px 0 3px 0;"><span style="color: #628C2A; font-weight: bold;"> 1 of 1 File(s) </span>
+          </p>
+        <div class="attach-table">
+              <div class="attach-row">
+            <div>
+    <div class="ygrp-file"> <img src="http://us.i1.yimg.com/us.yimg.com/i/yg/img/doc/video16x16.gif"></div>
+    <div class="ygrp-file-title"> <a href="http://d.yimg.com/kq/groups/450699/1491744331/name/Zeke%2Ewmv" style="">Zeke.wmv</a></div>
+  </div>
+        </div>
+          </div>
+
+  
+<br>
+
+<!-- |**|end egp html banner|**| -->
+
+
+<div width="1" style="color: white; clear: both;"/>__._,_.___</div>
+
+<!-- Start Recommendations -->
+<!-- End Recommendations -->
+
+
+
+<!-- |**|begin egp html banner|**| -->
+
+  <img src="http://geo.yahoo.com/serv?s=97476590/grpId=450699/grpspId=1705020655/msgId=4122/stime=1244560153" width="1" height="1"> <br>
+
+<!-- |**|end egp html banner|**| -->
+
+    
+<!-- |**|begin egp html banner|**| -->
+
+<br>
+      <div style="font-family: verdana; font-size: 77%; border-top: 1px solid #666; padding: 5px 0;" >
+      Your email settings: Individual Email|Traditional <br>
+      <a href="http://groups.yahoo.com/group/Humor_G/join;_ylc=X3oDMTJlNDRjdHNyBF9TAzk3NDc2NTkwBGdycElkAzQ1MDY5OQRncnBzcElkAzE3MDUwMjA2NTUEc2VjA2Z0cgRzbGsDc3RuZ3MEc3RpbWUDMTI0NDU2MDE1Mw--">Change settings via the Web</a> (Yahoo! ID required) <br>
+      Change settings via email: <a href="mailto:Humor_G-digest@yahoogroups.com?subject=Email Delivery: Digest">Switch delivery to Daily Digest</a> | <a href = "mailto:Humor_G-fullfeatured@yahoogroups.com?subject=Change Delivery Format: Fully Featured">Switch to Fully Featured</a> <br>
+           <a href="http://groups.yahoo.com/group/Humor_G;_ylc=X3oDMTJjaWVzdDhmBF9TAzk3NDc2NTkwBGdycElkAzQ1MDY5OQRncnBzcElkAzE3MDUwMjA2NTUEc2VjA2Z0cgRzbGsDaHBmBHN0aW1lAzEyNDQ1NjAxNTM-">
+        Visit Your Group 
+      </a> |
+      <a href="http://docs.yahoo.com/info/terms/">
+        Yahoo! Groups Terms of Use
+      </a> |
+      <a href="mailto:Humor_G-unsubscribe@yahoogroups.com?subject=Unsubscribe">
+       Unsubscribe 
+      </a> 
+ <br>
+    </div>
+  <br>
+
+<!-- |**|end egp html banner|**| -->
+
+
+<div style="color: white; clear: both;"/>__,_._,___</div>
+</BODY></HTML>
+
+------=_NextPart_001_0038_01C9E8E0.E6E622D0--

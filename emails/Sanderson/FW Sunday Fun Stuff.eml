@@ -1,0 +1,547 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <aardvark@illinois.edu>
+X-Original-To: gcfl-submit@gcfl.net
+Delivered-To: gcfl-submit@gcfl.net
+Received-SPF: Temperror (mailfrom) identity=mailfrom; client-ip=148.163.135.28; helo=mx0a-00007101.pphosted.com; envelope-from=aardvark@illinois.edu; receiver=<UNKNOWN> 
+Authentication-Results: attila.gcfl.net;
+	dkim=pass (2048-bit key; unprotected) header.d=illinois.edu header.i=@illinois.edu header.b="hbdqPG22";
+	dkim-atps=neutral
+Received: from mx0a-00007101.pphosted.com (mx0a-00007101.pphosted.com [148.163.135.28])
+	by attila.gcfl.net (Postfix) with ESMTPS id E970C30802C2
+	for <gcfl-submit@gcfl.net>; Sun,  1 May 2022 07:01:42 -0500 (CDT)
+Received: from pps.filterd (m0166257.ppops.net [127.0.0.1])
+	by mx0a-00007101.pphosted.com (8.17.1.5/8.17.1.5) with ESMTP id 241AiYnY010738
+	for <gcfl-submit@gcfl.net>; Sun, 1 May 2022 12:01:41 GMT
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=illinois.edu; h=from : to : subject
+ : date : message-id : content-type : mime-version; s=campusrelays;
+ bh=yrGMfBL+TW6+pr01c4iCJniKjepQ8fIyO1kxa1D0k0o=;
+ b=hbdqPG221BNM50m4hkyBsuXfjS2pxrhKBe/5G0tQ5R9/B+y/1grufeGilRLvsSRayYzW
+ /8ZdVUxWbe+8UwfY0f/ZUTeLjQ9xWGxer0jt0jkYaOrlPAhtwdYTSc3Yxbq6nDAUn6HK
+ stEyiLriPF4Y2Tvg5FS572iammf1rNuNLDo462IbIQ2UedEtcfl8VZmfkZRkjHh/VeAh
+ 0JQsmRWFPYcQVl+6atwmirvFfhToa5i8ujSA0ZlIdmGJ+ptPbqE+Y4FIIUiowQ0eQcVc
+ WrhUvMevrMOC3I7Pk0d1QWZXFb50q3htAQxvjTtrtTKcpi5Sz4McLKSizRdntBIPSBw0 6w== 
+Received: from nam12-dm6-obe.outbound.protection.outlook.com (mail-dm6nam12lp2170.outbound.protection.outlook.com [104.47.59.170])
+	by mx0a-00007101.pphosted.com (PPS) with ESMTPS id 3frwvjs3aw-1
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT)
+	for <gcfl-submit@gcfl.net>; Sun, 01 May 2022 12:01:41 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=KcZSvTkUSyVqQGGYHZaWN2YskjGVd3ymN4ZDAN5VXF7RPw6MRAUQ96cbKsm70HBS5sI6m96Ll/QmErbalG+YqOXNE23udayg9uNgpsetlYRooVmpOwoHqb4DXiwCC210MkbEORN2lPl3iqUX6YmR6cwmOPvhrD0OA44Kmj8QA8I6dlYOdQETPRm9gNIn6C/Fzp3MPX/ogTg9U5+X4dWexBWrwXGlFoUdwCPXmbSr64+BRIH2ql9Mxg/RBW8wP33SDTRONhSEWzm5gEXZXzkY0zIPuOKx1sRsm8BM3f9atSSLB9lSXnqEmS+dS2YMdBOUjTUumLoablpJRqB8RgOQRA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=yrGMfBL+TW6+pr01c4iCJniKjepQ8fIyO1kxa1D0k0o=;
+ b=COaTdyhNhM5BOVWPS2V8B47s2CUW3hpZ9oEDgwm9reoPQzzf0wN5taJjiaLhl9VAtyvxWjHrc9w0C4er0Ml7WKZPPHhEUI018DDW1YFy0ACNk4YQz/pXjbp1jF/Xw6v/tC19CMEJHRcJ+URxmUoDLschiPGWHt/2aqFCf0w+p4ZhrRM5L5Wy0yBe7NZLZHUJ0T0DovbPJ98t7c9meux2tlDT9LWXCvvCrxYlk38OaTJ/FntUtR+E8e+g08z9J3aXoLv5VBx+61+ZI+oHeXaOwbdOVB2dAw10AU3TLsU0tzX0TEpFG7ObgtGoJ4fhc3mLdaNQA+V/e7m2h/+JFHEb4A==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=illinois.edu; dmarc=pass action=none header.from=illinois.edu;
+ dkim=pass header.d=illinois.edu; arc=none
+Received: from BN6PR11MB4003.namprd11.prod.outlook.com (2603:10b6:405:7b::17)
+ by DM6PR11MB3083.namprd11.prod.outlook.com (2603:10b6:5:65::20) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5186.15; Sun, 1 May
+ 2022 12:01:39 +0000
+Received: from BN6PR11MB4003.namprd11.prod.outlook.com
+ ([fe80::f9e1:338b:c5ee:d10f]) by BN6PR11MB4003.namprd11.prod.outlook.com
+ ([fe80::f9e1:338b:c5ee:d10f%6]) with mapi id 15.20.5206.013; Sun, 1 May 2022
+ 12:01:39 +0000
+From: "Sanderson, Steven C" <aardvark@illinois.edu>
+To: "Good Clean Fun  " <gcfl-submit@gcfl.net>
+Subject: FW: Sunday Fun Stuff 
+Thread-Topic: Sunday Fun Stuff 
+Thread-Index: AdhdUyqRLEg/u1YDQ9eH9Kfj2n3qoQ==
+Date: Sun, 1 May 2022 12:01:39 +0000
+Message-ID: 
+ <BN6PR11MB4003FCC658A1E5E022DB4097A3FE9@BN6PR11MB4003.namprd11.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 753eca06-e858-45ac-4de1-08da2b6a598b
+x-ms-traffictypediagnostic: DM6PR11MB3083:EE_
+x-microsoft-antispam-prvs: 
+ <DM6PR11MB3083FA57757764E45D2CD910A3FE9@DM6PR11MB3083.namprd11.prod.outlook.com>
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info: 
+ 9ygr63SlJOtD1v1GfzgjyWMoYEEbOHL2/cs03l41tIpJObYAQ2dDWQXw/BO2UBJpwwK6jOTnMQ6qQCEbfuL3Qvi3OqlAt0YB346yNy8TbjAEVmNFx7HX6colYs25n2F4QWlVGCn8AiNzwm3aiMgk4pkwnRvTwLFfB7bQfnFAy+CEUZxgp9ZN6J4owFaVhVyCqoAulkbVAfovaWKlMAb8XlbcieDB9IQF1NiScMSTIe4nHFEyzS6RHbS3au/GxZX0vGX6M3B9w8xAdPj72XR1dpQaIF9nNekfZwpXY9J3t5TAK2WkvD6SHcFne9LuT3cYG6ktEIwb3ihVxci0DPZsNxA4mV6Nmx2Voux0T3sPt4MtAQx3ksJjqUpx/mqdYmX8hQdWCb9VoftU+QsKVF6uJ7KD4UP01mqFfcDxzNLggnKkKfqwiHuHwvPQmh8TQVXEAdQZ2vNReKNtngXZ91Vd+cDW/pKAuP6H/UZtmI4zWxGkvWcJfmOL46EVS2zGQn50DOoX7x4fWM4nTJrxPdOlbiPoNjGZJ3klzlHyBW46wCEujKp6dW7Dwkt1B9aHu9bmi0zg3YF2YvX3DobPraForB+/UaZEHqSreS9TeFDY0qLR6FwNFRv71yjI5s/E8V4QRF/nE1aFEFQCy4cNjB3bRWpenSwGtHEIVwv4DiGHWDlPo/OUVsvJRKb+n8LangEa1JbH2+4VFCR+YYGVxkmnh7Rt2ijCEqyilTNTVHkG042ga7kfQyvlQNkivJVx01I/AfashreNxyIivhVxnND534vZrnLIxCJsKozZihCbebe6Gcpqs0T3ve65HjihHOauqdChRaqjZoM2XIbKpOcjXg==
+x-forefront-antispam-report: 
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:BN6PR11MB4003.namprd11.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230001)(4636009)(366004)(2906002)(186003)(83380400001)(75432002)(26005)(4743002)(122000001)(52536014)(8936002)(7696005)(5660300002)(9686003)(166002)(6506007)(66446008)(66476007)(508600001)(40140700001)(66946007)(76116006)(66556008)(33656002)(86362001)(7116003)(8676002)(6916009)(786003)(316002)(71200400001)(38100700002)(45080400002)(38070700005)(966005)(55016003)(64756008);DIR:OUT;SFP:1101;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0: 
+ =?us-ascii?Q?DWcd8FUbbCUihx0CYFiQWWbXmN/XYyUOEwae7WScVbJNV9ajVRchne2i9L/3?=
+ =?us-ascii?Q?v6cyq+gip0W2H1cBLtjRjdzKDlv1PlodCqzY0YqnEPKc++bem/Z2om2UOZhE?=
+ =?us-ascii?Q?x7rFRooz8AsnWIJAdELu18PPIfTN4k7/yGEQ1dPO+EFUzhfkHlHAO5ud2ovE?=
+ =?us-ascii?Q?7Ai20sUBrSHdioUZez5P8L9d7utHuuqw2bTBVczXu203ygak96ZRobiQ1EXi?=
+ =?us-ascii?Q?m562+xwvTTRnhSFZ9e6TKtzz5wqA/1hNVnjkNrM8IVFkGuGuKmloahipJ/5n?=
+ =?us-ascii?Q?n31W8j+uI+jElHs2EngH+BOYxjwyzxlLSdNWAfOkpfwHSACuiTrruTd3+f4X?=
+ =?us-ascii?Q?n8xfEmQ7fIEDaxGd1jSpb+BadEsMCC61R8y5CDlR3O77usiSjqauWD3DhLoF?=
+ =?us-ascii?Q?aG80zFJgDoC474ZCS62SK35pxhkZlKg0diaUTX9Uv52M3fxWPmUcupzfNF3M?=
+ =?us-ascii?Q?nEs9ZrP6MQ2pcCPXys/OKzXUthvfDY8hmio0y2IiVm6xp/szLFTuqmPue47K?=
+ =?us-ascii?Q?7mMbSS1ZE/t11sU4DEluncEYT982Yk9bRNCbbZg3SbkchFdp4ehih45xyp34?=
+ =?us-ascii?Q?a06wuvvCkombJaOtC0e4++zBpjYnQVoyrR+veOgvTNuYGbDY6CV3aS2XUtHY?=
+ =?us-ascii?Q?rM56nIH746yF7MWX3pKiqkkCKtXyzW2gDcyyUWD9eOIdf5HAhfLYdJKm5+Q8?=
+ =?us-ascii?Q?8BAv5Cdv9Ra6B4FxHjm7dDZFLzvvev9aYUUEeWhTkXL3IVE66St/fg6/BjXL?=
+ =?us-ascii?Q?w6uKEf99t8iZSZScbaqtLLaPKRijnoOekhVJf5/MeVhsfzMDamzaFOalSZUR?=
+ =?us-ascii?Q?BXYQ3oSw//nN9gQqRXtIb4U1Dd3/bvgdF4JVlT57WUZ+12cShSWgDgP3cC+P?=
+ =?us-ascii?Q?/7lYlG3tdLdNuivQBgF0GwLge9OO7jLqePZjWwBgzNd2uhcNvce9/fjhmXgy?=
+ =?us-ascii?Q?xMdetBZH50vc4D96D1Hu1R4jVoyh6J8sr0ufG2FAZSYahqfu1AIF3RdRu2nm?=
+ =?us-ascii?Q?By7/YHsRFk6bz45npcb/VFxUMys4+iTQQG62k6skElZk/Ludu697qJTMBJ+A?=
+ =?us-ascii?Q?PTI61S1gVnhWuFPbQPX8wYys1kH4jeAdUvy5nUeeKR/MGJD7wcfzrjwCC6Yj?=
+ =?us-ascii?Q?gReF82JysfIM4t6AFVS+tyNeo3O6z2oX41YwB8CO1U+Kt3ms49xS1MT8oPxx?=
+ =?us-ascii?Q?Sr6QM8XfUkmeSOJN1ulna1QdxQ19NtsETpDBsgTT/VSX7BNA9/Ilwme0m+ny?=
+ =?us-ascii?Q?GPV8mRmRw2/dYYCUqYkyvKFGuUKPXkW9hd+BIZ8uTPKMzCsWjBZ1ZGPaQRcl?=
+ =?us-ascii?Q?BDFWTOBlfegX7Gm45HFeCsgit/gUoC9K+yRn0idxLzj3ZonfEht7v76PQcSN?=
+ =?us-ascii?Q?THmPkJKk6JYQVMsap0TtirV1sRM6dFxUKd8xeDF3A9LFNzG2WkXp54bk8/xo?=
+ =?us-ascii?Q?EmmE58NZAinkMs7mnnnUaoNN9XKrERO5uz1JYK4P+7Eto5BO5zL7GpYV909U?=
+ =?us-ascii?Q?pmlWvBfoYX7IsAuWl4c05hxW2JiSIT8C8S8tBL/jQn5u0uBxYg4eDTeciv2E?=
+ =?us-ascii?Q?/yoVUMZjBPMjJsAEJaVr3EsdqM63HS2wMyZ+kldbAaB+JwDKGIqDsqab8gRp?=
+ =?us-ascii?Q?OrBWO1mXSFUUajfMsdVTcNy8o7t2f4UU6dAQ+1lBeos9Aqa9tSbbua9wtbOH?=
+ =?us-ascii?Q?prSKsDONdoBHldRQwEHp3K1nhDUi85D2apd5y19IWT5r74klp6yPO3IbTUrj?=
+ =?us-ascii?Q?Xekx1ZMMCA=3D=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_BN6PR11MB4003FCC658A1E5E022DB4097A3FE9BN6PR11MB4003namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: illinois.edu
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: BN6PR11MB4003.namprd11.prod.outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 753eca06-e858-45ac-4de1-08da2b6a598b
+X-MS-Exchange-CrossTenant-originalarrivaltime: 01 May 2022 12:01:39.5019
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 44467e6f-462c-4ea2-823f-7800de5434e3
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: x5V7EPh03HUE6Xo00neyOUWumd9kPfD7ZiKyM809TeoR661NVDRB3MzlFZz1/0PmyFW1IeQFg8UelBw7RIc+Pw==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR11MB3083
+X-Proofpoint-GUID: FL33jF2cG0QPvjk_fo_CiXM2B0vQYmY-
+X-Proofpoint-ORIG-GUID: FL33jF2cG0QPvjk_fo_CiXM2B0vQYmY-
+X-Spam-Details: rule=cautious_plus_nq_notspam policy=cautious_plus_nq score=0
+ priorityscore=1501 bulkscore=0 mlxlogscore=999 clxscore=1015 mlxscore=0
+ suspectscore=0 adultscore=0 phishscore=0 impostorscore=0 spamscore=0
+ malwarescore=0 lowpriorityscore=0 classifier=spam adjust=0 reason=mlx
+ scancount=1 engine=8.12.0-2202240000 definitions=main-2205010096
+X-Spam-Score: 0
+X-Spam-OrigSender: aardvark@illinois.edu
+X-Spam-Bar: 
+Content-Length: 20085
+
+--_000_BN6PR11MB4003FCC658A1E5E022DB4097A3FE9BN6PR11MB4003namp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+
+Good Morning,
+
+Welcome to Sunday and a soggy weekend in South Florida.  Not complaining, h=
+owever, as we need the rain.  Not raining at the moment, but anything can h=
+appen.
+Keep smiling.......................................ss
+
+************************************************************************
+
+
+A Joke A Day:
+
+The proprietor of a small village drugstore was called out one sleepy summe=
+r morning, leaving the establishment temporarily under the sole management =
+of a very young, and very uneducated, clerk.
+
+"Just answer the phone if it rings, Jim," instructed the proprietor.
+
+The phone rang.
+
+"Hello," said the clerk.
+
+"Do you have streptomycin and aureomycin?" asked a voice at the other end.
+
+The clerk scratched his head, then said, "Ma'am, when I said 'Hello' I told=
+ you everything I know."
+
+
+
+
+
+A Joke A Day:
+
+My husband, Dewey, was attempting to build a patio for the first time. He b=
+ought 100 cement blocks. Laying them out in a pattern, he discovered the ch=
+osen area was too small.
+
+He stacked the blocks against the house and cleared more space. The next da=
+y Dewey put the cement blocks back down, only to find that the ground was t=
+oo hard to keep the patio level.
+
+He ordered a truckload of sand to be delivered the following morning. Again=
+ he stacked the 100 blocks against the house.
+
+Observing all this, our next-door neighbor asked, "Dewey, are you going to =
+put your patio away every night?"
+
+
+
+
+
+Mikey's Funnies:
+
+At a job Interview...
+
+"What are your strengths?"
+
+"I take matters in my own hands."
+
+"Okay, thank you. We will contact you."
+
+"No, I will contact you."
+
+
+
+
+
+
+A Joke A Day:
+
+The young boy was spending a Sunday afternoon with his grandpa. Looking at =
+pictures of his grandpa in his military uniform, the boy asked, "Grandpa, d=
+id you ever kill anyone in the war?"
+
+"No champ, I never did."
+
+"That's a good thing."
+
+"You're telling me," began grandpa, "I was the cook!"
+
+
+
+
+
+A Joke A Day:
+
+A man wrote a letter to the IRS:
+
+"I have been unable to sleep knowing that I have cheated on my income tax. =
+I understated my taxable income and have enclosed a check for $200.00.
+
+If I still can't sleep, I will send the rest."
+
+
+
+
+Steve Sanderson
+21265 Rock Ridge Drive
+Boca Raton, Florida 33428
+217-766-4213
+aardvark@illinois.edu<mailto:aardvark@illinois.edu>
+https://www.facebook.com/steve.sanderson2/
+https://www.linkedin.com/in/steve-sanderson-15730511/
+Radio:  KK4FBU
+[https://gallery.mailchimp.com/f9d6f535ed1131010188e280b/images/90fc63a5-21=
+13-4e43-be14-b0bab9e51c26.jpg][https://gallery.mailchimp.com/f9d6f535ed1131=
+010188e280b/images/4a216983-709d-46a5-a9ed-5c8aa66ebccc.jpg]
+
+
+
+
+
+--_000_BN6PR11MB4003FCC658A1E5E022DB4097A3FE9BN6PR11MB4003namp_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+span.EmailStyle19
+	{mso-style-type:personal-reply;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-US" link=3D"#0563C1" vlink=3D"#954F72" style=3D"word-wrap:=
+break-word">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Good Morning,<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Welcome to Sunday and a soggy weekend in South Florid=
+a.&nbsp; Not complaining, however, as we need the rain.&nbsp; Not raining a=
+t the moment, but anything can happen.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"></span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Keep smiling&#8230;&#8230;&#8230;&#8230;&#8230;&#8230=
+;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;ss<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">*****************************************************=
+*******************<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">A Joke A Day:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">The proprietor of a small village drugstore was calle=
+d out one sleepy summer morning, leaving the establishment temporarily unde=
+r the sole management of a very young, and very
+ uneducated, clerk.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">&quot;Just answer the phone if it rings, Jim,&quot; i=
+nstructed the proprietor.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">The phone rang.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">&quot;Hello,&quot; said the clerk.<o:p></o:p></span><=
+/p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">&quot;Do you have streptomycin and aureomycin?&quot; =
+asked a voice at the other end.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">The clerk scratched his head, then said, &quot;Ma'am,=
+ when I said 'Hello' I told you everything I know.&quot;<o:p></o:p></span><=
+/p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">A Joke A Day:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">My husband, Dewey, was attempting to build a patio fo=
+r the first time. He bought 100 cement blocks. Laying them out in a pattern=
+, he discovered the chosen area was too small.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">He stacked the blocks against the house and cleared m=
+ore space. The next day Dewey put the cement blocks back down, only to find=
+ that the ground was too hard to keep the patio
+ level.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">He ordered a truckload of sand to be delivered the fo=
+llowing morning. Again he stacked the 100 blocks against the house.<o:p></o=
+:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Observing all this, our next-door neighbor asked, &qu=
+ot;Dewey, are you going to put your patio away every night?&quot;<o:p></o:p=
+></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Mikey&#8217;s Funnies:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">At a job Interview...<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">&quot;What are your strengths?&quot;<o:p></o:p></span=
+></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">&quot;I take matters in my own hands.&quot;<o:p></o:p=
+></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">&quot;Okay, thank you. We will contact you.&quot;<o:p=
+></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">&quot;No, I will contact you.&quot;<o:p></o:p></span>=
+</p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">A Joke A Day:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">The young boy was spending a Sunday afternoon with hi=
+s grandpa. Looking at pictures of his grandpa in his military uniform, the =
+boy asked, &quot;Grandpa, did you ever kill anyone
+ in the war?&quot;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">&quot;No champ, I never did.&quot;<o:p></o:p></span><=
+/p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">&quot;That's a good thing.&quot;<o:p></o:p></span></p=
+>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">&quot;You're telling me,&quot; began grandpa, &quot;I=
+ was the cook!&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">A Joke A Day:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">A man wrote a letter to the IRS:<o:p></o:p></span></p=
+>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">&#8220;I have been unable to sleep knowing that I hav=
+e cheated on my income tax. I understated my taxable income and have enclos=
+ed a check for $200.00.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">If I still can&#8217;t sleep, I will send the rest.&#=
+8221;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Steve Sanderson<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">21265 Rock Ridge Drive<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Boca Raton, Florida 33428<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">217-766-4213<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><a href=3D"mailto:aardvark@illinois.edu"><span style=
+=3D"font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif">aardvark@ill=
+inois.edu</span></a><span style=3D"font-size:12.0pt;font-family:&quot;Arial=
+&quot;,sans-serif"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><a href=3D"https://www.facebook.com/steve.sanderson2=
+/"><span style=3D"font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif=
+">https://www.facebook.com/steve.sanderson2/</span></a><span style=3D"font-=
+size:12.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p=
+>
+<p class=3D"MsoNormal"><a href=3D"https://www.linkedin.com/in/steve-sanders=
+on-15730511/"><span style=3D"font-size:12.0pt;font-family:&quot;Arial&quot;=
+,sans-serif">https://www.linkedin.com/in/steve-sanderson-15730511/</span></=
+a><span style=3D"font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif"=
+><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Radio:&nbsp; KK4FBU<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;color:#202020"><img border=3D"0" width=3D"125" height=
+=3D"83" style=3D"width:1.2986in;height:.8611in" id=3D"_x0000_i1026" src=3D"=
+https://gallery.mailchimp.com/f9d6f535ed1131010188e280b/images/90fc63a5-211=
+3-4e43-be14-b0bab9e51c26.jpg"></span><span style=3D"font-size:12.0pt;font-f=
+amily:&quot;Arial&quot;,sans-serif;color:#202020"><img border=3D"0" width=
+=3D"125" height=3D"110" style=3D"width:1.2986in;height:1.1458in" id=3D"_x00=
+00_i1025" src=3D"https://gallery.mailchimp.com/f9d6f535ed1131010188e280b/im=
+ages/4a216983-709d-46a5-a9ed-5c8aa66ebccc.jpg"></span><o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+</div>
+</body>
+</html>
+
+--_000_BN6PR11MB4003FCC658A1E5E022DB4097A3FE9BN6PR11MB4003namp_--

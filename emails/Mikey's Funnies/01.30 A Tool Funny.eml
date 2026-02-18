@@ -1,0 +1,91 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <funnies-return-5398-gcfl-jokes=gcfl.net@lists.mikeysfunnies.com>
+X-Original-To: gcfl-jokes@gcfl.net
+Delivered-To: gcfl-jokes@gcfl.net
+Authentication-Results: OpenDMARC-attila.gcfl.net; dmarc=pass (p=none dis=none) header.from=lists.MikeysFunnies.com
+Authentication-Results: OpenDMARC-attila.gcfl.net; spf=pass smtp.mailfrom=lists.mikeysfunnies.com
+Authentication-Results: attila.gcfl.net;
+	dkim=pass (2048-bit key; unprotected) header.d=lists.MikeysFunnies.com header.i=@lists.MikeysFunnies.com header.a=rsa-sha256 header.s=dprts header.b=elKA4Qon;
+	dkim=fail reason="signature verification failed" (2048-bit key; unprotected) header.d=mikeysfunnies.com header.i=@mikeysfunnies.com header.a=rsa-sha256 header.s=drh header.b=r0KKcq8h;
+	dkim-atps=neutral
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=15.204.225.125; helo=mail.dprts.com; envelope-from=funnies-return-5398-gcfl-jokes=gcfl.net@lists.mikeysfunnies.com; receiver=gcfl.net 
+Received: from mail.dprts.com (mail.dprts.com [15.204.225.125])
+	by attila.gcfl.net (Postfix) with ESMTP id C58A06F01474
+	for <gcfl-jokes@gcfl.net>; Fri, 30 Jan 2026 02:35:30 -0600 (CST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=lists.MikeysFunnies.com; s=dprts; x=1770366926; h=Mailing-List:
+	Precedence:Content-Transfer-Encoding:Reply-To:To:From:
+	Delivered-To:Subject:Message-Id:Date; bh=wEiE6qhXtKqGvBr+wTwr5mK
+	pszbIo2NpIZvjcH+SOOQ=; b=elKA4Qon0RB7xtwfruKTCpQtWgNdJBCyCWj1IhT
+	7U0QewzaBHC13rL/9/eO0yqIGFweXvgQra28js67UUWgxqnKs4f3HsXSNC0ygClY
+	6vbL5XEelb0GsFdF4VBCSsyH3sg4r/ECYzYiUwg4cTMdGalwqEbk+xaPQWm3iLKY
+	T/cSRSKnLDfw7aRf13QTZRjRfukwUHYDimHyssnYlFWGpZFFfJYzwcsag1swE8G3
+	T53hINvie1ffjxGZZoYOOZ7KpmZI5Z2sX0Ep/PGR9ZeRmGRIPtHWh8gjJAkpvg3U
+	jaxUrbU1mVEYHLVSI8+XVg3e+vlqhjprBHyVfF3xvWjfynw==
+Received: (qmail 2123662 invoked by uid 1014); 30 Jan 2026 08:30:02 +0000
+Mailing-List: contact funnies-help@lists.mikeysfunnies.com; run by ezmlm
+Precedence: bulk
+Content-Transfer-Encoding: 8bit
+X-Yes-Archive: yes
+X-List-Help: <mailto:funnies-help@lists.mikeysfunnies.com>
+Reply-To: reply@MikeysFunnies.com
+To: Mikey's Funnies List <funnies@lists.MikeysFunnies.com>
+From: Mikey's Funnies <funnies-owner@lists.MikeysFunnies.com>
+Delivered-To: mailing list funnies@lists.mikeysfunnies.com
+Received: (qmail 2123648 invoked by uid 0); 30 Jan 2026 08:30:02 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=mikeysfunnies.com;
+	s=drh; t=1769761801;
+	bh=pj4E+ax8Beyp825SvCKlwLo9WKiOyn4ZdBBY8qmo1eE=;
+	h=From:To:Subject:Date:From;
+	b=r0KKcq8haQvM/zUz2isZtaTt9sawET+5uQSFO0VWxprq8+AG57BbYsxOlwwo0kHco
+	 C8K1yBXyAZOJbGnPlIOkQfTVStGW1vxCs39mGWt+KWMoBO0eeaPMe57hrWWYUr+qS5
+	 21eAC5U1V0+gYtXnF5Cjy3ZRvJn/5dOndd3UYwICMBdwMkzn5ZVyCc3M6fJLaUxvcA
+	 8qEP3R4gxciEzLCMpb3AvZ3ujlnKhcT+jHZ1WMDHo6I7TgWE0guvSCuAma0RH9tosk
+	 IOrN/ZsIsRBQJhi3sIFKGdW2dRhYlvXXljXL2zESRzZj/XvNbvPwS9E8aZ+d94tWWu
+	 3KRy0Ih5g3dlQ==
+Subject: 01.30: A Tool Funny
+Message-Id: <20260130083001.D40979E1@mikeysfunnies-com.dprts.com>
+Date: Fri, 30 Jan 2026 03:30:01 -0500 (EST)
+Content-Length: 2029
+
+>>>Today's Funny
+
+AMAZON PRODUCT REVIEW
+
+Kim Beall posted the following product review:
+
+My screwdrivers kept disappearing out of the kitchen drawer - the only possible explanation had to be that a ghost was doing it, because both my husband and my son swore they never touched them. I mean, the tools often showed up in my husband's workshop or on my son's bedroom floor weeks later, but that was probably because it's one of those poltergeists who likes to move things around, because why would these dear people who love me ever lie to me, right?  
+
+So I bought some new screwdrivers and some of this tape, in PINK. After I wrapped this tape around the handles of my screwdrivers, voila! Like magic, they stopped vanishing from the drawer! Amazing, right? I'm going to get some more for my hammer and my pliers, now.
+
+>>>Today's Thot
+
+A scientist crossed a boomerang with a snake. His colleague warned him that this could come back to bite him. 
+
+>>>
+
+PASS IT ON! 
+Yeah, you can send this Funny to anybody you want. And, if you're REAL nice, you'll tell them where you got it! www.mikeysFunnies.com 
+
+>>>
+
+Mikey's Funnies is a clean humor email list sent every weekday and generously hosted by Agathon for Ministries. Agathon has over 35 years of experience helping organizations advance their digital mission through strategic planning, website design, and app development. Learn more at https://agathonforministries.com 
+
+We DO NOT rent, sell, or share your email address with any company, organization, or individual, sacred or secular. Subscribing will not result in more spam - we guarantee it!
+
+~ Add our address to your Approved Senders/Whitelist: funnies-owner@lists.MikeysFunnies.com
+
+Instagram: @mikeysfunnies
+
+Facebook: https://www.facebook.com/mikeysfunnies
+
+~ Donate: https://www.mikeysFunnies.com/donate.html
+
+~ Advertise: https://www.mikeysFunnies.com/advertise/
+
+~ Contact:  https://www.mikeysFunnies.com/contact.html
+
+Unsubscribe, subscribe, or change your email address: https://www.mikeysFunnies.com/sub/
+
+

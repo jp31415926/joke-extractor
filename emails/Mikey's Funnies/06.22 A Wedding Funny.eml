@@ -1,0 +1,99 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <funnies-return-4568-gcfl-jokes=gcfl.net@lists.mikeysfunnies.com>
+X-Original-To: gcfl-jokes@gcfl.net
+Delivered-To: gcfl-jokes@gcfl.net
+Received-SPF: Temperror (mailfrom) identity=mailfrom; client-ip=76.8.25.230; helo=list.agathongroup.com; envelope-from=funnies-return-4568-gcfl-jokes=gcfl.net@lists.mikeysfunnies.com; receiver=<UNKNOWN> 
+Authentication-Results: attila.gcfl.net;
+	dkim=pass (1024-bit key; unprotected) header.d=lists.MikeysFunnies.com header.i=@lists.MikeysFunnies.com header.b="miOw53qc";
+	dkim-atps=neutral
+Received: from list.agathongroup.com (mail.agathongroup.com [76.8.25.230])
+	by attila.gcfl.net (Postfix) with ESMTPS id C2B0B308526D
+	for <gcfl-jokes@gcfl.net>; Wed, 22 Jun 2022 02:32:59 -0500 (CDT)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed;
+	d=lists.MikeysFunnies.com; s=default; h=Mailing-List:Precedence:
+	Content-Transfer-Encoding:Reply-To:To:From:Delivered-To:
+	Received-SPF:Subject:Message-Id:Date; bh=g73WrNqSpuynxIxjQDDtT6z
+	ntPs=; b=miOw53qcg+0BLm145csDkweAKiYI6QFv6hU6mWaX8zCkHn4x3sHvI2I
+	0a+CRSqJ5m+7djA7ZeQ0A4zwfHQP1r7RDHwOdzH8N+LFZMnsHERwQjbwWJVvvrCT
+	UPJQ61tdE0v3JLJJJcd417x+NjTjfW5SslbO0nZVh3k/zTqJigRo=
+DomainKey-Signature: a=rsa-sha1; q=dns; c=simple;
+  s=default; d=lists.MikeysFunnies.com;
+  b=Y2HaKiTePWynFXbYlyUBXHT9teBBOARcf9OOuryL6bBowQqvUMVQYzNXgBWQPAloN93WILWVSu4ml2KYmXQGpq47dVOXDgo3jfYJ316LZdo+BAa3gzfNUaXwMCWWcylZ6AKLh7yDRERBUrJE7c48Fkh6C1WQU431nvV9W2cd/UE=;
+Received: (qmail 15083 invoked by uid 1061); 22 Jun 2022 07:30:07 -0000
+Mailing-List: contact funnies-help@lists.mikeysfunnies.com; run by ezmlm
+Precedence: bulk
+Content-Transfer-Encoding: 8bit
+X-Yes-Archive: yes
+X-List-Help: <mailto:funnies-help@lists.mikeysfunnies.com>
+Reply-To: reply@MikeysFunnies.com
+To: Mikey's Funnies List <funnies@lists.MikeysFunnies.com>
+From: Mikey's Funnies <funnies-owner@lists.MikeysFunnies.com>
+Delivered-To: mailing list funnies@lists.mikeysfunnies.com
+Received: (qmail 15070 invoked by uid 0); 22 Jun 2022 07:30:07 -0000
+X-Agathon-BaruwaFW-From: mikey@mikeysfunnies.com
+X-Agathon-BaruwaFW-SpamCheck: not spam (whitelisted),
+	SpamAssassin (not cached, score=-0.844, required 5, BAYES_00 -2.00,
+	DCC_REPUT_70_89 0.10, KAM_DMARC_STATUS 0.01, SPF_HELO_NONE 0.00,
+	SPF_PASS -0.00, TXREP 1.06, T_SCC_BODY_TEXT_LINE -0.01)
+X-Agathon-BaruwaFW: MTA virus scan performed
+X-Agathon-BaruwaFW-ID: 1o3uoM-0004he-2u
+X-Agathon-BaruwaFW-Information: Please contact Agathon Group Mail Firewall for more information
+Received-SPF: pass (filter.agathongroup.com: domain of mikeysfunnies.com designates 209.151.235.145 as permitted sender) client-ip=209.151.235.145; envelope-from=mikey@mikeysfunnies.com; helo=shared1.aghosted.com;
+Subject: 06.22: A Wedding Funny
+Message-Id: <20220622073001.22BDF6A104F@shared1.aghosted.com>
+Date: Wed, 22 Jun 2022 00:30:01 -0700 (PDT)
+X-Baruwa-Whitelisted-Host: 209.151.235.145
+Content-Length: 1896
+
+>>>Today's Funny
+
+Dearest Dad,
+
+I am coming home to get married soon. Can you help pay for a big wedding? I am presently in Australia and the boy I love lives in Scotland. We met on a dating website, became friends on Facebook, had long chats on WhatsApp. He proposed to me on Zoom, and we've stayed in touch through Viber. Dad, can I count on you for a big wedding?
+
+Your favorite daughter, Lilly
+
+Dad's response
+
+My Dearest Lilly,
+
+Like Wow! Really? Cool! I suggest you two get married on Twitter, have a honeymoon on Tango, buy your kids on Amazon, and pay for it all through PayPal. And when you get fed up with this new husband, sell him on eBay! 
+
+Love, Dad
+
+[forwarded by Steve Sanderson]
+
+>>>Today's Thot
+
+I always say "Thank you" to Alexa so that when the machines take over they know I'm nice.
+
+>>>
+
+PASS IT ON! 
+Yeah, you can send this Funny to anybody you want. And, if you're REAL nice, you'll tell them where you got it! www.mikeysFunnies.com 
+
+>>>
+
+Mikey's Funnies is a clean humor email list, sent every weekday and is generously hosted by Agathon for Ministries. Agathon has more than 20 years of experience helping organizations advance their digital mission through strategic planning, website design, and app development. Learn more at https://agathonforministries.com 
+
+We DO NOT rent, sell, or share your email address with any company, organization, or individual, sacred or secular. And, subscribing will not result in more spam. We guarantee it!
+
+~ Add our address to your Approved Senders/Whitelist: funnies-owner@lists.MikeysFunnies.com
+
+Instagram: @mikeysfunnies
+
+Facebook: https://www.facebook.com/mikeysfunnies
+
+~ Donate: http://www.mikeysFunnies.com/donate.html
+
+~ Advertise: http://www.mikeysFunnies.com/advertise/
+
+~ Contact:  http://www.mikeysFunnies.com/contact.html
+
+
+Unsubscribe, subscribe, or change your email address: http://www.mikeysFunnies.com/sub/
+
+
+
+

@@ -1,0 +1,92 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <funnies-return-5401-gcfl-jokes=gcfl.net@lists.mikeysfunnies.com>
+X-Original-To: gcfl-jokes@gcfl.net
+Delivered-To: gcfl-jokes@gcfl.net
+Authentication-Results: OpenDMARC-attila.gcfl.net; dmarc=pass (p=none dis=none) header.from=lists.MikeysFunnies.com
+Authentication-Results: OpenDMARC-attila.gcfl.net; spf=pass smtp.mailfrom=lists.mikeysfunnies.com
+Authentication-Results: attila.gcfl.net;
+	dkim=pass (2048-bit key; unprotected) header.d=lists.MikeysFunnies.com header.i=@lists.MikeysFunnies.com header.a=rsa-sha256 header.s=dprts header.b=MRWpq0EF;
+	dkim=fail reason="signature verification failed" (2048-bit key; unprotected) header.d=mikeysfunnies.com header.i=@mikeysfunnies.com header.a=rsa-sha256 header.s=drh header.b=PUZbPCJF;
+	dkim-atps=neutral
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=15.204.225.125; helo=mail.dprts.com; envelope-from=funnies-return-5401-gcfl-jokes=gcfl.net@lists.mikeysfunnies.com; receiver=gcfl.net 
+Received: from mail.dprts.com (mail.dprts.com [15.204.225.125])
+	by attila.gcfl.net (Postfix) with ESMTP id F13786F04DAB
+	for <gcfl-jokes@gcfl.net>; Wed, 04 Feb 2026 02:35:29 -0600 (CST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=lists.MikeysFunnies.com; s=dprts; x=1770798928; h=Mailing-List:
+	Precedence:Content-Transfer-Encoding:Reply-To:To:From:
+	Delivered-To:Subject:Message-Id:Date; bh=ttMTU1bn6ufrK7UeYTtLL6Y
+	IZvwhLqvMERNls9pGbKk=; b=MRWpq0EF1c6S+CgC1nnbogQx7cQCH27jCNj0hNk
+	BnKp70qY3H9NmdptOk3/51TmuKSiluyiaDq/hOxxtAYKjV/7J9jMd2j7iFvbLi1f
+	p3wliyT4EM2ImSI7oiR17qC5i6ckP4hKhHbzMu2XjSeZOphsxTKbhVnyJ0gz3KzH
+	JRyAX0csZf3DTYIKVTJ/0LkmL73g7mkgRAxMeoXe1W7RRPOaV5NZNaNpFX9ltadv
+	VK5ERTJAxnP9gctpU4+7Kd8gr7w9AuHIChYjTtFydWGQAF1bjrwhCMdyps7Af2Mk
+	azm9lITlSm1odMoupDZmebyNX+X19TUGTjpyUcDx8OTfYRg==
+Received: (qmail 1838319 invoked by uid 1014); 4 Feb 2026 08:30:03 +0000
+Mailing-List: contact funnies-help@lists.mikeysfunnies.com; run by ezmlm
+Precedence: bulk
+Content-Transfer-Encoding: 8bit
+X-Yes-Archive: yes
+X-List-Help: <mailto:funnies-help@lists.mikeysfunnies.com>
+Reply-To: reply@MikeysFunnies.com
+To: Mikey's Funnies List <funnies@lists.MikeysFunnies.com>
+From: Mikey's Funnies <funnies-owner@lists.MikeysFunnies.com>
+Delivered-To: mailing list funnies@lists.mikeysfunnies.com
+Received: (qmail 1838305 invoked by uid 0); 4 Feb 2026 08:30:03 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=mikeysfunnies.com;
+	s=drh; t=1770193801;
+	bh=vDVZcJlxf4Xg2aWOF6++7De0RneiCXysUpcmIKJ9xRw=;
+	h=From:To:Subject:Date:From;
+	b=PUZbPCJFXILm9Ju0AubrLZ+CxoiYnvOvoKyOOqWLU8PQPJJSmJY3kme0Daa4wgEMC
+	 0k8RAb+S7mjQNSWiRsaa9XG40DeI1uMA67onl7qUmAlu7wYsDK0/u1qbEDlzDyqXCc
+	 m0XbsBuiBDI+6HUnTwBj4yLn8b/PCVq1LoTS5dI3Wy4T/rQ1m/GT5rFX0+jZglSK8f
+	 X3RrM9ppDddgxstlB1pOnqTFOuDetZpBVaCVSZDXkbx8t6FWs9+lEmPz7/fLxEqOc6
+	 VSPLZSiwNJlrYTDHs4oJqFojPmGmPBKjCksKZpeBJiN3Fi5PbKo2SPtJiE2SDfsCAM
+	 i+zkjRkx/Dccw==
+Subject: 02.04: A Bear Funny
+Message-Id: <20260204083001.E68B5B27@mikeysfunnies-com.dprts.com>
+Date: Wed,  4 Feb 2026 03:30:01 -0500 (EST)
+
+>>>Today's Funny
+
+There's a guy who's hiking in the woods one day when a bear chases him up a really tall tree.
+
+The bear started to climb the tree, so the guy climbed up higher. Then, the bear climbed down and went away.
+
+So the guy starts to climb down the tree. Suddenly, the bear returns, and this time he's brought an even bigger bear with him. The two bears climb up the tree, the bigger bear going higher than the first. But the guy climbed even higher still, so the bears couldn't reach him. Eventually, the bears went away.
+
+Naturally quite relieved, the guy starts down the tree again. Suddenly, the two bears return. But this time the guy knew he was in big trouble.
+
+Each bear was carrying a beaver.
+
+>>>Today's Thot
+
+I just learned that the inventor of Velcro died. RIP.
+
+>>>
+
+PASS IT ON! 
+Yeah, you can send this Funny to anybody you want. And, if you're REAL nice, you'll tell them where you got it! www.mikeysFunnies.com 
+
+>>>
+
+Mikey's Funnies is a clean humor email list sent every weekday and generously hosted by Agathon for Ministries. Agathon has over 35 years of experience helping organizations advance their digital mission through strategic planning, website design, and app development. Learn more at https://agathonforministries.com 
+
+We DO NOT rent, sell, or share your email address with any company, organization, or individual, sacred or secular. Subscribing will not result in more spam - we guarantee it!
+
+~ Add our address to your Approved Senders/Whitelist: funnies-owner@lists.MikeysFunnies.com
+
+Instagram: @mikeysfunnies
+
+Facebook: https://www.facebook.com/mikeysfunnies
+
+~ Donate: https://www.mikeysFunnies.com/donate.html
+
+~ Advertise: https://www.mikeysFunnies.com/advertise/
+
+~ Contact:  https://www.mikeysFunnies.com/contact.html
+
+Unsubscribe, subscribe, or change your email address: https://www.mikeysFunnies.com/sub/
+
+

@@ -1,0 +1,91 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <funnies-return-4593-gcfl-jokes=gcfl.net@lists.mikeysfunnies.com>
+X-Original-To: gcfl-jokes@gcfl.net
+Delivered-To: gcfl-jokes@gcfl.net
+Received-SPF: Temperror (mailfrom) identity=mailfrom; client-ip=76.8.25.230; helo=list.agathongroup.com; envelope-from=funnies-return-4593-gcfl-jokes=gcfl.net@lists.mikeysfunnies.com; receiver=<UNKNOWN> 
+Authentication-Results: attila.gcfl.net;
+	dkim=pass (1024-bit key; unprotected) header.d=lists.MikeysFunnies.com header.i=@lists.MikeysFunnies.com header.b="DL5cCa11";
+	dkim-atps=neutral
+Received: from list.agathongroup.com (mail.agathongroup.com [76.8.25.230])
+	by attila.gcfl.net (Postfix) with ESMTPS id 9604C3084EDA
+	for <gcfl-jokes@gcfl.net>; Wed, 27 Jul 2022 02:32:59 -0500 (CDT)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed;
+	d=lists.MikeysFunnies.com; s=default; h=Mailing-List:Precedence:
+	Content-Transfer-Encoding:Reply-To:To:From:Delivered-To:
+	Received-SPF:Subject:Message-Id:Date; bh=MkUCgy/UgZ59982MBTrPEJh
+	JS8o=; b=DL5cCa11GAk+WYROQGH22b8uupI0iBG0BbQ3v0aXn7ACGQwVGkBKBYh
+	3Fyyx0WhfizLB5kpKhLnZkvI0Pisvgz12RZW6snVnllZkdmyiXgTRLLfGgLy9hV3
+	yDmVLzOabgMtA80DoTxsfbL8JB1Z8pQN9u64MsxT9oClZ7swH5Rc=
+DomainKey-Signature: a=rsa-sha1; q=dns; c=simple;
+  s=default; d=lists.MikeysFunnies.com;
+  b=qpH40ZAJFUMmHfBX8LPsb6NtnXVlBYWIZv3LDCzcqoAgamqVc4Tbfd4zp58lYgf/YEhRSZoXQ+x9SeGhZk+AHyXT3+/28DptOrTUKYKF93KKBRs+qayLrSl9zZIA5BVZajxGZvwnpjzOfDunvDC0xOm6bAzJoAtWllZbvAleUec=;
+Received: (qmail 20047 invoked by uid 1061); 27 Jul 2022 07:30:07 -0000
+Mailing-List: contact funnies-help@lists.mikeysfunnies.com; run by ezmlm
+Precedence: bulk
+Content-Transfer-Encoding: 8bit
+X-Yes-Archive: yes
+X-List-Help: <mailto:funnies-help@lists.mikeysfunnies.com>
+Reply-To: reply@MikeysFunnies.com
+To: Mikey's Funnies List <funnies@lists.MikeysFunnies.com>
+From: Mikey's Funnies <funnies-owner@lists.MikeysFunnies.com>
+Delivered-To: mailing list funnies@lists.mikeysfunnies.com
+Received: (qmail 20034 invoked by uid 0); 27 Jul 2022 07:30:07 -0000
+X-Agathon-BaruwaFW-From: mikey@mikeysfunnies.com
+X-Agathon-BaruwaFW-SpamCheck: not spam (whitelisted),
+	SpamAssassin (not cached, score=-0.896, required 5,
+	autolearn=not spam, BAYES_00 -2.00, KAM_DMARC_STATUS 0.01,
+	SPF_HELO_NONE 0.00, SPF_PASS -0.00, TXREP 1.09)
+X-Agathon-BaruwaFW: MTA virus scan performed
+X-Agathon-BaruwaFW-ID: 1oGbUY-0006Sh-Mx
+X-Agathon-BaruwaFW-Information: Please contact Agathon Group Mail Firewall for more information
+Received-SPF: pass (filter.agathongroup.com: domain of mikeysfunnies.com designates 209.151.235.145 as permitted sender) client-ip=209.151.235.145; envelope-from=mikey@mikeysfunnies.com; helo=shared1.aghosted.com;
+Subject: 07.27: An Age Funny
+Message-Id: <20220727073001.CB7C26A4D1D@shared1.aghosted.com>
+Date: Wed, 27 Jul 2022 00:30:01 -0700 (PDT)
+X-Baruwa-Whitelisted-Host: 209.151.235.145
+Content-Length: 1641
+
+>>>Today's Funny
+
+Upon retiring, a woman decides to get a physical. The doctor asked her how she was doing, so with a sigh, she reported a litany of symptoms - this aches, that's stiff, I'm not as quick as I used to be, and so on. 
+
+He responded with, "You have to expect things to start deteriorating. After all, who wants to live to be a hundred?" 
+
+She looked him straight in the eye and replied, "Anyone who's ninety-nine."
+
+[forwarded by Steve Sanderson]
+
+>>>Today's Thot
+
+My body is a temple, ancient and crumbling, perhaps cursed or haunted.
+
+>>>
+
+PASS IT ON! 
+Yeah, you can send this Funny to anybody you want. And, if you're REAL nice, you'll tell them where you got it! www.mikeysFunnies.com 
+
+>>>
+
+Mikey's Funnies is a clean humor email list, sent every weekday and is generously hosted by Agathon for Ministries. Agathon has more than 20 years of experience helping organizations advance their digital mission through strategic planning, website design, and app development. Learn more at https://agathonforministries.com 
+
+We DO NOT rent, sell, or share your email address with any company, organization, or individual, sacred or secular. And, subscribing will not result in more spam. We guarantee it!
+
+~ Add our address to your Approved Senders/Whitelist: funnies-owner@lists.MikeysFunnies.com
+
+Instagram: @mikeysfunnies
+
+Facebook: https://www.facebook.com/mikeysfunnies
+
+~ Donate: http://www.mikeysFunnies.com/donate.html
+
+~ Advertise: http://www.mikeysFunnies.com/advertise/
+
+~ Contact:  http://www.mikeysFunnies.com/contact.html
+
+
+Unsubscribe, subscribe, or change your email address: http://www.mikeysFunnies.com/sub/
+
+
+
+

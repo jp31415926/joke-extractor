@@ -1,0 +1,447 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <aardvark@illinois.edu>
+X-Original-To: gcfl-submit@gcfl.net
+Delivered-To: gcfl-submit@gcfl.net
+Received-SPF: Temperror (mailfrom) identity=mailfrom; client-ip=148.163.139.28; helo=mx0b-00007101.pphosted.com; envelope-from=aardvark@illinois.edu; receiver=<UNKNOWN> 
+Authentication-Results: attila.gcfl.net;
+	dkim=pass (2048-bit key; unprotected) header.d=illinois.edu header.i=@illinois.edu header.b="AxpLrVCR";
+	dkim-atps=neutral
+Received: from mx0b-00007101.pphosted.com (mx0b-00007101.pphosted.com [148.163.139.28])
+	by attila.gcfl.net (Postfix) with ESMTPS id 91EAA308018A
+	for <gcfl-submit@gcfl.net>; Sun, 17 Apr 2022 06:34:50 -0500 (CDT)
+Received: from pps.filterd (m0272703.ppops.net [127.0.0.1])
+	by mx0b-00007101.pphosted.com (8.16.1.2/8.16.1.2) with ESMTP id 23HAl6BZ007828
+	for <gcfl-submit@gcfl.net>; Sun, 17 Apr 2022 11:34:50 GMT
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=illinois.edu; h=from : to : subject
+ : date : message-id : content-type : mime-version; s=campusrelays;
+ bh=OKGxxL3Fh87yf8SqeeHVUGSqQrEChJMHjxxiafBVOtc=;
+ b=AxpLrVCRsedRcy4F4z9KnfJOnpZHzIEo7K/LJMrzacJ9Mso230inbBSa8hN3OVe+fgkd
+ JRbuO3h2PwZSdd4WMb1L0khfZhItP5wbY7w0yoxhgrIdy+JaJ5y3FvUZJgTALZZ/Y5IB
+ asK8w4q/unCLNg0RssuVOiDXqWpqVsizpNqAdA8Utln/UrMl1JM8/xSikC55qFHoyRPH
+ osLMgEOyRNe2OtYLgTmXYBcu4M6zfm2QkmMrDFYf1QIlpJ6RFnbCxX6O0QxrjW2cGM9C
+ lh+Cy0c+BmdEi8fZj4qzIjvitdsFSH+9w+ZDJt1eYlHjzHj1PeQfaHhxI2ANllT7WCQD AQ== 
+Received: from nam10-bn7-obe.outbound.protection.outlook.com (mail-bn7nam10lp2102.outbound.protection.outlook.com [104.47.70.102])
+	by mx0b-00007101.pphosted.com (PPS) with ESMTPS id 3ffkx96sef-1
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT)
+	for <gcfl-submit@gcfl.net>; Sun, 17 Apr 2022 11:34:49 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=bqZqPSnn7BjeZG4WnYLcDKaUd8WuJkg7x0HLnrKqp8ieGXqkc02nibbO/8g7BEFxqXxjsjZxSV+QHMVSwwasRPhevWnqQwZvc73X8qKYjyjFs77WTN1i1sS0Kmx06+G8vVkyg54ChNL7vNgYQUH81CelRlTu5AaHVgXkSNp46bpoXK5tqhqSmPf5yGPacGkSp+M62QfBU6mIY0f9BEF+oL5Fn7ba/gvejM2g4ncSjxAaXUCCP9guEOW2TUoexT/FBdHD78lS41gYkl9/grTceMKg/D7hwCZGgvKWY5w0xtF636ZNK2DLB5axC9xeYozIoP9m3YwvcJFirR6xnW+upQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=OKGxxL3Fh87yf8SqeeHVUGSqQrEChJMHjxxiafBVOtc=;
+ b=fFQH4XuTTq+KqyFfzy0icqy5vVMCGixfg0AJZMsRpDBdrxwbtIjttUI3hHd9Mc2gF9SVdnHOO87yzFXU77oUb6Sph8BkhLxwiUL2s2XZIJKtFrBzmQnoFVJp6garYrmd2Ft/eyATsm2nh7Ttfuf7T+N0kYud2+EHPW7JTBjxHiDLGLC/B/cd18bnBTzC8tXA1jkxHvgbcpu6vksIncJjjrJxtynGJLbyMGHGsBLLw4vOOury99laeuhNoLYlM+lP6spbKTEmEpPuiQ42iqhGYOHcdwKBsYmdpoNC2H2imQ6jSjih/9rNg75PwXKRymzQwFic6xNuQqJxAJ416t7KJA==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=illinois.edu; dmarc=pass action=none header.from=illinois.edu;
+ dkim=pass header.d=illinois.edu; arc=none
+Received: from BN6PR11MB4003.namprd11.prod.outlook.com (2603:10b6:405:7b::17)
+ by BY5PR11MB4449.namprd11.prod.outlook.com (2603:10b6:a03:1cc::23) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5164.18; Sun, 17 Apr
+ 2022 11:34:48 +0000
+Received: from BN6PR11MB4003.namprd11.prod.outlook.com
+ ([fe80::38b6:a979:d818:1f24]) by BN6PR11MB4003.namprd11.prod.outlook.com
+ ([fe80::38b6:a979:d818:1f24%6]) with mapi id 15.20.5164.025; Sun, 17 Apr 2022
+ 11:34:47 +0000
+From: "Sanderson, Steven C" <aardvark@illinois.edu>
+To: "Good Clean Fun  " <gcfl-submit@gcfl.net>
+Subject: Sunday Fun Stuff:  DECISION MADE
+Thread-Topic: Sunday Fun Stuff:  DECISION MADE
+Thread-Index: AdhSTxo7ssBBmmRMQCOpcSOnoE61yQ==
+Date: Sun, 17 Apr 2022 11:34:47 +0000
+Message-ID: 
+ <BN6PR11MB40033862F519382F74888851A3F09@BN6PR11MB4003.namprd11.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 4a9fde91-3752-493e-cc9a-08da2066471b
+x-ms-traffictypediagnostic: BY5PR11MB4449:EE_
+x-microsoft-antispam-prvs: 
+ <BY5PR11MB4449D148C421740A00BA2BBCA3F09@BY5PR11MB4449.namprd11.prod.outlook.com>
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info: 
+ UBLK/vRWRCkURBQNJGdD3c0078pXD5UJk9xi2UEWU5uo5qK2CX+0V6qZ/VucIsAVrk3k40UV+crhf67D8JcAXbZv8vbYNYChab+h3oUcaV6T7BdJFIKmdW3yexZYMfrAWHv2mf9wsNRfjG1jg7ihTysvRdNvhj+2mdshwMUABTfQxB978/SOhcCfLYE1S3mXaAuCoUyhzngFGzcKmx5gwGmKYikKR/mG6EcxfPL9M47YsCDCw+TJlQvmKRy0Ai9sU8kR2yleCC2/9xcCesxINoDDHkrWR2vmYBZadbOCXtkOtOABuDOO8u0M2GhWHR5gKO+YcGCyAn7GdVUAz69KXEOlSsxGK7XujavO7gTyZPhyA6e3SFQRyYXECh5SOifQxrbkguycEw5qXWrQEMpuMiSqd3DaR4sD/geQq3P5MTnw/UrcCLOR20vSVX8F6lUUtAi1cwyk2GR9qsLueBTmlNk614IboYO1UB+bQGpbKY00JUkHa1JINC6CwvLQcVKZr+VJCgJeR1icKOhb/yu90qmOygn9eLY9TnkDYm6SoRy1VYFVnLC8v9jmTJuBgr9QsncRlFmH9zJAajwjLeKQKTlrRtLr48QkP4hLTFRSvAFr6/i3FDvDqfLYjKbNtkIKaPdBKx/X9hp8m1j5rpdbEKgsp2MmalJ/j3rmW3cFR4HSgjmfv62ECIFll6m+1vi6NbpJNLB69R8gWKu59zXci4VmKQEkkLKBlxSJ5KPIm/JjLKPyvx2P8C97AkJFpbHHBUdIBRKpBLzpI3nPYQJu6PjZLN3izU3jWITSb+VJNL2tGyfeEldJ2q3UC3JhxvN0QFc49CjPfC32mn5pod6F/g==
+x-forefront-antispam-report: 
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:BN6PR11MB4003.namprd11.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230001)(4636009)(366004)(38100700002)(6916009)(786003)(316002)(122000001)(5660300002)(55016003)(33656002)(9686003)(166002)(2906002)(6506007)(75432002)(38070700005)(8936002)(186003)(26005)(508600001)(40140700001)(86362001)(966005)(52536014)(71200400001)(76116006)(8676002)(7696005)(45080400002)(83380400001)(66946007)(66556008)(66476007)(64756008)(66446008);DIR:OUT;SFP:1101;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0: 
+ =?us-ascii?Q?m9UVqcLdR5aFvMnQBPSjaRudGfRkurKxtutjYOEVNjcvoU1XtPPO+Lq/kluH?=
+ =?us-ascii?Q?IDjiOJtqj4ub/t8gkCIXoCSXjBr6PsW0ihyPPWLYutBdaBGGLpoTBrPnbfP4?=
+ =?us-ascii?Q?P/UWlIYF0hCGW9T9FDF7fMFhiImyRJB3HmoeUhE3N6Z/dB+upW+J0D3YGWGn?=
+ =?us-ascii?Q?dfz2c5iIYwVP1kTdopajl/QP9wy6S4bPzktVqJHlylJrbI8COpC7Oo3jib+6?=
+ =?us-ascii?Q?0GgJrzYOPEyoIr1Gn45FPaUOQbF4iKZSG577DHiKLWQ7vH1S+BWTjyazCjYo?=
+ =?us-ascii?Q?xlWJo0ahgDWk1UI7i2BqaVTXHfg4izTMYoGiC9G9N1KA+5Fk2GhdI2+ZHqJ6?=
+ =?us-ascii?Q?cwJuDVYKeGxCrM2Sa0Ciu63A4ulp/Ott0MldK/Vuykp0CDiHpG1Bezgur7Zr?=
+ =?us-ascii?Q?mrqbCgzeY/N9mdyj0+NItlrAsbilKkswuGzFi+ErggVDPdW49S4ZS+fynmSh?=
+ =?us-ascii?Q?o59GIIRngGqLVwU53XdDF/tSR/Q4Z7UtypGRyWER5uBEK11fNxt3F4ZfwiSq?=
+ =?us-ascii?Q?7W0qnBK4CWxk0x0AyEqxB4FhjSVBPANNHyDFuYrFZtVivBP7YWqipTm2M1z5?=
+ =?us-ascii?Q?7bg7JI6tW3Dy9/zribUMIwcuGtRF6mM0Lg+NB8vixNmi4Xr7/PBNPmSuPts3?=
+ =?us-ascii?Q?VbOGP3gtHQbKq7vgcebR26nDM9kkmUjrY1sr2Tpa5GSerGdXj4ACbwKJpoB6?=
+ =?us-ascii?Q?bMxI9nuiJdrhOgLtTMhCk8puDmYSZDPJlvmV4K4RonmBd+amOtBvB4oSD6zb?=
+ =?us-ascii?Q?3D0Cd7vezT5VmdCOdVhfdJd+2cpCfroA0bDec1dwthE0eHfZErMduB/9MdHk?=
+ =?us-ascii?Q?cIXWNPZMKTYKrWdCXHf7GfCmrT6UhDr2zbhdDRFsyQOtp0l7KStcgAS33REz?=
+ =?us-ascii?Q?Mcjp04b6AxkJwQZMAgyOLYNRsV1AiNs2Q7kp3w3H3Rb77m5+5K9709I03LN0?=
+ =?us-ascii?Q?AFtUcJ6tG/R/N8g6H8+ok5GZK+Y3yNO1BF4t0Nw9lJqEU2hJ6S+zRuHqtLnJ?=
+ =?us-ascii?Q?gezckZVuTd6KA62lNK+LJMLr70NswiipACa4ASD8hkyGfwbzP4qSfvKPwOwT?=
+ =?us-ascii?Q?AkGV1yL/u/q/rLj0vWDEE5hjKscewPZ8pUM7PACl55EhQVw/xbxSosIfXuKx?=
+ =?us-ascii?Q?yG5GG5ItSIJjkkMYXvJSRTMMtXMbnL4wvf/9KwfYvGCCeITRckqASY2a91S+?=
+ =?us-ascii?Q?oujND14c+2dlljAWD2enNaCOcGAkXa8uYB1Xb6lx1K7ENvqHsYBRX2rgd/dB?=
+ =?us-ascii?Q?Y6UPcD4t/89aGkQLg43ubRnHh4P0RUbyvrZwO0GOuscjFgvqtmkgFuDo+pMx?=
+ =?us-ascii?Q?jQ0OSMdmpji4OnSy1ipk3zdeyh9u/POWjzLL+mxZ3lVy6Ws1iqVSW+rHVCtd?=
+ =?us-ascii?Q?68rbfxZ+BqL1JRdUXCaNZCkCWMrEhJexeA5jQHNS4GjEr2wAG3tHdd0MBlhq?=
+ =?us-ascii?Q?3gyeMkWSq3IV2zh/IRnNiwkcLJM2dMK7p81Ta1/Fj+nXEVH45HeaFsHRcuIA?=
+ =?us-ascii?Q?UaKU+mO0nXXoJ7IPLs/ThFjlrg4g9QQl6apgyvJaTvh7x0QLxiSfg+7+I+7S?=
+ =?us-ascii?Q?v6/tMb8zmmvv5PBmMdWY6HERnxMP09haKlp17qIDdND7ptlvFsVYGvi4nH60?=
+ =?us-ascii?Q?QecLnuykfX0jixbrMBdM9JYlud3Ff77V8gDq1Z7vZsORxQFCJGlVt0nkWw9A?=
+ =?us-ascii?Q?6a3FwusE7qZmvOI5Vz2qnYB9jTywmwRSKxiCTKtrFTZ87zUXTNx6oQZay0an?=
+ =?us-ascii?Q?rfm0EbATJA=3D=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_BN6PR11MB40033862F519382F74888851A3F09BN6PR11MB4003namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: illinois.edu
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: BN6PR11MB4003.namprd11.prod.outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4a9fde91-3752-493e-cc9a-08da2066471b
+X-MS-Exchange-CrossTenant-originalarrivaltime: 17 Apr 2022 11:34:47.7166
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 44467e6f-462c-4ea2-823f-7800de5434e3
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: XulptBAAFeyW+s4irWCXamjF6WbVvk4SlyAlBrsTV4YL7bN//5viDOqtos9kad+9MuZd7Yl+Cqn4CaxZVrAJKw==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BY5PR11MB4449
+X-Proofpoint-GUID: kUdgSkhE55w8n0Y9IDE3xJBLj2ca1Mkc
+X-Proofpoint-ORIG-GUID: kUdgSkhE55w8n0Y9IDE3xJBLj2ca1Mkc
+X-Spam-Details: rule=cautious_plus_nq_notspam policy=cautious_plus_nq score=0
+ impostorscore=0 lowpriorityscore=0 priorityscore=1501 phishscore=0
+ bulkscore=0 mlxscore=0 suspectscore=0 mlxlogscore=999 clxscore=1015
+ malwarescore=0 spamscore=0 adultscore=0 classifier=spam adjust=0
+ reason=mlx scancount=1 engine=8.12.0-2202240000
+ definitions=main-2204170078
+X-Spam-Score: 0
+X-Spam-OrigSender: aardvark@illinois.edu
+X-Spam-Bar: 
+Content-Length: 15848
+
+--_000_BN6PR11MB40033862F519382F74888851A3F09BN6PR11MB4003namp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+
+Good Morning!
+
+Happy Easter!
+
+We are pleased to share that after being accepted into several universities=
+, Granddaughter Rachel has chosen Central Michigan University for the launc=
+h of her college career.  At least four of our Sanderson family members hav=
+e been Chippewas at Central Michigan and we know that Rachel will have a gr=
+eat time there.
+
+
+
+In other news from the north, our very own Ed Morrison was in Midland and e=
+njoyed dinner Thursday with Kathy and Matt and Rian:
+
+
+
+Our jokes today, stolen from others as usual, are dedicated to all of our J=
+oke List family members who are still working today to meet the tax filing =
+deadline tomorrow. I had ours calculated and in the can since February, but=
+ waited to hit the SEND button until this past week.  It seems to me that o=
+ur taxes have gotten more and more complicated, and despite a degree in acc=
+ounting and many years helping train tax professionals, I have little under=
+standing of the 40 pages that Turbo Tax filed for me.
+
+Your results may vary...............
+
+Keep smiling...................................ss
+
+***************************************************************************=
+***************
+
+A Joke A Day:
+
+A rookie police officer was assigned to ride in a cruiser with an experienc=
+ed partner. A call came over the car's radio telling them to disperse some =
+people who were loitering.
+
+The officers drove to the street and observed a small crowd standing on a c=
+orner. The rookie rolled down his window and said, "Let's get off the corne=
+r."
+
+No one moved, so he barked again, "Let's get off the corner!" Intimidated, =
+the group of people began to leave, casting puzzled glances in his directio=
+n. Proud of his first official act, the young policeman turned to his partn=
+er and asked, "Well, how did I do?"
+
+"Pretty good," replied the veteran, "especially since this is a bus stop."
+
+
+
+
+
+A Joke A Day:
+
+A travel agent looked up from his desk to see an older lady and an older ge=
+ntleman peering in the shop window at the posters showing the glamorous des=
+tinations around the world. The agent had had a good week and the dejected =
+couple looking in the window gave him a feeling of generosity.
+
+He called them into his shop and said, "I have a surprise for you. I am sen=
+ding you off to a fabulous resort at my expense, and I won't take no for an=
+ answer."
+
+He took them inside and asked his secretary to write two flight tickets and=
+ book a room in a five star hotel. They, as can be expected, gladly accepte=
+d, and were on their way. About a month later the little lady came in to hi=
+s shop. "And how did you like your holiday?" he asked eagerly.
+
+"The flight was exciting and the room was lovely," she said. "I've come to =
+thank you. But, one thing puzzled me. Who was that old guy I had to share t=
+he room with?"
+
+
+
+Steve Sanderson
+21265 Rock Ridge Drive
+Boca Raton, Florida 33428
+217-766-4213
+aardvark@illinois.edu<mailto:aardvark@illinois.edu>
+https://www.facebook.com/steve.sanderson2/
+https://www.linkedin.com/in/steve-sanderson-15730511/
+Radio:  KK4FBU
+[https://gallery.mailchimp.com/f9d6f535ed1131010188e280b/images/90fc63a5-21=
+13-4e43-be14-b0bab9e51c26.jpg][https://gallery.mailchimp.com/f9d6f535ed1131=
+010188e280b/images/4a216983-709d-46a5-a9ed-5c8aa66ebccc.jpg]
+
+
+
+
+
+
+--_000_BN6PR11MB40033862F519382F74888851A3F09BN6PR11MB4003namp_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+span.EmailStyle19
+	{mso-style-type:personal-reply;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-US" link=3D"#0563C1" vlink=3D"#954F72" style=3D"word-wrap:=
+break-word">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Good Morning!<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Happy Easter!<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">We are pleased to share that after being accepted int=
+o several universities, Granddaughter Rachel has chosen Central Michigan Un=
+iversity for the launch of her college career.&nbsp;
+ At least four of our Sanderson family members have been Chippewas at Centr=
+al Michigan and we know that Rachel will have a great time there.<o:p></o:p=
+></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">In other news from the north, our very own Ed Morriso=
+n was in Midland and enjoyed dinner Thursday with Kathy and Matt and Rian:<=
+o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Our jokes today, stolen from others as usual, are ded=
+icated to all of our Joke List family members who are still working today t=
+o meet the tax filing deadline tomorrow. I had
+ ours calculated and in the can since February, but waited to hit the SEND =
+button until this past week.&nbsp; It seems to me that our taxes have gotte=
+n more and more complicated, and despite a degree in accounting and many ye=
+ars helping train tax professionals,
+ I have little understanding of the 40 pages that Turbo Tax filed for me. <=
+o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Your results may vary&#8230;&#8230;&#8230;&#8230;&#82=
+30;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Keep smiling&#8230;&#8230;&#8230;&#8230;&#8230;&#8230=
+;&#8230;&#8230;&#8230;&#8230;&#8230;..ss<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">****************************************************=
+**************************************&nbsp;
+<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">A Joke A Day:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">A rookie police officer was assigned to ride in a cru=
+iser with an experienced partner. A call came over the car's radio telling =
+them to disperse some people who were loitering.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">The officers drove to the street and observed a small=
+ crowd standing on a corner. The rookie rolled down his window and said, &q=
+uot;Let's get off the corner.&quot;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">No one moved, so he barked again, &quot;Let's get off=
+ the corner!&quot; Intimidated, the group of people began to leave, casting=
+ puzzled glances in his direction. Proud of his first official
+ act, the young policeman turned to his partner and asked, &quot;Well, how =
+did I do?&quot;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">&quot;Pretty good,&quot; replied the veteran, &quot;e=
+specially since this is a bus stop.&quot;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">A Joke A Day:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">A travel agent looked up from his desk to see an olde=
+r lady and an older gentleman peering in the shop window at the posters sho=
+wing the glamorous destinations around the world.
+ The agent had had a good week and the dejected couple looking in the windo=
+w gave him a feeling of generosity.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">He called them into his shop and said, &quot;I have a=
+ surprise for you. I am sending you off to a fabulous resort at my expense,=
+ and I won't take no for an answer.&quot;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">He took them inside and asked his secretary to write =
+two flight tickets and book a room in a five star hotel. They, as can be ex=
+pected, gladly accepted, and were on their way.
+ About a month later the little lady came in to his shop. &quot;And how did=
+ you like your holiday?&quot; he asked eagerly.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">&quot;The flight was exciting and the room was lovely=
+,&quot; she said. &quot;I've come to thank you. But, one thing puzzled me. =
+Who was that old guy I had to share the room with?&quot;<o:p></o:p></span><=
+/p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Steve Sanderson<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">21265 Rock Ridge Drive<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Boca Raton, Florida 33428<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">217-766-4213<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><a href=3D"mailto:aardvark@illinois.edu">aardvark@ill=
+inois.edu</a><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><a href=3D"https://www.facebook.com/steve.sanderson2/=
+">https://www.facebook.com/steve.sanderson2/</a><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><a href=3D"https://www.linkedin.com/in/steve-sanderso=
+n-15730511/">https://www.linkedin.com/in/steve-sanderson-15730511/</a><o:p>=
+</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Radio:&nbsp; KK4FBU<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;color:#202020"><img border=3D"0" width=3D"125" height=
+=3D"83" style=3D"width:1.2986in;height:.8611in" id=3D"_x0000_i1026" src=3D"=
+https://gallery.mailchimp.com/f9d6f535ed1131010188e280b/images/90fc63a5-211=
+3-4e43-be14-b0bab9e51c26.jpg"></span><span style=3D"font-size:12.0pt;font-f=
+amily:&quot;Arial&quot;,sans-serif;color:#202020"><img border=3D"0" width=
+=3D"125" height=3D"110" style=3D"width:1.3055in;height:1.1458in" id=3D"_x00=
+00_i1025" src=3D"https://gallery.mailchimp.com/f9d6f535ed1131010188e280b/im=
+ages/4a216983-709d-46a5-a9ed-5c8aa66ebccc.jpg"></span><o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+</div>
+</body>
+</html>
+
+--_000_BN6PR11MB40033862F519382F74888851A3F09BN6PR11MB4003namp_--

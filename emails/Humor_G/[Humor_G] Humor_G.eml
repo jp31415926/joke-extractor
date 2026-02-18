@@ -1,0 +1,429 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <sentto-450699-4105-1243697123-gcfl-jokes=gcfl.net@returns.groups.yahoo.com>
+X-Original-To: gcfl-jokes@gcfl.net
+Delivered-To: gcfl-jokes@gcfl.net
+Received: from n67d.bullet.mail.sp1.yahoo.com (n67d.bullet.mail.sp1.yahoo.com [98.136.45.92])
+	by bruno.gcfl.net (Postfix) with SMTP id 59CE817AE200
+	for <gcfl-jokes@gcfl.net>; Sat, 30 May 2009 10:25:26 -0500 (CDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoogroups.com; s=lima; t=1243697126; bh=V7+T1fxvBaktGehmQMbyPXWceqLKDzvJTOf00JXktPU=; h=Received:Received:X-Yahoo-Newman-Id:Received:Received:Received:DKIM-Signature:Received:Received:X-Sender:X-Apparently-To:X-Received:X-Received:X-Received:X-Received:X-Received:Message-ID:To:X-Priority:X-MSMail-Priority:X-Mailer:X-MimeOLE:X-Originating-IP:X-eGroups-Msg-Info:From:X-Yahoo-Profile:X-eGroups-Approved-By:Sender:MIME-Version:Mailing-List:Delivered-To:List-Id:Precedence:List-Unsubscribe:Date:Subject:Reply-To:X-Yahoo-Newman-Property:Content-Type; b=SObSlLg9rYWtDvhKYC13aJGGmvi8p6GcSAklDxMWoSkT7JCi2mI+NGPmG/57UPDrwySiPHtZ9tOGMZsOoIoZqYA7zjANL6mz/ofx6kZf4jD5gT/0Ysv+lhLBG7WSrfyt
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=lima; d=yahoogroups.com;
+	b=lEHn+Fe0DSAZ2Q49GUJcf4qxPoN7zxjdUJbuevv7QlT29K49sMFroO1z/EHDHGJKJwgWHqwD9+5VqCRF6v5VOas4xQBaZsV1xEWy3Zbdh61AbYmLap8p7n1Qv28CYjpb;
+Received: from [69.147.65.173] by n67.bullet.mail.sp1.yahoo.com with NNFMP; 30 May 2009 15:25:26 -0000
+Received: from [69.147.108.197] by t15.bullet.mail.sp1.yahoo.com with NNFMP; 30 May 2009 15:25:26 -0000
+X-Yahoo-Newman-Id: 450699-m4105
+Received: (qmail 11452 invoked from network); 30 May 2009 15:25:18 -0000
+Received: from unknown (98.137.34.44)
+  by m6.grp.re1.yahoo.com with QMQP; 30 May 2009 15:25:18 -0000
+Received: from unknown (HELO n43d.bullet.mail.sp1.yahoo.com) (66.163.169.157)
+  by mta1.grp.sp2.yahoo.com with SMTP; 30 May 2009 15:25:18 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoogroups.com; s=lima; t=1243697101; bh=sb6XsY47Xlp7dX+ZKSgvPufBDPpj+E88DGT9CfBL/II=; h=Received:Received:X-Sender:X-Apparently-To:X-Received:X-Received:X-Received:X-Received:X-Received:Message-ID:To:Date:MIME-Version:Content-Type:X-Priority:X-MSMail-Priority:X-Mailer:X-MimeOLE:X-Originating-IP:X-eGroups-Msg-Info:From:Subject:X-Yahoo-Group-Post:X-Yahoo-Profile:Sender:X-Yahoo-Newman-Property:X-eGroups-Approved-By:X-eGroups-Auth; b=ZlTidKXNt5pw9A7gVQWX8I6I0s+3ADC41mCf8uAtmUVdl1o9wNwDqU79xtVkIdr/XD0Egpm9jlOcgGhkulCgJImXBLF9D+inK81hOvlm/G6fHx5qJ6rb/jMEUv8FKJ2b
+Received: from [69.147.65.172] by n43.bullet.mail.sp1.yahoo.com with NNFMP; 30 May 2009 15:25:01 -0000
+Received: from [98.137.35.13] by t14.bullet.mail.sp1.yahoo.com with NNFMP; 30 May 2009 15:25:01 -0000
+X-Sender: judib51@comcast.net
+X-Apparently-To: humor_g@yahoogroups.com
+X-Received: (qmail 87946 invoked from network); 30 May 2009 15:12:37 -0000
+X-Received: from unknown (98.137.34.45)
+  by m2.grp.sp2.yahoo.com with QMQP; 30 May 2009 15:12:37 -0000
+X-Received: from unknown (HELO QMTA12.emeryville.ca.mail.comcast.net) (76.96.27.227)
+  by mta2.grp.sp2.yahoo.com with SMTP; 30 May 2009 15:12:37 -0000
+X-Received: from OMTA03.emeryville.ca.mail.comcast.net ([76.96.30.27])
+	by QMTA12.emeryville.ca.mail.comcast.net with comcast
+	id xogJ1b0010b6N64ACrCdrZ; Sat, 30 May 2009 15:12:37 +0000
+X-Received: from yourd137mzmhow ([75.71.220.24])
+	by OMTA03.emeryville.ca.mail.comcast.net with comcast
+	id xrCZ1b00S0YAy9F8PrCcbH; Sat, 30 May 2009 15:12:37 +0000
+Message-ID: <CE01D8E8E6F94B00ADA1C56DAD336EE6@yourd137mzmhow>
+To: "Humor_G" <Humor_G@yahoogroups.com>
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.5512
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5579
+X-Originating-IP: 76.96.27.227
+X-eGroups-Msg-Info: 1:12:0:0:0
+From: "Judi" <judib51@comcast.net>
+X-Yahoo-Profile: judib1
+X-eGroups-Approved-By: judib1 <judib51@comcast.net> via web; 30 May 2009 15:25:00 -0000
+Sender: Humor_G@yahoogroups.com
+MIME-Version: 1.0
+Mailing-List: list Humor_G@yahoogroups.com; contact Humor_G-owner@yahoogroups.com
+Delivered-To: mailing list Humor_G@yahoogroups.com
+List-Id: <Humor_G.yahoogroups.com>
+Precedence: bulk
+List-Unsubscribe: <mailto:Humor_G-unsubscribe@yahoogroups.com>
+Date: Sat, 30 May 2009 09:12:31 -0600
+Subject: [Humor_G] Humor_G
+Reply-To: Humor_G@yahoogroups.com
+X-Yahoo-Newman-Property: groups-email-tradh-m
+Content-Type: multipart/alternative;
+ boundary="----=_NextPart_000_0009_01C9E106.C31079A0"
+Content-Length: 14509
+Lines: 367
+
+------=_NextPart_000_0009_01C9E106.C31079A0
+Content-Type: text/plain;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+Obama & Lincoln are much alike...
+
+
+
+
+        1.     Lincoln placed his hand on the Bible for his inauguration. O=
+bama used the same Bible.=20
+
+
+        2. Lincoln came from Illinois . Obama comes from Illinois .=20
+
+
+        3. Lincoln served in the Illinois Legislature. Obama served in the =
+Illinois Legislature.=20
+
+
+        4. Lincoln had very little experience before becoming President. Ob=
+ama had very little experience before becoming President.=20
+
+
+        5. Lincoln rode the train from Philadelphia to Washington for his i=
+nauguration. Obama rode the train from Philadelphia to Washington for his i=
+nauguration.=20
+
+
+        6. Lincoln was a skinny lawyer. Obama is a skinny lawyer.=20
+
+
+        7. Lincoln was a Republican. Obama is a skinny lawyer.=20
+
+
+        8. Lincoln was highly respected. Obama is a skinny lawyer.=20
+
+
+        9. Lincoln was born in the United States . Obama is a skinny lawyer=
+.=20
+
+
+        10. Lincoln was honest, so honest he was called "Honest Abe". Obama=
+ is a skinny lawyer.=20
+
+
+        ~~~~~~~~~~~~~~
+        Humor_G ...
+        Humor_G-subscribe@yahoogroups.com
+        Clean Humor for the whole family
+        Subscribe: Humor_G-subscribe@yahoogroups.com
+
+        Humor_ ...
+        Humor_-subscribe@yahoogroups.com
+              While this is PG 13 Humor it is not raunchy
+              Enjoy these posts and feel free to share this site with your =
+friends.
+              Subscribe: Humor_-subscribe@yahoogroups.com
+
+              STTA ...
+              STTA-subscribe@yahoogroups.com
+              Something To Think About
+                    These are Inspiring Stories that I receive in my mailbo=
+x each day.
+                    I hope they touch you as they do me.=20
+                    This world could use some encouragement to get by each =
+day.
+                    Enjoy them and share them with your friends.
+                    Feel free to share this site and have them subscribe fo=
+r themselves.=20
+              Subscribe: STTA-subscribe@yahoogroups.com=20
+
+
+        BSAHWC ...
+        BSAHWC-subscribe@yahoogroups.com
+        Boring Stay At Home Wives Club
+        This group was started by Housewives that were 'bashed' for being s=
+uch.=20
+        We call ourselves The Boring Stay At Home Wives Club.
+        We are a group of women that have developed friendships, support ea=
+ch other continue to grow within ourselves.=20
+        Just a happy go lucky group, meeting for lunches, movies or whateve=
+r.=20
+        You know...all that BORING STUFF! ;)
+        Subscribe : BSAHWC-subscribe@yahoogroups.com=20
+
+------=_NextPart_000_0009_01C9E106.C31079A0
+Content-Type: text/html; charset=Windows-1252
+Content-Transfer-Encoding: 7bit
+
+
+
+
+
+<head>
+
+<style type="text/css">
+<!--
+
+/* start of attachment style */
+       .ygrp-photo-title{
+         clear: both;
+         font-size: smaller;
+         height: 15px;
+         overflow: hidden;
+         text-align: center;
+         width: 75px;
+       }
+       div.ygrp-photo{
+         background-position: center;
+         background-repeat: no-repeat;
+         background-color: white;
+         border: 1px solid black;
+         height: 62px;
+         width: 62px;
+       }
+
+       div.photo-title 
+         a,
+         div.photo-title a:active,
+         div.photo-title a:hover,
+         div.photo-title a:visited {
+           text-decoration: none; 
+       }
+
+       div.attach-table div.attach-row {
+         clear: both;
+       }
+
+       div.attach-table div.attach-row div {
+         float: left;
+         /* margin: 2px;*/
+       }
+
+       p {
+         clear: both;
+         padding: 15px 0 3px 0;
+	 overflow: hidden;
+       }
+
+       div.ygrp-file {
+         width: 30px;
+         valign: middle;
+       }
+       div.attach-table div.attach-row div div a {
+         text-decoration: none;
+       }
+
+       div.attach-table div.attach-row div div span {
+         font-weight: normal;
+       }
+
+       div.ygrp-file-title {
+         font-weight: bold;
+       }
+ /* end of attachment style */
+        -->
+        </style>
+        </head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.6000.16825" name=GENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=#ffffff>
+
+
+<!-- |**|begin egp html banner|**| -->
+
+<br><br>
+
+<!-- |**|end egp html banner|**| -->
+
+
+
+<DIV>
+<DIV>Obama &amp; Lincoln are much alike...</DIV>
+<DIV><BR></DIV>
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top><FONT face="Comic Sans MS"></FONT><BR>
+      <BLOCKQUOTE 
+      style="PADDING-LEFT: 5px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(16,16,255) 2px solid">
+        <DIV id=yiv467452635>
+        <DIV class=Section1>
+        <DIV>
+        <P class=MsoNormal><SPAN 
+        style="FONT-SIZE: 14pt; COLOR: black; FONT-FAMILY: 'Calibri', 'sans-serif'"><SPAN>1.<SPAN 
+        style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; 
+        </SPAN></SPAN></SPAN><SPAN 
+        style="FONT-SIZE: 14pt; COLOR: black; FONT-FAMILY: 'Comic Sans MS'">Lincoln 
+        placed his hand on the Bible for his inauguration. Obama used the same 
+        Bible. </SPAN><SPAN 
+        style="FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: 'Calibri', 'sans-serif'"></SPAN></P></DIV></DIV></DIV>
+        <DIV id=ygrp-mlmsg>
+        <DIV id=ygrp-msg>
+        <DIV>
+        <DIV>
+        <DIV>
+        <P class=MsoNormal style="MARGIN-LEFT: 0.5in"><SPAN 
+        style="FONT-SIZE: 14pt; COLOR: black; FONT-FAMILY: 'Comic Sans MS'"><BR>2. 
+        Lincoln came from Illinois . Obama comes from Illinois . </SPAN><SPAN 
+        style="FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: 'Calibri', 'sans-serif'"></SPAN></P></DIV>
+        <P class=MsoNormal style="MARGIN-LEFT: 0.5in"><SPAN 
+        style="FONT-SIZE: 14pt; COLOR: black; FONT-FAMILY: 'Comic Sans MS'"><BR>3. 
+        Lincoln served in the Illinois Legislature. Obama served in the 
+        Illinois</SPAN><SPAN 
+        style="FONT-SIZE: 14pt; COLOR: #1f497d; FONT-FAMILY: 'Comic Sans MS'"> 
+        </SPAN><SPAN 
+        style="FONT-SIZE: 14pt; COLOR: black; FONT-FAMILY: 'Comic Sans MS'">Legislature. 
+        </SPAN><SPAN 
+        style="FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: 'Calibri', 'sans-serif'"></SPAN></P></DIV><SPAN 
+        style="FONT-SIZE: 14pt; COLOR: black; FONT-FAMILY: 'Comic Sans MS'">
+        <P class=MsoNormal style="MARGIN-LEFT: 0.5in"><BR>4. Lincoln had very 
+        little experience before becoming President. Obama had very little 
+        experience before becoming President. </P>
+        <P class=MsoNormal style="MARGIN-LEFT: 0.5in"></SPAN><SPAN 
+        style="FONT-SIZE: 14pt; COLOR: black; FONT-FAMILY: 'Comic Sans MS'"><BR>5. 
+        Lincoln rode the train from Philadelphia to Washington for his 
+        inauguration. Obama rode the train from Philadelphia to Washington for 
+        his inauguration. </SPAN><SPAN 
+        style="FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: 'Calibri', 'sans-serif'"></SPAN></P></DIV></DIV>
+        <P class=MsoNormal style="MARGIN-LEFT: 0.5in"><SPAN 
+        style="FONT-SIZE: 14pt; COLOR: black; FONT-FAMILY: 'Comic Sans MS'"><BR>6. 
+        Lincoln was a skinny lawyer. Obama is a skinny lawyer. </SPAN><SPAN 
+        style="FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: 'Calibri', 'sans-serif'"></SPAN></P></DIV>
+        <P class=MsoNormal style="MARGIN-LEFT: 0.5in"><SPAN 
+        style="FONT-SIZE: 14pt; COLOR: black; FONT-FAMILY: 'Comic Sans MS'"><BR>7. 
+        Lincoln was a Republican. Obama is a skinny lawyer. </SPAN><SPAN 
+        style="FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: 'Calibri', 'sans-serif'"></SPAN>
+        <DIV></DIV>
+        <P class=MsoNormal style="MARGIN-LEFT: 0.5in"><SPAN 
+        style="FONT-SIZE: 14pt; COLOR: black; FONT-FAMILY: 'Comic Sans MS'"><BR>8. 
+        Lincoln was highly respected. Obama is a skinny lawyer. </SPAN><SPAN 
+        style="FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: 'Calibri', 'sans-serif'"></SPAN>
+        <DIV></DIV>
+        <P class=MsoNormal style="MARGIN-LEFT: 0.5in"><SPAN 
+        style="FONT-SIZE: 14pt; COLOR: black; FONT-FAMILY: 'Comic Sans MS'"><BR>9. 
+        Lincoln was born in the United States . Obama is a skinny lawyer. 
+        </SPAN><SPAN 
+        style="FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: 'Calibri', 'sans-serif'"></SPAN>
+        <DIV></DIV><SPAN 
+        style="FONT-SIZE: 14pt; COLOR: black; FONT-FAMILY: 'Comic Sans MS'">
+        <P class=MsoNormal style="MARGIN-LEFT: 0.5in"><BR>10. Lincoln was 
+        honest, so honest he was called "Honest Abe". Obama is a skinny lawyer. 
+        </SPAN><BR></P>
+        <DIV><FONT face="Comic Sans MS"><STRONG><FONT face=Arial 
+        color=#ff0000>~~~~~~~~~~~~~~</FONT></STRONG></DIV>
+        <DIV>
+        <DIV class=group-description><STRONG>Humor_G ...</STRONG></DIV>
+        <DIV class=group-description><A 
+        href="mailto:Humor_G-subscribe@yahoogroups.com">Humor_G-subscribe@yahoogroups.com</A></DIV>
+        <DIV class=group-description>
+        <DIV class=group-description id=ygr_desc><STRONG>Clean Humor for the 
+        whole family</STRONG></DIV>
+        <DIV class=group-description>Subscribe: <A 
+        href="mailto:Humor_G-subscribe@yahoogroups.com">Humor_G-subscribe@yahoogroups.com</A></DIV>
+        <DIV class=group-description>&nbsp;</DIV>
+        <DIV class=group-description>
+        <DIV class=group-description><STRONG>Humor_ ...</STRONG></DIV>
+        <DIV class=group-description><A 
+        href="mailto:Humor_-subscribe@yahoogroups.com">Humor_-subscribe@yahoogroups.com</A></DIV><FONT 
+        size=2>
+        <DIV class=group-description>
+        <TABLE class=ygrp-desc cellSpacing=0 cellPadding=0>
+          <TBODY>
+          <TR>
+            <TD>
+              <DIV class=group-description><STRONG>While this is PG 13 Humor it 
+              is not raunchy</STRONG><BR>Enjoy these posts and feel free to 
+              share this site with your friends.<BR><FONT size=2><FONT 
+              size=3>Subscribe:</FONT> <A 
+              href="mailto:Humor_-subscribe@yahoogroups.com"><FONT 
+              size=3>Humor_-subscribe@yahoogroups.com</FONT></A></FONT></DIV>
+              <DIV class=group-description>&nbsp;</DIV>
+              <DIV class=group-description>
+              <DIV class=group-description><STRONG>STTA ...</STRONG></DIV>
+              <DIV class=group-description><A 
+              href="mailto:STTA-subscribe@yahoogroups.com">STTA-subscribe@yahoogroups.com</A></DIV>
+              <DIV class=group-description><STRONG>Something To Think 
+              About</STRONG></DIV>
+              <TABLE class=ygrp-desc cellSpacing=0 cellPadding=0>
+                <TBODY>
+                <TR>
+                  <TD>
+                    <DIV class=group-description id=ygr_desc>These are Inspiring 
+                    Stories that I receive in my mailbox each day.<BR>I hope 
+                    they touch you as they do me. <BR>This world could use some 
+                    encouragement to get by each day.<BR>Enjoy them and share 
+                    them with your friends.<BR>Feel free to share this site and 
+                    have them subscribe for 
+              themselves.</DIV></TD></TR></TBODY></TABLE>Subscribe: <A 
+              href="mailto:STTA-subscribe@yahoogroups.com">STTA-subscribe@yahoogroups.com</A></DIV></TD></TR></TBODY></TABLE></DIV>
+        <DIV class=group-description><FONT size=3></FONT>&nbsp;</DIV>
+        <DIV class=group-description>
+        <DIV>
+        <DIV class=group-description><STRONG>BSAHWC ...</STRONG></DIV>
+        <DIV class=group-description><A 
+        href="mailto:BSAHWC-subscribe@yahoogroups.com">BSAHWC-subscribe@yahoogroups.com</A></DIV>
+        <DIV class=group-description><STRONG>Boring Stay At Home Wives 
+        Club</STRONG></DIV>
+        <DIV class=group-description>This group was started by Housewives that 
+        were 'bashed' for being such. <BR>We call ourselves The Boring Stay At 
+        Home Wives Club.<BR>We are a group of women that have developed 
+        friendships, support each other continue to grow within ourselves. 
+        <BR>Just a happy go lucky group, meeting for lunches, movies or 
+        whatever. <BR>You know...all that BORING STUFF! ;)</DIV>
+        <DIV class=group-description>Subscribe : <A 
+        href="mailto:BSAHWC-subscribe@yahoogroups.com">BSAHWC-subscribe@yahoogroups.com</A></DIV></DIV></DIV></FONT></DIV></DIV></FONT></DIV></BLOCKQUOTE></TD></TR></TBODY></TABLE></DIV>
+
+
+
+<!-- |**|begin egp html banner|**| -->
+
+<br>
+
+    
+    
+<br>
+
+<!-- |**|end egp html banner|**| -->
+
+
+<div width="1" style="color: white; clear: both;"/>__._,_.___</div>
+
+<!-- Start Recommendations -->
+<!-- End Recommendations -->
+
+
+
+<!-- |**|begin egp html banner|**| -->
+
+  <img src="http://geo.yahoo.com/serv?s=97476590/grpId=450699/grpspId=1705020655/msgId=4105/stime=1243697126" width="1" height="1"> <br>
+
+<!-- |**|end egp html banner|**| -->
+
+    
+<!-- |**|begin egp html banner|**| -->
+
+<br>
+      <div style="font-family: verdana; font-size: 77%; border-top: 1px solid #666; padding: 5px 0;" >
+      Your email settings: Individual Email|Traditional <br>
+      <a href="http://groups.yahoo.com/group/Humor_G/join;_ylc=X3oDMTJlazlodTA3BF9TAzk3NDc2NTkwBGdycElkAzQ1MDY5OQRncnBzcElkAzE3MDUwMjA2NTUEc2VjA2Z0cgRzbGsDc3RuZ3MEc3RpbWUDMTI0MzY5NzEyNg--">Change settings via the Web</a> (Yahoo! ID required) <br>
+      Change settings via email: <a href="mailto:Humor_G-digest@yahoogroups.com?subject=Email Delivery: Digest">Switch delivery to Daily Digest</a> | <a href = "mailto:Humor_G-fullfeatured@yahoogroups.com?subject=Change Delivery Format: Fully Featured">Switch to Fully Featured</a> <br>
+           <a href="http://groups.yahoo.com/group/Humor_G;_ylc=X3oDMTJjNm5lcDA1BF9TAzk3NDc2NTkwBGdycElkAzQ1MDY5OQRncnBzcElkAzE3MDUwMjA2NTUEc2VjA2Z0cgRzbGsDaHBmBHN0aW1lAzEyNDM2OTcxMjY-">
+        Visit Your Group 
+      </a> |
+      <a href="http://docs.yahoo.com/info/terms/">
+        Yahoo! Groups Terms of Use
+      </a> |
+      <a href="mailto:Humor_G-unsubscribe@yahoogroups.com?subject=Unsubscribe">
+       Unsubscribe 
+      </a> 
+ <br>
+    </div>
+  <br>
+
+<!-- |**|end egp html banner|**| -->
+
+
+<div style="color: white; clear: both;"/>__,_._,___</div>
+</BODY></HTML>
+
+------=_NextPart_000_0009_01C9E106.C31079A0--

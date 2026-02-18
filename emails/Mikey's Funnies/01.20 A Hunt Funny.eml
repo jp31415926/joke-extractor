@@ -1,0 +1,98 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <funnies-return-4710-gcfl-jokes=gcfl.net@lists.mikeysfunnies.com>
+X-Original-To: gcfl-jokes@gcfl.net
+Delivered-To: gcfl-jokes@gcfl.net
+Received-SPF: Temperror (mailfrom) identity=mailfrom; client-ip=76.8.25.230; helo=list.agathongroup.com; envelope-from=funnies-return-4710-gcfl-jokes=gcfl.net@lists.mikeysfunnies.com; receiver=<UNKNOWN> 
+Authentication-Results: attila.gcfl.net;
+	dkim=pass (1024-bit key; unprotected) header.d=lists.MikeysFunnies.com header.i=@lists.MikeysFunnies.com header.b="cgk9j2ap";
+	dkim-atps=neutral
+Received: from list.agathongroup.com (mail.agathongroup.com [76.8.25.230])
+	by attila.gcfl.net (Postfix) with ESMTPS id CB28030857F9
+	for <gcfl-jokes@gcfl.net>; Fri, 20 Jan 2023 02:33:10 -0600 (CST)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed;
+	d=lists.MikeysFunnies.com; s=default; h=Mailing-List:Precedence:
+	Content-Transfer-Encoding:Reply-To:To:From:Delivered-To:
+	Received-SPF:Subject:Message-Id:Date; bh=hHtWYbyrze4E1sCsj1pWuHk
+	6ksc=; b=cgk9j2ap1cxyU6XtaI8wmAxcitm0MdMMgqfFfyFDaFb1CTFATHB6yYd
+	XI8LVhtd8/hlbCSJ+NRSpRdbICGj7wPXX4KI34Iusd4pHrEocGBJWvjuLO9aE6Da
+	oyd7OzgAAvQmGgmYGatSVJJqB+G1dmestpavWRrVws8F1fXdL1dc=
+DomainKey-Signature: a=rsa-sha1; q=dns; c=simple;
+  s=default; d=lists.MikeysFunnies.com;
+  b=in3tbdnyC/iqkcFTKzb/uofURQSa1cTwfLDVF3NFYzLnYMyd3Tl09mCSvqRoSl7r4jyJAFWYuy8ZbjUickVb8cGBLWgE0+dCFQBibyzqieYDeNfk3Yxq6NvrVfSQ9v+0Gwf3O7rakId303vYCKaNfudGd+Ylwf2MInxcis7qfa8=;
+Received: (qmail 27612 invoked by uid 1061); 20 Jan 2023 08:30:07 -0000
+Mailing-List: contact funnies-help@lists.mikeysfunnies.com; run by ezmlm
+Precedence: bulk
+Content-Transfer-Encoding: 8bit
+X-Yes-Archive: yes
+X-List-Help: <mailto:funnies-help@lists.mikeysfunnies.com>
+Reply-To: reply@MikeysFunnies.com
+To: Mikey's Funnies List <funnies@lists.MikeysFunnies.com>
+From: Mikey's Funnies <funnies-owner@lists.MikeysFunnies.com>
+Delivered-To: mailing list funnies@lists.mikeysfunnies.com
+Received: (qmail 27599 invoked by uid 0); 20 Jan 2023 08:30:07 -0000
+X-Agathon-BaruwaFW-From: mikey@mikeysfunnies.com
+X-Agathon-BaruwaFW-SpamCheck: not spam (whitelisted),
+	SpamAssassin (not cached, score=-0.947, required 5,
+	autolearn=not spam, BAYES_00 -2.00, KAM_DMARC_STATUS 0.01,
+	SPF_HELO_NONE 0.00, SPF_PASS -0.00, TXREP 1.04)
+X-Agathon-BaruwaFW: MTA virus scan performed
+X-Agathon-BaruwaFW-ID: 1pImmg-0005YJ-Eo
+X-Agathon-BaruwaFW-Information: Please contact Agathon Group Mail Firewall for more information
+Received-SPF: pass (filter.agathongroup.com: domain of mikeysfunnies.com designates 209.151.235.145 as permitted sender) client-ip=209.151.235.145; envelope-from=mikey@mikeysfunnies.com; helo=shared1.aghosted.com;
+Subject: 01.20: A Hunt Funny
+Message-Id: <20230120083001.7E92F6A0F81@shared1.aghosted.com>
+Date: Fri, 20 Jan 2023 00:30:01 -0800 (PST)
+X-Baruwa-Whitelisted-Host: 209.151.235.145
+Content-Length: 1751
+
+>>>From Mikey
+
+Don't forget to follow us on social media for an assortment of uproarious, clean memes and images:
+
+Instagram: @mikeysfunnies
+https://www.instagram.com/mikeysfunnies/
+
+Facebook: https://www.facebook.com/mikeysfunnies
+
+>>>Today's Funny
+
+A hunting party is hopelessly lost. "I thought you said you were the best guide in Maine!" one of the hunters angrily said to their confused leader.
+
+"I am, "replied the guide. "But I think we're in Canada now."
+
+[forwarded by Steve Sanderson]
+
+>>>Today's Thot
+
+The nurse came in and said "Doc, there's a man in the waiting room who thinks he's invisible." The doctor said, "Tell him I can't see him today."
+
+>>>
+
+PASS IT ON! 
+Yeah, you can send this Funny to anybody you want. And, if you're REAL nice, you'll tell them where you got it! www.mikeysFunnies.com 
+
+>>>
+
+Mikey's Funnies is a clean humor email list, sent every weekday and is generously hosted by Agathon for Ministries. Agathon has more than 25 years of experience helping organizations advance their digital mission through strategic planning, website design, and app development. Learn more at https://agathonforministries.com 
+
+We DO NOT rent, sell, or share your email address with any company, organization, or individual, sacred or secular. And, subscribing will not result in more spam. We guarantee it!
+
+~ Add our address to your Approved Senders/Whitelist: funnies-owner@lists.MikeysFunnies.com
+
+Instagram: @mikeysfunnies
+
+Facebook: https://www.facebook.com/mikeysfunnies
+
+~ Donate: http://www.mikeysFunnies.com/donate.html
+
+~ Advertise: http://www.mikeysFunnies.com/advertise/
+
+~ Contact:  http://www.mikeysFunnies.com/contact.html
+
+
+Unsubscribe, subscribe, or change your email address: http://www.mikeysFunnies.com/sub/
+
+
+
+

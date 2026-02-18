@@ -1,0 +1,169 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <sentto-1237676-5691-1595508594-@returns.groups.yahoo.com>
+X-Original-To: linux-guru@gcfl.net
+Delivered-To: linux-guru@gcfl.net
+Received-SPF: Temperror (mailfrom) identity=mailfrom; client-ip=74.6.131.158; helo=sonic327-32.consmr.mail.bf2.yahoo.com; envelope-from=sentto-1237676-5691-1595508594-@returns.groups.yahoo.com; receiver=<UNKNOWN> 
+Authentication-Results: attila.gcfl.net;
+	dkim=pass (1024-bit key; unprotected) header.d=yahoogroups.com header.i=@yahoogroups.com header.b="RVM0hrHF";
+	dkim-atps=neutral
+Received: from sonic327-32.consmr.mail.bf2.yahoo.com (sonic327-32.consmr.mail.bf2.yahoo.com [74.6.131.158])
+	by attila.gcfl.net (Postfix) with ESMTPS id AB01C30802CC
+	for <linux-guru@gcfl.net>; Thu, 23 Jul 2020 07:49:55 -0500 (CDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoogroups.com; s=echoe; t=1595508595; bh=N80uAe2VuXSmm4+2sDTaOnuUsJZehkP/dtqSfnOafGw=; h=To:From:List-Id:List-Unsubscribe:Date:Subject:Reply-To:From:Subject; b=RVM0hrHF50UemT+lbKNTL7fKq9vwuQRVprY1JuvH6My0oHygLKX2Lr2vwQkQM46PpAFNXuY9T3Fss+CwqMZmvTl7gZ5qCUakTParYTG8C5Okuidsk2POk0nnumzDVk4xT6Zc2nDJDfC8Y8V2qcmCZaJvDB8m07pmsVwCq63hGOw=
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic327.consmr.mail.bf2.yahoo.com with HTTP; Thu, 23 Jul 2020 12:49:55 +0000
+X-Yahoo-Newman-Id: 1237676-m5691
+X-Sender: tellswor@kcbx.net
+X-Apparently-To: good-clean-fun@yahoogroups.com
+X-Received: (qmail 20008 invoked by uid 102); 23 Jul 2020 12:49:53 -0000
+X-Received: from unknown (HELO mtaq3.grp.bf1.yahoo.com) (10.196.204.226)
+  by m6.grp.bf1.yahoo.com with SMTP; 23 Jul 2020 12:49:53 -0000
+X-Received: (qmail 26089 invoked from network); 23 Jul 2020 12:49:53 -0000
+X-Received: from unknown (HELO mta4000.groups.mail.bf1.yahoo.com) (10.201.194.145)
+  by mtaq3.grp.bf1.yahoo.com with SMTP; 23 Jul 2020 12:49:53 -0000
+Authentication-Results: mta4000.groups.mail.bf1.yahoo.com; 
+ dkim=neutral (no sig) header.i=@kcbx.net;
+ spf=softfail smtp.mailfrom=@kcbx.net;
+ dmarc=NULL(p=NULL sp=NULL dis=NULL) header.from=kcbx.net;
+X-Received-SPF: softfail (transitioning domain of kcbx.net does not designate 47.43.20.26 as permitted sender)
+X-YMailISG: 8mR6ANsWLDtljkUv4wrMXRFsrNFXvVCN58MPkaZpZ2kmg3.J
+ HyYwpUDgejTsHDMLEhrdx1Pqmuhhfnlt6ViE67A0jdBrxb0x.o.oqFdLH_hF
+ VkAnRRX3uUGji3wuT.vX12kjUF28iyH.vyeaQZ5RolArABBFreICaeEg7K9M
+ HFJLwwigPyiCqqvD0PNwrltlie39fccsB5Bc7fOlTsSJmMVIbntzuIKBnSs6
+ L3KR8ZbM.04il4CzULnuzAa1q9o1d_SxFSB2rcttyl81SAuAU7MZoVRkkngs
+ NRSzyRprJuZ7niV7etOfSzknLxbeugPSVr2h5PcQMjQ6CnQ3g75W.ZFOM_Ic
+ f7W8yYCcDvuMk8XYWesd2DEWT_lA3_xMw8ddypUpXGBoXeEpncmbGXifk_6.
+ ULHXXpTY_VS8v_zsXuMQzoHMd4PXIgWvVZP09y0FUXc76t6DfY6UZXqmceHD
+ txDXeJ87OuGMs89lEU6.Cg5izsSJj7lPLjq0w3U5f.7NFTWWaHO.8d1aUQE4
+ OYM4lOEAuzUb2zshhrpizVlxajxFtndv_e2pfZpGxqedVRo38le.S6vnsbW6
+ 2UrlhNANCqcYfPMERmiwtXW8FPgSbXG9yz2Ydpfq6PPYgouYTCQuW1G80.TJ
+ iiQbLOTvB_pfK.vhc5X08NA9jV.SS2KO.X5kzL1OXnzGaY9vzKUjPgCrtz79
+ fIHA9w7iizhIXsgOFmKAyWTshQ.gz44A4rBqjjXnRkTXkxKITLWv6d70mF6s
+ LPfbANHW7q3h.tUfTXz702BlW8WKjOaGftqcxzG392q2a9GWuXyexvN2Ep6f
+ GZ2kqvLa5cCzvweOyBCKOxN3mDmyErjpuFrNi1J4f9v44qsDRKKK6zsKl6GE
+ isuCji4G3Iyq5shn2ktQ2hvao_WIndm.F3e92cD5ZTnIFZepdRePQmAU68bB
+ o8e16isnAyArwH3Hr.Vfz2TOb4oDcPE_sk7HY1L.019rZ0jMFzh.ova1.Ccf
+ _yZEfnDoLmbEVNXKTA5tISZahtmOK9OF8B4E2UJQnrmJ.vxSzPfl5sMrpD2m
+ WPqauGZPMTP5hCAFrrDkb_kG9sib2CjA6BVf.kgMLtyF.DWh
+X-Received: from 10.201.234.139  (EHLO impout002.msg.chrl.nc.charter.net) (47.43.20.26)
+  by mta4000.groups.mail.bf1.yahoo.com with SMTPS; Thu, 23 Jul 2020 12:49:53 +0000
+X-Received: from ThomasEllsworth.kcbx.net ([66.214.196.169])
+	by cmsmtp with ESMTPA
+	id yafVjyuqdh15uyafXjRg0E; Thu, 23 Jul 2020 12:49:51 +0000
+Authentication-Results: kcbx.net; none
+X-Authority-Analysis: v=2.3 cv=etJrMbhX c=1 sm=1 tr=0
+ a=UFL7CaVhbjE5AyUk81XeAg==:117 a=UFL7CaVhbjE5AyUk81XeAg==:17
+ a=HpEJnUlJZJkA:10 a=kj9zAlcOel0A:10 a=pDCGZZFbAAAA:8 a=qV0mfD4mAAAA:8
+ a=KxeGKX1eAAAA:8 a=EqL7-QgTc-U7ZbCHq7EA:9 a=CjuIK1q_8ugA:10 a=1gylOlVyTIQA:10
+ a=ReGkIpCd4hIA:10 a=JcQeijbT3-2kmBptS8B2:22 a=mnVZ7iNJyew7AB3q5ROZ:22
+ a=nkovl10d-2D50Pg-qAt3:22 a=pHzHmUro8NiASowvMSCR:22 a=xoEH_sTeL_Rfw54TyV31:22
+X-Mailer: QUALCOMM Windows Eudora Version 7.1.0.9
+To: good-clean-fun@yahoogroups.com
+X-CMAE-Envelope: MS4wfO42/Fr6Z4gp2qF391PJZig/B+De2NRXqAPdMuFlDAKfh9/C57VBGBcBz6Tq4gvfGCP9OvX34To3G36AVKkwfJStpeULlrr3hx0GdeMf9A9tTWQcHbOz
+ R2W0I9Cha6IPJU9M1C2ZDDwMriQXuYyTJ4NqgXSHJw970cCI/9lKcFtkvNRzVrLB71Sgjk0pCOK1ipApi4ryEq7kNh9h39O+GKg=
+X-Originating-IP: 10.201.194.145
+X-Original-From: "Thomas S. Ellsworth" <tellswor@kcbx.net>
+From: "'Thomas S. Ellsworth' tellswor@kcbx.net [good-clean-fun]" <good-clean-fun-noreply@yahoogroups.com>
+X-Yahoo-Profile: tom_ellsworth
+Sender: good-clean-fun@yahoogroups.com
+MIME-Version: 1.0
+Mailing-List: list good-clean-fun@yahoogroups.com; contact good-clean-fun-owner@yahoogroups.com
+Delivered-To: mailing list good-clean-fun@yahoogroups.com
+List-Id: <good-clean-fun.yahoogroups.com>
+Precedence: bulk
+List-Unsubscribe: <mailto:good-clean-fun-unsubscribe@yahoogroups.com>
+Date: Thu, 23 Jul 2020 05:49:35 -0700
+Subject: GCF: Colorful Meal
+Reply-To: good-clean-fun-owner@yahoogroups.com
+X-Yahoo-Newman-Property: groups-email-tradt-m
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+Content-Length: 2633
+
+
+
+
+Emailed to me from another humor list (Doc's Daily Chuckle)    -Tom
+Subscribe to Doc's Daily Chuckle at the website:
+<a href="http://family-safe-mail.com/lists/?p=subscribe&id=55">Subscribe</a>
+
+If this was forwarded to you, please consider your own
+subscription to Good Clean Fun. It's free! Just send an
+email to: good-clean-fun-subscribe@yahoogroups.com
+-------------------------------------------------------------------------
+
+
+GCF: Colorful Meal
+
+Over dinner, I explained the health benefits of a colorful meal to my 
+family. "The more colors, the more variety of nutrients," I told 
+them. Pointing to our food, I asked, "How many different colors do you see?"
+
+"Six," volunteered my daughter. "Seven if you count the burned parts."
+
+
+----------- Today's saying or thought -------------------------
+
+"Life is not a journey to the grave with the intention of arriving
+safely in a pretty and well-preserved body, but rather to skid in
+broadside, thoroughly used up, totally worn out, and loudly
+proclaiming WOW!  What a Ride!"
+
+---------------------------------------------------------------
+0007
+
+
+*** Good Clean Fun ***
+is brought to you by
+Thomas S. Ellsworth
+email: tellswor@kcbx.net
+
+You can subscribe to the Good Clean Fun mailing list by sending
+an email (blank is fine) to:   good-clean-fun-subscribe@yahoogroups.com
+and just reply to the confirmation email you receive.
+
+Stop for a visit, leave with a smile!
+
+-------------------------------------------------------------------------
+Any ad that is inserted into this email is done automatically by
+YahooGroups as a condition of their free hosting the Good Clean Fun list.
+I have no control over any content of the advertisement.
+-------------------------------------------------------------------------
+
+This email was scanned by Charter Security Suite before it was sent.
+
+
+
+
+
+
+
+------------------------------------
+Posted by: "Thomas S. Ellsworth" <tellswor@kcbx.net>
+------------------------------------
+
+
+------------------------------------
+
+Yahoo Groups Links
+
+<*> To visit your group on the web, go to:
+    http://groups.yahoo.com/group/good-clean-fun/
+
+<*> Your email settings:
+    Individual Email | Traditional
+
+<*> To change settings online go to:
+    http://groups.yahoo.com/group/good-clean-fun/join
+    (Yahoo! ID required)
+
+<*> To change settings via email:
+    good-clean-fun-digest@yahoogroups.com 
+    good-clean-fun-fullfeatured@yahoogroups.com
+
+<*> To unsubscribe from this group, send an email to:
+    good-clean-fun-unsubscribe@yahoogroups.com
+
+<*> Your use of Yahoo Groups is subject to:
+    https://info.yahoo.com/legal/us/yahoo/utos/terms/
+

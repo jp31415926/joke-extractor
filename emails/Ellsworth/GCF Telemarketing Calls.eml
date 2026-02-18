@@ -1,0 +1,217 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <sentto-1237676-5679-1594211758-@returns.groups.yahoo.com>
+X-Original-To: linux-guru@gcfl.net
+Delivered-To: linux-guru@gcfl.net
+Received-SPF: Temperror (mailfrom) identity=mailfrom; client-ip=98.137.67.158; helo=sonic325-32.consmr.mail.gq1.yahoo.com; envelope-from=sentto-1237676-5679-1594211758-@returns.groups.yahoo.com; receiver=<UNKNOWN> 
+Authentication-Results: attila.gcfl.net;
+	dkim=pass (1024-bit key; unprotected) header.d=yahoogroups.com header.i=@yahoogroups.com header.b="paFxLAN+";
+	dkim-atps=neutral
+Received: from sonic325-32.consmr.mail.gq1.yahoo.com (sonic325-32.consmr.mail.gq1.yahoo.com [98.137.67.158])
+	by attila.gcfl.net (Postfix) with ESMTPS id 9B55130802CA
+	for <linux-guru@gcfl.net>; Wed,  8 Jul 2020 07:36:00 -0500 (CDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoogroups.com; s=echoe; t=1594211759; bh=3B7NQ65BahECLwMxIKBfb16HHslHOtilXBou/ooj4tA=; h=To:From:List-Id:List-Unsubscribe:Date:Subject:Reply-To:From:Subject; b=paFxLAN+Ak28zyt/jkjAIjbhMy5MSCSUymzgtH7T0mNqGaP0CRGCFw+Z9sX1Ps39AUbqpyJq7/FWrmp4wqQvNXgtP0GrcbGf6nbZY4S/UHH+QAznN8NdEY48x6Jv1dl668Aqwah15zrh0xW0rsOj+Nc9tJBeoSyBRzHFxUK2PIw=
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic325.consmr.mail.gq1.yahoo.com with HTTP; Wed, 8 Jul 2020 12:35:59 +0000
+X-Yahoo-Newman-Id: 1237676-m5679
+X-Sender: tellswor@kcbx.net
+X-Apparently-To: good-clean-fun@yahoogroups.com
+X-Received: (qmail 13572 invoked by uid 102); 8 Jul 2020 12:35:58 -0000
+X-Received: from unknown (HELO mtaq6.grp.bf1.yahoo.com) (10.198.29.79)
+  by m8.grp.bf1.yahoo.com with SMTP; 8 Jul 2020 12:35:58 -0000
+X-Received: (qmail 12033 invoked from network); 8 Jul 2020 12:35:58 -0000
+X-Received: from unknown (HELO mta4003.groups.mail.ne1.yahoo.com) (10.221.10.34)
+  by mtaq6.grp.bf1.yahoo.com with SMTP; 8 Jul 2020 12:35:58 -0000
+Authentication-Results: mta4003.groups.mail.ne1.yahoo.com; 
+ dkim=neutral (no sig) header.i=@kcbx.net;
+ spf=softfail smtp.mailfrom=@kcbx.net;
+ dmarc=NULL(p=NULL sp=NULL dis=NULL) header.from=kcbx.net;
+X-Received-SPF: softfail (transitioning domain of kcbx.net does not designate 47.43.20.28 as permitted sender)
+X-YMailISG: Y8_xPL4WLDuqOR3lK4fdW6czUI29cMyECk7kq4RiWVzaCOZB
+ 2IHLbe91Tc73hIHAkRGj7cq8PRbJ8P0bA1ewmuRfKAQJEllLMz3WGYUJQdZd
+ YUy3D7JaeqYhfitXqfZY9g1piVVaEhN4KYofGuqFLvPPHQs6P7iEbzxAMn2j
+ n3S_JdL3ksf483kgl2xkvfHXoRWSqMGFXojiQ2IoK6lNML928XkJbQHpqkOV
+ N7PWKjd.q2HvSyn8czwdGlidhbCf6k1zvmxeobiB3JNKLc4_0f_TdP.f4pyi
+ 13FB5COEsmkQ5LMSnitb0moeU6yik_r2svw7B8yc6B_Y4YbrrNa8gESScRJ.
+ YnEGnzsCiWJtNhcXLf4itVAGblNNhTLWIMGswq6_EgUuj_lvXgWa6gM0zX8N
+ Zl3QksHea86W8BQrl4ESkNqG9nWfs4YnhVzti9L.Q5JqP00Aa2RbOgCvsGHP
+ NNd5At8Btp0NiXEE9i6TfjWQWAq0u6PCQLUJyvrJM8YdP8837PRsz2hNpYcr
+ YB6u1I7yrGVG7YiVo0E_8g5hzlWu15_QotqcIpBcN1jagA4TsUp_.HxDP0P9
+ n_ZudyhNXPjHAN1CHm6aGo2eiwA.f5b13HChbTcyESIRGWQEZJwdSeC5pcbB
+ lFcEH3caOwfn3W.w2YGV.2LeTphKfPq2odhh3xed1Tgi7z2LlX57M5K726WG
+ .enYPoucWla.XqYsuIdwijCuuaR6w7JvZo6XGhatptPtSm7xmfbvE6rmjW6G
+ UvbeAD3rjST__NOpOmSvm99LEeXvzmC292vTjW5oFrsca6pj8Ms_2CF6z3U.
+ 9vVTENlWUeHltPunkYnRWx.pDvOqm850rDrbdvEiZiAOWP.NKLHQQ_zqWhwH
+ .Z6P67TH59Wv_mMonHNOOMxQP_MArGy7VPX84gDzM3RwuTZILhRjo_tdkuf2
+ slIBCE0hVOSrn1wdlQJT.KAsEeFotPUIdvHsoe2Gw6LkJ8Nn8YDjnZH26MA4
+ R0wzThLuruFcfMBX4dR4odg_ODU87ZVNexg1zNRlKlDdMVC5urqSNovJQ4P3
+ jfTTN3ABUrFXTlUEvrzPQu79o6znoIWxsnc-
+X-Received: from 10.222.83.74  (EHLO impout004.msg.chrl.nc.charter.net) (47.43.20.28)
+  by mta4003.groups.mail.ne1.yahoo.com with SMTPS; Wed, 08 Jul 2020 12:35:57 +0000
+X-Received: from ThomasEllsworth.kcbx.net ([66.214.196.169])
+	by cmsmtp with ESMTPA
+	id t9InjdaCUwzF8t9IpjI3ZF; Wed, 08 Jul 2020 12:35:55 +0000
+Authentication-Results: kcbx.net; none
+X-Authority-Analysis: v=2.3 cv=SdVDicZu c=1 sm=1 tr=0
+ a=UFL7CaVhbjE5AyUk81XeAg==:117 a=UFL7CaVhbjE5AyUk81XeAg==:17
+ a=HpEJnUlJZJkA:10 a=kj9zAlcOel0A:10 a=qV0mfD4mAAAA:8 a=KxeGKX1eAAAA:8
+ a=15LXtfKg5IeC0zCPrTwA:9 a=58Pj1H8-bEYVVHq6:21 a=7F1n3xxQ2yb0sHKP:21
+ a=CjuIK1q_8ugA:10 a=p82mZUHHN3gA:10 a=1gylOlVyTIQA:10 a=ReGkIpCd4hIA:10
+ a=mnVZ7iNJyew7AB3q5ROZ:22 a=nkovl10d-2D50Pg-qAt3:22 a=pHzHmUro8NiASowvMSCR:22
+ a=xoEH_sTeL_Rfw54TyV31:22
+X-Mailer: QUALCOMM Windows Eudora Version 7.1.0.9
+To: good-clean-fun@yahoogroups.com
+X-CMAE-Envelope: MS4wfOT9EVyIAOrlojqWjwqwDLOhR+JC61Py7jNlgT2GH6po44u+1e/iA4+W7A+73o4yLzlYz/eyPzal7q8pOpptEEqbLA7D9Ody5RwUKNWNxHmcrqjmAgFg
+ +GzkEaowBLh5LXYSYUQPFbffQSmI5G6XtCPGAtXPf2Lcfv+Ei6CR3qAGkYZ1LLzJS8csLhcL8kJkrMtnWZH0mfF3sbklrg1+3bA=
+X-Originating-IP: 10.221.10.34
+X-Original-From: "Thomas S. Ellsworth" <tellswor@kcbx.net>
+From: "'Thomas S. Ellsworth' tellswor@kcbx.net [good-clean-fun]" <good-clean-fun-noreply@yahoogroups.com>
+X-Yahoo-Profile: tom_ellsworth
+Sender: good-clean-fun@yahoogroups.com
+MIME-Version: 1.0
+Mailing-List: list good-clean-fun@yahoogroups.com; contact good-clean-fun-owner@yahoogroups.com
+Delivered-To: mailing list good-clean-fun@yahoogroups.com
+List-Id: <good-clean-fun.yahoogroups.com>
+Precedence: bulk
+List-Unsubscribe: <mailto:good-clean-fun-unsubscribe@yahoogroups.com>
+Date: Wed, 08 Jul 2020 05:35:44 -0700
+Subject: GCF: Telemarketing Calls
+Reply-To: good-clean-fun-owner@yahoogroups.com
+X-Yahoo-Newman-Property: groups-email-tradt-m
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+Content-Length: 4582
+
+
+
+
+Emailed to me another humor list (Da Mouse Tracks)    -Tom
+To subscribe Da Mouse Tracks send an email to:
+DaMouseTracks-subscribe@yahoogroups.com
+
+
+If this was forwarded to you, please consider your own
+subscription to Good Clean Fun. It's free! Just send an
+email to: good-clean-fun-subscribe@yahoogroups.com
+-------------------------------------------------------------------------
+
+
+
+GCF: Telemarketing Calls
+
+I used to hate it when telemarketers would call but nowadays I 
+welcome them with open arms. Their calls are opportunities for me to 
+turn the tables and inconvenience them instead of them 
+inconveniencing me. Perhaps they have now blacklisted me because I 
+don't get as many calls as I used to but when my caller ID shows 
+"Private Caller"my adrenaline rushes and I am ready to play.
+
+One of the new ploys that telemarketers are using is to call you 
+electronically. You pick up the phone to hear a recorded voice say, 
+"Please stay on the line for an important message." They actually 
+expect you to wait on hold while they take their sweet time before 
+getting around to selling you something.
+
+The last time I got one of these calls, I put on some classical music 
+and waited for someone to greet me. As soon as I heard the 
+telemarketer say hello, I said in my best radio advertiser voice, 
+"Your call is important to us. Please stay on the line. Our next 
+available representative will be with you shortly." I let the music 
+play and would repeat those phrases at thirty second intervals.
+
+Finally I turned off the music and said, "Hello?"
+"Hello, this is Jane with Allied Travel. How are you today?"
+"Well, my gouts been acting up, I've got terrible hemorrhoids, I've 
+got poison ivy on the bottom of my feet and I just ate a pizza so the 
+heartburn will be coming on soon."
+"I'm sorry to hear that sir but I'm calling to tell you about some of 
+our exciting travel packages that ..."
+I interrupted her, "You don't really care about how I'm doing, do you?"
+"Why, sure I do?"
+"You want to come over and throw some horseshoes?"
+"Well sir, I can't do that right now. I have to call people and tell 
+them about our travel packages."
+"You can use my phone. Come on over."
+"I'm afraid I can't do that."
+"You don't like me do you?"
+"Of course I like you sir."
+"So why won't you come over?"
+"Well, I'm working."
+"I got some pork rinds and some Pepsi and I could fry up a little 
+fatback if you'd like."
+"Boy, that sounds real tempting but I'll have to take a rain check on that."
+"Okay, how about tomorrow then?"
+"I can't. I'm working."
+"How about the day after tomorrow then?"
+"Actually sir, I'm not supposed to get too personal with the people I call."
+"Why'd you ask me how I was doing then?"
+"That's just a courtesy."
+"You don't like me do you?"
+"Yes sir. I like you just fine."
+"So ... You want to come over and throw some horseshoes?"
+(click)
+
+
+----------- Today's saying or thought -------------------------
+
+Some mistakes are too much fun to only make once.
+
+---------------------------------------------------------------
+2020
+
+
+
+
+*** Good Clean Fun ***
+is brought to you by
+Thomas S. Ellsworth
+email: tellswor@kcbx.net
+
+You can subscribe to the Good Clean Fun mailing list by sending
+an email (blank is fine) to:   good-clean-fun-subscribe@yahoogroups.com
+and just reply to the confirmation email you receive.
+
+Stop for a visit, leave with a smile!
+
+-------------------------------------------------------------------------
+Any ad that is inserted into this email is done automatically by
+YahooGroups as a condition of their free hosting the Good Clean Fun list.
+I have no control over any content of the advertisement.
+-------------------------------------------------------------------------
+
+This email was scanned by Charter Security Suite before it was sent.
+
+
+
+
+
+
+
+------------------------------------
+Posted by: "Thomas S. Ellsworth" <tellswor@kcbx.net>
+------------------------------------
+
+
+------------------------------------
+
+Yahoo Groups Links
+
+<*> To visit your group on the web, go to:
+    http://groups.yahoo.com/group/good-clean-fun/
+
+<*> Your email settings:
+    Individual Email | Traditional
+
+<*> To change settings online go to:
+    http://groups.yahoo.com/group/good-clean-fun/join
+    (Yahoo! ID required)
+
+<*> To change settings via email:
+    good-clean-fun-digest@yahoogroups.com 
+    good-clean-fun-fullfeatured@yahoogroups.com
+
+<*> To unsubscribe from this group, send an email to:
+    good-clean-fun-unsubscribe@yahoogroups.com
+
+<*> Your use of Yahoo Groups is subject to:
+    https://info.yahoo.com/legal/us/yahoo/utos/terms/
+

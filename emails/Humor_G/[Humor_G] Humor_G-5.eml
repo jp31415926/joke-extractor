@@ -1,0 +1,650 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <sentto-450699-4218-1250968156-gcfl-jokes=gcfl.net@returns.groups.yahoo.com>
+X-Spam-Checker-Version: SpamAssassin 3.2.5 (2008-06-10) on bruno.gcfl.net
+X-Spam-Level: **
+X-Spam-Status: No, score=2.4 required=7.0 tests=AWL,DATE_IN_PAST_24_48,
+	HTML_FONT_SIZE_HUGE,HTML_MESSAGE,SARE_HOUSEWIVES autolearn=no version=3.2.5
+X-Original-To: gcfl-jokes@gcfl.net
+Delivered-To: gcfl-jokes@gcfl.net
+Received: from n45a.bullet.mail.sp1.yahoo.com (n45a.bullet.mail.sp1.yahoo.com [66.163.168.139])
+	by bruno.gcfl.net (Postfix) with SMTP id EB6041889B66
+	for <gcfl-jokes@gcfl.net>; Sat, 22 Aug 2009 14:09:17 -0500 (CDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoogroups.com; s=lima; t=1250968157; bh=VZNRe3v8QaCrrXTV3zrLobWIFdChJOvcJzSFNMb9ICI=; h=Received:Received:X-Yahoo-Newman-Id:Received:Received:Received:DKIM-Signature:Received:Received:X-Sender:X-Apparently-To:X-Received:X-Received:X-Received:X-Received:X-Received:Message-ID:To:X-Priority:X-MSMail-Priority:X-Mailer:X-MimeOLE:X-Originating-IP:X-eGroups-Msg-Info:From:X-Yahoo-Profile:X-eGroups-Approved-By:Sender:MIME-Version:Mailing-List:Delivered-To:List-Id:Precedence:List-Unsubscribe:Date:Subject:X-Yahoo-Newman-Property:Reply-To:Content-Type; b=GnldtWpHt2/0ILPXQZNEOGCvjheZTd54kj8eCrdXUa1/dHa3EODg03CnBBRTuNhZ35Hnf0pOTn1T5k/FqEsu0SOy6ixJWh61VRzupty/zr/o4WtWmJ8dJSG4OG1OtQpv
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=lima; d=yahoogroups.com;
+	b=rQvzXuWZpX3WKUBV2niquywsrmO4iZ//mUrQLA3oTSYIJYGhD1zWiBLja2Ye1KSzA8wG+Bcyjr4WxhOdct4VQ5zA8/KwsgkcZKpGODjsQHAJVtWqDkNOFXIoVK3dHeVd;
+Received: from [69.147.65.149] by n45.bullet.mail.sp1.yahoo.com with NNFMP; 22 Aug 2009 19:09:17 -0000
+Received: from [98.137.34.41] by t9.bullet.mail.sp1.yahoo.com with NNFMP; 22 Aug 2009 19:09:17 -0000
+X-Yahoo-Newman-Id: 450699-m4218
+Received: (qmail 14831 invoked from network); 22 Aug 2009 19:09:14 -0000
+Received: from unknown (98.137.34.46)
+  by m5.grp.sp2.yahoo.com with QMQP; 22 Aug 2009 19:09:14 -0000
+Received: from unknown (HELO n40b.bullet.mail.sp1.yahoo.com) (66.163.168.154)
+  by mta3.grp.sp2.yahoo.com with SMTP; 22 Aug 2009 19:09:14 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoogroups.com; s=lima; t=1250968150; bh=Fp7oLjnywvtNPw+ecNhojRKBWL4+18Ic40tUQ4LfyNg=; h=Received:Received:X-Sender:X-Apparently-To:X-Received:X-Received:X-Received:X-Received:X-Received:Message-ID:To:Date:MIME-Version:Content-Type:X-Priority:X-MSMail-Priority:X-Mailer:X-MimeOLE:X-Originating-IP:X-eGroups-Msg-Info:From:Subject:X-Yahoo-Group-Post:X-Yahoo-Profile:X-YGroups-SubInfo:Sender:X-Yahoo-Newman-Property:X-eGroups-Approved-By:X-eGroups-Auth; b=MWkIuba3tjXQMHluD4EJ941XEfnXo2QHUAbZ+GyG19QqnoyU1wIBKF7MBT95ZCev5cF6zOK/+nYU7dEj/FoMu/CQRjGTtPr28ITsUS9RyaUGfE6WeLeOI1Ys+eVa0Idm
+Received: from [69.147.65.148] by n40.bullet.mail.sp1.yahoo.com with NNFMP; 22 Aug 2009 19:09:10 -0000
+Received: from [98.137.34.32] by t11.bullet.mail.sp1.yahoo.com with NNFMP; 22 Aug 2009 19:09:10 -0000
+X-Sender: judib51@comcast.net
+X-Apparently-To: humor_g@yahoogroups.com
+X-Received: (qmail 68311 invoked from network); 21 Aug 2009 14:46:54 -0000
+X-Received: from unknown (69.147.108.202)
+  by m4.grp.sp2.yahoo.com with QMQP; 21 Aug 2009 14:46:54 -0000
+X-Received: from unknown (HELO QMTA01.emeryville.ca.mail.comcast.net) (76.96.30.16)
+  by mta3.grp.re1.yahoo.com with SMTP; 21 Aug 2009 14:46:54 -0000
+X-Received: from OMTA01.emeryville.ca.mail.comcast.net ([76.96.30.11])
+	by QMTA01.emeryville.ca.mail.comcast.net with comcast
+	id X25W1c0030EPchoA12l8lU; Fri, 21 Aug 2009 14:45:08 +0000
+X-Received: from yourd137mzmhow ([75.71.220.24])
+	by OMTA01.emeryville.ca.mail.comcast.net with comcast
+	id X2l81c00J0YAy9F8M2l8FB; Fri, 21 Aug 2009 14:45:09 +0000
+Message-ID: <683FD0F13B284A21BF5E6993F38A19FC@yourd137mzmhow>
+To: "Humor_G" <Humor_G@yahoogroups.com>
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.5843
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5579
+X-Originating-IP: 76.96.30.16
+X-eGroups-Msg-Info: 1:12:0:0:0
+From: "Judi" <judib51@comcast.net>
+X-Yahoo-Profile: judib1
+X-eGroups-Approved-By: judib1 <judib51@comcast.net> via web; 22 Aug 2009 19:09:09 -0000
+Sender: Humor_G@yahoogroups.com
+MIME-Version: 1.0
+Mailing-List: list Humor_G@yahoogroups.com; contact Humor_G-owner@yahoogroups.com
+Delivered-To: mailing list Humor_G@yahoogroups.com
+List-Id: <Humor_G.yahoogroups.com>
+Precedence: bulk
+List-Unsubscribe: <mailto:Humor_G-unsubscribe@yahoogroups.com>
+Date: Fri, 21 Aug 2009 08:45:06 -0600
+Subject: [Humor_G] Humor_G
+X-Yahoo-Newman-Property: groups-email-tradh-m
+Reply-To: Humor_G@yahoogroups.com
+Content-Type: multipart/related;
+ boundary="----=_NextPart_000_0021_01CA223B.AE9F22C0"
+Content-Length: 31388
+Lines: 583
+
+------=_NextPart_000_0021_01CA223B.AE9F22C0
+Content-Type: multipart/alternative;
+ boundary="----=_NextPart_001_0022_01CA223B.AE9F22C0"
+
+------=_NextPart_001_0022_01CA223B.AE9F22C0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+I woke up feeling pretty good today and then someone sent me this......=20
+
+=20
+=20
+=20
+=20
+
+Eddie Haskell, The Beaver and Wally!
+=20
+=20
+Are we really that old???=20
+=20
+
+~~~~~~~~~~~~~~
+Humor_G ...
+Humor_G-subscribe@yahoogroups.com
+Clean Humor for the whole family
+Subscribe: Humor_G-subscribe@yahoogroups.com
+
+Humor_ ...
+Humor_-subscribe@yahoogroups.com
+      While this is PG 13 Humor it is not raunchy
+      Enjoy these posts and feel free to share this site with your friends.
+      Subscribe: Humor_-subscribe@yahoogroups.com
+
+      STTA ...
+      STTA-subscribe@yahoogroups.com
+      Something To Think About
+            These are Inspiring Stories that I receive in my mailbox each d=
+ay.
+            I hope they touch you as they do me.=20
+            This world could use some encouragement to get by each day.
+            Enjoy them and share them with your friends.
+            Feel free to share this site and have them subscribe for themse=
+lves.=20
+      Subscribe: STTA-subscribe@yahoogroups.com=20
+
+
+BSAHWC ...
+BSAHWC-subscribe@yahoogroups.com
+Boring Stay At Home Wives Club
+This group was started by Housewives that were 'bashed' for being such.=20
+We call ourselves The Boring Stay At Home Wives Club.
+We are a group of women that have developed friendships, support each other=
+ continue to grow within ourselves.=20
+Just a happy go lucky group, meeting for lunches, movies or whatever.=20
+You know...all that BORING STUFF! ;)
+Subscribe : BSAHWC-subscribe@yahoogroups.com
+
+
+
+
+=20
+------=_NextPart_001_0022_01CA223B.AE9F22C0
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+
+
+
+
+<head>
+
+<style type="text/css">
+<!--
+
+/* start of attachment style */
+       .ygrp-photo-title{
+         clear: both;
+         font-size: smaller;
+         height: 15px;
+         overflow: hidden;
+         text-align: center;
+         width: 75px;
+       }
+       div.ygrp-photo{
+         background-position: center;
+         background-repeat: no-repeat;
+         background-color: white;
+         border: 1px solid black;
+         height: 62px;
+         width: 62px;
+       }
+
+       div.photo-title 
+         a,
+         div.photo-title a:active,
+         div.photo-title a:hover,
+         div.photo-title a:visited {
+           text-decoration: none; 
+       }
+
+       div.attach-table div.attach-row {
+         clear: both;
+       }
+
+       div.attach-table div.attach-row div {
+         float: left;
+         /* margin: 2px;*/
+       }
+
+       p {
+         clear: both;
+         padding: 15px 0 3px 0;
+	 overflow: hidden;
+       }
+
+       div.ygrp-file {
+         width: 30px;
+         valign: middle;
+       }
+       div.attach-table div.attach-row div div a {
+         text-decoration: none;
+       }
+
+       div.attach-table div.attach-row div div span {
+         font-weight: normal;
+       }
+
+       div.ygrp-file-title {
+         font-weight: bold;
+       }
+ /* end of attachment style */
+        -->
+        </style>
+        </head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<STYLE>.hmmessage P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+BODY.hmmessage {
+	FONT-SIZE: 10pt; FONT-FAMILY: Verdana
+}
+</STYLE>
+
+<META content="MSHTML 6.00.6000.16890" name=GENERATOR></HEAD>
+<BODY class=hmmessage bgColor=#ffffff>
+
+
+<!-- |**|begin egp html banner|**| -->
+
+<br><br>
+
+<!-- |**|end egp html banner|**| -->
+
+
+
+<DIV><FONT id=EC_role_document face="Comic Sans MS" color=#000000 
+size=2><STRONG><B><FONT face="Comic Sans MS" color=navy size=7><SPAN 
+style="FONT-SIZE: 36pt; COLOR: navy; FONT-FAMILY: 'Comic Sans MS'">I woke up 
+feeling pretty good today and then someone sent me 
+this......</SPAN></FONT></B></STRONG><FONT face="Comic Sans MS" color=black 
+size=4><SPAN 
+style="FONT-SIZE: 13.5pt; COLOR: black; FONT-FAMILY: 'Comic Sans MS'">&nbsp;</SPAN></FONT><FONT 
+face=Arial color=black size=2><SPAN 
+style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial"></SPAN></FONT></DIV>
+<DIV>
+<DIV>
+<DIV>
+<DIV>
+<DIV>
+<DIV>
+<P class=EC_MsoNormal><FONT face=Arial color=black size=2><SPAN 
+style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial"><BR>&nbsp;<BR>&nbsp;<BR>&nbsp;<BR>&nbsp;<BR></SPAN></FONT><FONT 
+face="Comic Sans MS" color=black size=4><SPAN 
+style="FONT-SIZE: 13.5pt; COLOR: black; FONT-FAMILY: 'Comic Sans MS'"><IMG 
+id=EC_MA1.1250817318 height=288 
+src="cid:E8A6E68D189B43B4842C5B487B1EF476@yourd137mzmhow" width=384 
+border=0></SPAN></FONT><FONT face=Arial color=black size=2><SPAN 
+style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial"><BR></SPAN></FONT><B><FONT 
+face="Comic Sans MS" color=blue size=5><SPAN 
+style="FONT-WEIGHT: bold; FONT-SIZE: 18pt; COLOR: blue; FONT-FAMILY: 'Comic Sans MS'">Eddie 
+Haskell, The Beaver and Wally!</SPAN></FONT></B><FONT face=Arial color=black 
+size=2><SPAN 
+style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial"><BR>&nbsp;<BR>&nbsp;<BR></SPAN></FONT><B><FONT 
+face="Comic Sans MS" color=navy size=7><SPAN 
+style="FONT-WEIGHT: bold; FONT-SIZE: 36pt; COLOR: navy; FONT-FAMILY: 'Comic Sans MS'">Are&nbsp;we 
+<EM><I><FONT face="Comic Sans MS"><SPAN 
+style="FONT-FAMILY: 'Comic Sans MS'">really </SPAN></FONT></I></EM>that 
+old???</SPAN></FONT></B><B><FONT face="Comic Sans MS" color=blue size=4><SPAN 
+style="FONT-WEIGHT: bold; FONT-SIZE: 13.5pt; COLOR: blue; FONT-FAMILY: 'Comic Sans MS'">&nbsp;</SPAN></FONT></B><FONT 
+face=Arial color=black size=2><SPAN 
+style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial"><BR>&nbsp;</P>
+<DIV><FONT face="Comic Sans MS"><STRONG><FONT face=Arial 
+color=#ff0000>~~~~~~~~~~~~~~</FONT></STRONG></DIV>
+<DIV>
+<DIV class=group-description><STRONG>Humor_G ...</STRONG></DIV>
+<DIV class=group-description><A 
+href="mailto:Humor_G-subscribe@yahoogroups.com">Humor_G-subscribe@yahoogroups.com</A></DIV>
+<DIV class=group-description>
+<DIV class=group-description id=ygr_desc><STRONG>Clean Humor for the whole 
+family</STRONG></DIV>
+<DIV class=group-description>Subscribe: <A 
+href="mailto:Humor_G-subscribe@yahoogroups.com">Humor_G-subscribe@yahoogroups.com</A></DIV>
+<DIV class=group-description>&nbsp;</DIV>
+<DIV class=group-description>
+<DIV class=group-description><STRONG>Humor_ ...</STRONG></DIV>
+<DIV class=group-description><A 
+href="mailto:Humor_-subscribe@yahoogroups.com">Humor_-subscribe@yahoogroups.com</A></DIV><FONT 
+size=2>
+<DIV class=group-description>
+<TABLE class=ygrp-desc cellSpacing=0 cellPadding=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV class=group-description><STRONG>While this is PG 13 Humor it is not 
+      raunchy</STRONG><BR>Enjoy these posts and feel free to share this site 
+      with your friends.<BR><FONT size=2><FONT size=3>Subscribe:</FONT> <A 
+      href="mailto:Humor_-subscribe@yahoogroups.com"><FONT 
+      size=3>Humor_-subscribe@yahoogroups.com</FONT></A></FONT></DIV>
+      <DIV class=group-description>&nbsp;</DIV>
+      <DIV class=group-description>
+      <DIV class=group-description><STRONG>STTA ...</STRONG></DIV>
+      <DIV class=group-description><A 
+      href="mailto:STTA-subscribe@yahoogroups.com">STTA-subscribe@yahoogroups.com</A></DIV>
+      <DIV class=group-description><STRONG>Something To Think 
+      About</STRONG></DIV>
+      <TABLE class=ygrp-desc cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV class=group-description id=ygr_desc>These are Inspiring Stories 
+            that I receive in my mailbox each day.<BR>I hope they touch you as 
+            they do me. <BR>This world could use some encouragement to get by 
+            each day.<BR>Enjoy them and share them with your friends.<BR>Feel 
+            free to share this site and have them subscribe for 
+          themselves.</DIV></TD></TR></TBODY></TABLE>Subscribe: <A 
+      href="mailto:STTA-subscribe@yahoogroups.com">STTA-subscribe@yahoogroups.com</A></DIV></TD></TR></TBODY></TABLE></DIV>
+<DIV class=group-description><FONT size=3></FONT>&nbsp;</DIV>
+<DIV class=group-description>
+<DIV>
+<DIV class=group-description><STRONG>BSAHWC ...</STRONG></DIV>
+<DIV class=group-description><A 
+href="mailto:BSAHWC-subscribe@yahoogroups.com">BSAHWC-subscribe@yahoogroups.com</A></DIV>
+<DIV class=group-description><STRONG>Boring Stay At Home Wives 
+Club</STRONG></DIV>
+<DIV class=group-description>This group was started by Housewives that were 
+'bashed' for being such. <BR>We call ourselves The Boring Stay At Home Wives 
+Club.<BR>We are a group of women that have developed friendships, support each 
+other continue to grow within ourselves. <BR>Just a happy go lucky group, 
+meeting for lunches, movies or whatever. <BR>You know...all that BORING STUFF! 
+;)</DIV>
+<DIV class=group-description>Subscribe : <A 
+href="mailto:BSAHWC-subscribe@yahoogroups.com">BSAHWC-subscribe@yahoogroups.com</A></DIV></DIV></DIV></FONT></DIV></DIV></FONT></DIV>
+<P 
+class=EC_MsoNormal><BR></SPAN></FONT></P></DIV></DIV></DIV></DIV></DIV></DIV></FONT>
+<DIV class=EC_aol_ad_footer 
+id=EC_ca2f1658657ebda791182658fe5f4227><BR>&nbsp;</DIV>
+
+
+
+<!-- |**|begin egp html banner|**| -->
+
+<br>
+
+    
+    
+<br>
+
+<!-- |**|end egp html banner|**| -->
+
+
+<div width="1" style="color: white; clear: both;"/>__._,_.___</div>
+
+<!-- Start Recommendations -->
+<!-- End Recommendations -->
+
+
+
+<!-- |**|begin egp html banner|**| -->
+
+  <img src="http://geo.yahoo.com/serv?s=97476590/grpId=450699/grpspId=1705020655/msgId=4218/stime=1250968157" width="1" height="1"> <br>
+
+<!-- |**|end egp html banner|**| -->
+
+    
+<!-- |**|begin egp html banner|**| -->
+
+<br>
+      <div style="font-family: verdana; font-size: 77%; border-top: 1px solid #666; padding: 5px 0;" >
+      Your email settings: Individual Email|Traditional <br>
+      <a href="http://groups.yahoo.com/group/Humor_G/join;_ylc=X3oDMTJldDJvdDg1BF9TAzk3NDc2NTkwBGdycElkAzQ1MDY5OQRncnBzcElkAzE3MDUwMjA2NTUEc2VjA2Z0cgRzbGsDc3RuZ3MEc3RpbWUDMTI1MDk2ODE1Nw--">Change settings via the Web</a> (Yahoo! ID required) <br>
+      Change settings via email: <a href="mailto:Humor_G-digest@yahoogroups.com?subject=Email Delivery: Digest">Switch delivery to Daily Digest</a> | <a href = "mailto:Humor_G-fullfeatured@yahoogroups.com?subject=Change Delivery Format: Fully Featured">Switch to Fully Featured</a> <br>
+           <a href="http://groups.yahoo.com/group/Humor_G;_ylc=X3oDMTJjMzRmNzI0BF9TAzk3NDc2NTkwBGdycElkAzQ1MDY5OQRncnBzcElkAzE3MDUwMjA2NTUEc2VjA2Z0cgRzbGsDaHBmBHN0aW1lAzEyNTA5NjgxNTc-">
+        Visit Your Group 
+      </a> |
+      <a href="http://docs.yahoo.com/info/terms/">
+        Yahoo! Groups Terms of Use
+      </a> |
+      <a href="mailto:Humor_G-unsubscribe@yahoogroups.com?subject=Unsubscribe">
+       Unsubscribe 
+      </a> 
+ <br>
+    </div>
+  <br>
+
+<!-- |**|end egp html banner|**| -->
+
+
+<div style="color: white; clear: both;"/>__,_._,___</div>
+</BODY></HTML>
+
+------=_NextPart_001_0022_01CA223B.AE9F22C0--
+
+------=_NextPart_000_0021_01CA223B.AE9F22C0
+Content-Type: image/jpeg;
+	name="image001.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <E8A6E68D189B43B4842C5B487B1EF476@yourd137mzmhow>
+
+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
+
+------=_NextPart_000_0021_01CA223B.AE9F22C0--
+

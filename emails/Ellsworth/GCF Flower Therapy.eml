@@ -1,0 +1,168 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <sentto-1237676-5681-1594298593-@returns.groups.yahoo.com>
+X-Original-To: linux-guru@gcfl.net
+Delivered-To: linux-guru@gcfl.net
+Received-SPF: Temperror (mailfrom) identity=mailfrom; client-ip=98.137.70.94; helo=sonic322-31.consmr.mail.gq1.yahoo.com; envelope-from=sentto-1237676-5681-1594298593-@returns.groups.yahoo.com; receiver=<UNKNOWN> 
+Authentication-Results: attila.gcfl.net;
+	dkim=pass (1024-bit key; unprotected) header.d=yahoogroups.com header.i=@yahoogroups.com header.b="MQCRvJYl";
+	dkim-atps=neutral
+Received: from sonic322-31.consmr.mail.gq1.yahoo.com (sonic322-31.consmr.mail.gq1.yahoo.com [98.137.70.94])
+	by attila.gcfl.net (Postfix) with ESMTPS id 46BDC30802CA
+	for <linux-guru@gcfl.net>; Thu,  9 Jul 2020 07:43:18 -0500 (CDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoogroups.com; s=echoe; t=1594298597; bh=hhkodE935WcBV1aLAQhiQW95TRniMEJ19KaRTGsvzFc=; h=To:From:List-Id:List-Unsubscribe:Date:Subject:Reply-To:From:Subject; b=MQCRvJYl68CAMuBxLot1QK4XvVuEGI8udNG6yDzmzuidfHhT2ej7RQde8qI3jbnO43NDuQEbLIx7S6+W00jJC/+zqoWg2/G+uM/Jv4YE4L0DlegXmdrJEKPWFx8Wi+zSkl+MUh7GZ6PPecim5ArmtbF3BUvAvc45sTUAXLkNJPs=
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic322.consmr.mail.gq1.yahoo.com with HTTP; Thu, 9 Jul 2020 12:43:17 +0000
+X-Yahoo-Newman-Id: 1237676-m5681
+X-Sender: tellswor@kcbx.net
+X-Apparently-To: good-clean-fun@yahoogroups.com
+X-Received: (qmail 28245 invoked by uid 102); 9 Jul 2020 12:43:12 -0000
+X-Received: from unknown (HELO mtaq3.grp.bf1.yahoo.com) (10.196.204.226)
+  by m9.grp.bf1.yahoo.com with SMTP; 9 Jul 2020 12:43:12 -0000
+X-Received: (qmail 21444 invoked from network); 9 Jul 2020 12:43:12 -0000
+X-Received: from unknown (HELO mta4004.groups.mail.ne1.yahoo.com) (10.218.140.75)
+  by mtaq3.grp.bf1.yahoo.com with SMTP; 9 Jul 2020 12:43:12 -0000
+Authentication-Results: mta4004.groups.mail.ne1.yahoo.com; 
+ dkim=neutral (no sig) header.i=@kcbx.net;
+ spf=softfail smtp.mailfrom=@kcbx.net;
+ dmarc=NULL(p=NULL sp=NULL dis=NULL) header.from=kcbx.net;
+X-Received-SPF: softfail (transitioning domain of kcbx.net does not designate 47.43.20.28 as permitted sender)
+X-YMailISG: 6XPaK7QWLDte.izUATBjYH1b4K2wAdlO8uHSZ_d3R6Z86cai
+ 21V6D9PYIdTHrwJM.A_8ZgH.jKVsLPC31aPay6etFvdlsMAOmUeDEomC_ySc
+ JOC82CUj79eVzJ4icsv.G7KHHWBmKUsCHTwjSVnPWs9yY4qa5rznz1xEhxQI
+ dnm1uFSVDwNfCHvHHuiLu1x4sRCdVAuoiLAtbkdlXvr5Ifpfi3rqvXJwA29.
+ pD6D4t.BNWNboEKmKySAZdK1D45jb2g5ho4ioGFHWaobTXJdXmhCpz3.9P3K
+ EPOUgfeJ1eC0ejrWxSsjfP6QEQ3NWSzP8oa5y.lR9WJAm6ySRP034Y7b1AZc
+ 5uivARyFlT7cq7Q9yW2OtGz2qj2Zr1FQ8AUS.Dtw9XlmK6CLJ5lc9MH50lHa
+ ZbTpfLfco7vNUXTMzkiKSydKob1Q6YoBRAZrvUPdrGuifUa7INS_ym50Mkos
+ uDWM5nHxkI2QFy1oBdOhohXdS78McJVV8uaDIo26VRrIpWUIXZCLgpCQgsoh
+ YYwrz7OPLw74vCE2nuNh4hI6mt6f1KnrL_khA8EeQVzjlmOdF4xCvs2BNfiF
+ RQf5mF8BviUUOjCvGjBNL48hHJD.cTFTC4uLzZZbvFJzwiOh6hj0PyPc5nPZ
+ 76SHb7y4Y09.E476Pe8GZkIi3XC1ji48QtZvW2Mkm4RLnxaCzgN41w_gxTXK
+ pOXTvNivLynQ.e9euSD_yLxx1t6FB7w2DxNvXeCic8BkxRw_3it9ebFy0drT
+ mWCwS2XYbyLqXkdJgGEpiBAql6HWJTTzd9zNifw3wW2wtp4h39K2R8SCTBHi
+ 9HRiYEK_jGmDTIt7zoZQsoTYPnq4zgSIlv3dvdSV82ARlnMVDsukEpeuZBg_
+ tzI48u1ccWa3Lh2pO7BYgde_GLMVVglFbITj9f03_d0mx57fRYoVppyzsR86
+ qCfOQILSujotZlOmRGKWfKKnNVBdwylItluLLOWoWWY_rTOjl264cCEzMgLN
+ YXrsJELST.XqVcUCVjRIRsfLfVSZQUADn9otkZniPZgZjz.Sf4iypokqnpWm
+ R5m0j_CO1E0io1bbkLDBbB_Y9wKN
+X-Received: from 10.223.160.151  (EHLO impout004.msg.chrl.nc.charter.net) (47.43.20.28)
+  by mta4004.groups.mail.ne1.yahoo.com with SMTPS; Thu, 09 Jul 2020 12:43:11 +0000
+X-Received: from ThomasEllsworth.kcbx.net ([66.214.196.169])
+	by cmsmtp with ESMTPA
+	id tVtLjicuewzF8tVtNjKNvN; Thu, 09 Jul 2020 12:43:10 +0000
+Authentication-Results: kcbx.net; none
+X-Authority-Analysis: v=2.3 cv=SdVDicZu c=1 sm=1 tr=0
+ a=UFL7CaVhbjE5AyUk81XeAg==:117 a=UFL7CaVhbjE5AyUk81XeAg==:17
+ a=HpEJnUlJZJkA:10 a=kj9zAlcOel0A:10 a=-h9LFaMZAAAA:8 a=qV0mfD4mAAAA:8
+ a=KxeGKX1eAAAA:8 a=gSXRlb13Hq7oKjWOxEwA:9 a=CjuIK1q_8ugA:10 a=1gylOlVyTIQA:10
+ a=ReGkIpCd4hIA:10 a=AcqGC50u6CT8yfRHfHj9:22 a=mnVZ7iNJyew7AB3q5ROZ:22
+ a=nkovl10d-2D50Pg-qAt3:22 a=pHzHmUro8NiASowvMSCR:22 a=xoEH_sTeL_Rfw54TyV31:22
+X-Mailer: QUALCOMM Windows Eudora Version 7.1.0.9
+To: good-clean-fun@yahoogroups.com
+X-CMAE-Envelope: MS4wfCtZ4UwmB635WnDxdqFOG8ADskSOK0+WJl/52TVNas/piOmUh9uvnIhCZ1zbImiC54UFmt9+DCTnoRgpFXA4EHeSO4WEeho65JfTjQA4K4FtR5JBQrby
+ /PSGHU4Aai/zOYdji2SLt6rc3qqPMM5q86NTv1+7au8CTsmsS+o3Vso0KPq1ETSoXtcEec2hAouokL97rp41TcyKKAEXdeEcnfI=
+X-Originating-IP: 10.218.140.75
+X-Original-From: "Thomas S. Ellsworth" <tellswor@kcbx.net>
+From: "'Thomas S. Ellsworth' tellswor@kcbx.net [good-clean-fun]" <good-clean-fun-noreply@yahoogroups.com>
+X-Yahoo-Profile: tom_ellsworth
+Sender: good-clean-fun@yahoogroups.com
+MIME-Version: 1.0
+Mailing-List: list good-clean-fun@yahoogroups.com; contact good-clean-fun-owner@yahoogroups.com
+Delivered-To: mailing list good-clean-fun@yahoogroups.com
+List-Id: <good-clean-fun.yahoogroups.com>
+Precedence: bulk
+List-Unsubscribe: <mailto:good-clean-fun-unsubscribe@yahoogroups.com>
+Date: Thu, 09 Jul 2020 05:42:54 -0700
+Subject: GCF: Flower Therapy
+Reply-To: good-clean-fun-owner@yahoogroups.com
+X-Yahoo-Newman-Property: groups-email-tradt-m
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+Content-Length: 2410
+
+
+
+
+Emailed to me from another humor list (A Joke A Day)    -Tom
+Subscription info is at the website http://www.ajokeaday.com/
+
+If this was forwarded to you, please consider your own
+subscription to Good Clean Fun. It's free! Just send an
+email to: good-clean-fun-subscribe@yahoogroups.com
+-------------------------------------------------------------------------
+
+
+GCF: Flower Therapy
+
+"That's a nice plant," said a woman at the florist's shop, pointing 
+to the flower I was buying.
+
+"Yeah, my wife and I had an argument," I admitted. "I was going to 
+buy her a dozen roses, but I don't think she's that mad at me."
+
+
+----------- Today's saying or thought -------------------------
+
+Buy a dog a toy and the dog will play with it forever.
+Buy a cat a toy and the cat will play with the wrapper for 10 minutes.
+
+---------------------------------------------------------------
+2022
+
+
+
+
+*** Good Clean Fun ***
+is brought to you by
+Thomas S. Ellsworth
+email: tellswor@kcbx.net
+
+You can subscribe to the Good Clean Fun mailing list by sending
+an email (blank is fine) to:   good-clean-fun-subscribe@yahoogroups.com
+and just reply to the confirmation email you receive.
+
+Stop for a visit, leave with a smile!
+
+-------------------------------------------------------------------------
+Any ad that is inserted into this email is done automatically by
+YahooGroups as a condition of their free hosting the Good Clean Fun list.
+I have no control over any content of the advertisement.
+-------------------------------------------------------------------------
+
+This email was scanned by Charter Security Suite before it was sent.
+
+
+
+
+
+
+
+------------------------------------
+Posted by: "Thomas S. Ellsworth" <tellswor@kcbx.net>
+------------------------------------
+
+
+------------------------------------
+
+Yahoo Groups Links
+
+<*> To visit your group on the web, go to:
+    http://groups.yahoo.com/group/good-clean-fun/
+
+<*> Your email settings:
+    Individual Email | Traditional
+
+<*> To change settings online go to:
+    http://groups.yahoo.com/group/good-clean-fun/join
+    (Yahoo! ID required)
+
+<*> To change settings via email:
+    good-clean-fun-digest@yahoogroups.com 
+    good-clean-fun-fullfeatured@yahoogroups.com
+
+<*> To unsubscribe from this group, send an email to:
+    good-clean-fun-unsubscribe@yahoogroups.com
+
+<*> Your use of Yahoo Groups is subject to:
+    https://info.yahoo.com/legal/us/yahoo/utos/terms/
+

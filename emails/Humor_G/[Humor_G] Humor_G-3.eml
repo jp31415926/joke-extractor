@@ -1,0 +1,415 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <sentto-450699-4120-1244476589-gcfl-jokes=gcfl.net@returns.groups.yahoo.com>
+X-Original-To: gcfl-jokes@gcfl.net
+Delivered-To: gcfl-jokes@gcfl.net
+Received: from n36d.bullet.mail.sp1.yahoo.com (n36d.bullet.mail.sp1.yahoo.com [66.163.168.190])
+	by bruno.gcfl.net (Postfix) with SMTP id 5943817B9A03
+	for <gcfl-jokes@gcfl.net>; Mon,  8 Jun 2009 10:56:32 -0500 (CDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoogroups.com; s=lima; t=1244476591; bh=IP9H6o8od4SxxH548KFkg9MiNtlS2B1tR/MVuSbJ+qo=; h=Received:Received:X-Yahoo-Newman-Id:Received:Received:Received:DKIM-Signature:Received:Received:X-Sender:X-Apparently-To:X-Received:X-Received:X-Received:X-Received:X-Received:Message-ID:To:X-Priority:X-MSMail-Priority:X-Mailer:X-MimeOLE:X-Originating-IP:X-eGroups-Msg-Info:From:X-Yahoo-Profile:X-eGroups-Approved-By:Sender:MIME-Version:Mailing-List:Delivered-To:List-Id:Precedence:List-Unsubscribe:Date:Subject:Reply-To:X-Yahoo-Newman-Property:Content-Type; b=tSF+AoRrsX+fVrGNBZD37xeoRoUwQHvVAv6jfcJzq6XVxoOX/HZ45gBq26vaR/JV94ii5vPYNx3j2WF1cs9UcLJ4+m5w7WvETXLLQL9ni4UKpFtjxk6yKazKsWdTMtaO
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=lima; d=yahoogroups.com;
+	b=dWT+rKSqQBQdnKnWltoYnwvPZgZnzDjImudlvR+OtldL7HEAABw9G1YwmLe5JdTyAr8BcHx8kRCq+MsTJ7Xh1IRh8z/MNveL4aReO4HnxZr9jngUft3l2LnM6Y6gw4wC;
+Received: from [69.147.65.150] by n36.bullet.mail.sp1.yahoo.com with NNFMP; 08 Jun 2009 15:56:31 -0000
+Received: from [98.137.34.38] by t7.bullet.mail.sp1.yahoo.com with NNFMP; 08 Jun 2009 15:56:31 -0000
+X-Yahoo-Newman-Id: 450699-m4120
+Received: (qmail 52094 invoked from network); 8 Jun 2009 15:56:28 -0000
+Received: from unknown (69.147.108.202)
+  by m2.grp.sp2.yahoo.com with QMQP; 8 Jun 2009 15:56:28 -0000
+Received: from unknown (HELO n39b.bullet.mail.sp1.yahoo.com) (66.163.168.153)
+  by mta3.grp.re1.yahoo.com with SMTP; 8 Jun 2009 15:56:28 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoogroups.com; s=lima; t=1244476549; bh=d0bfzha1PyDCPN7miAwvKMJrcIiXEXnl8P3jqnSW8Uk=; h=Received:Received:X-Sender:X-Apparently-To:X-Received:X-Received:X-Received:X-Received:X-Received:Message-ID:To:Date:MIME-Version:Content-Type:X-Priority:X-MSMail-Priority:X-Mailer:X-MimeOLE:X-Originating-IP:X-eGroups-Msg-Info:From:Subject:X-Yahoo-Group-Post:X-Yahoo-Profile:Sender:X-Yahoo-Newman-Property:X-eGroups-Approved-By:X-eGroups-Auth; b=bK67aZFvpsEGT1kH1gMQxWGPSIKV5bujLg4I1yqbjfM6Yv1JOr4Oc15+9LRMMiyjmelL3JgbOzCDynR6HzikUEdERiaOayyKR6JxkdsGf03UeirRbN7q451OZeaGtqBT
+Received: from [69.147.65.151] by n39.bullet.mail.sp1.yahoo.com with NNFMP; 08 Jun 2009 15:55:49 -0000
+Received: from [98.137.35.14] by t5.bullet.mail.sp1.yahoo.com with NNFMP; 08 Jun 2009 15:55:49 -0000
+X-Sender: judib51@comcast.net
+X-Apparently-To: humor_g@yahoogroups.com
+X-Received: (qmail 69774 invoked from network); 8 Jun 2009 15:45:36 -0000
+X-Received: from unknown (69.147.108.202)
+  by m6.grp.re1.yahoo.com with QMQP; 8 Jun 2009 15:45:36 -0000
+X-Received: from unknown (HELO QMTA10.emeryville.ca.mail.comcast.net) (76.96.30.17)
+  by mta3.grp.re1.yahoo.com with SMTP; 8 Jun 2009 15:45:35 -0000
+X-Received: from OMTA14.emeryville.ca.mail.comcast.net ([76.96.30.60])
+	by QMTA10.emeryville.ca.mail.comcast.net with comcast
+	id 1RRD1c00v1HpZEsAATlMAG; Mon, 08 Jun 2009 15:45:21 +0000
+X-Received: from yourd137mzmhow ([75.71.220.24])
+	by OMTA14.emeryville.ca.mail.comcast.net with comcast
+	id 1TlK1c0170YAy9F8aTlLEJ; Mon, 08 Jun 2009 15:45:21 +0000
+Message-ID: <A358CB70A8B4408ABD0C9F1A52EF53EC@yourd137mzmhow>
+To: "Humor_G" <Humor_G@yahoogroups.com>
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.5512
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5579
+X-Originating-IP: 76.96.30.17
+X-eGroups-Msg-Info: 1:12:0:0:0
+From: "Judi" <judib51@comcast.net>
+X-Yahoo-Profile: judib1
+X-eGroups-Approved-By: judib1 <judib51@comcast.net> via web; 08 Jun 2009 15:55:48 -0000
+Sender: Humor_G@yahoogroups.com
+MIME-Version: 1.0
+Mailing-List: list Humor_G@yahoogroups.com; contact Humor_G-owner@yahoogroups.com
+Delivered-To: mailing list Humor_G@yahoogroups.com
+List-Id: <Humor_G.yahoogroups.com>
+Precedence: bulk
+List-Unsubscribe: <mailto:Humor_G-unsubscribe@yahoogroups.com>
+Date: Mon, 8 Jun 2009 09:45:18 -0600
+Subject: [Humor_G] Humor_G
+Reply-To: Humor_G@yahoogroups.com
+X-Yahoo-Newman-Property: groups-email-tradh-m
+Content-Type: multipart/alternative;
+ boundary="----=_NextPart_000_0015_01C9E81D.D4ED31E0"
+Content-Length: 14360
+Lines: 353
+
+------=_NextPart_000_0015_01C9E81D.D4ED31E0
+Content-Type: text/plain;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+HOW TO CALL THE POLICE WHEN YOU'RE OLD AND DON'T MOVE FAST ANYMORE.
+
+George Phillips , an elderly man, from Meridian, Mississippi, was going up =
+to bed, when his wife told him that he'd left the light on in the garden sh=
+ed, which she could see from the bedroom window. George opened the back doo=
+r to go turn off the light, but saw that there were people in the shed stea=
+ling things.
+
+He phoned the police, who asked "Is someone in your house?"
+
+He said "No," but some people are breaking into my garden shed and stealing=
+ from me.
+
+Then the police dispatcher said "All patrols are busy. You should lock your=
+ doors and an officer will be along when one is available."
+
+George said, "Okay."
+
+He hung up the phone and counted to 30.
+
+Then he phoned the police again.
+
+"Hello, I just called you a few seconds ago because there were people steal=
+ing things from my shed. Well, you don't have to worry about them now becau=
+se I just shot them." and he hung up.
+
+Within five minutes, six Police Cars, a SWAT Team, a Helicopter, two Fire T=
+rucks, a Paramedic, and an Ambulance showed up at the Phillips' residence, =
+and caught the burglars red-handed.
+
+One of the Policemen said to George, "I thought you said that you'd shot th=
+em!"
+
+George said, "I thought you said there was nobody available!"
+
+ I LOVE IT!
+Don't mess with old people=20
+~~~~~~~~~~~~~~
+Humor_G ...
+Humor_G-subscribe@yahoogroups.com
+Clean Humor for the whole family
+Subscribe: Humor_G-subscribe@yahoogroups.com
+
+Humor_ ...
+Humor_-subscribe@yahoogroups.com
+      While this is PG 13 Humor it is not raunchy
+      Enjoy these posts and feel free to share this site with your friends.
+      Subscribe: Humor_-subscribe@yahoogroups.com
+
+      STTA ...
+      STTA-subscribe@yahoogroups.com
+      Something To Think About
+            These are Inspiring Stories that I receive in my mailbox each d=
+ay.
+            I hope they touch you as they do me.=20
+            This world could use some encouragement to get by each day.
+            Enjoy them and share them with your friends.
+            Feel free to share this site and have them subscribe for themse=
+lves.=20
+      Subscribe: STTA-subscribe@yahoogroups.com=20
+
+
+BSAHWC ...
+BSAHWC-subscribe@yahoogroups.com
+Boring Stay At Home Wives Club
+This group was started by Housewives that were 'bashed' for being such.=20
+We call ourselves The Boring Stay At Home Wives Club.
+We are a group of women that have developed friendships, support each other=
+ continue to grow within ourselves.=20
+Just a happy go lucky group, meeting for lunches, movies or whatever.=20
+You know...all that BORING STUFF! ;)
+Subscribe : BSAHWC-subscribe@yahoogroups.com
+------=_NextPart_000_0015_01C9E81D.D4ED31E0
+Content-Type: text/html; charset=Windows-1252
+Content-Transfer-Encoding: 7bit
+
+
+
+
+
+<head>
+
+<style type="text/css">
+<!--
+
+/* start of attachment style */
+       .ygrp-photo-title{
+         clear: both;
+         font-size: smaller;
+         height: 15px;
+         overflow: hidden;
+         text-align: center;
+         width: 75px;
+       }
+       div.ygrp-photo{
+         background-position: center;
+         background-repeat: no-repeat;
+         background-color: white;
+         border: 1px solid black;
+         height: 62px;
+         width: 62px;
+       }
+
+       div.photo-title 
+         a,
+         div.photo-title a:active,
+         div.photo-title a:hover,
+         div.photo-title a:visited {
+           text-decoration: none; 
+       }
+
+       div.attach-table div.attach-row {
+         clear: both;
+       }
+
+       div.attach-table div.attach-row div {
+         float: left;
+         /* margin: 2px;*/
+       }
+
+       p {
+         clear: both;
+         padding: 15px 0 3px 0;
+	 overflow: hidden;
+       }
+
+       div.ygrp-file {
+         width: 30px;
+         valign: middle;
+       }
+       div.attach-table div.attach-row div div a {
+         text-decoration: none;
+       }
+
+       div.attach-table div.attach-row div div span {
+         font-weight: normal;
+       }
+
+       div.ygrp-file-title {
+         font-weight: bold;
+       }
+ /* end of attachment style */
+        -->
+        </style>
+        </head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.6000.16825" name=GENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=#ffffff>
+
+
+<!-- |**|begin egp html banner|**| -->
+
+<br><br>
+
+<!-- |**|end egp html banner|**| -->
+
+
+
+<DIV><FONT size=4><STRONG><FONT color=#000080><FONT face=Verdana>HOW TO CALL THE 
+POLICE </FONT></FONT></STRONG><FONT face=Verdana><SPAN 
+style="FONT-WEIGHT: bold; FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: Verdana">WHEN 
+YOU'RE OLD AND DON'T MOVE FAST ANYMORE.</SPAN></FONT></FONT><FONT face=Verdana 
+size=2><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana"><BR></SPAN></FONT><B><FONT 
+face=Verdana color=navy size=4><SPAN 
+style="FONT-WEIGHT: bold; FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: Verdana"><BR>George 
+Phillips , an elderly man, from Meridian, Mississippi, was going up to bed, when 
+his wife told him that he'd left the light on in the garden shed, which she 
+could see from the bedroom window. George opened the back door to go turn off 
+the light, but saw that there were people in the shed stealing 
+things.</SPAN></FONT></B><FONT face=Verdana size=2><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana"><BR></SPAN></FONT><B><FONT 
+face=Verdana color=navy size=4><SPAN 
+style="FONT-WEIGHT: bold; FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: Verdana"><BR>He 
+phoned the police, who asked "Is someone in your house?"</SPAN></FONT></B><FONT 
+face=Verdana size=2><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana"><BR></SPAN></FONT><B><FONT 
+face=Verdana color=navy size=4><SPAN 
+style="FONT-WEIGHT: bold; FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: Verdana"><BR>He 
+said "No," but some people are breaking into my garden shed and stealing from 
+me.</SPAN></FONT></B><FONT face=Verdana size=2><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana"><BR></SPAN></FONT><B><FONT 
+face=Verdana color=navy size=4><SPAN 
+style="FONT-WEIGHT: bold; FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: Verdana"><BR>Then 
+the police dispatcher said "All patrols are busy. You should lock your doors and 
+an officer will be along when one is available."</SPAN></FONT></B><FONT 
+face=Verdana size=2><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana"><BR></SPAN></FONT><B><FONT 
+face=Verdana color=navy size=4><SPAN 
+style="FONT-WEIGHT: bold; FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: Verdana"><BR>George 
+said, "Okay."</SPAN></FONT></B><FONT face=Verdana size=2><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana"><BR></SPAN></FONT><B><FONT 
+face=Verdana color=navy size=4><SPAN 
+style="FONT-WEIGHT: bold; FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: Verdana"><BR>He 
+hung up the phone and counted to 30.</SPAN></FONT></B><FONT face=Verdana 
+size=2><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana"><BR></SPAN></FONT><B><FONT 
+face=Verdana color=navy size=4><SPAN 
+style="FONT-WEIGHT: bold; FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: Verdana"><BR>Then 
+he phoned the police again.</SPAN></FONT></B><B><FONT face=Arial size=2><SPAN 
+style="FONT-WEIGHT: bold; FONT-SIZE: 10pt; FONT-FAMILY: Arial"><BR></SPAN></FONT></B><B><FONT 
+face=Verdana color=navy size=4><SPAN 
+style="FONT-WEIGHT: bold; FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: Verdana"><BR>"Hello, 
+I just called you a few seconds ago because there were people stealing things 
+from my shed. Well, you don't have to worry about them now because I just shot 
+them." and he hung up.</SPAN></FONT></B></DIV>
+<DIV><B><FONT face=Verdana color=navy size=4><SPAN 
+style="FONT-WEIGHT: bold; FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: Verdana"></SPAN></FONT></B><B><FONT 
+face=Verdana color=navy size=4><SPAN 
+style="FONT-WEIGHT: bold; FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: Verdana"><BR>Within 
+five minutes, six Police Cars, a SWAT Team, a Helicopter, two Fire Trucks, a 
+Paramedic, and an Ambulance showed up at the Phillips' residence, and caught the 
+burglars red-handed.</SPAN></FONT></B><FONT face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><BR></SPAN></FONT><B><FONT 
+face=Verdana color=navy size=4><SPAN 
+style="FONT-WEIGHT: bold; FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: Verdana"><BR>One 
+of the Policemen said to George, "I thought you said that you'd shot 
+them!"</SPAN></FONT></B><FONT face=Verdana size=2><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana"><BR></SPAN></FONT><B><FONT 
+face=Verdana color=navy size=4><SPAN 
+style="FONT-WEIGHT: bold; FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: Verdana"><BR>George 
+said, "I thought you said there was nobody available!"</SPAN></FONT></B><FONT 
+face=Verdana size=2><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana"><BR></SPAN></FONT><B><FONT 
+face=Verdana color=red size=5><SPAN 
+style="FONT-WEIGHT: bold; FONT-SIZE: 18pt; COLOR: red; FONT-FAMILY: Verdana"><BR>&nbsp;I 
+LOVE IT!<BR>Don't mess with old people</SPAN></FONT></B> </DIV>
+<DIV>
+<DIV><FONT face="Comic Sans MS"><STRONG><FONT face=Arial 
+color=#ff0000>~~~~~~~~~~~~~~</FONT></STRONG></DIV>
+<DIV>
+<DIV class=group-description><STRONG>Humor_G ...</STRONG></DIV>
+<DIV class=group-description><A 
+href="mailto:Humor_G-subscribe@yahoogroups.com">Humor_G-subscribe@yahoogroups.com</A></DIV>
+<DIV class=group-description>
+<DIV class=group-description id=ygr_desc><STRONG>Clean Humor for the whole 
+family</STRONG></DIV>
+<DIV class=group-description>Subscribe: <A 
+href="mailto:Humor_G-subscribe@yahoogroups.com">Humor_G-subscribe@yahoogroups.com</A></DIV>
+<DIV class=group-description>&nbsp;</DIV>
+<DIV class=group-description>
+<DIV class=group-description><STRONG>Humor_ ...</STRONG></DIV>
+<DIV class=group-description><A 
+href="mailto:Humor_-subscribe@yahoogroups.com">Humor_-subscribe@yahoogroups.com</A></DIV><FONT 
+size=2>
+<DIV class=group-description>
+<TABLE class=ygrp-desc cellSpacing=0 cellPadding=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV class=group-description><STRONG>While this is PG 13 Humor it is not 
+      raunchy</STRONG><BR>Enjoy these posts and feel free to share this site 
+      with your friends.<BR><FONT size=2><FONT size=3>Subscribe:</FONT> <A 
+      href="mailto:Humor_-subscribe@yahoogroups.com"><FONT 
+      size=3>Humor_-subscribe@yahoogroups.com</FONT></A></FONT></DIV>
+      <DIV class=group-description>&nbsp;</DIV>
+      <DIV class=group-description>
+      <DIV class=group-description><STRONG>STTA ...</STRONG></DIV>
+      <DIV class=group-description><A 
+      href="mailto:STTA-subscribe@yahoogroups.com">STTA-subscribe@yahoogroups.com</A></DIV>
+      <DIV class=group-description><STRONG>Something To Think 
+      About</STRONG></DIV>
+      <TABLE class=ygrp-desc cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV class=group-description id=ygr_desc>These are Inspiring Stories 
+            that I receive in my mailbox each day.<BR>I hope they touch you as 
+            they do me. <BR>This world could use some encouragement to get by 
+            each day.<BR>Enjoy them and share them with your friends.<BR>Feel 
+            free to share this site and have them subscribe for 
+          themselves.</DIV></TD></TR></TBODY></TABLE>Subscribe: <A 
+      href="mailto:STTA-subscribe@yahoogroups.com">STTA-subscribe@yahoogroups.com</A></DIV></TD></TR></TBODY></TABLE></DIV>
+<DIV class=group-description><FONT size=3></FONT>&nbsp;</DIV>
+<DIV class=group-description>
+<DIV>
+<DIV class=group-description><STRONG>BSAHWC ...</STRONG></DIV>
+<DIV class=group-description><A 
+href="mailto:BSAHWC-subscribe@yahoogroups.com">BSAHWC-subscribe@yahoogroups.com</A></DIV>
+<DIV class=group-description><STRONG>Boring Stay At Home Wives 
+Club</STRONG></DIV>
+<DIV class=group-description>This group was started by Housewives that were 
+'bashed' for being such. <BR>We call ourselves The Boring Stay At Home Wives 
+Club.<BR>We are a group of women that have developed friendships, support each 
+other continue to grow within ourselves. <BR>Just a happy go lucky group, 
+meeting for lunches, movies or whatever. <BR>You know...all that BORING STUFF! 
+;)</DIV>
+<DIV class=group-description>Subscribe : <A 
+href="mailto:BSAHWC-subscribe@yahoogroups.com">BSAHWC-subscribe@yahoogroups.com</A></DIV></DIV></DIV></FONT></DIV></DIV></FONT></DIV></DIV>
+
+
+
+<!-- |**|begin egp html banner|**| -->
+
+<br>
+
+    
+    
+<br>
+
+<!-- |**|end egp html banner|**| -->
+
+
+<div width="1" style="color: white; clear: both;"/>__._,_.___</div>
+
+<!-- Start Recommendations -->
+<!-- End Recommendations -->
+
+
+
+<!-- |**|begin egp html banner|**| -->
+
+  <img src="http://geo.yahoo.com/serv?s=97476590/grpId=450699/grpspId=1705020655/msgId=4120/stime=1244476591" width="1" height="1"> <br>
+
+<!-- |**|end egp html banner|**| -->
+
+    
+<!-- |**|begin egp html banner|**| -->
+
+<br>
+      <div style="font-family: verdana; font-size: 77%; border-top: 1px solid #666; padding: 5px 0;" >
+      Your email settings: Individual Email|Traditional <br>
+      <a href="http://groups.yahoo.com/group/Humor_G/join;_ylc=X3oDMTJlNjhmZ2c3BF9TAzk3NDc2NTkwBGdycElkAzQ1MDY5OQRncnBzcElkAzE3MDUwMjA2NTUEc2VjA2Z0cgRzbGsDc3RuZ3MEc3RpbWUDMTI0NDQ3NjU5MQ--">Change settings via the Web</a> (Yahoo! ID required) <br>
+      Change settings via email: <a href="mailto:Humor_G-digest@yahoogroups.com?subject=Email Delivery: Digest">Switch delivery to Daily Digest</a> | <a href = "mailto:Humor_G-fullfeatured@yahoogroups.com?subject=Change Delivery Format: Fully Featured">Switch to Fully Featured</a> <br>
+           <a href="http://groups.yahoo.com/group/Humor_G;_ylc=X3oDMTJjbDRzY2RmBF9TAzk3NDc2NTkwBGdycElkAzQ1MDY5OQRncnBzcElkAzE3MDUwMjA2NTUEc2VjA2Z0cgRzbGsDaHBmBHN0aW1lAzEyNDQ0NzY1OTE-">
+        Visit Your Group 
+      </a> |
+      <a href="http://docs.yahoo.com/info/terms/">
+        Yahoo! Groups Terms of Use
+      </a> |
+      <a href="mailto:Humor_G-unsubscribe@yahoogroups.com?subject=Unsubscribe">
+       Unsubscribe 
+      </a> 
+ <br>
+    </div>
+  <br>
+
+<!-- |**|end egp html banner|**| -->
+
+
+<div style="color: white; clear: both;"/>__,_._,___</div>
+</BODY></HTML>
+
+------=_NextPart_000_0015_01C9E81D.D4ED31E0--

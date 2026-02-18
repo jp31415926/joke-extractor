@@ -1,0 +1,622 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <sentto-137944-1224-1271961615-gcfl-submit=gcfl.net@returns.groups.yahoo.com>
+X-Original-To: gcfl-submit@gcfl.net
+Delivered-To: gcfl-submit@gcfl.net
+Received: from n3-vm1.bullet.mail.sp2.yahoo.com (n3-vm1.bullet.mail.sp2.yahoo.com [67.195.134.221])
+	by bruno.gcfl.net (Postfix) with SMTP id D39571D05304
+	for <gcfl-submit@gcfl.net>; Thu, 22 Apr 2010 13:40:19 -0500 (CDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoogroups.com; s=lima; t=1271961617; bh=ftrifVFn18IqCd0eJJC6YkBCNdwLPXikQq5Hs7YnbhU=; h=Received:Received:Received:X-Yahoo-Newman-Id:X-Sender:X-Apparently-To:X-Received:X-Received:X-Received:X-Received:X-Received:X-Yahoo-SMTP:X-YMail-OSG:Message-ID:Organization:User-Agent:To:X-Originating-IP:X-eGroups-Msg-Info:From:X-Yahoo-Profile:Sender:MIME-Version:Mailing-List:Delivered-To:List-Id:Precedence:List-Unsubscribe:Date:Subject:X-Yahoo-Newman-Property:Reply-To:Content-Type; b=H+VPETs3e/U2t8nHZnxeGHCGa9sExltTArPlXOCfuclYj9MJp3ctjOGPtdrPc22y1WhbRBtQ2yIQ45ORZtlvJoR0uSeGMR89dOs89as0hbPd2WAO6ns/evRt5oe2t4EN
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=lima; d=yahoogroups.com;
+	b=lzP+vkCi4A3Q4uTb1Ll5mELZwSoN3ukIQv9ZZH0PvNar/gtlsXObUxxgDfBE9Tjjmu/1gL9X45a7ef1qUkEsKxv0TeG93Y3DWPw6XwQ6aljlfH+yF3UCmPQgHF2rged6;
+Received: from [67.195.134.48] by n3.bullet.mail.sp2.yahoo.com with NNFMP; 22 Apr 2010 18:40:17 -0000
+Received: from [69.147.65.151] by t1.bullet.mail.sp2.yahoo.com with NNFMP; 22 Apr 2010 18:40:17 -0000
+Received: from [66.196.94.63] by t5.bullet.mail.sp1.yahoo.com with NNFMP; 22 Apr 2010 18:40:17 -0000
+X-Yahoo-Newman-Id: 137944-m1224
+X-Sender: bill@billrayborn.com
+X-Apparently-To: bills-punch-line@yahoogroups.com
+X-Received: (qmail 48262 invoked from network); 22 Apr 2010 18:39:59 -0000
+X-Received: from unknown (98.137.34.44)
+  by m13.grp.re1.yahoo.com with QMQP; 22 Apr 2010 18:39:59 -0000
+X-Received: from unknown (HELO smtp108.sbc.mail.mud.yahoo.com) (68.142.198.106)
+  by mta1.grp.sp2.yahoo.com with SMTP; 22 Apr 2010 18:39:58 -0000
+X-Received: (qmail 9443 invoked from network); 22 Apr 2010 18:39:58 -0000
+X-Received: from [127.0.0.1] (bill@99.156.171.173 with plain)
+        by smtp108.sbc.mail.mud.yahoo.com with SMTP; 22 Apr 2010 11:39:58 -0700 PDT
+X-Yahoo-SMTP: 2MfeHqOswBBtWQgpoz_lAAAoxw4hEdJuqcScAasas5E-
+X-YMail-OSG: JlkPRCsVM1lpH9HnjL1bNp0eK.sI0A0iuZG_fWaH9oF_9UAeu_EL5mnlIEQvLA0K0mHBxbqmlFKuxqincTLzuW5_YIM30UV0J9_O3WPG3tyrVE_UtaLurOrBOlHErVYoWTQuwbMR1FWlzzxQ_lH97Wi7g6MM1h4DKiPaakY1Npxa6CgibZFIZAzhnqkLntieoEv6UR8nAcDOwTqx8A9eOZmJi0L4N3qxuCxTnqtADnPUfQOETU_gAf4I15P1tcbl8d4sAy_G8Pvr.nvUWvjsIAp8hoAAlrQ1P_pta0ns6C1VtOE-
+Message-ID: <4BD097CE.1030907@billrayborn.com>
+Organization: ilevite Publishing
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US; rv:1.9.1.9) Gecko/20100317 Thunderbird/3.0.4
+To: *BILLS-PUNCH-LINE <bills-punch-line@yahoogroups.com>
+X-Originating-IP: 68.142.198.106
+X-eGroups-Msg-Info: 2:4:8:0:1
+From: Bill Rayborn <bill@billrayborn.com>
+X-Yahoo-Profile: williehray
+Sender: Bills-Punch-Line@yahoogroups.com
+MIME-Version: 1.0
+Mailing-List: list Bills-Punch-Line@yahoogroups.com; contact Bills-Punch-Line-owner@yahoogroups.com
+Delivered-To: mailing list Bills-Punch-Line@yahoogroups.com
+List-Id: <Bills-Punch-Line.yahoogroups.com>
+Precedence: bulk
+List-Unsubscribe: <mailto:Bills-Punch-Line-unsubscribe@yahoogroups.com>
+Date: Thu, 22 Apr 2010 13:39:10 -0500
+Subject: [Bills-Punch-Line] 04/22/2010
+X-Yahoo-Newman-Property: groups-email-ff-u
+Reply-To: Bills-Punch-Line-owner@yahoogroups.com
+Content-Type: multipart/mixed;
+ boundary="------------030903060106020507090402"
+Content-Length: 18616
+Lines: 570
+
+--------------030903060106020507090402
+Content-Type: multipart/alternative;
+ boundary="5c2IiFjIV3g9mvN2NKwGT28I2E6zjTFf6WHB9UJ"
+
+--5c2IiFjIV3g9mvN2NKwGT28I2E6zjTFf6WHB9UJ
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+  The Three Little Pigs
+
+There were three little pigs that went to a restaurant for dinner. The 
+waiter came to the table and asked if they would like something to drink.
+
+The first piggy said, "I would like a Dr. Pepper."
+
+The second piggy said, "I would like a glass of tea."
+
+The third piggy said, "I would like a glass of water."
+
+When the waiter brought the drinks, he asked if they were ready to order.
+
+The first piggy said he would like a Hamburger."
+
+The second piggy said, "I would like a Steak."
+
+The third piggy said, "I would like a glass of water."
+
+When the piggies were finished eating, the waiter asked if they would 
+like some dessert.
+
+The first piggy said, "I would like a hot fudge sundae."
+
+The second piggy said, "I would like a banana split."
+
+The third piggy said, "I would like a glass of water."
+
+When the piggies were finished with dessert, the waiter brought their check.
+
+Before he left the table, he asked the third little piggy why he only 
+ordered water.
+
+The third piggy said, "Well, someone has to go 'Wee wee wee all the way 
+home."
+
+--5c2IiFjIV3g9mvN2NKwGT28I2E6zjTFf6WHB9UJ
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+</head>
+
+
+
+
+
+
+
+<body style="background-color: #fff;">
+<span style="display:none">&nbsp;</span>
+
+<!--~-|**|PrettyHtmlStartT|**|-~-->
+<div id="ygrp-mlmsg" style="position:relative;">
+  <div id="ygrp-msg" style="z-index: 1;">
+<!--~-|**|PrettyHtmlEndT|**|-~-->
+
+    <div id="ygrp-text" >
+      
+      
+      <p>  The Three Little Pigs<br>
+<br>
+There were three little pigs that went to a restaurant for dinner. The <br>
+waiter came to the table and asked if they would like something to drink.<br>
+<br>
+The first piggy said, &quot;I would like a Dr. Pepper.&quot;<br>
+<br>
+The second piggy said, &quot;I would like a glass of tea.&quot;<br>
+<br>
+The third piggy said, &quot;I would like a glass of water.&quot;<br>
+<br>
+When the waiter brought the drinks, he asked if they were ready to order.<br>
+<br>
+The first piggy said he would like a Hamburger.&quot;<br>
+<br>
+The second piggy said, &quot;I would like a Steak.&quot;<br>
+<br>
+The third piggy said, &quot;I would like a glass of water.&quot;<br>
+<br>
+When the piggies were finished eating, the waiter asked if they would <br>
+like some dessert.<br>
+<br>
+The first piggy said, &quot;I would like a hot fudge sundae.&quot;<br>
+<br>
+The second piggy said, &quot;I would like a banana split.&quot;<br>
+<br>
+The third piggy said, &quot;I would like a glass of water.&quot;<br>
+<br>
+When the piggies were finished with dessert, the waiter brought their check.<br>
+<br>
+Before he left the table, he asked the third little piggy why he only <br>
+ordered water.<br>
+<br>
+The third piggy said, &quot;Well, someone has to go 'Wee wee wee all the way <br>
+home.&quot;<br>
+</p>
+
+    </div>
+     
+
+    <!--~-|**|PrettyHtmlStart|**|-~-->
+    <div style="color: #fff; height: 0;">__._,_.___</div>
+
+        
+  
+   
+    <div id="ygrp-actbar" style="clear: both; margin-bottom: 10px; white-space: nowrap; color: #666; padding-top: 15px;">
+      <div>
+        <a href="mailto:bill@billrayborn.com?subject=04/22/2010" style="margin-right: 0; padding-right: 0;">
+	  Reply to <span style="font-weight: 700;">sender</span></a> |
+        <a href="mailto:Bills-Punch-Line@yahoogroups.com?subject=04/22/2010">
+	  Reply to <span style="font-weight: 700;">group</span></a> |
+        	  <a href="http://groups.yahoo.com/group/Bills-Punch-Line/post;_ylc=X3oDMTJvZnJqczlkBF9TAzk3MzU5NzE0BGdycElkAzEzNzk0NARncnBzcElkAzE3MDUwMjA2NTUEbXNnSWQDMTIyNARzZWMDZnRyBHNsawNycGx5BHN0aW1lAzEyNzE5NjE2MTY-?act=reply&messageNum=1224">Reply <span style="font-weight: 700;">via web post</span></a> |
+            	<a href="http://groups.yahoo.com/group/Bills-Punch-Line/post;_ylc=X3oDMTJkOG4zbW5kBF9TAzk3MzU5NzE0BGdycElkAzEzNzk0NARncnBzcElkAzE3MDUwMjA2NTUEc2VjA2Z0cgRzbGsDbnRwYwRzdGltZQMxMjcxOTYxNjE2" style="font-weight: 700;">Start a New Topic</a>
+      </div>
+
+                <a href="http://groups.yahoo.com/group/Bills-Punch-Line/message/1224;_ylc=X3oDMTMzMmxkZm8zBF9TAzk3MzU5NzE0BGdycElkAzEzNzk0NARncnBzcElkAzE3MDUwMjA2NTUEbXNnSWQDMTIyNARzZWMDZnRyBHNsawN2dHBjBHN0aW1lAzEyNzE5NjE2MTYEdHBjSWQDMTIyNA--">Messages in this topic</a>
+          (<span style="font-weight: 700;">1</span>)
+          </div> 
+<!------- Start Nav Bar ------>
+<!-- |**|begin egp html banner|**| -->
+<!-- |**|end egp html banner|**| -->
+
+<!-- |**|begin egp html banner|**| -->
+<div id="ygrp-vital" style="background-color: #e0ecee; font-family: Verdana; font-size: 10px; margin-bottom: 10px; padding: 10px;">
+      <span id="vithd" style="font-weight: bold; color: #333; text-transform: uppercase; ">Recent Activity:</span>
+
+    <ul style="list-style-type: none; margin: 0; padding: 0; display: inline;">
+                                                    </ul>
+    
+  <div style="clear: both; padding-top: 2px; color: #1e66ae;">
+    <a href="http://groups.yahoo.com/group/Bills-Punch-Line;_ylc=X3oDMTJkaTI4MGRtBF9TAzk3MzU5NzE0BGdycElkAzEzNzk0NARncnBzcElkAzE3MDUwMjA2NTUEc2VjA3Z0bARzbGsDdmdocARzdGltZQMxMjcxOTYxNjE1" style="text-decoration: none;">Visit Your Group</a>
+  </div>
+</div>
+
+        <div id="ygrp-grft" style="font-family: Verdana; font-size: 12px; padding: 15px 0;">
+      
+<!-- |**|begin egp html banner|**| -->
+
+      =======================================================<BR>
+FREE ON-LINE MAGAZINE FOR CHURCH WORSHIP LEADERS!<BR>
+Go to&nbsp; <a href="http://www.ilevite.com">http://www.ilevite.com</a><BR>
+Sign up to receive iLevite FREE each month.&nbsp; <BR>
+Recommend iLevite to your friends.<BR>
+============================================== <BR>
+BILL'S PUNCH LINE is brought to you as a <BR>
+free service by Bill Rayborn.<BR>
+============================================== <BR>
+TO SUBSCRIBE: Send a blank e-mail to:<BR>
+bills-punch-line-subscribe@yahoogroups.com<BR>
+==============================================<BR>
+TO UNSUBSCRIBE: Send a blank e-mail to:<BR>
+bills-punch-line-unsubscribe@yahoogroups.com<BR>
+===============================================<BR>
+To view Punch Line ARCHIVES go to:<BR>
+<a href="http://www.yahoogroups.com/messages/Bills-Punch-Line">http://www.yahoogroups.com/messages/Bills-Punch-Line</a><BR>
+============================================== <BR>
+Visit our web site at <a href="http://ilevite.net">http://ilevite.net</a><BR>
+Free on-line magazine for church worship leaders<BR>
+=============================================<BR>
+      
+<!-- |**|end egp html banner|**| -->
+
+    </div>
+            <div id="ygrp-mkp" style="border: 1px solid #d8d8d8; clear: both; float: left; font-family: Arial; margin: 5px 0 10px 0; padding: 0 10px;">
+      <div id="hd" style="color: #628c2a; font-size: 85%; font-weight: 700; line-height: 122%; margin: 10px 0;">MARKETPLACE</div>
+      <div id="ads" style="margin-bottom: 10px;">
+                  <div class="ad" style="color: #628C2A; font-family: Arial; font-weight: 700; padding: 0 0;">
+            <p><a href="http://us.ard.yahoo.com/SIG=15ov3ve30/M=493064.13983314.13965207.13298430/D=groups/S=1705020655:MKP1/Y=YAHOO/EXP=1271968816/L=7eea457a-4e3e-11df-93d2-0f8ca7d47686/B=p_RsEkwNBkw-/J=1271961616874516/K=lJRYh.nktvDhTKEoK8VNWw/A=6060255/R=0/SIG=1194m4keh/*http://us.toolbar.yahoo.com/?.cpdl=grpj">Stay on top of your group activity without leaving the page you're on - Get the Yahoo! Toolbar now.</a></p> <script language=javascript>
+if(window.yzq_d==null)window.yzq_d=new Object();
+window.yzq_d['p_RsEkwNBkw-']='&U=13c8tjtka%2fN%3dp_RsEkwNBkw-%2fC%3d493064.13983314.13965207.13298430%2fD%3dMKP1%2fB%3d6060255%2fV%3d1';
+</script><noscript><img width=1 height=1 alt="" src="http://us.bc.yahoo.com/b?P=7eea457a-4e3e-11df-93d2-0f8ca7d47686&T=1ctp736ki%2fX%3d1271961616%2fE%3d1705020655%2fR%3dgroups%2fK%3d5%2fV%3d2.1%2fW%3dH%2fY%3dYAHOO%2fF%3d2477108872%2fH%3dY29udGVudD0iR3JvdXBzO01vYmlsZTtCcmllZmNhc2U7UG9kY2FzdHM7S25vd2xlZGdlX1NlYXJjaDtNYWlsO01lc3NlbmdlcjtXaWRnZXRzO0dlb2NpdGllcztCb29rbWFyazsiIGRpc2FibGVzaHVmZmxpbmc9IjEiIHNlcnZlSWQ9IjdlZWE0NTdhLTRlM2UtMTFkZi05M2QyLTBmOGNhN2Q0NzY4NiIgc2l0ZUlkPSIyNzk2MDUxIiB0U3RtcD0iMTI3MTk2MTYxNjg2MjY5NyIg%2fQ%3d-1%2fS%3d1%2fJ%3d3F5EC442&U=13c8tjtka%2fN%3dp_RsEkwNBkw-%2fC%3d493064.13983314.13965207.13298430%2fD%3dMKP1%2fB%3d6060255%2fV%3d1"></noscript>          </div>
+                          <div class="ad" style="color: #628C2A; font-family: Arial; font-weight: 700; padding: 0 0;">
+                          <hr style="border: 1px solid #d8d8d8;">
+                        <p><a href="http://us.ard.yahoo.com/SIG=15o10uoti/M=493064.13814537.13965224.10835568/D=groups/S=1705020655:MKP1/Y=YAHOO/EXP=1271968816/L=7eea457a-4e3e-11df-93d2-0f8ca7d47686/B=qPRsEkwNBkw-/J=1271961616874516/K=lJRYh.nktvDhTKEoK8VNWw/A=6042764/R=0/SIG=11jbo19n3/*http://advision.webevents.yahoo.com/momconnection">Welcome to Mom Connection! Share stories, news and more with moms like you.</a></p><script language=javascript>
+if(window.yzq_d==null)window.yzq_d=new Object();
+window.yzq_d['qPRsEkwNBkw-']='&U=13cekls7t%2fN%3dqPRsEkwNBkw-%2fC%3d493064.13814537.13965224.10835568%2fD%3dMKP1%2fB%3d6042764%2fV%3d1';
+</script><noscript><img width=1 height=1 alt="" src="http://us.bc.yahoo.com/b?P=7eea457a-4e3e-11df-93d2-0f8ca7d47686&T=1ctgodlpq%2fX%3d1271961616%2fE%3d1705020655%2fR%3dgroups%2fK%3d5%2fV%3d2.1%2fW%3dH%2fY%3dYAHOO%2fF%3d2767696296%2fH%3dY29udGVudD0iR3JvdXBzO01vYmlsZTtCcmllZmNhc2U7UG9kY2FzdHM7S25vd2xlZGdlX1NlYXJjaDtNYWlsO01lc3NlbmdlcjtXaWRnZXRzO0dlb2NpdGllcztCb29rbWFyazsiIGRpc2FibGVzaHVmZmxpbmc9IjEiIHNlcnZlSWQ9IjdlZWE0NTdhLTRlM2UtMTFkZi05M2QyLTBmOGNhN2Q0NzY4NiIgc2l0ZUlkPSIyNzk2MDUxIiB0U3RtcD0iMTI3MTk2MTYxNjg2MjY5NyIg%2fQ%3d-1%2fS%3d1%2fJ%3d3F5EC442&U=13cekls7t%2fN%3dqPRsEkwNBkw-%2fC%3d493064.13814537.13965224.10835568%2fD%3dMKP1%2fB%3d6042764%2fV%3d1"></noscript>          </div>
+                          <div class="ad" style="color: #628C2A; font-family: Arial; font-weight: 700; padding: 0 0;">
+                          <hr style="border: 1px solid #d8d8d8;">
+                        <p><a href="http://us.ard.yahoo.com/SIG=15ocd2pg5/M=493064.14012770.13963757.13298430/D=groups/S=1705020655:MKP1/Y=YAHOO/EXP=1271968816/L=7eea457a-4e3e-11df-93d2-0f8ca7d47686/B=qfRsEkwNBkw-/J=1271961616874516/K=lJRYh.nktvDhTKEoK8VNWw/A=6015306/R=0/SIG=11vlkvigg/*http://advision.webevents.yahoo.com/hobbiesandactivitieszone/">Hobbies & Activities Zone: Find others who share your passions! Explore new interests.</a></p><script language=javascript>
+if(window.yzq_d==null)window.yzq_d=new Object();
+window.yzq_d['qfRsEkwNBkw-']='&U=13cb9hngp%2fN%3dqfRsEkwNBkw-%2fC%3d493064.14012770.13963757.13298430%2fD%3dMKP1%2fB%3d6015306%2fV%3d1';
+</script><noscript><img width=1 height=1 alt="" src="http://us.bc.yahoo.com/b?P=7eea457a-4e3e-11df-93d2-0f8ca7d47686&T=1csnpao6h%2fX%3d1271961616%2fE%3d1705020655%2fR%3dgroups%2fK%3d5%2fV%3d2.1%2fW%3dH%2fY%3dYAHOO%2fF%3d689430425%2fH%3dY29udGVudD0iR3JvdXBzO01vYmlsZTtCcmllZmNhc2U7UG9kY2FzdHM7S25vd2xlZGdlX1NlYXJjaDtNYWlsO01lc3NlbmdlcjtXaWRnZXRzO0dlb2NpdGllcztCb29rbWFyazsiIGRpc2FibGVzaHVmZmxpbmc9IjEiIHNlcnZlSWQ9IjdlZWE0NTdhLTRlM2UtMTFkZi05M2QyLTBmOGNhN2Q0NzY4NiIgc2l0ZUlkPSIyNzk2MDUxIiB0U3RtcD0iMTI3MTk2MTYxNjg2MjY5NyIg%2fQ%3d-1%2fS%3d1%2fJ%3d3F5EC442&U=13cb9hngp%2fN%3dqfRsEkwNBkw-%2fC%3d493064.14012770.13963757.13298430%2fD%3dMKP1%2fB%3d6015306%2fV%3d1"></noscript>          </div>
+              </div>
+    </div>
+  
+<div id="ft" style="font-family: Arial; font-size: 11px; margin-top: 5px; padding: 0 2px 0 0; clear: both;">
+  <a href="http://groups.yahoo.com/;_ylc=X3oDMTJjdGw0NHNlBF9TAzk3MzU5NzE0BGdycElkAzEzNzk0NARncnBzcElkAzE3MDUwMjA2NTUEc2VjA2Z0cgRzbGsDZ2ZwBHN0aW1lAzEyNzE5NjE2MTY-" style="float: left;"><img src="http://l.yimg.com/a/i/us/yg/logo/us.gif" height="15" width="137" alt="Yahoo! Groups" style="border: 0;"/></a>
+  <div style="color: #747575; float: right;">Switch to: <a href="mailto:Bills-Punch-Line-traditional@yahoogroups.com?subject=Change Delivery Format: Traditional" style="text-decoration: none;">Text-Only</a>, <a href="mailto:Bills-Punch-Line-digest@yahoogroups.com?subject=Email Delivery: Digest" class="margin-rt" style="text-decoration: none;">Daily Digest</a> &bull; <a href="mailto:Bills-Punch-Line-unsubscribe@yahoogroups.com?subject=Unsubscribe" style="text-decoration: none;">Unsubscribe</a> &bull; <a href="http://docs.yahoo.com/info/terms/" style="text-decoration: none;">Terms of Use</a></div>
+</div>
+
+<!-- |**|end egp html banner|**| -->
+
+  </div> <!-- ygrp-msg -->
+
+  <!-- Sponsor -->
+  <!-- |**|begin egp html banner|**| -->
+  <div id="ygrp-sponsor" style="width:160px; float:right; clear:none; margin:0 0 25px 0; background: #fff;">
+
+<!-- Start Recommendations -->
+<div id="ygrp-reco">
+     </div>
+<!-- End Recommendations -->
+
+
+
+  </div>   <!-- |**|end egp html banner|**| -->
+
+  <div style="clear:both; color: #FFF; font-size:1px;">.</div>
+</div>
+
+  <img src="http://geo.yahoo.com/serv?s=97359714/grpId=137944/grpspId=1705020655/msgId=1224/stime=1271961616/nc1=3848586/nc2=5191953/nc3=5522126" width="1" height="1"> <br>
+
+<div style="color: #fff; height: 0;">__,_._,___</div>
+<!--~-|**|PrettyHtmlEnd|**|-~-->
+
+</body>
+
+<!--~-|**|PrettyHtmlStart|**|-~-->
+<head>
+  <style type="text/css">
+  <!--
+  #ygrp-mkp {
+  border: 1px solid #d8d8d8;
+  font-family: Arial;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+#ygrp-mkp hr {
+  border: 1px solid #d8d8d8;
+}
+
+#ygrp-mkp #hd {
+  color: #628c2a;
+  font-size: 85%;
+  font-weight: 700;
+  line-height: 122%;
+  margin: 10px 0;
+}
+
+#ygrp-mkp #ads {
+  margin-bottom: 10px;
+}
+
+#ygrp-mkp .ad {
+  padding: 0 0;
+}
+
+#ygrp-mkp .ad a {
+  color: #0000ff;
+  text-decoration: none;
+}
+  #ygrp-sponsor #ygrp-lc {
+  font-family: Arial;
+}
+
+#ygrp-sponsor #ygrp-lc #hd {
+  margin: 10px 0px;
+  font-weight: 700;
+  font-size: 78%;
+  line-height: 122%;
+}
+
+#ygrp-sponsor #ygrp-lc .ad {
+  margin-bottom: 10px;
+  padding: 0 0;
+}
+
+  a {
+    color: #1e66ae;
+  }
+
+  #actions {
+    font-family: Verdana;
+    font-size: 11px;
+    padding: 10px 0;
+  }
+
+  #activity {
+    background-color: #e0ecee;
+    float: left;
+    font-family: Verdana;
+    font-size: 10px;
+    padding: 10px;
+  }
+
+  #activity span {
+    font-weight: 700;
+  }
+
+  #activity span:first-child {
+    text-transform: uppercase;
+  }
+
+  #activity span a {
+    color: #5085b6;
+    text-decoration: none;
+  }
+
+  #activity span span {
+    color: #ff7900;
+  }
+
+  #activity span .underline {
+    text-decoration: underline;
+  }
+
+  .attach {
+    clear: both;
+    display: table;
+    font-family: Arial;
+    font-size: 12px;
+    padding: 10px 0;
+    width: 400px;
+  }
+
+  .attach div a {
+    text-decoration: none;
+  }
+
+  .attach img {
+    border: none;
+    padding-right: 5px;
+  }
+
+  .attach label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .attach label a {
+    text-decoration: none;
+  }
+  
+  blockquote {
+    margin: 0 0 0 4px;
+  }
+
+  .bold {
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .bold a {
+    text-decoration: none;
+  }
+
+  dd.last p a {
+    font-family: Verdana;
+    font-weight: 700;
+  }
+
+  dd.last p span {
+    margin-right: 10px;
+    font-family: Verdana;
+    font-weight: 700;
+  }
+
+  dd.last p span.yshortcuts {
+    margin-right: 0;
+  }
+
+  div.attach-table div div a {
+    text-decoration: none;
+  }
+
+  div.attach-table {
+    width: 400px;
+  }
+
+  div.file-title a, div.file-title a:active, div.file-title a:hover, div.file-title a:visited {
+    text-decoration: none;
+  }
+
+  div.photo-title a, div.photo-title a:active, div.photo-title a:hover, div.photo-title a:visited {
+    text-decoration: none;
+  }
+
+  div#ygrp-mlmsg #ygrp-msg p a span.yshortcuts {
+    font-family: Verdana;
+    font-size: 10px;
+    font-weight: normal;
+  }
+
+  .green {
+    color: #628c2a;
+  }
+
+  .MsoNormal {
+    margin: 0 0 0 0;
+  }
+
+  o {
+    font-size: 0;
+  }
+
+  #photos div {
+    float: left;
+    width: 72px;
+  }
+
+  #photos div div {
+    border: 1px solid #666666;
+    height: 62px;
+    overflow: hidden;
+    width: 62px;
+  }
+
+  #photos div label {
+    color: #666666;
+    font-size: 10px;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    width: 64px;
+  }
+
+  #reco-category {
+    font-size: 77%;
+  }
+
+  #reco-desc {
+    font-size: 77%;
+  }
+
+  .replbq {
+    margin: 4px;
+  }
+
+  #ygrp-actbar div a:first-child {
+   /* border-right: 0px solid #000;*/
+    margin-right: 2px;
+    padding-right: 5px;
+  }
+
+  #ygrp-mlmsg {
+    font-size: 13px;
+    font-family: Arial, helvetica,clean, sans-serif;
+    *font-size: small;
+    *font: x-small;
+  }
+
+  #ygrp-mlmsg table {
+    font-size: inherit;
+    font: 100%;
+  }
+
+  #ygrp-mlmsg select, input, textarea {
+    font: 99% Arial, Helvetica, clean, sans-serif;
+  }
+
+  #ygrp-mlmsg pre, code {
+    font:115% monospace;
+    *font-size:100%;
+  }
+
+  #ygrp-mlmsg * {
+    line-height: 1.22em;
+  }
+
+  #ygrp-mlmsg #logo {
+    padding-bottom: 10px;
+  }
+
+  #ygrp-mlmsg a {
+    color: #1E66AE;
+  }
+
+  #ygrp-msg p a {
+    font-family: Verdana;
+  }
+
+  #ygrp-msg p#attach-count span {
+    color: #1E66AE;
+    font-weight: 700;
+  }
+
+  #ygrp-reco #reco-head {
+    color: #ff7900;
+    font-weight: 700;
+  }
+
+  #ygrp-reco {
+    margin-bottom: 20px;
+    padding: 0px;
+  }
+
+  #ygrp-sponsor #ov li a {
+    font-size: 130%;
+    text-decoration: none;
+  }
+
+  #ygrp-sponsor #ov li {
+    font-size: 77%;
+    list-style-type: square;
+    padding: 6px 0;
+  } 
+
+  #ygrp-sponsor #ov ul {
+    margin: 0;
+    padding: 0 0 0 8px;
+  }
+
+  #ygrp-text {
+    font-family: Georgia;
+  }
+
+  #ygrp-text p {
+    margin: 0 0 1em 0;
+  }
+
+  #ygrp-text tt {
+    font-size: 120%;
+  }
+
+  #ygrp-vital ul li:last-child {
+    border-right: none !important; 
+  } 
+  -->
+  </style>
+</head>
+
+<!--~-|**|PrettyHtmlEnd|**|-~-->
+</html>
+<!-- end group email -->
+
+
+--5c2IiFjIV3g9mvN2NKwGT28I2E6zjTFf6WHB9UJ--
+
+--------------030903060106020507090402
+Content-Type: text/x-vcard; charset=utf-8;
+ name="bill.vcf"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+ filename="bill.vcf"
+
+begin:vcard
+fn:Bill Rayborn
+n:Rayborn;Bill
+org:iLevite Publications, LLC
+adr:;;PO Box 1179;Grapevine;TX;76021;USA
+email;internet:bill@billrayborn.com
+title:President
+tel;work:817-868-0660
+tel;fax:817-817-868-0660
+tel;pager:SKYPE:  BILL.RAYBORN
+tel;home:BLOG: http://tinyurl.com/l9zrp5
+x-mozilla-html:TRUE
+url:http://www/ilevite.com
+version:2.1
+end:vcard
+
+
+--------------030903060106020507090402--
+

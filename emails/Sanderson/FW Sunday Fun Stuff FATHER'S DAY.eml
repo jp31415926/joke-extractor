@@ -1,0 +1,533 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <aardvark@illinois.edu>
+X-Original-To: gcfl-submit@gcfl.net
+Delivered-To: gcfl-submit@gcfl.net
+Received-SPF: Temperror (mailfrom) identity=mailfrom; client-ip=148.163.139.28; helo=mx0b-00007101.pphosted.com; envelope-from=aardvark@illinois.edu; receiver=<UNKNOWN> 
+Authentication-Results: attila.gcfl.net;
+	dkim=pass (2048-bit key; unprotected) header.d=illinois.edu header.i=@illinois.edu header.b="CUT30pXE";
+	dkim-atps=neutral
+Received: from mx0b-00007101.pphosted.com (mx0b-00007101.pphosted.com [148.163.139.28])
+	by attila.gcfl.net (Postfix) with ESMTPS id 913543080099
+	for <gcfl-submit@gcfl.net>; Sun, 19 Jun 2022 07:01:58 -0500 (CDT)
+Received: from pps.filterd (m0166258.ppops.net [127.0.0.1])
+	by mx0b-00007101.pphosted.com (8.17.1.5/8.17.1.5) with ESMTP id 25J6YvCf002922
+	for <gcfl-submit@gcfl.net>; Sun, 19 Jun 2022 12:01:58 GMT
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=illinois.edu; h=from : to : subject
+ : date : message-id : references : in-reply-to : content-type :
+ mime-version; s=campusrelays;
+ bh=HwJzSoKp7EVMN2FRKFuKvRTUPB8FIevgXjvCaX8SrmI=;
+ b=CUT30pXE2xsi1ZezgzsrR7pVoaMHwMKEE+Cul/COetDmOlesJX89Hdvi93aHs8gV1XrJ
+ 7bZxP3pkkpIv3+YeyibzD1UQwMKn8QfosDOx+HKBlqISsh9BgqlmFm0GnQwR8gZRCZA8
+ h3XDUMQokIG4EP8HOzEE5sHP+vbPTXdEj0cCZfAsTNHyaNGDQLah/6MeJim+6rJ8Y3tE
+ MYldbJ/9pVhqmP4KOMR4f9URseWgexi+GNbgRQKvo52s55hJzeaw/K/i8/lu8fetGB8M
+ aJnItu76Uf7F6m8l3P77L06xBtsOh9r+SOY9vKRJx3mvt0QdfY0TY7X6JE0a0vqsBVIU kA== 
+Received: from nam04-dm6-obe.outbound.protection.outlook.com (mail-dm6nam04lp2043.outbound.protection.outlook.com [104.47.73.43])
+	by mx0b-00007101.pphosted.com (PPS) with ESMTPS id 3gsrtnk1bf-1
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT)
+	for <gcfl-submit@gcfl.net>; Sun, 19 Jun 2022 12:01:57 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=dulUjy42J2HrzqQN3h4OmWhhSK7xLnsMqU5jxLxqGncaWWIfWZXScYxABcGYGohAVDdAYS2r1T/g72Sd9tTGWqLDMCIkujlSW3ATs2XxjgbGDRhlQj42egZ14uE2CTSkOOCYsIlVeeEqi5DSYCMvo4Mk8eVTIPFwkar5+Gags0C3bB8SiHoNcAJ/N6cYnMwlJlcDbHl0R+8qMvnYD9RZpj8Wt7Qst6q7mqk438U47fYQv/YLDxMNstmgz5CeSGWIwOl8w0dx4ohgNcqiC8P9FrwiHO0tmx3Go6NS1NzpdnPW7J3mhEQg7JGsFqOx2ecK8Hqyk6fOFtK1TmktJj+Kzg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=HwJzSoKp7EVMN2FRKFuKvRTUPB8FIevgXjvCaX8SrmI=;
+ b=PNQ1yFO1raamwDBFQoMsZFcMNxP9V9GBrg+PLCwlzLdEA89j+CT/B2wEysz+WcxRU21C4XFTusOfVTX2Ld2mCCxoD7bDM7Kqdrc55mF/CLJfa9PF+E0ALa+DwsFw3RtBhlfJXH/Y1rp7PfVK5KWuS+IFIKlPd1CQEkXawuGYUzjT+Mm1KSwTxIH9ItxctkKtsP7Kir8FneZarlZrxRKj8G09yQbOAqDJ5XZBXw8QibUtL9GJS2oc9FwSzsauqajYDhGlbQdUJT8lojy+tnAgSDXWTwCdfVwRzPsfSQsbCBmNhUtk/gfwPsHrcA5FBNHFQbWCfsp2PVHK77g0E6ApWw==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=illinois.edu; dmarc=pass action=none header.from=illinois.edu;
+ dkim=pass header.d=illinois.edu; arc=none
+Received: from BY5PR11MB4007.namprd11.prod.outlook.com (2603:10b6:a03:189::28)
+ by CO1PR11MB5090.namprd11.prod.outlook.com (2603:10b6:303:96::21) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5353.14; Sun, 19 Jun
+ 2022 12:01:56 +0000
+Received: from BY5PR11MB4007.namprd11.prod.outlook.com
+ ([fe80::646a:c91f:8ac2:3ba1]) by BY5PR11MB4007.namprd11.prod.outlook.com
+ ([fe80::646a:c91f:8ac2:3ba1%7]) with mapi id 15.20.5353.018; Sun, 19 Jun 2022
+ 12:01:56 +0000
+From: "Sanderson, Steven C" <aardvark@illinois.edu>
+To: "Good Clean Fun  " <gcfl-submit@gcfl.net>
+Subject: FW: Sunday Fun Stuff:  FATHER'S DAY
+Thread-Topic: Sunday Fun Stuff:  FATHER'S DAY
+Thread-Index: AdiBcMpKBKoOBeLeQt25zB/ueOnMKQCYxy8A
+Date: Sun, 19 Jun 2022 12:01:56 +0000
+Message-ID: 
+ <BY5PR11MB40074F1E8331845C4A68EB74A3B19@BY5PR11MB4007.namprd11.prod.outlook.com>
+References: 
+ <BY5PR11MB40079EC876C7596DAE086C35A3B19@BY5PR11MB4007.namprd11.prod.outlook.com>
+In-Reply-To: 
+ <BY5PR11MB40079EC876C7596DAE086C35A3B19@BY5PR11MB4007.namprd11.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 9f8e52b3-8526-4bc8-dd49-08da51eb81b5
+x-ms-traffictypediagnostic: CO1PR11MB5090:EE_
+x-microsoft-antispam-prvs: 
+ <CO1PR11MB5090F6D2D8D6611F98466EC2A3B19@CO1PR11MB5090.namprd11.prod.outlook.com>
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info: 
+ sZaTVDHbxLmaUnuqElKS7J7EG2LWdB8/Xz4VmHktApxayZKKJ0NlVCNPbKLbZuq3fatDmwa/9wzw1xfaMqQ1T9EEQ2CNAvxvCywrBN/UCwarCVb5kdvc+5ZconiD7EzVWLkS3IGqa4bEIP050aZ3blJMvRHsdA0aXaxLymdm7wJyh8ivsut3OtHxtw/0wHHPRWtZ+6D8GgUmoJJ5+unqFTy3vSkZ7SiXqoJJqJh2qAsLfc6LC4J0wSqa09upyzwnm19Tl8GQjwP4oFVApeBkNxyX2wcSCyBtcqc1otf1Hv0G2h/6vvsZA4ZovLiPa+0kP3rhQNmxHkE4SzGxIXKIDs4bcotBLyBRLCEWljwoFXf2cySk0QwPWDX6Kra5dtRw+1ctrJm9TY3Wn8+G9PCWJKsr4mNxIpbweR/xms7s2YB2/ZzDldN0JDvHMps+Z47Fff16ca76XCDXLifbR+sfZAZIaKTviHviica0N+JcNfuqjWhPkkusXNIDYySOHn+eynkwT6d+qeeXzoFVZjE4e6Q17aNjBIstes9HIix3PD0SuFKjE5fpNBPtxPkg7cM4USgJW7RLzw1Ayz7rQtl1VegaFaN8IbypGw3TTv91xXTrvVx9UFOebmcad1G0Kf98dw6Zvdu4QhJ5FwWFN+0jO4CiouodL60FDJwzVqBBqtYpCOSKH5N0VtBaS607c8jrixH3aWjXu1yFLXz71KxBX25hctAhEo5dcoGH9kSus/7vQQ4PFxQIC7Z5Rt021f3y9JPeOKt99kwg3nsXA6h8QZyQ5CvVnYfbcEgTVNwv3X8ra8b6FNvkbZsso1azoB7nghnhohLBp2tUkn8sSNuZ8Q==
+x-forefront-antispam-report: 
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:BY5PR11MB4007.namprd11.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230016)(4636009)(366004)(966005)(786003)(498600001)(316002)(45080400002)(2906002)(26005)(9686003)(2940100002)(6916009)(71200400001)(52536014)(8676002)(5660300002)(8936002)(86362001)(33656002)(40140700001)(66946007)(76116006)(66556008)(66476007)(66446008)(64756008)(83380400001)(166002)(75432002)(186003)(7696005)(38100700002)(6506007)(122000001)(38070700005)(55016003);DIR:OUT;SFP:1101;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0: 
+ =?us-ascii?Q?0wUYtNyJJACAVXGrUqHxAK/1areIVpr5xeBT3rQopMqKScJEqNDxGRmkKxn6?=
+ =?us-ascii?Q?inGZRoUUW83Gwj0hzN72T4+E1BlqfnrQco02MrXDbJlbK9xoDAbOZy1NDRuP?=
+ =?us-ascii?Q?9+O+ZB/X6n2v5lZZoPphrjajQDDFQGjO+p8gnDCdnN/AAUHWXVg/aCbWJcZg?=
+ =?us-ascii?Q?viEtaKvsaJBdfdTw5QZIXwUac18bAvT/CFEqV8D7VqpvbEcJJJo3PZTTdHuc?=
+ =?us-ascii?Q?1HUp2mEABL8IKbZiYvdV7eS5DiCZKDECmi+lnT3gQ4i+n0w+6JA9GtIMo9Lr?=
+ =?us-ascii?Q?x6/ayQ56vOC2yvIqXNxiUkthy/5t4KYOdZUUy29y/8Yt8IyQbAmwvUzvu2Gs?=
+ =?us-ascii?Q?VDbJ4RWGB4MPuHoywOlLQQOvsqHRkU2sfm3PIZbcu1Kv2RqYCYiEcckLO6I0?=
+ =?us-ascii?Q?HXvFruCfQ5m/PAgdp1XbOWMnnK0GQNOy+CDqIz4VSul3NEBQ58YjDJWLt0kC?=
+ =?us-ascii?Q?THD+Q/5IHDGTw53TQ1CwVvRWzb5EMaE1EDBCJrO5LdhAJfp8YiVXXtPuPQ9k?=
+ =?us-ascii?Q?EG0gQj/9F8Cm6wbTnPVdJduatmQTJXYIiG3SPVwEoggfjdItTLZBgDFJygYm?=
+ =?us-ascii?Q?wmkqFtW0gwmhtOw19DG4VvItvVd66GL8DDk58nDwmsdv8TESSqJckaw6MccS?=
+ =?us-ascii?Q?CACwqUnISsCnYef8JbIQbFhzaFfnlVLS3HPvOrsrY05hKkYrpmxCGxmjLIWU?=
+ =?us-ascii?Q?YieDgPOHkItiUNjHnI2h6L7QtNbelbaelWRLehWs9d7UYogf55uBSXy/Fzkf?=
+ =?us-ascii?Q?FkwNtujg9AzvlY/pNLYF6GSdhh8daMRmny0awV/nvTb5WT9Ud6NITZXrX4q4?=
+ =?us-ascii?Q?KlweWDL6mMh4VbULswv/m9tx/VUO8xO4t0l+T0cAL/8GjalI/3oLrgWxghxG?=
+ =?us-ascii?Q?Wck960L/D1drBpLqzouMld3TSjdhb3vmHk26p2ys4gJTxSfaZ81KtNYo/oII?=
+ =?us-ascii?Q?Hn1ZX9inemFqIseBu2QI1emYwyQ9NKhG0ZfXPk65YK80qJEkm7b78NZXcND4?=
+ =?us-ascii?Q?6nEhrhZVP8XPIhDqzitrX2faMdH7NdTiZ7FONo66724bDu1z4tYy2FyA66iK?=
+ =?us-ascii?Q?EHLtGvM4eN9gh4M/FMuJ9oAAIb8Hpy7CBsxgYCLpPxG/R4i8Wzex/VqAIC8y?=
+ =?us-ascii?Q?oJBfOZ0FF8ajwhd0WFe/JAZ5C87Nxp9m4VLve12G9V4sePlQD2EysW6QW9RV?=
+ =?us-ascii?Q?qUFzPa7SnCJD3IOlIhSboaFBR0RxXzVZ04gAR7HOv+4kia+8wKJ9IvpwQHd7?=
+ =?us-ascii?Q?UC9k5pi0X9a2PHxLBlj+XAj/IJNHXQdzg0j8if3UX63uze12LdwiDisPwyUo?=
+ =?us-ascii?Q?75g82EpyFDGNi9KhrKMrwBe3mycT+9C+lsYgHJ7BZT8Li/xWYZyGSW5+k7zy?=
+ =?us-ascii?Q?2q3b4cI2nwBFP0Q51a8TCe5NIC6W5Uschs3Z3u1mNOXzl6iEVHqOp78OoLPO?=
+ =?us-ascii?Q?dnwkM/4yypxnUsaMHh0dDF3qIiUDpciyj6etoJgU0V1Y17nKR1xIWHntW7kG?=
+ =?us-ascii?Q?g0AnMDpVh4694IEXq91zhA6f+IqS1c83/SA5V7UaeGOvaivC5KKa05CBshrx?=
+ =?us-ascii?Q?Ryts/AOAhGPXPmkC30d2lwBn95V/SC19AAvf86xbdF5Q7tA2RW5GcmiHwU1w?=
+ =?us-ascii?Q?JshrzLDIsS16Vygd4S1nFIHp1nwgG+wmPsSMXl73XH4iwvj7dUNMnNQSRe7A?=
+ =?us-ascii?Q?LBwigI0hsrT74RZBJSRAGCWY2BQbqKw0mRvEIT75RgDjdXCMOA15K41Vu0E+?=
+ =?us-ascii?Q?oTN5NqDPKA=3D=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_BY5PR11MB40074F1E8331845C4A68EB74A3B19BY5PR11MB4007namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: illinois.edu
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: BY5PR11MB4007.namprd11.prod.outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 9f8e52b3-8526-4bc8-dd49-08da51eb81b5
+X-MS-Exchange-CrossTenant-originalarrivaltime: 19 Jun 2022 12:01:56.1221
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 44467e6f-462c-4ea2-823f-7800de5434e3
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: zhaoZGecuBbhjinVtILPdg5eYe2W5j5DHRhUlhIMIGDzhYFdmHBhRs5+rMX9T62oBLdNqQiVhdUjYrzlE/sAjQ==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CO1PR11MB5090
+X-Proofpoint-ORIG-GUID: Jieph_csoIITg6GCkmyfVRr6bC2hz21I
+X-Proofpoint-GUID: Jieph_csoIITg6GCkmyfVRr6bC2hz21I
+X-Spam-Details: rule=cautious_plus_nq_notspam policy=cautious_plus_nq score=0
+ priorityscore=1501 suspectscore=0 phishscore=0 impostorscore=0 spamscore=0
+ clxscore=1015 bulkscore=0 lowpriorityscore=0 mlxscore=0 malwarescore=0
+ mlxlogscore=999 adultscore=0 classifier=spam adjust=0 reason=mlx
+ scancount=1 engine=8.12.0-2204290000 definitions=main-2206190059
+X-Spam-Score: 0
+X-Spam-OrigSender: aardvark@illinois.edu
+X-Spam-Bar: 
+Content-Length: 19666
+
+--_000_BY5PR11MB40074F1E8331845C4A68EB74A3B19BY5PR11MB4007namp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Good Morning!
+
+Sunny Sunday greetings from South Florida, where we have enjoyed a warm but=
+ dry weather week.  Back in the days when I was doing New Student Orientati=
+on on the FAU campus, it managed to rain nearly every day, so I am not sure=
+ how we got so lucky this week.
+
+As we pause on this Father's Day Sunday to honor fathers everywhere, please=
+ take a moment to honor the memory of fathers who are no longer with us.  H=
+ere is my Dad, Dr. Milton W. Sanderson, 1910-2012.
+
+
+Our jokes today, stolen as usual, are dedicated to the Office of Appreciati=
+ve Education staff and interns for the outstanding institute we just hosted=
+.  GREAT job, team!
+
+Keep smiling.........................ss
+
+***************************************************************************=
+***********************************
+
+
+
+Mikey's Funnies:
+
+Little Dewey was brought to Dr. Dr. Mike Wilson  because he hadn't eaten an=
+ything for days. Dr. Wilson offered him all the goodies he could think of. =
+No luck. He tried a little scolding. It didn't work. A little pleading, to =
+no avail.
+
+Finally he sat down, faced the boy, looked him in the eye. He said, "Look y=
+oung man, if you can be stubborn, so can I. You're not going anywhere until=
+ you eat something. You can have whatever you want, but only after you have=
+ eaten will you leave."
+
+Dewey just sat and glared for some time, then said, "OK. I'll eat but I hav=
+e some conditions. First, I'll have exactly what I want and exactly how I w=
+ant it and second you'll share with me."
+
+Dr. Wilson was OK with this. He asked the child what he'd like. "Worms!" sa=
+id Dewey.
+
+Dr. Wilson was horrified but didn't want to back out and seem like a loser.=
+ So, he ordered a plate of worms to be brought in. "Not that many, just one=
+," yelled Dewey as he saw the plate.
+
+So, everything other than one worm was removed. Dewey then demanded that th=
+e single worm be cut into two pieces and then Dr. Wilson eat half. Dr. Wils=
+on went through the worst ordeal of his life, and after finishing, barely m=
+anaging to keep his cool, said, "OK, now eat!"
+
+Dewey refused as he sobbed, "No way! You ate my half!"
+
+
+
+
+
+Mikey's Funnies:
+
+A customer asked his barber, "When would be the best time to bring in my tw=
+o-year-old son?"
+
+Without hesitation, the barber answered, "When he's four."
+
+
+
+
+The Good Clean Fun List:
+
+A Frenchman walks into a bar with a parrot perched on his shoulder. "Wow," =
+says the bartended, "that's pretty cool, where'd you get him?"
+
+"Oh, him?" Says the parrot, "I found him in France, There's millions more o=
+ver there."
+
+
+
+
+Mikey's Funnies:
+
+Kathy and Rachel were chatting about her upcoming first year at Central Mic=
+higan University. Rachel was excited about Central, as other members of the=
+ family had also gone there..
+
+"What would you like to take when you attend college?" Kathy asked.
+
+After giving it some thought and glancing around the kitchen, Rachel replie=
+d, "The refrigerator, if you can get along without it."
+
+
+
+
+A Joke A Day:
+
+When a squirrel slipped into my house, I did the logical thing: I panicked =
+and called my father.
+
+"How do you get a squirrel out of a basement?" I shrieked.
+
+Dad advised me to leave a trail of peanut butter and crackers from the base=
+ment to the outside. It worked-the squirrel ate his way out of the house. U=
+nfortunately, he passed another squirrel eating his way in.
+
+
+
+
+Steve Sanderson
+21265 Rock Ridge Drive
+Boca Raton, Florida 33428
+217-766-4213
+aardvark@illinois.edu<mailto:aardvark@illinois.edu>
+https://www.facebook.com/steve.sanderson2/
+https://www.linkedin.com/in/steve-sanderson-15730511/
+Radio:  KK4FBU
+[https://gallery.mailchimp.com/f9d6f535ed1131010188e280b/images/90fc63a5-21=
+13-4e43-be14-b0bab9e51c26.jpg][https://gallery.mailchimp.com/f9d6f535ed1131=
+010188e280b/images/4a216983-709d-46a5-a9ed-5c8aa66ebccc.jpg]
+
+
+
+
+
+
+--_000_BY5PR11MB40074F1E8331845C4A68EB74A3B19BY5PR11MB4007namp_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-US" link=3D"#0563C1" vlink=3D"#954F72" style=3D"word-wrap:=
+break-word">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Good Morning!<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Sunny Sunday greetings from South Florida, where we h=
+ave enjoyed a warm but dry weather week.&nbsp; Back in the days when I was =
+doing New Student Orientation on the FAU campus, it
+ managed to rain nearly every day, so I am not sure how we got so lucky thi=
+s week.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">As we pause on this Father&#8217;s Day Sunday to hono=
+r fathers everywhere, please take a moment to honor the memory of fathers w=
+ho are no longer with us.&nbsp; Here is my Dad, Dr. Milton
+ W. Sanderson, 1910-2012.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Our jokes today, stolen as usual, are dedicated to th=
+e Office of Appreciative Education staff and interns for the outstanding in=
+stitute we just hosted.&nbsp; GREAT job, team!<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Keep smiling&#8230;&#8230;&#8230;&#8230;&#8230;&#8230=
+;&#8230;&#8230;.ss<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">*****************************************************=
+*********************************************************<o:p></o:p></span>=
+</p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Mikey&#8217;s Funnies:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Little Dewey was brought to Dr. Dr. Mike Wilson&nbsp;=
+ because he hadn't eaten anything for days. Dr. Wilson offered him all the =
+goodies he could think of. No luck. He tried a little
+ scolding. It didn't work. A little pleading, to no avail. <o:p></o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Finally he sat down, faced the boy, looked him in the=
+ eye. He said, &quot;Look young man, if you can be stubborn, so can I. You'=
+re not going anywhere until you eat something. You
+ can have whatever you want, but only after you have eaten will you leave.&=
+quot; <o:p>
+</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Dewey just sat and glared for some time, then said, &=
+quot;OK. I'll eat but I have some conditions. First, I'll have exactly what=
+ I want and exactly how I want it and second you'll
+ share with me.&quot; <o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Dr. Wilson was OK with this. He asked the child what =
+he'd like. &quot;Worms!&quot; said Dewey.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Dr. Wilson was horrified but didn't want to back out =
+and seem like a loser. So, he ordered a plate of worms to be brought in. &q=
+uot;Not that many, just one,&quot; yelled Dewey as he saw
+ the plate. <o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">So, everything other than one worm was removed. Dewey=
+ then demanded that the single worm be cut into two pieces and then Dr. Wil=
+son eat half. Dr. Wilson went through the worst
+ ordeal of his life, and after finishing, barely managing to keep his cool,=
+ said, &quot;OK, now eat!&quot;
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Dewey refused as he sobbed, &quot;No way! You ate my =
+half!&quot;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Mikey&#8217;s Funnies:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">A customer asked his barber, &quot;When would be the =
+best time to bring in my two-year-old son?&quot;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Without hesitation, the barber answered, &quot;When h=
+e's four.&quot;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">The Good Clean Fun List:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">A Frenchman walks into a bar with a parrot perched on=
+ his shoulder. &quot;Wow,&quot; says the bartended, &quot;that's pretty coo=
+l, where'd you get him?&quot;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">&quot;Oh, him?&quot; Says the parrot, &quot;I found h=
+im in France, There's millions more over there.&quot;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Mikey&#8217;s Funnies:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Kathy and Rachel were chatting about her upcoming fir=
+st year at Central Michigan University. Rachel was excited about Central, a=
+s other members of the family had also gone there..<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">&quot;What would you like to take when you attend col=
+lege?&quot; Kathy asked.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">After giving it some thought and glancing around the =
+kitchen, Rachel replied, &quot;The refrigerator, if you can get along witho=
+ut it.&quot;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">A Joke A Day:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">When a squirrel slipped into my house, I did the logi=
+cal thing: I panicked and called my father.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">&quot;How do you get a squirrel out of a basement?&qu=
+ot; I shrieked.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Dad advised me to leave a trail of peanut butter and =
+crackers from the basement to the outside. It worked&#8212;the squirrel ate=
+ his way out of the house. Unfortunately, he passed
+ another squirrel eating his way in.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Steve Sanderson<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">21265 Rock Ridge Drive<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Boca Raton, Florida 33428<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">217-766-4213<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><a href=3D"mailto:aardvark@illinois.edu">aardvark@ill=
+inois.edu</a><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><a href=3D"https://www.facebook.com/steve.sanderson2/=
+">https://www.facebook.com/steve.sanderson2/</a><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><a href=3D"https://www.linkedin.com/in/steve-sanderso=
+n-15730511/">https://www.linkedin.com/in/steve-sanderson-15730511/</a><o:p>=
+</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">Radio:&nbsp; KK4FBU<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;color:#202020"><img border=3D"0" width=3D"125" height=
+=3D"83" style=3D"width:1.2986in;height:.8611in" id=3D"_x0000_i1026" src=3D"=
+https://gallery.mailchimp.com/f9d6f535ed1131010188e280b/images/90fc63a5-211=
+3-4e43-be14-b0bab9e51c26.jpg"></span><span style=3D"font-size:12.0pt;font-f=
+amily:&quot;Arial&quot;,sans-serif;color:#202020"><img border=3D"0" width=
+=3D"125" height=3D"110" style=3D"width:1.2986in;height:1.1458in" id=3D"_x00=
+00_i1025" src=3D"https://gallery.mailchimp.com/f9d6f535ed1131010188e280b/im=
+ages/4a216983-709d-46a5-a9ed-5c8aa66ebccc.jpg"></span><o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+</body>
+</html>
+
+--_000_BY5PR11MB40074F1E8331845C4A68EB74A3B19BY5PR11MB4007namp_--

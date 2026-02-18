@@ -1,0 +1,174 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <sentto-1237676-5689-1595335719-@returns.groups.yahoo.com>
+X-Original-To: linux-guru@gcfl.net
+Delivered-To: linux-guru@gcfl.net
+Received-SPF: Temperror (mailfrom) identity=mailfrom; client-ip=74.6.135.93; helo=sonic318-38.consmr.mail.bf2.yahoo.com; envelope-from=sentto-1237676-5689-1595335719-@returns.groups.yahoo.com; receiver=<UNKNOWN> 
+Authentication-Results: attila.gcfl.net;
+	dkim=pass (1024-bit key; unprotected) header.d=yahoogroups.com header.i=@yahoogroups.com header.b="5TtVovpG";
+	dkim-atps=neutral
+Received: from sonic318-38.consmr.mail.bf2.yahoo.com (sonic318-38.consmr.mail.bf2.yahoo.com [74.6.135.93])
+	by attila.gcfl.net (Postfix) with ESMTPS id B211A3080862
+	for <linux-guru@gcfl.net>; Tue, 21 Jul 2020 07:48:41 -0500 (CDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoogroups.com; s=echoe; t=1595335720; bh=DL5aVG1ROAMg3PqRFjUi4sSMmmMJ4jdLFtP3MwN2aAw=; h=To:From:List-Id:List-Unsubscribe:Date:Subject:Reply-To:From:Subject; b=5TtVovpGjSi6kCUW3mLtKxMCe0AOpcBL+jUtJYiTQmR84AbW88j+JgPka1IvNl0cG/DM+wOuLxsU2O7gsQdThgB1GW16BuVoFYJ1HZkXfD1iZD3xbbG1wkHnhkh7udmzQehJ7KOW3VHKrS547KDDRyOdhnHB6QQKTS1kT9wv+kA=
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic318.consmr.mail.bf2.yahoo.com with HTTP; Tue, 21 Jul 2020 12:48:40 +0000
+X-Yahoo-Newman-Id: 1237676-m5689
+X-Sender: tellswor@kcbx.net
+X-Apparently-To: good-clean-fun@yahoogroups.com
+X-Received: (qmail 8456 invoked by uid 102); 21 Jul 2020 12:48:39 -0000
+X-Received: from unknown (HELO mtaq6.grp.bf1.yahoo.com) (10.198.29.79)
+  by m4.grp.bf1.yahoo.com with SMTP; 21 Jul 2020 12:48:39 -0000
+X-Received: (qmail 29874 invoked from network); 21 Jul 2020 12:48:39 -0000
+X-Received: from unknown (HELO mta4002.groups.mail.ne1.yahoo.com) (10.221.2.24)
+  by mtaq6.grp.bf1.yahoo.com with SMTP; 21 Jul 2020 12:48:39 -0000
+Authentication-Results: mta4002.groups.mail.ne1.yahoo.com; 
+ dkim=neutral (no sig) header.i=@kcbx.net;
+ spf=softfail smtp.mailfrom=@kcbx.net;
+ dmarc=NULL(p=NULL sp=NULL dis=NULL) header.from=kcbx.net;
+X-Received-SPF: softfail (transitioning domain of kcbx.net does not designate 47.43.20.30 as permitted sender)
+X-YMailISG: .qQjPF0WLDsZclh0qBasDJu59vpXMp0_BV3QnsS.6kVC.K2y
+ 5U5JChsTtTqJLWz6BcSdK9kOImaloCaCVqFC3PQ07V8i0S3CXhNlxjQBh5Dc
+ KeAdSkoll0ltMt0hYWe6af.2eUmUUPmSUfjvdJemQUIIxtkbJQvSHnNT9n4p
+ ZphG7Il1ZJFH2TBIX7rWD5c177W5vkA6AA5nCQK2_xNxKCZnxADOBYZVXC3i
+ 2y7K_Y6Q0q3G4Qy8KKcHC.nQKYyPeguV0nZvRmShSkvfn5dkP2QREUEvQUyZ
+ dEI1pjr_rYalDfmsAbYEBcJpu2bjw9JYQX2AiiCdb1PHt.pUpjurEKtcdHW9
+ 2Z80YpeV22dSuD7vpjm9OReZ4Z0PEy9a2dW28waivdF.Nf1CWRyzDIfuMrz8
+ kwKZR2niiGm_3tc6a8TSqs1Cyd2kCZg23g37GDGVfQcxhzkKPNAbje0FdXOY
+ ZJZn89H2xHtzBd62XRai10RrYQnitZ3a8CBg1R0K28mAJ4EPPUea1fY9fc6S
+ 6f8gLd8c1RuDuSuBNcDTQJbmtw5FWQjk8qs.dVhi92s6c9eYdQhLRDln0u0M
+ SrH3X3jyWkHjTqKi53v8MKTCALza8P7IxBj964HZtUWltEUKcKnOdu2nO.p5
+ LL6TYCPmWE5guh_zGNJ7Y4pPhc6m0qd_2QWxhS1PfCK152u2EijSfWibl6_y
+ wn238X0yWPdfqHvAw2CDSokCVtaTdV8XdN2.mAvwRgIYYUvRCkodX6FIzL1k
+ xhx1g21vmRB15b0jagyPO9j.u_SxGTQg_TckqvMbQrdHohOnGKw6_hg.G_4Y
+ WiEAKIlvgWG3enyAz.gYdD5uePY9t6.c7lYhRyjUiJrR7EpMuMoGzY17vBig
+ E1iHtcM6rNe6PChsztdhwbxVMk52L5RXgTMHklDpNXuBl5yS5aCk6463MdF6
+ EtqkHJLGYDpyFNRp1e0YNbHFfXh_5xjgJg5t10r5.96KqacDbaIwujs4D65X
+ K9LhcKR.LczRsDIzWhgP05dRQE8V1LgmgKvCelmCcfc4hvB67Y46kUNMU1k3
+ _YEpr3aDAA--
+X-Received: from 10.222.83.74  (EHLO impout006.msg.chrl.nc.charter.net) (47.43.20.30)
+  by mta4002.groups.mail.ne1.yahoo.com with SMTPS; Tue, 21 Jul 2020 12:48:38 +0000
+X-Received: from ThomasEllsworth.kcbx.net ([66.214.196.169])
+	by cmsmtp with ESMTPA
+	id xrhCjaOme6k6FxrhEjpOSp; Tue, 21 Jul 2020 12:48:37 +0000
+Authentication-Results: kcbx.net; none
+X-Authority-Analysis: v=2.3 cv=G8io7Os5 c=1 sm=1 tr=0
+ a=UFL7CaVhbjE5AyUk81XeAg==:117 a=UFL7CaVhbjE5AyUk81XeAg==:17
+ a=HpEJnUlJZJkA:10 a=kj9zAlcOel0A:10 a=qV0mfD4mAAAA:8 a=KxeGKX1eAAAA:8
+ a=kbZ7Qaxr9mv-ZCitSNMA:9 a=CjuIK1q_8ugA:10 a=1gylOlVyTIQA:10
+ a=ReGkIpCd4hIA:10 a=mnVZ7iNJyew7AB3q5ROZ:22 a=nkovl10d-2D50Pg-qAt3:22
+ a=pHzHmUro8NiASowvMSCR:22 a=xoEH_sTeL_Rfw54TyV31:22
+X-Mailer: QUALCOMM Windows Eudora Version 7.1.0.9
+To: good-clean-fun@yahoogroups.com
+X-CMAE-Envelope: MS4wfBPQZz5M+xjfiLi0Y927hwENqD9XaGxIwMsrQzRFsMI8U4XJv2sh6GxfEmZs1QYVfjqFk8nsOceyTn7i8HyCpSp0EFn1+PUql0LZ7Ms2XWGMe9zID/pH
+ FJYnoIOj36CtVJH5X3J+FZ/GthOwf6N2acShCBl+v822u/ZJnIZvIswE/ZKhyb+9n8MpccnOzWErQ6104uZn5PsVff133m2e1X0=
+X-Originating-IP: 10.221.2.24
+X-Original-From: "Thomas S. Ellsworth" <tellswor@kcbx.net>
+From: "'Thomas S. Ellsworth' tellswor@kcbx.net [good-clean-fun]" <good-clean-fun-noreply@yahoogroups.com>
+X-Yahoo-Profile: tom_ellsworth
+Sender: good-clean-fun@yahoogroups.com
+MIME-Version: 1.0
+Mailing-List: list good-clean-fun@yahoogroups.com; contact good-clean-fun-owner@yahoogroups.com
+Delivered-To: mailing list good-clean-fun@yahoogroups.com
+List-Id: <good-clean-fun.yahoogroups.com>
+Precedence: bulk
+List-Unsubscribe: <mailto:good-clean-fun-unsubscribe@yahoogroups.com>
+Date: Tue, 21 Jul 2020 05:48:16 -0700
+Subject: GCF: New Teacher
+Reply-To: good-clean-fun-owner@yahoogroups.com
+X-Yahoo-Newman-Property: groups-email-tradt-m
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+Content-Length: 2509
+
+
+
+
+ From the GCF Archives
+
+If this was forwarded to you, please consider your own
+subscription to Good Clean Fun. It's free! Just send an
+email to: good-clean-fun-subscribe@yahoogroups.com
+-------------------------------------------------------------------------
+
+
+GCF: New Teacher
+
+A young lady graduated from college and started teaching at an area 
+school. One day she went with a friend to a nearby restaurant for lunch.
+
+A man seated next to her asks, "Are you a teacher?"
+
+Surprised but happy, she replied, "Why, yes, I certainly am!"
+
+She enjoyed a warm feeling throughout the meal ... she looked like a 
+teacher, and this made her feel great.
+
+As she was leaving the restaurant, she asked the man, "How did you 
+know I was a teacher?"
+
+"You have chalk dust on your rear", he replied.
+
+
+
+----------- Today's saying or thought -------------------------
+
+I spilled Spot remover on my dog.  Now he's gone.
+
+---------------------------------------------------------------
+0005
+
+
+*** Good Clean Fun ***
+is brought to you by
+Thomas S. Ellsworth
+email: tellswor@kcbx.net
+
+You can subscribe to the Good Clean Fun mailing list by sending
+an email (blank is fine) to:   good-clean-fun-subscribe@yahoogroups.com
+and just reply to the confirmation email you receive.
+
+Stop for a visit, leave with a smile!
+
+-------------------------------------------------------------------------
+Any ad that is inserted into this email is done automatically by
+YahooGroups as a condition of their free hosting the Good Clean Fun list.
+I have no control over any content of the advertisement.
+-------------------------------------------------------------------------
+
+This email was scanned by Charter Security Suite before it was sent.
+
+
+
+
+
+
+
+------------------------------------
+Posted by: "Thomas S. Ellsworth" <tellswor@kcbx.net>
+------------------------------------
+
+
+------------------------------------
+
+Yahoo Groups Links
+
+<*> To visit your group on the web, go to:
+    http://groups.yahoo.com/group/good-clean-fun/
+
+<*> Your email settings:
+    Individual Email | Traditional
+
+<*> To change settings online go to:
+    http://groups.yahoo.com/group/good-clean-fun/join
+    (Yahoo! ID required)
+
+<*> To change settings via email:
+    good-clean-fun-digest@yahoogroups.com 
+    good-clean-fun-fullfeatured@yahoogroups.com
+
+<*> To unsubscribe from this group, send an email to:
+    good-clean-fun-unsubscribe@yahoogroups.com
+
+<*> Your use of Yahoo Groups is subject to:
+    https://info.yahoo.com/legal/us/yahoo/utos/terms/
+

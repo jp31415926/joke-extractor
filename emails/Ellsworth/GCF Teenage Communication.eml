@@ -1,0 +1,189 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <sentto-1237676-5690-1595422270-@returns.groups.yahoo.com>
+X-Original-To: linux-guru@gcfl.net
+Delivered-To: linux-guru@gcfl.net
+Received-SPF: Temperror (mailfrom) identity=mailfrom; client-ip=74.6.135.93; helo=sonic318-38.consmr.mail.bf2.yahoo.com; envelope-from=sentto-1237676-5690-1595422270-@returns.groups.yahoo.com; receiver=<UNKNOWN> 
+Authentication-Results: attila.gcfl.net;
+	dkim=pass (1024-bit key; unprotected) header.d=yahoogroups.com header.i=@yahoogroups.com header.b="nUqW4HRT";
+	dkim-atps=neutral
+Received: from sonic318-38.consmr.mail.bf2.yahoo.com (sonic318-38.consmr.mail.bf2.yahoo.com [74.6.135.93])
+	by attila.gcfl.net (Postfix) with ESMTPS id 1ACAD30802CC
+	for <linux-guru@gcfl.net>; Wed, 22 Jul 2020 07:51:13 -0500 (CDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoogroups.com; s=echoe; t=1595422273; bh=rZpYrgOw1nEBQqbHLlOYv5x1RyY5RC5K5SdnP7/m4bo=; h=To:From:List-Id:List-Unsubscribe:Date:Subject:Reply-To:From:Subject; b=nUqW4HRTRAt96CreANfMk3ICsmdWrwFxDZ4X7LFtPUF6UXaNEWfklJgzZ9cHXiVJzg5k6NHNv8DuUSGQyXlX5CqYC5UKeJQIyax0AVg1FDfdINQdKjgP+v0a9RQ67mIeUe2A9HhZGOUCoGNOIV0/iM6lS+FCuW4A4HO9rgFw9RU=
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic318.consmr.mail.bf2.yahoo.com with HTTP; Wed, 22 Jul 2020 12:51:13 +0000
+X-Yahoo-Newman-Id: 1237676-m5690
+X-Sender: tellswor@kcbx.net
+X-Apparently-To: good-clean-fun@yahoogroups.com
+X-Received: (qmail 9144 invoked by uid 102); 22 Jul 2020 12:51:09 -0000
+X-Received: from unknown (HELO mtaq6.grp.bf1.yahoo.com) (10.198.29.79)
+  by m15.grp.bf1.yahoo.com with SMTP; 22 Jul 2020 12:51:09 -0000
+X-Received: (qmail 1187 invoked from network); 22 Jul 2020 12:51:09 -0000
+X-Received: from unknown (HELO mta4000.groups.mail.bf1.yahoo.com) (10.201.194.145)
+  by mtaq6.grp.bf1.yahoo.com with SMTP; 22 Jul 2020 12:51:09 -0000
+Authentication-Results: mta4000.groups.mail.bf1.yahoo.com; 
+ dkim=neutral (no sig) header.i=@kcbx.net;
+ spf=softfail smtp.mailfrom=@kcbx.net;
+ dmarc=NULL(p=NULL sp=NULL dis=NULL) header.from=kcbx.net;
+X-Received-SPF: softfail (transitioning domain of kcbx.net does not designate 47.43.20.26 as permitted sender)
+X-YMailISG: fhbrd6MWLDuw7xKT3756ZgjddbXbPfs3PzBniZs2gZ4f2cZp
+ bij44p.79G0yDBnPu.6w2isKKaXTU.DBEswRWepPqeKepAX1GwxVACcahhNP
+ 7JWS9tP2duUm5eKvfz3mUEySijaWpAY2M1gsmHA_ayPMrlkLdGb_QELT9ent
+ kcI8QBEKpeh1On.gR1JmcESHEysIOWvJxGwqFDCHiGDUI.KowRC9nw45unhY
+ yRHDNW2XTkidQJVpE4KM4fiJqkEfJV8dVJoUI7aoV9sPEPqawWJaHKqNmgC3
+ ODTb343YpUrBVaRPQenBX0lP2Q9hxHLDMMx25DFdHkeDxmBy5VzXIPDB59kj
+ NnNTgmAwiX.rT9HZrh.RLHWk7m19OHoLF4_UZL.D.uvJhk_UCGUzs3ZU52e5
+ dffYcDF92L4ZAkNSfrkzaH.v79VFCbaqPqwq6azKZ8hOWlV9fChIho8Bo3ca
+ .RyIE4oZQgsaXd7Yl0MELm3R2QZ5FYNgp7Ok5GGKtdJ3t.7DXt1jOpnIMQsG
+ rR43saWo24GOxqYgqlMqVGudK05HNbFufS8ct5P.jDH1pmWzQqWrSr0BcLVg
+ 5sy_wRiOWyRKp5gOd9BTQDxoQwh50BDFfBBeeMCFWEd279qFHxQCnvlfDKRG
+ AILjSLbSBe459jV9BUdRp99zZHslPVbFUrvSqB1SqAS7L1LqyJ5DcHyAHG_k
+ e4vLYcM_tC1F49h11IIPgYaHGIfNpEeryS5xyvaudkonRNOr4wI.hBL7miqw
+ ItiSQ4Q.DMp7OrD1Us.u3cM.0CBJibfAL.aoBpjp1drpTzZbf2LnKP2Cun4L
+ YiUGQN.VzhnwIEMa0HKUWJqBLpp6.AgnoQtihyYBkqmbAOlBw2tUBVNw5H2j
+ 0CogpVCR.OLVpBDNIYCV_Kxi9uGVNXUc9JFQwOw3vBbVJ8oLFi8iovMdtEeB
+ ajKXdNIxGMeghGE5NIuF4FS6xOIy5sKWqyauq_EHDVylZu6RiJuIKRIlrAAH
+ pdMRAJYRk5rTH1GGRajJSCLHTQ1XKTrMvNs4Rodyb6W6eSVjcTp7lRF.lCOr
+ VLuL5mvEeyAxPg--
+X-Received: from 10.201.234.75  (EHLO impout002.msg.chrl.nc.charter.net) (47.43.20.26)
+  by mta4000.groups.mail.bf1.yahoo.com with SMTPS; Wed, 22 Jul 2020 12:51:09 +0000
+X-Received: from ThomasEllsworth.kcbx.net ([66.214.196.169])
+	by cmsmtp with ESMTPA
+	id yEDBjtIBCh15uyEDDjPKVh; Wed, 22 Jul 2020 12:51:08 +0000
+Authentication-Results: kcbx.net; none
+X-Authority-Analysis: v=2.3 cv=etJrMbhX c=1 sm=1 tr=0
+ a=UFL7CaVhbjE5AyUk81XeAg==:117 a=UFL7CaVhbjE5AyUk81XeAg==:17
+ a=HpEJnUlJZJkA:10 a=kj9zAlcOel0A:10 a=qV0mfD4mAAAA:8 a=KxeGKX1eAAAA:8
+ a=YFmTQ4X6Jzu5dhS31DIA:9 a=CjuIK1q_8ugA:10 a=1gylOlVyTIQA:10
+ a=ReGkIpCd4hIA:10 a=mnVZ7iNJyew7AB3q5ROZ:22 a=nkovl10d-2D50Pg-qAt3:22
+ a=pHzHmUro8NiASowvMSCR:22 a=xoEH_sTeL_Rfw54TyV31:22
+X-Mailer: QUALCOMM Windows Eudora Version 7.1.0.9
+To: good-clean-fun@yahoogroups.com
+X-CMAE-Envelope: MS4wfFZ8ucHsn8xSn7v8t3//LgBQ6e8pGP3borWaVCcRBm6tbGjILiC5iC6vG8mHRkB1Euq9Hi3VUriUs7PL9K+CvgjGj5mI3qhB8Xwmfm+UCb4o0aeBYK5d
+ QUWrcmFNn7HlMCmcgDDgO/l6IGI4/Mj9NaWfi5vshom0q8vi4RzW7NcdzB1t/Huyd2UhoWqMIA8cXGtOgiNNjNPLPiq48k7NvRg=
+X-Originating-IP: 10.201.194.145
+X-Original-From: "Thomas S. Ellsworth" <tellswor@kcbx.net>
+From: "'Thomas S. Ellsworth' tellswor@kcbx.net [good-clean-fun]" <good-clean-fun-noreply@yahoogroups.com>
+X-Yahoo-Profile: tom_ellsworth
+Sender: good-clean-fun@yahoogroups.com
+MIME-Version: 1.0
+Mailing-List: list good-clean-fun@yahoogroups.com; contact good-clean-fun-owner@yahoogroups.com
+Delivered-To: mailing list good-clean-fun@yahoogroups.com
+List-Id: <good-clean-fun.yahoogroups.com>
+Precedence: bulk
+List-Unsubscribe: <mailto:good-clean-fun-unsubscribe@yahoogroups.com>
+Date: Wed, 22 Jul 2020 05:50:54 -0700
+Subject: GCF: Teenage Communication
+Reply-To: good-clean-fun-owner@yahoogroups.com
+X-Yahoo-Newman-Property: groups-email-tradt-m
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+Content-Length: 2559
+
+
+
+
+ From the GCF Archives
+
+If this was forwarded to you, please consider your own
+subscription to Good Clean Fun. It's free! Just send an
+email to: good-clean-fun-subscribe@yahoogroups.com
+-------------------------------------------------------------------------
+
+
+GCF: Teenage Communication
+
+Our 15-year-old son asked me to drive him to his friend's house. Once 
+we were in the car and several minutes had passed in silence, I 
+attempted to open the lines of communication.
+
+"Did you have a nice day at school?"
+
+"Yep."
+
+"Any homework to do?"
+
+"Nope."
+
+"You got your hair cut"
+
+"Yep."
+
+"This is a monosyllabic conversation isn't it?"
+
+"Yep."
+
+"You do know what monosyllabic means?"
+
+"Yep."
+
+"Well, tell me." Aha, I thought, now he has to give me a dictionary 
+explanation.
+
+With a mischievous grin and a sly look at me, he replied, "One."
+
+
+
+----------- Today's saying or thought -------------------------
+
+  "Veni, Vidi, Vegi"
+(I came, I saw, I had a salad)
+
+---------------------------------------------------------------
+0006
+
+
+*** Good Clean Fun ***
+is brought to you by
+Thomas S. Ellsworth
+email: tellswor@kcbx.net
+
+You can subscribe to the Good Clean Fun mailing list by sending
+an email (blank is fine) to:   good-clean-fun-subscribe@yahoogroups.com
+and just reply to the confirmation email you receive.
+
+Stop for a visit, leave with a smile!
+
+-------------------------------------------------------------------------
+Any ad that is inserted into this email is done automatically by
+YahooGroups as a condition of their free hosting the Good Clean Fun list.
+I have no control over any content of the advertisement.
+-------------------------------------------------------------------------
+
+This email was scanned by Charter Security Suite before it was sent.
+
+
+
+
+
+
+
+------------------------------------
+Posted by: "Thomas S. Ellsworth" <tellswor@kcbx.net>
+------------------------------------
+
+
+------------------------------------
+
+Yahoo Groups Links
+
+<*> To visit your group on the web, go to:
+    http://groups.yahoo.com/group/good-clean-fun/
+
+<*> Your email settings:
+    Individual Email | Traditional
+
+<*> To change settings online go to:
+    http://groups.yahoo.com/group/good-clean-fun/join
+    (Yahoo! ID required)
+
+<*> To change settings via email:
+    good-clean-fun-digest@yahoogroups.com 
+    good-clean-fun-fullfeatured@yahoogroups.com
+
+<*> To unsubscribe from this group, send an email to:
+    good-clean-fun-unsubscribe@yahoogroups.com
+
+<*> Your use of Yahoo Groups is subject to:
+    https://info.yahoo.com/legal/us/yahoo/utos/terms/
+

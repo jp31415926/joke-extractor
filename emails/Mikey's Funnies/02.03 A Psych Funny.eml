@@ -1,0 +1,145 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <funnies-return-5400-gcfl-jokes=gcfl.net@lists.mikeysfunnies.com>
+X-Original-To: gcfl-jokes@gcfl.net
+Delivered-To: gcfl-jokes@gcfl.net
+Authentication-Results: OpenDMARC-attila.gcfl.net; dmarc=pass (p=none dis=none) header.from=lists.MikeysFunnies.com
+Authentication-Results: OpenDMARC-attila.gcfl.net; spf=pass smtp.mailfrom=lists.mikeysfunnies.com
+Authentication-Results: attila.gcfl.net;
+	dkim=pass (2048-bit key; unprotected) header.d=lists.MikeysFunnies.com header.i=@lists.MikeysFunnies.com header.a=rsa-sha256 header.s=dprts header.b=Aj/cdZYy;
+	dkim=fail reason="signature verification failed" (2048-bit key; unprotected) header.d=uneeknet.com header.i=@uneeknet.com header.a=rsa-sha256 header.s=dreamhost header.b=YBGD9VHj;
+	dkim-atps=neutral
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=15.204.225.125; helo=mail.dprts.com; envelope-from=funnies-return-5400-gcfl-jokes=gcfl.net@lists.mikeysfunnies.com; receiver=gcfl.net 
+Received: from mail.dprts.com (mail.dprts.com [15.204.225.125])
+	by attila.gcfl.net (Postfix) with ESMTP id 1EA756F0069C
+	for <gcfl-jokes@gcfl.net>; Tue, 03 Feb 2026 17:10:14 -0600 (CST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=lists.MikeysFunnies.com; s=dprts; x=1770765012; h=Mailing-List:
+	Precedence:Content-Transfer-Encoding:Reply-To:To:From:
+	Delivered-To:DKIM-Status:ARC-Seal:ARC-Message-Signature:Subject:
+	Date:Message-ID:MIME-Version:Content-Type:
+	Content-Transfer-Encoding:Thread-Index:Content-Language; bh=75wU
+	VojQ/M4JureWdbkzd40VFK9Xa37T6UPtD9iL3KY=; b=Aj/cdZYyJWIasoZ/DcRZ
+	nHzICK1nifRzWiN6fNM+mhAB/KX/Vp6xG2b8PSYlPezZvY5YsofBc+7M67rnIPBj
+	JHsBelEEnWu0KuJRqeAYkmzQgar0RTlN0MerthaSFKcWHAUmqOpEmweQqgI2kZDl
+	NYyyDJ0tYAxwm4OCHShU8IrVyoG4ET83woU//4xQvkDPOqekdIquxkPcmDD5mutu
+	lHkN8SPUcknYOiGslPjXy4WhKhC3PiMeuI3bRvTmiIWLvpbWq8nQ1yNc2K9nAez5
+	FWXc5BuiGwHuvGGfqEfNvmwcfaxmhgAZD8QXMiqeMxoqOOjdEapDM1bCpFKYYUSS
+	Jw==
+Received: (qmail 2372591 invoked by uid 1014); 3 Feb 2026 23:00:38 +0000
+Mailing-List: contact funnies-help@lists.mikeysfunnies.com; run by ezmlm
+Precedence: bulk
+Content-Transfer-Encoding: 8bit
+X-Yes-Archive: yes
+X-List-Help: <mailto:funnies-help@lists.mikeysfunnies.com>
+Reply-To: reply@MikeysFunnies.com
+To: Mikey's Funnies List <funnies@lists.MikeysFunnies.com>
+From: Mikey's Funnies <funnies-owner@lists.MikeysFunnies.com>
+Delivered-To: mailing list funnies@lists.mikeysfunnies.com
+Received: (qmail 2371441 invoked by uid 0); 3 Feb 2026 23:00:35 +0000
+DKIM-Status: good        
+X-Sender-Id: dreamhost|x-authsender|mike@uneeknet.com
+ARC-Seal: i=1; a=rsa-sha256; d=mailchannels.net; s=arc-2022; cv=none;
+	t=1770159629;
+	b=zVOxU/c5ySBtywBfu6Lim4+dh/dme5/u0I3BX1rBS8ZKUTp8+PP53nb2mUSs0lOACUvRo8
+	rCBw/4SFNH569Eyv2b8U2wwYW2H/I1ImdVM6OHhRwfHxdFWJnW7MF4A5mmtqJdzn5V5p0r
+	Pj4ls7VHJWo5lLLOOGfx+XvnqALGxod1HUa0JVGMiv0whHSj3i1f9xc/Q9I9lGqVb8etQn
+	Cvl4Oev7r7Oj8omhDRDS2VyTdTMQEbW4nWJBC6pvYdTxR+l+ZxyrSJ/kGjqO/EL5wrxXm5
+	23vYsBWsn4BFm5CUlekaHl/9oPiusiuq+szMX9b2C1bVqB8l1Yym9fpNQe6Kxg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=mailchannels.net;
+	s=arc-2022; t=1770159629;
+	h=from:from:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:dkim-signature;
+	bh=X8YHHR1qYyFaqsBqxuj9+uPXy03Vy24LWdZmHTWbA9Y=;
+	b=hcTSsY5jqIXYKl9XRgjPAeqlKkekBTKVO8zeojg+dYafiHUItB9AiVNsdLenumtFTdfjQk
+	ENzk+r2z8yFNATpFrbaN0DaLLeflLehvK0KL7DON/Zyng8iI1R4TlJepwWOhTPD7IDmV9E
+	7Eix2iTe6adULe9nROcFWALKd85MjG1rUqhs/1TmMTgVTzvfaANHUDYicVAz2NSOvnTUOL
+	uAhArNjZ6qbe9fVy2v/HBUW+G2VX1KKDGC4K3BNXZtRIVg6ltHBu3h4iRbh0My3H/STtmV
+	Jt58DikvZiPCvUsZFTTAZTjuHKfKKq9J35At2u7BLV+Tknogrk8SaqaZEppImw==
+ARC-Authentication-Results: i=1;
+	rspamd-c758cdf4d-dzj4w;
+	auth=pass smtp.auth=dreamhost smtp.mailfrom=mike@uneeknet.com
+X-Sender-Id: dreamhost|x-authsender|mike@uneeknet.com
+X-MC-Relay: Neutral
+X-MailChannels-SenderId: dreamhost|x-authsender|mike@uneeknet.com
+X-MailChannels-Auth-Id: dreamhost
+X-Trouble-Hysterical: 62a6c34e23488187_1770159629421_2316370809
+X-MC-Loop-Signature: 1770159629421:3114117638
+X-MC-Ingress-Time: 1770159629420
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=uneeknet.com;
+	s=dreamhost; t=1770159629;
+	bh=X8YHHR1qYyFaqsBqxuj9+uPXy03Vy24LWdZmHTWbA9Y=;
+	h=Reply-To:From:To:Subject:Date:Content-Type:
+	 Content-Transfer-Encoding;
+	b=YBGD9VHjO7DSDLfb4KuBVZKh2oC34RuW0H3JWtD+qOApd2+Vv2KPgX02Y+sGY9lp4
+	 WR50rk4yosH2Y+ECQIxPHn1YjRvRuGiFnxUclITC4/aaosfE2gKcqRJdMfxzHOIu60
+	 J0uBvw86Ppp700Ilq9gWMsCYmuiYwgMpc72YZaub+ZSWF+bYMc0Dxx7MfBE/MgfI9H
+	 Vydqv8DP/kJMWsg+USXST09iZrc3iz9MGkA+HXZ26Rjia7EsAi45eH3Y5HiW3cbuX8
+	 Nqvafe4bhw9FjNjWefHHjFZ4FtjY70jGtLgUXLQazL9F/jVamRdJ7PsZ5RhDuwc60Q
+	 4bnIWo+i78c4w==
+Subject: 02.03: A Psych Funny
+Date: Tue, 3 Feb 2026 15:00:26 -0800
+Message-ID: <007801dc9560$e34d1130$a9e73390$@uneeknet.com>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Thread-Index: AdyVYN2e6btym+saTPSXf5xySS7x2Q==
+Content-Language: en-us
+Content-Length: 1663
+
+>>>Today's Funny
+
+The aspiring psychiatry students were attending their first class on
+emotional extremes.
+
+"Just to establish some parameters," said the professor to a student from
+New York, "What is the opposite of joy?"
+
+"Sadness," said a student.
+
+And the opposite of depression?" he asked of the young lady from Oklahoma.
+
+"Elation," she said.
+
+"And you sir," he said to the young man from Texas, "how about the opposite
+of woe?"
+
+The Texan replied, "Sir, I believe that would be giddy-up."
+
+[forwarded by Martin VanDyk]
+
+>>>Today's Thot
+
+A duvet is a pillowcase for blankets.
+
+>>>
+
+
+PASS IT ON! 
+Yeah, you can send this Funny to anybody you want. And, if you're REAL nice, you'll tell them where you got it! www.mikeysFunnies.com 
+
+>>>
+
+Mikey's Funnies is a clean humor email list sent every weekday and generously hosted by Agathon for Ministries. Agathon has over 35 years of experience helping organizations advance their digital mission through strategic planning, website design, and app development. Learn more at https://agathonforministries.com 
+
+We DO NOT rent, sell, or share your email address with any company, organization, or individual, sacred or secular. Subscribing will not result in more spam - we guarantee it!
+
+~ Add our address to your Approved Senders/Whitelist: funnies-owner@lists.MikeysFunnies.com
+
+Instagram: @mikeysfunnies
+
+Facebook: https://www.facebook.com/mikeysfunnies
+
+~ Donate: https://www.mikeysFunnies.com/donate.html
+
+~ Advertise: https://www.mikeysFunnies.com/advertise/
+
+~ Contact:  https://www.mikeysFunnies.com/contact.html
+
+Unsubscribe, subscribe, or change your email address: https://www.mikeysFunnies.com/sub/
+
+

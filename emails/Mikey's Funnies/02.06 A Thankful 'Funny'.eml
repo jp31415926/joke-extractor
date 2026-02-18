@@ -1,0 +1,98 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <funnies-return-5403-gcfl-jokes=gcfl.net@lists.mikeysfunnies.com>
+X-Original-To: gcfl-jokes@gcfl.net
+Delivered-To: gcfl-jokes@gcfl.net
+Authentication-Results: OpenDMARC-attila.gcfl.net; dmarc=pass (p=none dis=none) header.from=lists.MikeysFunnies.com
+Authentication-Results: OpenDMARC-attila.gcfl.net; spf=pass smtp.mailfrom=lists.mikeysfunnies.com
+Authentication-Results: attila.gcfl.net;
+	dkim=pass (2048-bit key; unprotected) header.d=lists.MikeysFunnies.com header.i=@lists.MikeysFunnies.com header.a=rsa-sha256 header.s=dprts header.b=p8CLVZir;
+	dkim=fail reason="signature verification failed" (2048-bit key; unprotected) header.d=mikeysfunnies.com header.i=@mikeysfunnies.com header.a=rsa-sha256 header.s=drh header.b=Y0i36MYx;
+	dkim-atps=neutral
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=15.204.225.125; helo=mail.dprts.com; envelope-from=funnies-return-5403-gcfl-jokes=gcfl.net@lists.mikeysfunnies.com; receiver=gcfl.net 
+Received: from mail.dprts.com (mail.dprts.com [15.204.225.125])
+	by attila.gcfl.net (Postfix) with ESMTP id 4C00C6F056A7
+	for <gcfl-jokes@gcfl.net>; Fri, 06 Feb 2026 02:35:27 -0600 (CST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=lists.MikeysFunnies.com; s=dprts; x=1770971725; h=Mailing-List:
+	Precedence:Content-Transfer-Encoding:Reply-To:To:From:
+	Delivered-To:Subject:Message-Id:Date; bh=1SvR+RSQ45lxwHVuATFVWCm
+	CjbA2duYiTUb9pkGzMWI=; b=p8CLVZirD5rykTxih1MbA9Za5/pPdrk5OtM0zKx
+	/ezywQdL7GB3h/7pRhhNYOA3cwdXE/rr0d59fStZuZ7TmOngnao//RSw0J21toOZ
+	M537l+arMA8ZZG3A5ftI/XpoqP49yHEkeueKa9u7LG6O50vtAiTooq83WeJzD4Y3
+	427amHl/4UEmxfYt8qd/hOPt/hqP9MlA0Kj4WbkPBuAz6AvP9P1QqkdJbsqvUS1Q
+	UZZaglCEe824K5bCreqTI8l2wyu5q0LqIl2Jl+W/8lE9csFVuBMLmQGxKAiwdVdP
+	CvkNI5Whky3l81RoPBZZ0a3UVVXuTDLcpq350tA37NJGeFQ==
+Received: (qmail 3674687 invoked by uid 1014); 6 Feb 2026 08:30:02 +0000
+Mailing-List: contact funnies-help@lists.mikeysfunnies.com; run by ezmlm
+Precedence: bulk
+Content-Transfer-Encoding: 8bit
+X-Yes-Archive: yes
+X-List-Help: <mailto:funnies-help@lists.mikeysfunnies.com>
+Reply-To: reply@MikeysFunnies.com
+To: Mikey's Funnies List <funnies@lists.MikeysFunnies.com>
+From: Mikey's Funnies <funnies-owner@lists.MikeysFunnies.com>
+Delivered-To: mailing list funnies@lists.mikeysfunnies.com
+Received: (qmail 3674673 invoked by uid 0); 6 Feb 2026 08:30:02 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=mikeysfunnies.com;
+	s=drh; t=1770366601;
+	bh=GKsoCGmOC8BTMTYiusSuq/l1EpviALYmFAW+YV04r0Q=;
+	h=From:To:Subject:Date:From;
+	b=Y0i36MYxi76+M+tpET+3KVaY9bWKq6esIzwDEs8AVSbeXirh1FcNLf0LywL/8RAe8
+	 HPKyC9YVCeX4Rj9dV3JzDDrWGVd78vwPf71q4NVyOoSvmbLqZZgeZiRPacJnEWV7zR
+	 dGxGGzOTTNXjGn6iJocfSFZ9aKGdM4BfSMU78QfcGS4LLqaJY1p/vkapqpTa/BwLt+
+	 LxL9S+Kjebnk+VBEuQ4RWxfuPw6rs9qsdt5Y3gCvctWa2X94aL2B7TJPaB7E0RDUDe
+	 sH99AhqUMIiIdgVzzL3INi0SB/RppVq51GzCG9YOgX0V3SrUrV7KV6Cbd92MAh3ZsN
+	 EWsvFDRE0gITQ==
+Subject: 02.06: A Thankful "Funny"
+Message-Id: <20260206083001.236A2F90@mikeysfunnies-com.dprts.com>
+Date: Fri,  6 Feb 2026 03:30:01 -0500 (EST)
+
+>>>Today's "Funny"
+
+Be thankful that you don't already have everything you desire. If you did, what would there be to look forward to?
+
+Be thankful when you don't know something, for it gives you the opportunity to learn.
+
+Be thankful for the difficult times. During those times you grow.
+
+Be thankful for your limitations, because they give you opportunities for improvement.
+
+Be thankful for each new challenge, because it builds strength and character.
+
+Be thankful for your mistakes. They will teach you valuable lessons.
+
+Be thankful when you're tired and weary, because it means you've made a difference.
+
+It's easy to be thankful for the good things. A life of rich fulfillment comes to those who are also thankful for the setbacks. Gratitude can turn a negative into a positive. Find a way to be thankful for your troubles, and they can become your blessings.
+
+>>>Today's Thot
+
+Worry is interest paid in advance for a debt you may never owe.
+
+>>>
+
+PASS IT ON! 
+Yeah, you can send this Funny to anybody you want. And, if you're REAL nice, you'll tell them where you got it! www.mikeysFunnies.com 
+
+>>>
+
+Mikey's Funnies is a clean humor email list sent every weekday and generously hosted by Agathon for Ministries. Agathon has over 35 years of experience helping organizations advance their digital mission through strategic planning, website design, and app development. Learn more at https://agathonforministries.com 
+
+We DO NOT rent, sell, or share your email address with any company, organization, or individual, sacred or secular. Subscribing will not result in more spam - we guarantee it!
+
+~ Add our address to your Approved Senders/Whitelist: funnies-owner@lists.MikeysFunnies.com
+
+Instagram: @mikeysfunnies
+
+Facebook: https://www.facebook.com/mikeysfunnies
+
+~ Donate: https://www.mikeysFunnies.com/donate.html
+
+~ Advertise: https://www.mikeysFunnies.com/advertise/
+
+~ Contact:  https://www.mikeysFunnies.com/contact.html
+
+Unsubscribe, subscribe, or change your email address: https://www.mikeysFunnies.com/sub/
+
+
