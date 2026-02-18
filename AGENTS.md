@@ -1,9 +1,11 @@
 # AGENTS.md - Joke Extractor Project
 
 ## Files
-`docs/spec.md` is the spec file.
-`joke-extract.py` is the primary script
-`extractors/default.py` is the example extractor script
+`docs/spec.md` - the spec file
+`joke-extract.py` - primary script
+`parsers/parser-spec3.md` - spec file for writing parsers
+`parsers/parser-interface.md` - defines parser software interface
+`parsers/parser_example.py` - example of generic parser
 `integration_test.py` is the integration test script
 `clean_up.py` deletes all output files, temp files, and all files in the `jokes/` directory
 

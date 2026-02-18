@@ -1,13 +1,13 @@
 # Parser Specification (`parser-spec.md`)
 
-> **Version**: 1.1  
-> **Purpose**: Developer-ready specification for implementing a new email joke parser.  
-> **Prerequisites**: See `parser-interface.md` and `email_data.py`.  
+> **Version**: 1.2
+> **Purpose**: Developer-ready specification for implementing a new email joke parser
+> **Prerequisites**: See `parser-interface.md` and `email_data.py`
 > **Key Principle**: *Parse deterministically, reject silently, log only for debug.*
 
 ---
 ## 0. Provided files Description
-`parser-spec2.md` - spec for parser design
+`parser-spec3.md` - spec for parser design
 `parser-interface.md` - specifies the parser interface to the other parts of the system
 `email_data.py` - shared data definitions
 `parser-hints.md` - specific rules for how to parse this specific set of emails
