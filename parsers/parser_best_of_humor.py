@@ -3,20 +3,14 @@
 
 from .email_data import EmailData, JokeData
 from . import register_parser
-import logging
 
-# Configure logging to stderr for visibility in pipelines
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
 
 def _can_be_parsed_here(email: EmailData) -> bool:
     return False
     #return "bestofhumor.com" in email.from_header.lower()
 
-@register_parser(_can_be_parsed_here)
 
+@register_parser(_can_be_parsed_here)
 def parse(email: EmailData) -> list[JokeData]:
     """
     Parse 'Best of Humor' email format.
@@ -95,13 +89,11 @@ def parse(email: EmailData) -> list[JokeData]:
 
     return jokes
 
-import sys
-
 if __name__ == "__main__":
 
     email = EmailData(
-        from_header = "Subject: Best of Humor July 13th",
-        subject_header = "From: \"Bestofhumor.com\" <shawn@bestofhumor.com>",
+        from_header = "\"Bestofhumor.com\" <shawn@bestofhumor.com>",
+        subject_header = "Best of Humor July 13th",
         text = """
 Welcome to Best of Humor ---> http://www.bestofhumor.com
 We are part of the email4fun.com network ---> http://www.email4fun.com
