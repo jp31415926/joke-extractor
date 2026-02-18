@@ -1,22 +1,12 @@
 """Parser for Steve Sanderson's 'Sunday Fun Stuff' emails."""
 
 from .email_data import EmailData, JokeData
-
-import logging
-# Configure logging to stderr for visibility in pipelines
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
-
 from . import register_parser
 
 def _can_be_parsed_here(email: EmailData) -> bool:
-    #return False
     return "aardvark@illinois.edu" in email.from_header
 
 @register_parser(_can_be_parsed_here)
-
 def parse(email: EmailData) -> list[JokeData]:
     """
     Parse Steve Sanderson's "Sunday Fun Stuff" email format.
@@ -40,7 +30,7 @@ def parse(email: EmailData) -> list[JokeData]:
     # storage for all the jokes that are collected. This is the return variable
     jokes = []
 
-    joke_submitter = "Steve C Sanderson <aardvark@illinois.edu>"
+    joke_submitter = email.from_header
     joke_text = ''
     joke_title = ''
 
@@ -59,7 +49,6 @@ def parse(email: EmailData) -> list[JokeData]:
     # 3: collect lines until closing tag (e.g., `[end]`)
     while i < len(lines):
         line = lines[i]
-        #logging.info(f"state {state}: {line}")
 
         match state:
             case 0:  # Wait for start delimiter
