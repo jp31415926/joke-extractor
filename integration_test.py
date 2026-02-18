@@ -35,7 +35,7 @@ Here's a joke for you: Why don't scientists trust atoms? Because they make up ev
     try:
         # Run the main script
         result = subprocess.run([
-            sys.executable, 'joke-extract.py', email_file
+            sys.executable, 'joke-extract.py', email_file, 'jokes/',
         ], capture_output=True, text=True, cwd='.')
         
         print("Exit code:", result.returncode)

@@ -1,4 +1,4 @@
-# parser-hints.md for Thomas S. Ellsworth
+# parser-hints.md for Joke du Jour
 
 - Text format is the only formar available.
 
