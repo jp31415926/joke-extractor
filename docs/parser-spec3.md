@@ -7,11 +7,11 @@
 
 ---
 ## 0. Provided files Description
-`parser-spec3.md` - spec for parser design
-`parser-interface.md` - specifies the parser interface to the other parts of the system
-`email_data.py` - shared data definitions
-`parser-hints.md` - specific rules for how to parse this specific set of emails
-`EmailData_*.json` - files that contain the data from parsed emails specific to this email group
+`docs/parser-spec3.md` - spec for parser design
+`docs/parser-interface.md` - specifies the parser interface to the other parts of the system
+`parsers/email_data.py` - shared data definitions
+`emails/**/parser-hints.md` - specific rules for how to parse this specific set of emails
+`jokes/email_*.json` - files that contain the data from parsed emails specific to this email group
 ---
 ## 1. Core Interface (Mandatory)
 
