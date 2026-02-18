@@ -223,8 +223,8 @@ def main():
         501 : email file not found
         502 : email parsing error
     """
-    if len(sys.argv) != 4:
-        print("500 Usage: joke-extract.py <email_file> <output_success_dir> <output_failure_dir>")
+    if len(sys.argv) < 3:
+        print("500 Usage: joke-extract.py <email_file> <output_success_dir> [<output_failure_dir>]")
         sys.exit(1)
 
     from parsers import _parser_registry
@@ -232,7 +232,10 @@ def main():
 
     email_file = sys.argv[1]
     output_success_dir = sys.argv[2]
-    output_failure_dir = sys.argv[3]
+    if len(sys.argv) > 3:
+        output_failure_dir = sys.argv[3]
+    else:
+        output_failure_dir = output_success_dir
 
     # Validate email file existence
     if not os.path.exists(email_file):
