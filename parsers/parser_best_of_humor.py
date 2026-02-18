@@ -1,176 +1,144 @@
 """Parser for Best of Humor emails."""
-# SEE EXAMPLE EMAIL AT BOTTOM OF FILE
 
 from .email_data import EmailData, JokeData
 from . import register_parser
+import logging
 
 
 def _can_be_parsed_here(email: EmailData) -> bool:
-    return False
-    #return "bestofhumor.com" in email.from_header.lower()
+  return "shawn@bestofhumor.com" in email.from_header.lower()
+
+
+def _is_soj(line: str) -> bool:
+  """Return True if line is a Start-of-Joke (SOJ) marker."""
+  s = line.strip()
+  return (
+    (s.startswith('+--') and s.endswith('--+')) or
+    (s.startswith('++-') and s.endswith('-++')) or
+    s.endswith('<<<') or
+    s.startswith('------------------------------')
+  )
+
+
+def _is_eof(line: str) -> bool:
+  """Return True if line is an End-of-File (EOF) marker."""
+  s = line.strip()
+  return s.startswith('~~~~~') or s.startswith('_____') or s == '---'
+
+
+def _build_joke_text(raw_lines: list[str]) -> str:
+  """
+  Join consecutive non-blank lines into single-line paragraphs.
+  Preserve blank lines between paragraphs.
+  Reduce multiple consecutive blank lines to one.
+  """
+  parts = []
+  current_para: list[str] = []
+
+  for line in raw_lines:
+    if line.strip():
+      current_para.append(line.rstrip())
+    else:
+      if current_para:
+        parts.append(' '.join(current_para))
+        current_para = []
+      parts.append('')
+
+  if current_para:
+    parts.append(' '.join(current_para))
+
+  result: list[str] = []
+  prev_blank = False
+  for part in parts:
+    if part == '':
+      if result and not prev_blank:
+        result.append('')
+      prev_blank = True
+    else:
+      result.append(part)
+      prev_blank = False
+
+  return '\n'.join(result).strip()
+
+
+def _collect_joke(joke_lines: list[str], jokes: list[JokeData], submitter: str) -> None:
+  """Build joke text from raw lines and append to jokes if it passes filters."""
+  if not joke_lines:
+    return
+  joke_text = _build_joke_text(joke_lines)
+  if not joke_text:
+    return
+  lower = joke_text.lower()
+  if 'http' in lower or 'mailto' in lower or 'copyright' in lower:
+    return
+  jokes.append(JokeData(text=joke_text, submitter=submitter, title=''))
 
 
 @register_parser(_can_be_parsed_here)
 def parse(email: EmailData) -> list[JokeData]:
-    """
-    Parse 'Best of Humor' email format.
+  """
+  Parse 'Best of Humor' email format.
 
-    Jokes are embedded between visual separator lines like:
-        +--------------...------------+
-        or
-        ++-...--++
+  Jokes are delimited by SOJ marker lines:
+    - starts with '+--' and ends with '--+'
+    - starts with '++-' and ends with '-++'
+    - starts with '>>>' and ends with '<<<'
 
-    Each joke is the text *between* such lines (or between a line and email start/end).
+  Processing stops at EOF markers (starts with '~~~~~' or '_____', or equals '---').
+  Jokes containing 'http', 'mailto', or 'copyright' are discarded.
 
-    The email footer (signature, unsubscribe, newsletter sign-ups, promotions)
-    is excluded. Only substantial jokes (≥2 lines, non-promotional) are returned.
+  Parameters
+  ----------
+  email : EmailData
+      Email to parse
 
-    Parameters
-    ----------
-    email : EmailData
-        Email to parse
-        
-    Returns
-    -------
-    list[JokeData]
-        List of extracted jokes in JokeData.
-    """
-    # storage for all the jokes that are collected. This is the return variable
-    jokes = []
+  Returns
+  -------
+  list[JokeData]
+      List of extracted jokes.
+  """
+  if not email.text.strip():
+    return []
 
-    joke_submitter = "Shawn Thayer <shawn@bestofhumor.com>"
+  jokes: list[JokeData] = []
+  submitter = email.from_header
+  lines = email.text.split('\n')
 
-    lines = email.text.split('\n')
-    joke_text = ''
-    i = 0
-    state = 0
-    while i < len(lines):
-        line = lines[i]
-        stripped = line.strip()
-        #logging.info(f"state {state}: {line}")
-        match state:
-            case 0:
-                if ((stripped.startswith('+') and stripped.endswith('+')) or 
-                    (stripped.startswith('~') and stripped.endswith('~')) or
-                    (stripped.startswith('_') and stripped.endswith('_'))):
-                    state += 1
-                i += 1
+  in_joke = False
+  joke_lines: list[str] = []
+  first_nonblank_seen = False
 
-            case 1:
-                if ((stripped.startswith('+') and stripped.endswith('+')) or 
-                    (stripped.startswith('~') and stripped.endswith('~')) or
-                    (stripped.startswith('_') and stripped.endswith('_'))):
-                    state += 1
-                i += 1
+  for line in lines:
+    logging.debug(f"line: {line}")
+    if _is_eof(line):
+      logging.debug('EOJ')
+      if in_joke:
+        _collect_joke(joke_lines, jokes, submitter)
+      break
 
-            case 2:  # Collect until end marker `[...]`
-                if ((stripped.startswith('+') and stripped.endswith('+')) or 
-                    (stripped.startswith('~') and stripped.endswith('~')) or
-                    (stripped.startswith('_') and stripped.endswith('_'))):
+    if _is_soj(line):
+      logging.debug('SOJ')
+      if in_joke:
+        _collect_joke(joke_lines, jokes, submitter)
+      in_joke = True
+      joke_lines = []
+      first_nonblank_seen = False
+      continue
 
-                    jokes.append(JokeData(text=joke_text.strip(), submitter=joke_submitter, title=''))
-                    state = 1
-                    joke_text = ''
-                else:
-                    if ('http' in stripped or
-                        '<a' in stripped.lower() or
-                        'mailto:' in stripped or
-                        stripped.lower().startswith('subscribe') or
-                        stripped.lower().startswith('join') or
-                        stripped.lower().startswith('unsub') or
-                        stripped.startswith('___') or
-                        'Bestofhumor.com' in stripped or
-                        'email4fun' in stripped):
-                        pass
-                    else:
-                        joke_text += line + "\n"
+    if in_joke:
+      lower = line.strip().lower()
+      if not first_nonblank_seen and lower:
+        first_nonblank_seen = True
+        if 'http' in lower:
+          logging.debug("discard beginning 'http'")
+          continue  # discard first line if it contains a URL
+      if ('bestofhumor.com' in lower or 'free t-shirt' in lower) and \
+          not ('http' in lower or 'mailto' in lower or 'copyright' in lower):
+        continue # discard any line if it contains 'bestofhumor.com' or 'free t-shirt'
+      joke_lines.append(line)
+  else:
+    # Loop exhausted without hitting an EOF marker
+    if in_joke:
+      _collect_joke(joke_lines, jokes, submitter)
 
-                i += 1
-
-    return jokes
-
-if __name__ == "__main__":
-
-    email = EmailData(
-        from_header = "\"Bestofhumor.com\" <shawn@bestofhumor.com>",
-        subject_header = "Best of Humor July 13th",
-        text = """
-Welcome to Best of Humor ---> http://www.bestofhumor.com
-We are part of the email4fun.com network ---> http://www.email4fun.com
-For FREE Fun E-mail, Visit http://sjMail.com
-
--------------- LIST INFORMATION -----------------
-You are subscribed as: gcfl-submit@gcfl.net
-To unsubscribe send an email to
-<A href="mailto:bestofhumor-leave@list2.sjmail.com">unsubscribe</A>
-Or go to:  http://www.bestofhumor.com/leave.html
-Join Best of Humor:  http://www.bestofhumor.com/subscribe.html
--------------- LIST INFORMATION -----------------
-
-NOTE:  We had some computer problems on our end the past couple days.  We 
-are finalizing our move to a new lyris server.  Don't worry all of you are 
-coming with me to hopefully a faster server
-
-+---------------------------------------------------------------+
-Win a Complete home theater!
-It's a super System! A 53" Big Screen TV!
-
-Surround Sound System, CD/DVD Player.
-Two leather recliners.
-What do you have to lose? Enter now!
-This offer expires 08/04/00.
-http://www.afreeplace.com/boh/super.htm
-<a href="http://www.1freeplace.com/boh/super.htm">AOL link</a>
-+---------------------------------------------------------------+
-
-A painter, whitewashing the inner walls of a country outhouse,
-had the misfortune to fall through the opening and land in the
-muck at the bottom. He shouted, "Fire! Fire! Fire!" at the top
-of his lungs.
-
-The local fire department responded with alacrity, sirens
-roaring as they approached the privy.
-
-"Where's the fire?" called the chief.
-
-"No fire," replied the painter as they pulled him out of the hole.
-
-"But if I had yelled, 'Shit! Shit! Shit!' who would have rescued me?"
-
-+---------------------------------------------------------------+
-FREE E-MAIL ENTERTAINMENT
-List World is the place to go to get all the free
-newsletters you want! Join a free newsletter now!
-http://www.listworld.net/index23b.cfm?refid=24
-<A href="http://www.listworld.net/index23b.cfm?refid=24">FREE NEWSLETTERS</A>
-+---------------------------------------------------------------+
-
-Amanpreet was having marital problems. So he went to his
-
-The shrink says "when you get home, throw down your
-briefcase, run to her, embrace her, take off her clothes, and
-yours, and make made passionate love to her."
-In two weeks Preet was back in the shrink's office. The shrink
-asked "How did it go?"
-
-Preet said, "She didn't have anything to say, but her bridge
-club got a kick out of it."
-
-~~~~~~~~~~~~~~~~
-Shawn Thayer
-Best of Humor
-http://www.bestofhumor.com
-shawn@bestofhumor.com
-
-_______  Bestofhumor.com Daily Humor  _______
-You are subscribed as: gcfl-submit@gcfl.net
-To unsubscribe send an email to 
-mailto:leave-bestofhumor-284604L@list2.sjMail.com
-Or go to:  http://www.bestofhumor.com/leave.html
-
-We are part of the email4fun.com network ---> http://www.email4fun.com
-"""
-    )
-    jokes = parse(email)
-
-
+  return jokes
