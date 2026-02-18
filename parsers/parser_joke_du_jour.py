@@ -2,10 +2,7 @@
 
 from .email_data import EmailData, JokeData
 from . import register_parser
-import logging
 import re
-
-logging.basicConfig(level=logging.WARNING)
 
 def _can_be_parsed_here(email: EmailData) -> bool:
     """Return True if this parser can parse the email."""

@@ -5,8 +5,6 @@ from . import register_parser
 import logging
 import re
 
-logging.basicConfig(level=logging.WARNING)
-
 def _can_be_parsed_here(email: EmailData) -> bool:
     """Return True if this parser can parse the email."""
     # Check if the email is from the Humor_G source
