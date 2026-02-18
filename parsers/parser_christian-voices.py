@@ -21,8 +21,8 @@ def _can_be_parsed_here(email: EmailData) -> bool:
     # The from_header contains email addresses in formats like:
     # "Christian Voice <GrampsTN@comcast.net>" or "Bob <CVWorldwide@wmconnect.com>"
     # We look for consistent identifiers across the sample emails
-    return False
-    #return "GrampsTN@comcast.net" in email.from_header or "Christian Voice" in email.from_header
+    #return False
+    return "GrampsTN@comcast.net" in email.from_header or "Christian Voice" in email.from_header
 
 
 @register_parser(_can_be_parsed_here)
