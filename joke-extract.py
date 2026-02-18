@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 """
-Script to extract joke content from email files, supporting multiple joke email formats.
-Supports parsing:
-- "You Make Me Laugh" emails (CrosswalkMail)
-- Steve Sanderson's "Sunday Fun Stuff" emails
-Prioritizes `text/plain` over `text/html`, and cleans up content before output.
+Extract jokes from newsletter email files (.eml) into structured text files.
+
+Each email is matched to a parser in the parsers/ package. On success the
+extracted jokes are written to <output_success_dir>; on failure the raw
+email content is dumped to <output_failure_dir> for review.
 
 Usage:
-    python joke-extract.py <email_file> <output_directory>
+    python joke-extract.py <email_file> <output_success_dir> <output_failure_dir>
 """
 
 import sys
 import os
 import email
+import json
 import tempfile
 import logging
 import subprocess
@@ -34,7 +35,7 @@ def parse_email(file_path: str):
     Parameters
     ----------
     file_path : str
-        Path to the email file (must be UTF-8 encoded text).
+        Path to the email file (read as ISO-8859-1).
 
     Returns
     -------
@@ -47,8 +48,6 @@ def parse_email(file_path: str):
         Exits with status code 1 and logs error if parsing fails.
     """
     try:
-        #with open(file_path, 'r', encoding='utf-8') as file:
-
         with open(file_path, 'r', encoding='ISO-8859-1') as file:
             return email.message_from_file(file)
     except Exception as e:
@@ -145,8 +144,7 @@ def extract_text_content(email_message) -> str:
     Returns
     -------
     str
-        List with one string per joined part (often a list of one element).
-        Content is cleaned via `cleanup_body`.
+        Concatenated plain-text content, cleaned via `cleanup_body`.
     """
     text = ""
 
@@ -157,8 +155,6 @@ def extract_text_content(email_message) -> str:
                 #text_content = payload.decode('utf-8').strip()
                 text_content = payload.decode('ISO-8859-1').strip()
                 if text_content:
-                    # if text:
-                    #     text += "-=+=-\n"
                     text += cleanup_body(text_content)
 
     return text
@@ -178,9 +174,8 @@ def extract_html_content(email_message) -> str:
 
     Returns
     -------
-    list of str
-        List with one string per converted part, joined with `-=+=-\n`.
-        Content is cleaned via `cleanup_body`.
+    str
+        Concatenated plain-text output from lynx, cleaned via `cleanup_body`.
     """
     text = ""
 
@@ -217,16 +212,15 @@ def main():
 
     Command-line arguments:
         $1 : path to email file
-        $2 : output directory for extracted jokes
+        $2 : output directory for successfully extracted jokes (joke_*.txt)
+        $3 : output directory for emails that yielded no jokes (email_*.json + email_*.txt)
 
-    Each extracted joke is written to a temporary file in `output_dir`,
-    with `From:` and `Subject:` headers prepended.
-
-    Exit Codes:
-        100 : success (joke extracted)
-        200 : no joke found
-        500 : argument error
-        501 : file not found
+    Stdout codes:
+        100 : success — joke(s) extracted
+        200 : no text/html content found in email
+        201 : content found but no parser produced a joke
+        500 : wrong number of arguments
+        501 : email file not found
         502 : email parsing error
     """
     if len(sys.argv) != 4:
@@ -258,7 +252,7 @@ def main():
         logging.info("Text and HTML are identical.")
 
     if text_content or html_content:
-        email = EmailData(
+        email_data = EmailData(
             text = text_content,
             html = html_content,
             from_header = email_message.get('From', '').strip(),
@@ -266,18 +260,18 @@ def main():
         )
 
         # Try to find a custom parser
-        logging.info(f"From: {email.from_header}")
+        logging.info(f"From: {email_data.from_header}")
         jokes = []
-        parser = get_parser(email)
+        parser = get_parser(email_data)
         if parser:
             try:
-                jokes = parser(email)
+                jokes = parser(email_data)
             except Exception as e:
                 logging.exception(f"Parser failed for {email_file}: {e}")
         else:
             logging.warning("No parser found to process this email")
 
-        if len(jokes) > 0:
+        if jokes:
             # Write each joke to a temp file in output dir
             for joke in jokes:
                 with tempfile.NamedTemporaryFile(
@@ -303,13 +297,13 @@ def main():
                 dir=output_failure_dir,
                 delete=False
             ) as tmp_file:
-                tmp_file.write("{\n")
-                tmp_file.write(f"  \"subject\": \"{email.subject_header.replace('"', '\\"')}\",\n")
-                tmp_file.write(f"  \"from\": \"{email.from_header.replace('"', '\\"')}\",\n")
-                tmp_file.write(f"  \"plain_text\": \"{email.text.replace('"', '\\"').replace("\n", "\\n")}\",\n")
-                tmp_file.write(f"  \"html_text\": \"{email.html.replace('"', '\\"').replace("\n", "\\n")}\"\n")
-                tmp_file.write("}\n")
-            tmp_file.close()
+                json.dump({
+                    "subject": email_data.subject_header,
+                    "from": email_data.from_header,
+                    "plain_text": email_data.text,
+                    "html_text": email_data.html,
+                }, tmp_file, indent=2, ensure_ascii=False)
+                tmp_file.write('\n')
 
             with tempfile.NamedTemporaryFile(
                 mode='w',
@@ -318,15 +312,14 @@ def main():
                 dir=output_failure_dir,
                 delete=False
             ) as tmp_file:
-                tmp_file.write(f"Subject: {email.subject_header}\n")
-                tmp_file.write(f"From: {email.from_header}\n")
+                tmp_file.write(f"Subject: {email_data.subject_header}\n")
+                tmp_file.write(f"From: {email_data.from_header}\n")
                 tmp_file.write("\n")
-                tmp_file.write(f"-=+=- PLAIN -=+=-\n{email.text}\n")
-                tmp_file.write(f"-=+=- HTML -=+=-\n{email.html}\n")
-            tmp_file.close()
+                tmp_file.write(f"-=+=- PLAIN -=+=-\n{email_data.text}\n")
+                tmp_file.write(f"-=+=- HTML -=+=-\n{email_data.html}\n")
 
-            logging.info(f"201 No joke found in email with Subject: {email.subject_header}. Written to {tmp_file.name}")
-            print(f"201 No joke found in email with Subject: {email.subject_header}. Written to {tmp_file.name}")
+            logging.info(f"201 No joke found in email with Subject: {email_data.subject_header}. Written to {tmp_file.name}")
+            print(f"201 No joke found in email with Subject: {email_data.subject_header}. Written to {tmp_file.name}")
 
     else:
         logging.info("200 No email content found")
