@@ -8,19 +8,12 @@ def _can_be_parsed_here(email: EmailData) -> bool:
     """
     Check if this parser can handle the email based on the From header.
     
-    The parser is designed for emails from "Christian Voice" newsletter,
-    which uses email addresses containing "comcast.net" and "GrampsTN".
-    
     Args:
         from_header (str): The raw From: header value (without "From: " prefix)
         
     Returns:
         bool: True if the email appears to be from Christian Voices, False otherwise
     """
-    # Christian Voices emails typically have "GrampsTN" or "CVWorldwide" in the address
-    # The from_header contains email addresses in formats like:
-    # "Christian Voice <GrampsTN@comcast.net>" or "Bob <CVWorldwide@wmconnect.com>"
-    # We look for consistent identifiers across the sample emails
     return "example@example.com" in email.from_header or "Example T Example" in email.from_header
 
 
