@@ -1,4 +1,5 @@
-# parser-hints.md for Best of Humor
+# PARSER GUIDELINES (DO NOT DELETE)
+## Humor_G mailing list
 
 - [x] Text format is preferred
 - [ ] HTML format is preferred
@@ -47,8 +48,5 @@
 ## Additional Info
 Follow these rules in this order:
 - If the first line of the joke contains `http`, discard that line and continue processing the rest of the joke.
-- If a joke contains the following strings (case insensitive) on any line in the joke, the entire joke should be discarded:
-  - `http`
-  - `mailto`
-  - `copyright`
+- If a joke contains `http`, `mailto` or `copyright` (case insensitive) on any line in the joke, return []:
 - If any line in a joke contains `bestofhumor.com` or `free t-shirt`, discard that line and continue processing the rest of the joke.

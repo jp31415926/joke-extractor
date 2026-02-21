@@ -9,7 +9,10 @@
 
 #### **A. Primary Script (`joke-extract.py`)**
 **Input:**
-- Single CLI argument: Path to `.eml` file (e.g., `./joke-extract.py "input.eml"`).
+- CLI arguments: `<output_success_dir> <output_failure_dir> <email_file> [...]`
+  - `$1`: output directory for successfully extracted jokes (`joke_*.txt`)
+  - `$2`: output directory for emails that yielded no jokes (`email_*.json` + `email_*.txt`)
+  - `$3+`: one or more paths to `.eml` files to process (e.g., `./joke-extract.py out/ fail/ a.eml b.eml`)
 
 **Validation & Preprocessing (Exit with `sys.exit()` if failed):**
 1. **File Existence & Readability:**

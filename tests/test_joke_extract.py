@@ -22,7 +22,7 @@ def _run(fixture_name):
     tempfile.TemporaryDirectory() as failure_dir,
   ):
     result = subprocess.run(
-      [sys.executable, _SCRIPT, eml_path, success_dir, failure_dir],
+      [sys.executable, _SCRIPT, success_dir, failure_dir, eml_path],
       capture_output=True,
       text=True,
     )
@@ -73,7 +73,7 @@ def test_missing_file_exits_nonzero():
     tempfile.TemporaryDirectory() as failure_dir,
   ):
     result = subprocess.run(
-      [sys.executable, _SCRIPT, 'nonexistent.eml', success_dir, failure_dir],
+      [sys.executable, _SCRIPT, success_dir, failure_dir, 'nonexistent.eml'],
       capture_output=True,
       text=True,
     )

@@ -1,6 +1,6 @@
 # parser-hints.md for Humor_G
 
-- HTML format is the perfered format unless it is blank.
+- HTML format is the preferred format unless it is blank.
 
 - There will only be one joke per email.
 
@@ -14,4 +14,4 @@
 
 - The end marker is a line that starts with "~~~~~~~~~~" (10x'~'). Do not include that line with the joke.
 
-- If "[cid:" or "http" occurs anywhere in the joke, the joke is to be discarded and return [].
+- If `[cid:` or `http` occurs anywhere in the joke, the joke is to be discarded and return [].

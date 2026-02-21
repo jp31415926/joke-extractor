@@ -1,6 +1,6 @@
 # parser-hints.md for Joke du Jour
 
-- Text format is the only formar available.
+- Text format is the only format available.
 
 - There could be multiple jokes per email.
 
@@ -8,9 +8,9 @@
 
 - `email.subject_header` cannot be used as the title.
 
-1. The start marker for the first joke is a line that starts with "~*~*". The start marker should not be included in the joke text. The start marker for additional jokes (if present) will be specified below.
+1. The start marker for the first joke is a line that equals `~*~*~*~*~*~*`. The start marker should not be included in the joke text. The start marker for additional jokes (if present) will be specified below.
 
-2. The first non-blank line after the start marker will be the title in quotes, or a line that starts with `<>*<>` signifying the end of the valid content. If it is quoted text, there may be other text before or after the quoted text. Exttract only the quotes text and use that as a title. If end of valid content, ignore all remaining lines.
+2. The first non-blank line after the start marker may be the title in quotes, or a line that starts with `<>*<>` signifying the end of the valid content. If it is quoted text, there may be other text before or after the quoted text. Extract only the text in quotes and use that as a title. If end of valid content, ignore all remaining lines.
 
 3. If we are not done, the rest of the text is the joke text, until you see the end marker.
 

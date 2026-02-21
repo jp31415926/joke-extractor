@@ -7,6 +7,7 @@ import re
 def _can_be_parsed_here(email: EmailData) -> bool:
     """Return True if this parser can parse the email."""
     return "ladyhawke@jokedujour.com" in email.from_header.lower()
+    #return False;
 
 @register_parser(_can_be_parsed_here)
 def parse(email: EmailData) -> list[JokeData]:
@@ -25,7 +26,7 @@ def parse(email: EmailData) -> list[JokeData]:
         line = lines[i].strip()
         
         # Look for start marker: line that starts with "~*~*"
-        if line.startswith('~*~*'):
+        if line == '~*~*~*~*~*~*':
             # Skip the start marker line
             i += 1
             
@@ -57,7 +58,7 @@ def parse(email: EmailData) -> list[JokeData]:
             
             # Collect joke text until we hit an "http" line (ad starts)
             while i < len(lines):
-                line = lines[i].rstrip()
+                line = lines[i].strip()
                 
                 # Check for end of joke (starts with http for ad)
                 if line.startswith('http'):
@@ -95,7 +96,7 @@ def parse(email: EmailData) -> list[JokeData]:
                 
                 if joke_text:
                     jokes.append(JokeData(
-                        text=joke_text,
+                        text=joke_text.strip(),
                         submitter=submitter,
                         title=title
                     ))

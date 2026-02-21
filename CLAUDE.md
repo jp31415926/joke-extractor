@@ -6,14 +6,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a **Joke Extractor** — a Python 3.11+ pipeline that processes joke newsletter emails (`.eml` files) and extracts joke content into structured text files. It has two main layers:
 
-1. **`joke-extract.py`** — The primary script. Takes an `.eml` file + two output directories, selects a matching parser from `parsers/`, and writes extracted jokes to the success dir (or the raw email dump to the failure dir).
+1. **`joke-extract.py`** — The primary script. Takes two output directories + one or more `.eml` files, selects a matching parser from `parsers/`, and writes extracted jokes to the success dir (or the raw email dump to the failure dir).
 2. **`parsers/`** — A plugin system where each parser handles a specific joke newsletter sender.
 
 ## Commands
 
 ### Run the extractor
 ```bash
-python3 joke-extract.py <email.eml> <success_output_dir> <failure_output_dir>
+python3 joke-extract.py <success_output_dir> <failure_output_dir> <email.eml> [...]
 ```
 
 ### Run integration test
@@ -42,7 +42,7 @@ python3 clean_up.py   # deletes all output files, temp files, and jokes/ directo
 ## Architecture
 
 ### Primary Script (`joke-extract.py`)
-- Accepts 3 CLI args: `<eml_path> <success_dir> <failure_dir>`
+- Accepts CLI args: `<success_dir> <failure_dir> <eml_path> [...]` (one or more email files)
 - Parses the email with `email.message_from_file()` using ISO-8859-1 encoding
 - Extracts `text/plain` → `text_content` (cleaned via `cleanup_body`)
 - Extracts `text/html` → `html_content` (converted to plain text via `lynx -dump`, then cleaned)

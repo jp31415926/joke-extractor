@@ -1,0 +1,92 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <funnies-return-4703-gcfl-jokes=gcfl.net@lists.mikeysfunnies.com>
+X-Original-To: gcfl-jokes@gcfl.net
+Delivered-To: gcfl-jokes@gcfl.net
+Received-SPF: Temperror (mailfrom) identity=mailfrom; client-ip=76.8.25.230; helo=list.agathongroup.com; envelope-from=funnies-return-4703-gcfl-jokes=gcfl.net@lists.mikeysfunnies.com; receiver=<UNKNOWN> 
+Authentication-Results: attila.gcfl.net;
+	dkim=pass (1024-bit key; unprotected) header.d=lists.MikeysFunnies.com header.i=@lists.MikeysFunnies.com header.b="eddWGgA9";
+	dkim-atps=neutral
+Received: from list.agathongroup.com (mail.agathongroup.com [76.8.25.230])
+	by attila.gcfl.net (Postfix) with ESMTPS id 0E3E93085868
+	for <gcfl-jokes@gcfl.net>; Tue, 10 Jan 2023 02:33:06 -0600 (CST)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed;
+	d=lists.MikeysFunnies.com; s=default; h=Mailing-List:Precedence:
+	Content-Transfer-Encoding:Reply-To:To:From:Delivered-To:
+	Received-SPF:Subject:Message-Id:Date; bh=yg8i3625cy7/crS2xptyed3
+	5zGU=; b=eddWGgA9WA9m0GO+EInTlgRDxpSaTfCOxgxNSoctv0AbRCN329lj8LE
+	x8i4bCo56c+i3V8aY2L1zZ28cCkySY1VoXQIr85q1/ftTwK8DM1tNBNWpnSxchPG
+	18IigaXDxF5dtw4NAX9xU5B9TEIn4kX1XGUe+wXEUyMWzzjIcWHY=
+DomainKey-Signature: a=rsa-sha1; q=dns; c=simple;
+  s=default; d=lists.MikeysFunnies.com;
+  b=jcHAIptfZ4fjPdVN0K55O3ndaU8ThDwW7zyV9A3BqxdVwAoBmHsDOYs0M4mwO+wqckCIWW6TXMDmSzognZ+YwZpbv2C1+tQzuHdtx1BSxm4oqUat3Jt6RYxTKunOZy2hZYeg8X3kh3QJU49jnKY08JDtsDnGSBVb9q/nYqsT3Ec=;
+Received: (qmail 16918 invoked by uid 1061); 10 Jan 2023 08:30:08 -0000
+Mailing-List: contact funnies-help@lists.mikeysfunnies.com; run by ezmlm
+Precedence: bulk
+Content-Transfer-Encoding: 8bit
+X-Yes-Archive: yes
+X-List-Help: <mailto:funnies-help@lists.mikeysfunnies.com>
+Reply-To: reply@MikeysFunnies.com
+To: Mikey's Funnies List <funnies@lists.MikeysFunnies.com>
+From: Mikey's Funnies <funnies-owner@lists.MikeysFunnies.com>
+Delivered-To: mailing list funnies@lists.mikeysfunnies.com
+Received: (qmail 16905 invoked by uid 0); 10 Jan 2023 08:30:08 -0000
+X-Agathon-BaruwaFW-From: mikey@mikeysfunnies.com
+X-Agathon-BaruwaFW-SpamCheck: not spam (whitelisted),
+	SpamAssassin (not cached, score=-0.946, required 5,
+	autolearn=not spam, BAYES_00 -2.00, KAM_DMARC_STATUS 0.01,
+	PP_MIME_FAKE_ASCII_TEXT 0.00, SPF_HELO_NONE 0.00, SPF_PASS -0.00,
+	TXREP 1.04)
+X-Agathon-BaruwaFW: MTA virus scan performed
+X-Agathon-BaruwaFW-ID: 1pFA1D-0002jq-94
+X-Agathon-BaruwaFW-Information: Please contact Agathon Group Mail Firewall for more information
+Received-SPF: pass (filter.agathongroup.com: domain of mikeysfunnies.com designates 209.151.235.145 as permitted sender) client-ip=209.151.235.145; envelope-from=mikey@mikeysfunnies.com; helo=shared1.aghosted.com;
+Subject: 01.10: A Shot Funny
+Message-Id: <20230110083001.EE3286A0FFB@shared1.aghosted.com>
+Date: Tue, 10 Jan 2023 00:30:01 -0800 (PST)
+X-Baruwa-Whitelisted-Host: 209.151.235.145
+Content-Length: 1530
+
+>>>Today's Funny
+
+At a naval barracks the enlisted men were being given their shots prior to going overseas. One lad, having received his whole series of injections, asked for a glass of water.
+
+"What's the matter?" asked the hospital corpsman. "Do you feel light-headed?"
+
+"No, just checking to see if I'm still watertight."
+
+[forwarded by Steve Sanderson]
+
+>>>Today's Thot
+
+The older you get the better you get. Unless you’re a banana.
+
+>>>
+
+PASS IT ON! 
+Yeah, you can send this Funny to anybody you want. And, if you're REAL nice, you'll tell them where you got it! www.mikeysFunnies.com 
+
+>>>
+
+Mikey's Funnies is a clean humor email list, sent every weekday and is generously hosted by Agathon for Ministries. Agathon has more than 25 years of experience helping organizations advance their digital mission through strategic planning, website design, and app development. Learn more at https://agathonforministries.com 
+
+We DO NOT rent, sell, or share your email address with any company, organization, or individual, sacred or secular. And, subscribing will not result in more spam. We guarantee it!
+
+~ Add our address to your Approved Senders/Whitelist: funnies-owner@lists.MikeysFunnies.com
+
+Instagram: @mikeysfunnies
+
+Facebook: https://www.facebook.com/mikeysfunnies
+
+~ Donate: http://www.mikeysFunnies.com/donate.html
+
+~ Advertise: http://www.mikeysFunnies.com/advertise/
+
+~ Contact:  http://www.mikeysFunnies.com/contact.html
+
+
+Unsubscribe, subscribe, or change your email address: http://www.mikeysFunnies.com/sub/
+
+
+
+

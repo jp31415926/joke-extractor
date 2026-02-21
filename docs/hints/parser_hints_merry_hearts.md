@@ -31,7 +31,7 @@
 - [x] No don't include the end marker in the joke
 
 - Are the paragraphs line wrapped, or one long line?
-- [ ] Yes - concatinate multiple non-blank lines together into one long line; preserve blank lines between paragraphs.
+- [ ] Yes - concatenate multiple non-blank lines together into one long line; preserve blank lines between paragraphs.
 - [x] No - insert a blank line between every non-blank line (each line is always a full paragraph).
 
 - [x] Yes reduce multiple consecutive blank lines to one blank line

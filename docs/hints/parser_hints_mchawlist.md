@@ -1,5 +1,7 @@
 # parser-hints.md for McHawList
 
+- Use `title()` to correct title capitalization
+
 - [x] Text format is preferred
 - [ ] HTML format is preferred
 
@@ -16,7 +18,7 @@
 
 - [ ] Yes use `email.subject_header` for the title
 - [x] No don't use `email.subject_header` for the title
-  - Additional notes: Title is the first line of each joke. Use `title()` to correct capitalization
+  - Additional notes: Title is the first line of each joke
 
 - The start marker is: the first joke starts on line 1. If line 1 starts with "From: Keith Sullivan", skip it and start at the first non-blank line. The start marker for additional jokes is the same line as the end marker.
 
@@ -39,3 +41,6 @@ Remove excess blank lines?
 - [ ] No don't reduce multiple consecutive blank lines to one blank line
 - [x] Yes remove all blank lines before and after the joke
 - [ ] No don't remove all blank lines before and after the joke
+
+## Additional Info
+- If a joke contains `http`, `mailto` or `copyright` (case insensitive) on any line in the joke, return []:

@@ -35,7 +35,7 @@ def _run(eml_filename):
     tempfile.TemporaryDirectory() as failure_dir,
   ):
     result = subprocess.run(
-      [sys.executable, _SCRIPT, eml_path, success_dir, failure_dir],
+      [sys.executable, _SCRIPT, success_dir, failure_dir, eml_path],
       capture_output=True,
       text=True,
     )
