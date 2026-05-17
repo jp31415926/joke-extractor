@@ -2,7 +2,6 @@
 
 """
 # PARSER GUIDELINES (DO NOT DELETE)
-## Humor_G mailing list
 
 - [x] Text format is preferred
 - [ ] HTML format is preferred
@@ -51,10 +50,6 @@
 ## Additional Info
 Follow these rules in this order:
 - If the first line of the joke contains `http`, discard that line and continue processing the rest of the joke.
-- If a joke contains the following strings (case insensitive) on any line in the joke, the entire joke should be discarded:
-  - `http`
-  - `mailto`
-  - `copyright`
 - If any line in a joke contains `bestofhumor.com` or `free t-shirt`, discard that line and continue processing the rest of the joke.
 
 """
@@ -127,8 +122,8 @@ def _collect_joke(joke_lines: list[str], jokes: list[JokeData], submitter: str) 
   if not joke_text:
     return
   lower = joke_text.lower()
-  if 'http' in lower or 'mailto' in lower or 'copyright' in lower:
-    return
+#  if 'http' in lower or 'mailto' in lower or 'copyright' in lower:
+#    return
   jokes.append(JokeData(text=joke_text, submitter=submitter, title=''))
 
 
@@ -143,7 +138,6 @@ def parse(email: EmailData) -> list[JokeData]:
     - starts with '>>>' and ends with '<<<'
 
   Processing stops at EOF markers (starts with '~~~~~' or '_____', or equals '---').
-  Jokes containing 'http', 'mailto', or 'copyright' are discarded.
 
   Parameters
   ----------
@@ -190,8 +184,9 @@ def parse(email: EmailData) -> list[JokeData]:
         if 'http' in lower:
           logging.debug("discard beginning 'http'")
           continue  # discard first line if it contains a URL
-      if ('bestofhumor.com' in lower or 'free t-shirt' in lower) and \
-          not ('http' in lower or 'mailto' in lower or 'copyright' in lower):
+#      if ('bestofhumor.com' in lower or 'free t-shirt' in lower) and \
+#          not ('http' in lower or 'mailto' in lower or 'copyright' in lower):
+      if ('bestofhumor.com' in lower or 'free t-shirt' in lower)
         continue # discard any line if it contains 'bestofhumor.com' or 'free t-shirt'
       joke_lines.append(line)
   else:

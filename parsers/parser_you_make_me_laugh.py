@@ -1,5 +1,28 @@
 """Parser for 'You Make Me Laugh' (CrosswalkMail) format."""
 
+"""
+# PARSER GUIDELINES (DO NOT DELETE)
+
+- HTML format is preferred unless it is empty.
+
+- There will only be one joke per email.
+
+- Use `"crosswalk@crosswalkmail.com" in email.from_header.lower()` to match the email to this parser.
+
+- `email.subject_header` can be used as the title. Remove the suffix minus and date. Remove the quotes from the title. Example: "Acts 2:38 - August 26, 2010" → "Acts 2:38"
+
+- The start marker is starts with "__________" (10 underscores). Skip 2 lines after the bar.
+
+- Skip the line matching cleaned subject (if present)
+
+- Skip "Newsletters" line and next blank line if present
+
+- The rest of the text is the joke text, until you see the end marker.
+
+- The end marker is line that contains "cybersalt.org/cleanlaugh". Do not include that line with the joke.
+
+"""
+
 from .email_data import EmailData, JokeData
 from . import register_parser
 

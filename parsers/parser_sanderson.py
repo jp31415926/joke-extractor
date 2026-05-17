@@ -1,6 +1,46 @@
 #!/usr/bin/env python3
 """Parser for Steve Sanderson (aardvark@illinois.edu) joke emails."""
 
+"""
+# PARSER GUIDELINES (DO NOT DELETE)
+
+- [ ] Text format is preferred
+- [x] HTML format is preferred
+
+- What to do if preferred format is empty?
+- [ ] Use other format
+- [x] return empty list (e.g. `[]`)
+
+- How many jokes are expected?
+- [ ] Only one
+- [ ] Specific number:
+- [x] Multiple, but no specific number
+
+- Expression to match this parser: `"aardvark@illinois.edu" in email.from_header.lower()`
+
+- [ ] Yes use `email.subject_header` for the title
+- [x] No don't use `email.subject_header` for the title
+
+- The Start-Of-Joke (SOJ) marker is '********************'
+
+- [ ] Yes include the start marker in the joke
+- [x] No don't include the start marker in the joke
+
+- [x] The rest of the text is the joke text, until you see the another SOJ marker.
+
+- The End-Of-Email marker is a line that starts "Steve Sanderson"
+
+- [ ] Yes include the end marker in the joke
+- [x] No don't include the end marker in the joke
+
+- Are the paragraphs line wrapped, or one long line?
+- [ ] Yes - concatenate multiple non-blank lines together into one long line; preserve blank lines between paragraphs.
+- [x] No - insert a blank line between every non-blank line (each like is always a full paragraph).
+
+- [x] Yes reduce multiple consecutive blank lines to one blank line
+- [ ] No don't reduce multiple consecutive blank lines to one blank line
+"""
+
 import re
 import logging
 from .email_data import EmailData, JokeData

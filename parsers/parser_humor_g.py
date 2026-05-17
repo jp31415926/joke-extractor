@@ -1,7 +1,7 @@
-"""Parser for Humor_G emails
+"""Parser for Humor_G emails"""
 
+"""
 # PARSER GUIDELINES (DO NOT DELETE)
-## Humor_G mailing list
 
 - HTML format is the preferred format unless it is blank.
 
